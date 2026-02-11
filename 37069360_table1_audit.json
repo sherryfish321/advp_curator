@@ -1,0 +1,1423 @@
+{
+  "paper": {
+    "paper_id": "37069360_table1",
+    "pmcid": "NR",
+    "pdf": "",
+    "table_input": "/Users/sherryhuang/Desktop/Wang Lab/37069360_table1.xlsx"
+  },
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no stage cues found",
+      "needs_review": true
+    },
+    {
+      "field": "Analyses type",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no association cues found",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no model cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "37069360_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6011998",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs6011998 | 20:45269867 | C/T | 0.95 | intronic | SLC13A3 | 0.087 | 0.009 | 10.65 | ++++ | 9,502/39,128 | 1.90 × 10−24 | 1.80 × 10−26 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.8e-26,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs6011998 | 20:45269867 | C/T | 0.95 | intronic | SLC13A3 | 0.087 | 0.009 | 10.65 | ++++ | 9,502/39,128 | 1.90 × 10−24 | 1.80 × 10−26 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.087,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs6011998 | 20:45269867 | C/T | 0.95 | intronic | SLC13A3 | 0.087 | 0.009 | 10.65 | ++++ | 9,502/39,128 | 1.90 × 10−24 | 1.80 × 10−26 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs13079464",
+          "confidence": 0.9,
+          "evidence": "Row text: 3p25.1 | rs13079464 | 3:13822439 | C/G | 0.46 | intergenic | WNT7A | 0.026 | 0.004 | 8.7 | ++++ | 9,614/39,822 | 8.64 × 10−17 | 3.41 × 10−18 | 0.59\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.4100000000000003e-18,
+          "confidence": 0.7,
+          "evidence": "Row text: 3p25.1 | rs13079464 | 3:13822439 | C/G | 0.46 | intergenic | WNT7A | 0.026 | 0.004 | 8.7 | ++++ | 9,614/39,822 | 8.64 × 10−17 | 3.41 × 10−18 | 0.59\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.026,
+          "confidence": 0.65,
+          "evidence": "Row text: 3p25.1 | rs13079464 | 3:13822439 | C/G | 0.46 | intergenic | WNT7A | 0.026 | 0.004 | 8.7 | ++++ | 9,614/39,822 | 8.64 × 10−17 | 3.41 × 10−18 | 0.59\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2425884",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs2425884 | 20:45258292 | C/T | 0.57 | intronic | SLC13A3 | 0.029 | 0.004 | 8.63 | +−+− | 9,614/39,822 | 2.60 × 10−18 | 6.02 × 10−18 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.02e-18,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs2425884 | 20:45258292 | C/T | 0.57 | intronic | SLC13A3 | 0.029 | 0.004 | 8.63 | +−+− | 9,614/39,822 | 2.60 × 10−18 | 6.02 × 10−18 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.029,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs2425884 | 20:45258292 | C/T | 0.57 | intronic | SLC13A3 | 0.029 | 0.004 | 8.63 | +−+− | 9,614/39,822 | 2.60 × 10−18 | 6.02 × 10−18 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10817108c",
+          "confidence": 0.9,
+          "evidence": "Row text: 9q31.3 | rs10817108c | 9:113658671 | A/G | 0.21 | intronic | LPAR1 | 0.029 | 0.004 | 8.2 | +++? | 9,550/39,516 | 1.07 × 10−15 | 2.46 × 10−16 | 0.75\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.46e-16,
+          "confidence": 0.7,
+          "evidence": "Row text: 9q31.3 | rs10817108c | 9:113658671 | A/G | 0.21 | intronic | LPAR1 | 0.029 | 0.004 | 8.2 | +++? | 9,550/39,516 | 1.07 × 10−15 | 2.46 × 10−16 | 0.75\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.029,
+          "confidence": 0.65,
+          "evidence": "Row text: 9q31.3 | rs10817108c | 9:113658671 | A/G | 0.21 | intronic | LPAR1 | 0.029 | 0.004 | 8.2 | +++? | 9,550/39,516 | 1.07 × 10−15 | 2.46 × 10−16 | 0.75\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2425881",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs2425881 | 20:45255618 | A/G | 0.83 | intronic | SLC13A3 | 0.033 | 0.005 | 7.68 | +−+? | 9,496/39,087 | 2.02 × 10−15 | 1.59 × 10−14 | 0.06\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.59e-14,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs2425881 | 20:45255618 | A/G | 0.83 | intronic | SLC13A3 | 0.033 | 0.005 | 7.68 | +−+? | 9,496/39,087 | 2.02 × 10−15 | 1.59 × 10−14 | 0.06\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.033,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs2425881 | 20:45255618 | A/G | 0.83 | intronic | SLC13A3 | 0.033 | 0.005 | 7.68 | +−+? | 9,496/39,087 | 2.02 × 10−15 | 1.59 × 10−14 | 0.06\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs3772833",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q21.2 | rs3772833 | 3:124518362 | G/A | 0.83 | intronic | ITGB5, UMPS | 0.032 | 0.005 | 7.67 | +++? | 9,496/39,087 | 2.15 × 10−13 | 1.76 × 10−14 | 0.39\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.76e-14,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q21.2 | rs3772833 | 3:124518362 | G/A | 0.83 | intronic | ITGB5, UMPS | 0.032 | 0.005 | 7.67 | +++? | 9,496/39,087 | 2.15 × 10−13 | 1.76 × 10−14 | 0.39\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.032,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q21.2 | rs3772833 | 3:124518362 | G/A | 0.83 | intronic | ITGB5, UMPS | 0.032 | 0.005 | 7.67 | +++? | 9,496/39,087 | 2.15 × 10−13 | 1.76 × 10−14 | 0.39\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs112407396",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs112407396 | 20:45276381 | T/A | 0.03 | intronic | SLC13A3 | 0.078 | 0.012 | 6.91 | +??? | 8,426/34,530 | 4.81 × 10−12 | 4.81 × 10−12 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.81e-12,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs112407396 | 20:45276381 | T/A | 0.03 | intronic | SLC13A3 | 0.078 | 0.012 | 6.91 | +??? | 8,426/34,530 | 4.81 × 10−12 | 4.81 × 10−12 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.078,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs112407396 | 20:45276381 | T/A | 0.03 | intronic | SLC13A3 | 0.078 | 0.012 | 6.91 | +??? | 8,426/34,530 | 4.81 × 10−12 | 4.81 × 10−12 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10494988",
+          "confidence": 0.9,
+          "evidence": "Row text: 1q41 | rs10494988 | 1:215141570 | C/T | 0.63 | intergenic | CENPF, KCNK2 | 0.021 | 0.004 | 6.54 | ++++ | 9,614/39,822 | 2.23 × 10−10 | 6.03 × 10−11 | 0.69\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.03e-11,
+          "confidence": 0.7,
+          "evidence": "Row text: 1q41 | rs10494988 | 1:215141570 | C/T | 0.63 | intergenic | CENPF, KCNK2 | 0.021 | 0.004 | 6.54 | ++++ | 9,614/39,822 | 2.23 × 10−10 | 6.03 × 10−11 | 0.69\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.021,
+          "confidence": 0.65,
+          "evidence": "Row text: 1q41 | rs10494988 | 1:215141570 | C/T | 0.63 | intergenic | CENPF, KCNK2 | 0.021 | 0.004 | 6.54 | ++++ | 9,614/39,822 | 2.23 × 10−10 | 6.03 × 10−11 | 0.69\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs72485816d",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs72485816d | 20:45314435 | T/C | 0.96 | UTR3 | TP53RK, SLC13A3 | 0.059 | 0.01 | 6.45 | ++?− | 9,114/37,342 | 1.47 × 10−10 | 1.12 × 10−10 | 0.87\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.1200000000000001e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs72485816d | 20:45314435 | T/C | 0.96 | UTR3 | TP53RK, SLC13A3 | 0.059 | 0.01 | 6.45 | ++?− | 9,114/37,342 | 1.47 × 10−10 | 1.12 × 10−10 | 0.87\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.059,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs72485816d | 20:45314435 | T/C | 0.96 | UTR3 | TP53RK, SLC13A3 | 0.059 | 0.01 | 6.45 | ++?− | 9,114/37,342 | 1.47 × 10−10 | 1.12 × 10−10 | 0.87\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs8041189",
+          "confidence": 0.9,
+          "evidence": "Row text: 15q25.3 | rs8041189 | 15:85686327 | G/A | 0.7 | intergenic | PDE8A | 0.022 | 0.004 | 6.44 | +−?? | 9,486/39,315 | 7.30 × 10−11 | 1.24 × 10−10 | 0.31\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.24e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 15q25.3 | rs8041189 | 15:85686327 | G/A | 0.7 | intergenic | PDE8A | 0.022 | 0.004 | 6.44 | +−?? | 9,486/39,315 | 7.30 × 10−11 | 1.24 × 10−10 | 0.31\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.022,
+          "confidence": 0.65,
+          "evidence": "Row text: 15q25.3 | rs8041189 | 15:85686327 | G/A | 0.7 | intergenic | PDE8A | 0.022 | 0.004 | 6.44 | +−?? | 9,486/39,315 | 7.30 × 10−11 | 1.24 × 10−10 | 0.31\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4685022",
+          "confidence": 0.9,
+          "evidence": "Row text: 3p25 | rs4685022 | 3:13832611 | G/A | 0.65 | intergenic | WNT7A | 0.019 | 0.004 | 6.4 | +++? | 9,576/39,654 | 2.36 × 10−09 | 1.58 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.5800000000000002e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 3p25 | rs4685022 | 3:13832611 | G/A | 0.65 | intergenic | WNT7A | 0.019 | 0.004 | 6.4 | +++? | 9,576/39,654 | 2.36 × 10−09 | 1.58 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.019,
+          "confidence": 0.65,
+          "evidence": "Row text: 3p25 | rs4685022 | 3:13832611 | G/A | 0.65 | intergenic | WNT7A | 0.019 | 0.004 | 6.4 | +++? | 9,576/39,654 | 2.36 × 10−09 | 1.58 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7596872",
+          "confidence": 0.9,
+          "evidence": "Row text: 2p16.1 | rs7596872 | 2:56128091 | C/A | 0.9 | intronic | EFEMP1 | 0.033 | 0.006 | 6.31 | +−?? | 9,333/38,442 | 1.00 × 10−10 | 2.80 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.8e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 2p16.1 | rs7596872 | 2:56128091 | C/A | 0.9 | intronic | EFEMP1 | 0.033 | 0.006 | 6.31 | +−?? | 9,333/38,442 | 1.00 × 10−10 | 2.80 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.033,
+          "confidence": 0.65,
+          "evidence": "Row text: 2p16.1 | rs7596872 | 2:56128091 | C/A | 0.9 | intronic | EFEMP1 | 0.033 | 0.006 | 6.31 | +−?? | 9,333/38,442 | 1.00 × 10−10 | 2.80 × 10−10 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1126642",
+          "confidence": 0.9,
+          "evidence": "Row text: 17q21.31 | rs1126642 | 17:42989063 | C/T | 0.96 | exonic | GFAP | 0.051 | 0.009 | 6.23 | +?+? | 9,119/37,466 | 6.19 × 10−10 | 4.67 × 10−10 | 0.72\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.67e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 17q21.31 | rs1126642 | 17:42989063 | C/T | 0.96 | exonic | GFAP | 0.051 | 0.009 | 6.23 | +?+? | 9,119/37,466 | 6.19 × 10−10 | 4.67 × 10−10 | 0.72\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.051,
+          "confidence": 0.65,
+          "evidence": "Row text: 17q21.31 | rs1126642 | 17:42989063 | C/T | 0.96 | exonic | GFAP | 0.051 | 0.009 | 6.23 | +?+? | 9,119/37,466 | 6.19 × 10−10 | 4.67 × 10−10 | 0.72\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs687610d",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q29 | rs687610d | 3:193515781 | G/C | 0.43 | intergenic | OPA1 | 0.021 | 0.004 | 6.2 | +++− | 9,614/39,822 | 2.99 × 10−10 | 5.81 × 10−10 | 0.76\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.81e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q29 | rs687610d | 3:193515781 | G/C | 0.43 | intergenic | OPA1 | 0.021 | 0.004 | 6.2 | +++− | 9,614/39,822 | 2.99 × 10−10 | 5.81 × 10−10 | 0.76\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.021,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q29 | rs687610d | 3:193515781 | G/C | 0.43 | intergenic | OPA1 | 0.021 | 0.004 | 6.2 | +++− | 9,614/39,822 | 2.99 × 10−10 | 5.81 × 10−10 | 0.76\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4959689",
+          "confidence": 0.9,
+          "evidence": "Row text: 6p25.2 | rs4959689 | 6:2617122 | C/A | 0.58 | intergenic | C6orf195 | 0.02 | 0.004 | 6.03 | ++++ | 9,582/39,695 | 3.37 × 10−09 | 1.63 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.63e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 6p25.2 | rs4959689 | 6:2617122 | C/A | 0.58 | intergenic | C6orf195 | 0.02 | 0.004 | 6.03 | ++++ | 9,582/39,695 | 3.37 × 10−09 | 1.63 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.02,
+          "confidence": 0.65,
+          "evidence": "Row text: 6p25.2 | rs4959689 | 6:2617122 | C/A | 0.58 | intergenic | C6orf195 | 0.02 | 0.004 | 6.03 | ++++ | 9,582/39,695 | 3.37 × 10−09 | 1.63 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs56104388",
+          "confidence": 0.9,
+          "evidence": "Row text: 20q13.12 | rs56104388 | 20:45302135 | T/C | 0.99 | intronic | SLC13A3 | 0.101 | 0.017 | 5.85 | +??? | 7,626/30,916 | 4.80 × 10−09 | 4.80 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.8e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 20q13.12 | rs56104388 | 20:45302135 | T/C | 0.99 | intronic | SLC13A3 | 0.101 | 0.017 | 5.85 | +??? | 7,626/30,916 | 4.80 × 10−09 | 4.80 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.101,
+          "confidence": 0.65,
+          "evidence": "Row text: 20q13.12 | rs56104388 | 20:45302135 | T/C | 0.99 | intronic | SLC13A3 | 0.101 | 0.017 | 5.85 | +??? | 7,626/30,916 | 4.80 × 10−09 | 4.80 × 10−09 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12417836",
+          "confidence": 0.9,
+          "evidence": "Row text: 11q13.3 | rs12417836 | 11:70089700 | T/C | 0.07 | intergenic | FADD, PPFIA1 | 0.034 | 0.007 | 5.58 | +−+? | 9,464/38,960 | 1.56 × 10−08 | 2.47 × 10−08 | 0.4\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.4700000000000003e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 11q13.3 | rs12417836 | 11:70089700 | T/C | 0.07 | intergenic | FADD, PPFIA1 | 0.034 | 0.007 | 5.58 | +−+? | 9,464/38,960 | 1.56 × 10−08 | 2.47 × 10−08 | 0.4\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.034,
+          "confidence": 0.65,
+          "evidence": "Row text: 11q13.3 | rs12417836 | 11:70089700 | T/C | 0.07 | intergenic | FADD, PPFIA1 | 0.034 | 0.007 | 5.58 | +−+? | 9,464/38,960 | 1.56 × 10−08 | 2.47 × 10−08 | 0.4\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2923437d",
+          "confidence": 0.9,
+          "evidence": "Row text: 8p11.21 | rs2923437d | 8:42425399 | A/C | 0.41 | intergenic | SMIM19, CHRNB3, SLC20A2 | 0.018 | 0.004 | 5.49 | ++−− | 9,614/39,822 | 4.73 × 10−08 | 4.08 × 10−08 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.08e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 8p11.21 | rs2923437d | 8:42425399 | A/C | 0.41 | intergenic | SMIM19, CHRNB3, SLC20A2 | 0.018 | 0.004 | 5.49 | ++−− | 9,614/39,822 | 4.73 × 10−08 | 4.08 × 10−08 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.018,
+          "confidence": 0.65,
+          "evidence": "Row text: 8p11.21 | rs2923437d | 8:42425399 | A/C | 0.41 | intergenic | SMIM19, CHRNB3, SLC20A2 | 0.018 | 0.004 | 5.49 | ++−− | 9,614/39,822 | 4.73 × 10−08 | 4.08 × 10−08 | 0.14\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00019",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1922930",
+          "confidence": 0.9,
+          "evidence": "Row text: 6p25.3 | rs1922930 | 6:1364691 | C/A | 0.12 | intergenic | FOXQ1, FOXF2 | 0.029 | 0.006 | 5.47 | ++?? | 9,406/38,748 | 3.60 × 10−08 | 4.62 × 10−08 | 0.48\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.6200000000000003e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 6p25.3 | rs1922930 | 6:1364691 | C/A | 0.12 | intergenic | FOXQ1, FOXF2 | 0.029 | 0.006 | 5.47 | ++?? | 9,406/38,748 | 3.60 × 10−08 | 4.62 × 10−08 | 0.48\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.029,
+          "confidence": 0.65,
+          "evidence": "Row text: 6p25.3 | rs1922930 | 6:1364691 | C/A | 0.12 | intergenic | FOXQ1, FOXF2 | 0.029 | 0.006 | 5.47 | ++?? | 9,406/38,748 | 3.60 × 10−08 | 4.62 × 10−08 | 0.48\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00020",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2385089",
+          "confidence": 0.9,
+          "evidence": "Row text: 19p13.11 | rs2385089 | 19:18550434 | A/C | 0.74 | intergenic | ISYNA1, ELL, LRRC25c | 0.023 | 0.005 | 5.49 | +++− | 9,614/39,822 | 4.14 × 10−08 | 5.73 × 10−08 | 0.57\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.7300000000000004e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 19p13.11 | rs2385089 | 19:18550434 | A/C | 0.74 | intergenic | ISYNA1, ELL, LRRC25c | 0.023 | 0.005 | 5.49 | +++− | 9,614/39,822 | 4.14 × 10−08 | 5.73 × 10−08 | 0.57\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.023,
+          "confidence": 0.65,
+          "evidence": "Row text: 19p13.11 | rs2385089 | 19:18550434 | A/C | 0.74 | intergenic | ISYNA1, ELL, LRRC25c | 0.023 | 0.005 | 5.49 | +++− | 9,614/39,822 | 4.14 × 10−08 | 5.73 × 10−08 | 0.57\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00021",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10954468",
+          "confidence": 0.9,
+          "evidence": "Row text: 7q33 | rs10954468 | 7:134434661 | C/A | 0.4 | intergenic | BPGM, CALD1c | 0.019 | 0.004 | 5.52 | +−?+ | 9,524/39,483 | 3.39 × 10−08 | 8.79 × 10−08 | 0.29\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.79e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 7q33 | rs10954468 | 7:134434661 | C/A | 0.4 | intergenic | BPGM, CALD1c | 0.019 | 0.004 | 5.52 | +−?+ | 9,524/39,483 | 3.39 × 10−08 | 8.79 × 10−08 | 0.29\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.019,
+          "confidence": 0.65,
+          "evidence": "Row text: 7q33 | rs10954468 | 7:134434661 | C/A | 0.4 | intergenic | BPGM, CALD1c | 0.019 | 0.004 | 5.52 | +−?+ | 9,524/39,483 | 3.39 × 10−08 | 8.79 × 10−08 | 0.29\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00022",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4675310d",
+          "confidence": 0.9,
+          "evidence": "Row text: 2q33.2 | rs4675310d | 2:203880834 | A/G | 0.87 | intronic | NBEAL1, ICA1L | 0.027 | 0.005 | 5.92 | ++?? | 9,011/39,243 | 2.71 × 10−09 | 3.27 × 10−09 | 0.64\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.27e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 2q33.2 | rs4675310d | 2:203880834 | A/G | 0.87 | intronic | NBEAL1, ICA1L | 0.027 | 0.005 | 5.92 | ++?? | 9,011/39,243 | 2.71 × 10−09 | 3.27 × 10−09 | 0.64\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.027,
+          "confidence": 0.65,
+          "evidence": "Row text: 2q33.2 | rs4675310d | 2:203880834 | A/G | 0.87 | intronic | NBEAL1, ICA1L | 0.027 | 0.005 | 5.92 | ++?? | 9,011/39,243 | 2.71 × 10−09 | 3.27 × 10−09 | 0.64\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00023",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6769442",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q26.31 | rs6769442 | 3:171565463 | G/A | 0.75 | intronic | TMEM212 | 0.02 | 0.004 | 5.74 | ++?+ | 9,101/39,788 | 1.68 × 10−08 | 9.34 × 10−09 | 0.96\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.340000000000001e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q26.31 | rs6769442 | 3:171565463 | G/A | 0.75 | intronic | TMEM212 | 0.02 | 0.004 | 5.74 | ++?+ | 9,101/39,788 | 1.68 × 10−08 | 9.34 × 10−09 | 0.96\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.02,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q26.31 | rs6769442 | 3:171565463 | G/A | 0.75 | intronic | TMEM212 | 0.02 | 0.004 | 5.74 | ++?+ | 9,101/39,788 | 1.68 × 10−08 | 9.34 × 10−09 | 0.96\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00024",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10797812d",
+          "confidence": 0.9,
+          "evidence": "Row text: 1q25.3 | rs10797812d | 1:182984597 | A/G | 0.54 | intergenic | SHCBP1L, LAMC1 | 0.027 | 0.004 | 7.84 | ++++ | 9,399/40,095 | 1.67 × 10−14 | 4.39 × 10−15 | 0.68\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.39e-15,
+          "confidence": 0.7,
+          "evidence": "Row text: 1q25.3 | rs10797812d | 1:182984597 | A/G | 0.54 | intergenic | SHCBP1L, LAMC1 | 0.027 | 0.004 | 7.84 | ++++ | 9,399/40,095 | 1.67 × 10−14 | 4.39 × 10−15 | 0.68\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.027,
+          "confidence": 0.65,
+          "evidence": "Row text: 1q25.3 | rs10797812d | 1:182984597 | A/G | 0.54 | intergenic | SHCBP1L, LAMC1 | 0.027 | 0.004 | 7.84 | ++++ | 9,399/40,095 | 1.67 × 10−14 | 4.39 × 10−15 | 0.68\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00025",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs78857879d",
+          "confidence": 0.9,
+          "evidence": "Row text: 2p16.1 | rs78857879d | 2:56135099 | G/A | 0.9 | intronic | EFEMP1 | 0.038 | 0.006 | 6.43 | +??? | 9,033/38,008 | 8.20 × 10−11 | 1.31 × 10−10 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.31e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: 2p16.1 | rs78857879d | 2:56135099 | G/A | 0.9 | intronic | EFEMP1 | 0.038 | 0.006 | 6.43 | +??? | 9,033/38,008 | 8.20 × 10−11 | 1.31 × 10−10 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.038,
+          "confidence": 0.65,
+          "evidence": "Row text: 2p16.1 | rs78857879d | 2:56135099 | G/A | 0.9 | intronic | EFEMP1 | 0.038 | 0.006 | 6.43 | +??? | 9,033/38,008 | 8.20 × 10−11 | 1.31 × 10−10 | 1.0\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37069360_table1_R00026",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6540873",
+          "confidence": 0.9,
+          "evidence": "Row text: 1q41 | rs6540873 | 1:215137222 | A/C | 0.62 | intergenic | CENPF, KCNK2 | 0.02 | 0.004 | 5.95 | +−−+ | 9,399/40,095 | 1.38 × 10−09 | 2.72 × 10−09 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.7200000000000005e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 1q41 | rs6540873 | 1:215137222 | A/C | 0.62 | intergenic | CENPF, KCNK2 | 0.02 | 0.004 | 5.95 | +−−+ | 9,399/40,095 | 1.38 × 10−09 | 2.72 × 10−09 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.02,
+          "confidence": 0.65,
+          "evidence": "Row text: 1q41 | rs6540873 | 1:215137222 | A/C | 0.62 | intergenic | CENPF, KCNK2 | 0.02 | 0.004 | 5.95 | +−−+ | 9,399/40,095 | 1.38 × 10−09 | 2.72 × 10−09 | 0.11\n[Stage evidence] \n[Model evidence] \n[Imputation evidence]",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        }
+      ]
+    }
+  ]
+}
