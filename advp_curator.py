@@ -167,12 +167,12 @@ def safe_float(x) -> Optional[float]:
                 return None
             return v
         s = str(x).strip()
-        s = s.replace("×", "x").replace("−", "-")
+        s = s.replace("×", "x").replace("−", "-").replace("–", "-")
         # parse scientific like 4.2 x 10^-5
-        sci = re.search(r"([0-9.]+)\s*x\s*10\^?(-?\d+)", s, flags=re.I)
+        sci = re.search(r"([0-9.]+)\s*[x*]\s*10\s*\^?\s*([+-]?\s*\d+)", s, flags=re.I)
         if sci:
             base = float(sci.group(1))
-            exp = int(sci.group(2))
+            exp = int(re.sub(r"\s+", "", sci.group(2)))
             return base * (10 ** exp)
         v = float(s)
         if pd.isna(v):
@@ -478,6 +478,38 @@ def _normalize_table(df: pd.DataFrame) -> pd.DataFrame:
             seen[k] = seen.get(k, 0) + 1
             unique_cols.append(c if seen[k] == 1 else f"{c}_{seen[k]}")
         raw.columns = unique_cols
+
+        # Handle 2-level headers common in exported GWAS tables:
+        # row0: group name (e.g., i-Share (dichotomous))
+        # row1: metric name (e.g., OR (95% CI), P value)
+        if len(raw) >= 2:
+            candidate_idx = None
+            for ridx in range(min(3, len(raw))):
+                row_vals = [_normalize_cell_text(x) for x in raw.iloc[ridx].tolist()]
+                metric_hits = sum(
+                    1 for x in row_vals
+                    if any(k in x.lower() for k in ["p value", "or", "beta", "β", "ci", "z-score", "hr", "se", "ea/oa", "snp", "chr:position", "effect", "frq"])
+                )
+                if metric_hits >= max(3, len(row_vals) // 6):
+                    candidate_idx = ridx
+                    break
+
+            if candidate_idx is not None:
+                first_row = [_normalize_cell_text(x) for x in raw.iloc[candidate_idx].tolist()]
+                merged_cols = []
+                for c, sub in zip(raw.columns.tolist(), first_row):
+                    merged_cols.append(f"{c} {sub}".strip() if sub else str(c))
+                dedup = {}
+                final_cols = []
+                for c in merged_cols:
+                    k = c.lower()
+                    dedup[k] = dedup.get(k, 0) + 1
+                    final_cols.append(c if dedup[k] == 1 else f"{c}_{dedup[k]}")
+                body = raw.iloc[candidate_idx + 1:].copy()
+                body.columns = final_cols
+                body = body.dropna(axis=0, how="all")
+                return body
+
         return raw.dropna(axis=0, how="all")
 
     keyword_re = re.compile(r"(snp|rsid|p\s*-?value|beta|or|odds|chr|position|bp|allele|maf|ci)", re.I)
@@ -571,6 +603,17 @@ def _pick_pvalue_column(columns: List[str]) -> Optional[str]:
     generic = [c for c in columns if "p-value" in nmap[c] or "p value" in nmap[c]]
     if generic:
         return generic[-1]
+
+    # Relaxed fallback for columns like "P Joint", "P G", "P GxAge".
+    relaxed = []
+    for c in columns:
+        n = nmap[c]
+        if "pf" in n or "het p" in n:
+            continue
+        if re.search(r"\bp\b", n):
+            relaxed.append(c)
+    if relaxed:
+        return relaxed[-1]
     return None
 
 
@@ -626,6 +669,23 @@ def _split_ea_oa(allele_text: str) -> Tuple[str, str]:
     return "", ""
 
 
+def _split_a1a2_maf(text: str) -> Tuple[str, str, str]:
+    """
+    Parse strings like:
+    - 'A/G (0.198)' -> ('A', 'G', '0.198')
+    """
+    s = _normalize_cell_text(text)
+    if not s:
+        return "", "", ""
+    m = re.search(r"([^/\s()]+)/([^()\s]+)\s*\(([^)]+)\)", s)
+    if m:
+        return m.group(1).strip(), m.group(2).strip(), m.group(3).strip()
+    parts = [p.strip() for p in re.split(r"[\\/|]", s) if p and p.strip()]
+    if len(parts) >= 2:
+        return parts[0], parts[1], ""
+    return "", "", ""
+
+
 def _parse_chr_bp(chr_text: str, pos_text: str) -> Tuple[str, str]:
     """
     Parse chr and position from either:
@@ -640,6 +700,29 @@ def _parse_chr_bp(chr_text: str, pos_text: str) -> Tuple[str, str]:
         if m:
             return m.group(1), m.group(2)
     return c, p
+
+
+def _extract_effect_and_ci(effect_text: str, effect_type: str) -> Tuple[Optional[float], str]:
+    """
+    Parse patterns like:
+    - OR/HR: '1.26 (0.83-1.92)' -> effect=1.26, ci='(0.83-1.92)'
+    - Beta:  '0.164 (0.04)'     -> effect=0.164, ci=''
+    """
+    s = _normalize_cell_text(effect_text).replace("−", "-")
+    if not s:
+        return None, ""
+
+    # first numeric token = effect value
+    m = re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", s)
+    effect = float(m.group(0)) if m else None
+
+    ci = ""
+    paren = re.search(r"\(([^)]+)\)", s)
+    if paren and effect_type in ("OR", "HR"):
+        inner = paren.group(1).strip()
+        if "–" in inner or "-" in inner:
+            ci = f"({inner})"
+    return effect, ci
 
 
 def _effect_type_from_colname(colname: str) -> str:
@@ -664,16 +747,31 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
     - Nagahama (continuous)
     """
     defs: Dict[str, Dict[str, str]] = {}
+    subgroup_labels = [
+        ("i-Share", ["i-share"]),
+        ("Nagahama", ["nagahama"]),
+        ("European ancestry meta-analysis", ["european ancestry", "european meta-analysis"]),
+        ("Multi-ethnic meta-analysis", ["multi-ethnic", "multi ethnic"]),
+        ("Replication sample", ["replication sample", "replication"]),
+    ]
+
     for col in columns:
         n = _norm_colname(col)
-        if "i-share" not in n and "nagahama" not in n:
-            continue
-        if "dichotomous" not in n and "continuous" not in n:
+        subgroup_name = None
+        for label, keys in subgroup_labels:
+            if any(k in n for k in keys):
+                subgroup_name = label
+                break
+        if subgroup_name is None:
             continue
 
-        cohort = "i-Share" if "i-share" in n else "Nagahama"
-        mode = "dichotomous" if "dichotomous" in n else "continuous"
-        label = f"{cohort} ({mode})"
+        mode = ""
+        if "dichotomous" in n:
+            mode = "dichotomous"
+        elif "continuous" in n:
+            mode = "continuous"
+
+        label = f"{subgroup_name} ({mode})" if mode else subgroup_name
 
         defs.setdefault(label, {})
         if "p value all" in n or "p-value all" in n:
@@ -682,7 +780,7 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
             defs[label].setdefault("p", col)
         elif "95" in n and "ci" in n:
             defs[label]["ci"] = col
-        elif any(k in n for k in ["beta", "β", "odds ratio", " hr", "hazard ratio", "z-score", "zscore"]):
+        elif any(k in n for k in ["beta", "β", "effect", "odds ratio", " hr", "hazard ratio", "z-score", "zscore"]):
             defs[label]["effect"] = col
 
     return defs
@@ -713,9 +811,12 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     rs_col = variant_col
     chr_col = _pick_preferred_column(columns, ["chr:position", "chr", "chromosome"])
     bp_col = _pick_preferred_column(columns, ["position", "bp", "base pair", "pos"])
-    locus_col = _pick_preferred_column(columns, ["nearest gene", "closest gene", "gene"])
+    locus_col = _pick_preferred_column(columns, ["nearest gene", "closest gene", "nearestgene", "locusname", "locus name"])
     maf_col = _pick_preferred_column(columns, ["eaf", "maf", "af"])
+    a1_col = _pick_preferred_column(columns, ["a1"], ["allele 1"])
+    a2_col = _pick_preferred_column(columns, ["a2"], ["allele 2"])
     ea_oa_col = _pick_preferred_column(columns, ["ea/oa", "ea / oa", "effect allele/other allele"])
+    a1a2maf_col = _pick_preferred_column(columns, ["a1/a2", "a1/a2 a (maf)", "a1/a2a (maf)"])
     major_minor_col = _pick_preferred_column(columns, ["major/ minor alleles", "major/minor", "alleles", "allele"])
 
     p_col = _pick_pvalue_column(columns)
@@ -750,8 +851,27 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         pval_default = safe_float(row.get(p_col)) if p_col else None
         effect_default = safe_float(row.get(effect_col)) if effect_col else None
         ci_default = _normalize_cell_text(row.get(ci_col)) if ci_col else ""
-        if ea_oa_col:
+        if effect_col:
+            parsed_effect, parsed_ci = _extract_effect_and_ci(_normalize_cell_text(row.get(effect_col)), effect_type)
+            if parsed_effect is not None:
+                effect_default = parsed_effect
+            if parsed_ci and not ci_default:
+                ci_default = parsed_ci
+        if effect_default is None and ci_default and effect_type in ("OR", "HR"):
+            parsed_effect, parsed_ci = _extract_effect_and_ci(ci_default, effect_type)
+            if parsed_effect is not None:
+                effect_default = parsed_effect
+            if parsed_ci:
+                ci_default = parsed_ci
+        if a1a2maf_col:
+            ra1_minor, ra2_major, maf_from_a1a2 = _split_a1a2_maf(_normalize_cell_text(row.get(a1a2maf_col)))
+            if maf_from_a1a2:
+                maf_val = maf_from_a1a2
+        elif ea_oa_col:
             ra1_minor, ra2_major = _split_ea_oa(_normalize_cell_text(row.get(ea_oa_col)))
+        elif a1_col and a2_col:
+            ra1_minor = _normalize_cell_text(row.get(a1_col))
+            ra2_major = _normalize_cell_text(row.get(a2_col))
         else:
             ra1_minor, ra2_major = _split_major_minor(_normalize_cell_text(row.get(major_minor_col)) if major_minor_col else "")
 
@@ -764,8 +884,21 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         if subgroup_defs:
             for sub_label, metric_cols in subgroup_defs.items():
                 sp = safe_float(row.get(metric_cols["p"])) if metric_cols.get("p") else None
+                subgroup_effect_type = _effect_type_from_colname(metric_cols["effect"]) if metric_cols.get("effect") else effect_type
                 se = safe_float(row.get(metric_cols["effect"])) if metric_cols.get("effect") else None
                 sci = _normalize_cell_text(row.get(metric_cols["ci"])) if metric_cols.get("ci") else ""
+                if metric_cols.get("effect"):
+                    parsed_effect, parsed_ci = _extract_effect_and_ci(_normalize_cell_text(row.get(metric_cols["effect"])), subgroup_effect_type)
+                    if parsed_effect is not None:
+                        se = parsed_effect
+                    if parsed_ci and not sci:
+                        sci = parsed_ci
+                if se is None and sci and subgroup_effect_type in ("OR", "HR"):
+                    parsed_effect, parsed_ci = _extract_effect_and_ci(sci, subgroup_effect_type)
+                    if parsed_effect is not None:
+                        se = parsed_effect
+                    if parsed_ci:
+                        sci = parsed_ci
                 if sp is None and se is None:
                     continue
                 subgroup_records.append({
@@ -773,7 +906,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                     "p": sp,
                     "effect": se,
                     "ci": sci,
-                    "effect_type": _effect_type_from_colname(metric_cols["effect"]) if metric_cols.get("effect") else effect_type,
+                    "effect_type": subgroup_effect_type,
                 })
         if not subgroup_records:
             subgroup_records = [{
@@ -862,7 +995,7 @@ def run_pipeline(pdf_or_url: Optional[str],
     meta_joint = classify_meta_joint(stage_val)
 
     # 4) Extract tables
-    table_entries: List[Tuple[str, pd.DataFrame]] = []
+    table_entries: List[Tuple[str, pd.DataFrame, int]] = []
     table_source_errors: List[Dict[str, str]] = []
     if table_input:
         for src in parse_table_sources(table_input):
@@ -871,12 +1004,15 @@ def run_pipeline(pdf_or_url: Optional[str],
             except Exception as e:
                 table_source_errors.append({"source": src, "error": repr(e)})
                 continue
+            m = re.search(r"table[\s_-]?(\d+)", os.path.basename(src), flags=re.I)
+            src_table_num = int(m.group(1)) if m else None
             for j, tdf in enumerate(src_tables, start=1):
                 label = f"{os.path.basename(src)}#{j}"
-                table_entries.append((label, tdf))
+                logical_idx = src_table_num if (src_table_num is not None and len(src_tables) == 1) else j
+                table_entries.append((label, tdf, logical_idx))
     elif pdf_path:
         for j, tdf in enumerate(extract_tables(pdf_path, pages="all"), start=1):
-            table_entries.append((f"Table {j}", tdf))
+            table_entries.append((f"Table {j}", tdf, j))
 
     # 5) Convert each table to records (heuristic)
     records: List[Dict[str, Any]] = []
@@ -905,14 +1041,14 @@ def run_pipeline(pdf_or_url: Optional[str],
             f"See errors in audit: {audit_json}"
         )
 
-    for idx, (source_label, df) in enumerate(table_entries, start=1):
-        table_ref = f"Table {idx}"
+    for _, (source_label, df, logical_idx) in enumerate(table_entries, start=1):
+        table_ref = f"Table {logical_idx}"
         if table_input:
             table_link = source_label.split("#")[0]
         else:
             table_link = pdf_or_url if (pdf_or_url and pdf_or_url.lower().startswith("http")) else "local_pdf"
 
-        recs = extract_records_from_table(df, idx, paper_id, pmcid, table_ref, table_link)
+        recs = extract_records_from_table(df, logical_idx, paper_id, pmcid, table_ref, table_link)
         for r in recs:
             # Apply global inferred values as pre-fill
             r["Stage"] = stage_val
@@ -987,6 +1123,12 @@ def run_pipeline(pdf_or_url: Optional[str],
 
 
 def main():
+    def _clean_user_input(s: str) -> str:
+        s = (s or "").strip()
+        if len(s) >= 2 and ((s[0] == '"' and s[-1] == '"') or (s[0] == "'" and s[-1] == "'")):
+            s = s[1:-1].strip()
+        return s
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=False, default=None, help="PDF path or URL")
     parser.add_argument("--table_input", default=None, help="Table source(s): URL/path; comma-separated for multiple")
@@ -999,7 +1141,7 @@ def main():
 
     # Interactive fallback: prompt when key args are missing.
     if not args.input and not args.table_input:
-        src = input("Input source path/URL (PDF or table file/URL): ").strip()
+        src = _clean_user_input(input("Input source path/URL (PDF or table file/URL): "))
         if not src:
             raise ValueError("Input source is required.")
         src_low = src.lower()
@@ -1008,7 +1150,7 @@ def main():
         elif src_low.endswith((".xlsx", ".xls", ".csv", ".tsv", ".html", ".htm")):
             args.table_input = src
         else:
-            mode_hint = input("Treat source as table input? [Y/n]: ").strip()
+            mode_hint = _clean_user_input(input("Treat source as table input? [Y/n]: "))
             # Normalize common full-width answers (e.g., Ｙ/Ｎ)
             mode_hint = mode_hint.translate(str.maketrans({"Ｙ": "Y", "ｙ": "y", "Ｎ": "N", "ｎ": "n"})).lower()
             if mode_hint in ("", "y", "yes"):
@@ -1017,19 +1159,19 @@ def main():
                 args.input = src
 
     if not args.out:
-        out_val = input("Output xlsx path [curated_output.xlsx]: ").strip()
+        out_val = _clean_user_input(input("Output xlsx path [curated_output.xlsx]: "))
         args.out = out_val or "curated_output.xlsx"
     elif args.out == "curated_output.xlsx":
-        out_val = input("Output xlsx path [curated_output.xlsx]: ").strip()
+        out_val = _clean_user_input(input("Output xlsx path [curated_output.xlsx]: "))
         args.out = out_val or args.out
 
     if not args.paper_id or args.paper_id == "PAPER":
-        pid = input("paper_id [PAPER]: ").strip()
+        pid = _clean_user_input(input("paper_id [PAPER]: "))
         args.paper_id = pid or "PAPER"
 
     if not args.audit or args.audit == "audit.json":
         auto_audit = f"{args.paper_id}_audit.json" if args.paper_id else "audit.json"
-        audit_val = input(f"Audit json path [{auto_audit}]: ").strip()
+        audit_val = _clean_user_input(input(f"Audit json path [{auto_audit}]: "))
         args.audit = audit_val or auto_audit
 
     # Safety: if user accidentally sets --input to a table file, reroute it.
