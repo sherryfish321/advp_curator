@@ -79,7 +79,7 @@ python3 advp_curator.py \
 - `TableIDX`: `T00001`, `T00002`, ...
 
 ## Outputs
-- Curated Excel：`--out` 指定路徑
+- Curated Excel：`--out` 
 - Audit JSON: path from `--audit` (in interactive mode, default is `${paper_id}_audit.json`)
 
 ## Troubleshooting
