@@ -1,5 +1,8 @@
 import argparse
+import io
 import re
+import subprocess
+import tarfile
 from typing import List, Optional, Tuple
 
 import pandas as pd
@@ -31,8 +34,37 @@ def fetch_html(url: str, timeout: int = 60) -> str:
         "Referer": "https://www.google.com/",
     }
     resp = requests.get(url, timeout=timeout, headers=headers)
+    if resp.ok and resp.text:
+        return resp.text
+    # Fallback: some PMC pages block Python requests but allow curl.
+    if resp.status_code == 403:
+        curl_text = _curl_get_text(url, timeout=timeout)
+        if curl_text:
+            return curl_text
     resp.raise_for_status()
     return resp.text
+
+
+def _curl_get_text(url: str, timeout: int = 60) -> Optional[str]:
+    try:
+        cmd = [
+            "curl",
+            "-L",
+            "--max-time",
+            str(timeout),
+            "-A",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+            "-H",
+            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            url,
+        ]
+        res = subprocess.run(cmd, capture_output=True, text=True)
+        if res.returncode == 0 and res.stdout.strip():
+            return res.stdout
+    except Exception:
+        pass
+    return None
 
 
 def _extract_pmc_info(url: str) -> Tuple[Optional[str], Optional[str]]:
@@ -44,14 +76,136 @@ def _extract_pmc_info(url: str) -> Tuple[Optional[str], Optional[str]]:
     return pmcid, table_id
 
 
+def _try_pmc_direct_table_download(pmcid: str, table_id: str, timeout: int = 60) -> Optional[List[pd.DataFrame]]:
+    if requests is None:
+        return None
+    pmcid_num = re.sub(r"^PMC", "", pmcid, flags=re.I)
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "text/csv,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    }
+    candidates = [
+        f"https://pmc.ncbi.nlm.nih.gov/articles/instance/{pmcid_num}/bin/{table_id}.csv",
+        f"https://pmc.ncbi.nlm.nih.gov/articles/instance/{pmcid_num}/bin/{table_id}.htm",
+        f"https://pmc.ncbi.nlm.nih.gov/articles/instance/{pmcid_num}/bin/{table_id}.html",
+        f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/table/{table_id}/?download=1",
+        f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/table/{table_id}/?download=csv",
+    ]
+
+    for url in candidates:
+        try:
+            r = requests.get(url, timeout=timeout, headers=headers)
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            text = r.text if (r.ok and r.text.strip()) else ""
+            if (not text) and r.status_code == 403:
+                text = _curl_get_text(url, timeout=timeout) or ""
+                ctype = "text/html"
+            if not text:
+                continue
+            if "csv" in ctype or re.search(r",", text.splitlines()[0] if text.splitlines() else ""):
+                try:
+                    return [pd.read_csv(io.StringIO(text))]
+                except Exception:
+                    pass
+            # try parse as HTML table(s)
+            try:
+                dfs = pd.read_html(io.StringIO(text))
+                dfs = [d for d in dfs if not d.empty]
+                if dfs:
+                    return dfs
+            except Exception:
+                pass
+        except Exception:
+            continue
+    return None
+
+
 def fetch_pmc_fulltext_xml(pmcid: str, timeout: int = 60) -> str:
     if requests is None:
         raise RuntimeError("requests is not installed. Run: python3 -m pip install requests")
-    api_url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/{pmcid}/fullTextXML"
     headers = {"User-Agent": "Mozilla/5.0", "Accept": "application/xml,text/xml,*/*"}
-    resp = requests.get(api_url, timeout=timeout, headers=headers)
-    resp.raise_for_status()
-    return resp.text
+
+    errors = []
+
+    # 1) Europe PMC full text XML
+    api_url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/{pmcid}/fullTextXML"
+    try:
+        resp = requests.get(api_url, timeout=timeout, headers=headers)
+        if resp.ok and resp.text.strip():
+            return resp.text
+        if resp.status_code == 403:
+            curl_text = _curl_get_text(api_url, timeout=timeout)
+            if curl_text:
+                return curl_text
+        errors.append(f"europepmc_fullTextXML:{resp.status_code}")
+    except Exception as e:
+        errors.append(f"europepmc_fullTextXML:{repr(e)}")
+
+    # 2) NCBI OAI-PMH fallback
+    pmcid_num = re.sub(r"^PMC", "", pmcid, flags=re.I)
+    oai_url = (
+        "https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi"
+        f"?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:{pmcid_num}&metadataPrefix=pmc"
+    )
+    try:
+        resp2 = requests.get(oai_url, timeout=timeout, headers=headers)
+        if resp2.ok and resp2.text.strip():
+            return resp2.text
+        if resp2.status_code == 403:
+            curl_text = _curl_get_text(oai_url, timeout=timeout)
+            if curl_text:
+                return curl_text
+        errors.append(f"ncbi_oai:{resp2.status_code}")
+    except Exception as e:
+        errors.append(f"ncbi_oai:{repr(e)}")
+
+    # 3) PMC Open Access API fallback: download OA package and extract .nxml
+    oa_api = f"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id={pmcid}"
+    try:
+        oa_resp = requests.get(oa_api, timeout=timeout, headers=headers)
+        oa_text = oa_resp.text if (oa_resp.ok and oa_resp.text) else ""
+        if (not oa_text) and oa_resp.status_code == 403:
+            oa_text = _curl_get_text(oa_api, timeout=timeout) or ""
+        if oa_text:
+            oa_soup = BeautifulSoup(oa_text, "xml") if BeautifulSoup is not None else None
+            tgz_url = None
+            if oa_soup is not None:
+                # Try strict format first.
+                link = oa_soup.find("link", {"format": "tgz"})
+                if link and link.get("href"):
+                    tgz_url = link.get("href")
+                # Then relaxed search by href suffix.
+                if not tgz_url:
+                    for lk in oa_soup.find_all("link"):
+                        href = lk.get("href")
+                        if href and re.search(r"\.(?:tgz|tar\.gz)$", href, flags=re.I):
+                            tgz_url = href
+                            break
+
+            # Final fallback: regex over raw XML.
+            if not tgz_url:
+                m = re.search(r'href="([^"]+\.(?:tgz|tar\.gz))"', oa_text, flags=re.I)
+                if m:
+                    tgz_url = m.group(1)
+
+            if tgz_url:
+                    # OA API often returns ftp URLs; convert to https mirror.
+                    if tgz_url.startswith("ftp://ftp.ncbi.nlm.nih.gov"):
+                        tgz_url = tgz_url.replace("ftp://ftp.ncbi.nlm.nih.gov", "https://ftp.ncbi.nlm.nih.gov", 1)
+                    tgz_resp = requests.get(tgz_url, timeout=timeout, headers=headers)
+                    tgz_resp.raise_for_status()
+                    with tarfile.open(fileobj=io.BytesIO(tgz_resp.content), mode="r:gz") as tar:
+                        for member in tar.getmembers():
+                            if member.isfile() and member.name.lower().endswith(".nxml"):
+                                f = tar.extractfile(member)
+                                if f is not None:
+                                    xml_bytes = f.read()
+                                    return xml_bytes.decode("utf-8", errors="ignore")
+        errors.append(f"pmc_oa_api:{oa_resp.status_code if 'oa_resp' in locals() else 'unknown'}")
+    except Exception as e:
+        errors.append(f"pmc_oa_api:{repr(e)}")
+
+    raise RuntimeError(f"Unable to fetch full text XML for {pmcid}. Fallback errors: {'; '.join(errors)}")
 
 
 def parse_html_table(table_tag) -> List[List[str]]:
@@ -111,6 +265,18 @@ def sanitize_sheet_name(name: str, fallback: str) -> str:
     return name[:31]
 
 
+def _flatten_columns(df: pd.DataFrame) -> pd.DataFrame:
+    if isinstance(df.columns, pd.MultiIndex):
+        flat_cols = []
+        for col in df.columns:
+            parts = [str(x).strip() for x in col if str(x).strip() and str(x).strip().lower() != "nan"]
+            flat_cols.append(" | ".join(parts) if parts else "")
+        out = df.copy()
+        out.columns = flat_cols
+        return out
+    return df
+
+
 def pick_table(soup, table_id: Optional[str], table_selector: Optional[str], table_index: int):
     if table_id:
         t = soup.find("table", {"id": table_id})
@@ -118,6 +284,14 @@ def pick_table(soup, table_id: Optional[str], table_selector: Optional[str], tab
             wrap = soup.find("table-wrap", {"id": table_id})
             if wrap is not None:
                 t = wrap.find("table")
+        if t is None:
+            # case-insensitive id fallback
+            tid = table_id.lower()
+            t = soup.find("table", id=lambda x: isinstance(x, str) and x.lower() == tid)
+            if t is None:
+                wrap = soup.find("table-wrap", id=lambda x: isinstance(x, str) and x.lower() == tid)
+                if wrap is not None:
+                    t = wrap.find("table")
         if t is None:
             raise ValueError(f"Cannot find table with id={table_id}")
         return [t]
@@ -151,6 +325,17 @@ def main():
 
     pmcid, url_table_id = _extract_pmc_info(args.url)
     resolved_table_id = args.table_id or url_table_id
+
+    # Fast-path fallback for PMC direct table assets (often bypasses page-level 403).
+    if pmcid and resolved_table_id:
+        direct_tables = _try_pmc_direct_table_download(pmcid, resolved_table_id)
+        if direct_tables:
+            with pd.ExcelWriter(args.out, engine="openpyxl") as writer:
+                for i, df in enumerate(direct_tables, start=1):
+                    df2 = _flatten_columns(df)
+                    df2.to_excel(writer, index=False, sheet_name=sanitize_sheet_name("", f"table_{i}"))
+            print(f"Saved {len(direct_tables)} table(s) to {args.out}")
+            return
 
     html = ""
     soup = None
@@ -196,7 +381,8 @@ def main():
             if cap:
                 caption = _clean_text(cap.get_text(" ", strip=True))
             sheet = sanitize_sheet_name(caption, fallback=f"table_{i}")
-            df.to_excel(writer, index=False, header=False, sheet_name=sheet)
+            df2 = _flatten_columns(df)
+            df2.to_excel(writer, index=False, header=False, sheet_name=sheet)
 
     print(f"Saved {len(tables)} table(s) to {args.out}")
 
