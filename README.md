@@ -4,6 +4,16 @@
 
 ## Features
 - Outputs a fixed set of 46 curated columns (independent of raw table layout)
+- Text extraction fallback chain for PDF context fields:
+  - `pdfplumber` (default)
+  - `Docling` fallback only when Methods/Results signals are weak
+  - OCR + page-rotation retry (0/90/180/270) as final rescue
+- Section-aware context extraction (`Methods` / `Results` / `Supplement`) for:
+  - `Population`, `Cohort`, `Sample size`, `Imputation_simple2`, `Stage`, `Model type`
+- Abbreviation expansion and semantic column mapping to curated references
+  - e.g. `ADGC/IGAP/HRC/TOPMed` normalization
+  - low-confidence mapping score (`< 0.4`) flagged as `needs_review`
+- Generic subgroup melt/group logic for multi-header GWAS tables
 - Supports input sources:
   - PDF path / PDF URL
   - table URL
@@ -21,6 +31,11 @@
 ## Installation
 ```bash
 python3 -m pip install pandas openpyxl requests pdfplumber camelot-py lxml
+```
+
+Optional (for fallback rescue quality):
+```bash
+python3 -m pip install docling pymupdf pytesseract pillow
 ```
 
 ## Usage
