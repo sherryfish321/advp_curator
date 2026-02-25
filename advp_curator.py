@@ -269,6 +269,61 @@ def safe_float(x) -> Optional[float]:
         return None
 
 
+def infer_pub_ids_from_text(full_text: str) -> Tuple[str, str, str]:
+    """
+    Extract PMCID and PMID from paper full text.
+    Returns (pmcid, pmid, evidence).
+    """
+    text = str(full_text or "")
+    if not text:
+        return "NR", "NR", ""
+
+    pmcid = "NR"
+    pmid = "NR"
+    evidence = ""
+
+    pmcid_m = re.search(r"\bPMCID\s*[:：]?\s*(PMC\d{4,})\b", text, flags=re.I)
+    if not pmcid_m:
+        pmcid_m = re.search(r"\b(PMC\d{4,})\b", text, flags=re.I)
+    if pmcid_m:
+        pmcid = pmcid_m.group(1).upper()
+
+    pmid_m = re.search(r"\bPMID\s*[:：]?\s*(\d{6,10})\b", text, flags=re.I)
+    if not pmid_m:
+        pmid_m = re.search(r"\bPubMed\s*[:：]?\s*(\d{6,10})\b", text, flags=re.I)
+    if pmid_m:
+        pmid = pmid_m.group(1)
+
+    if pmcid != "NR" or pmid != "NR":
+        snippets = []
+        if pmcid != "NR":
+            snippets += find_snippets(text, [pmcid], window=80)
+        if pmid != "NR":
+            snippets += find_snippets(text, [pmid], window=80)
+        evidence = snippets[0] if snippets else ""
+
+    return pmcid, pmid, evidence
+
+
+def infer_pmid_from_source_name(pdf_or_url: Optional[str], table_input: Optional[str]) -> str:
+    """
+    Fallback PMID extraction from input filename, e.g.:
+    30448613_table1.xlsx -> 30448613
+    """
+    candidates: List[str] = []
+    if table_input:
+        candidates.extend(parse_table_sources(table_input))
+    if pdf_or_url:
+        candidates.append(pdf_or_url)
+
+    for src in candidates:
+        name = os.path.basename(str(src))
+        m = re.match(r"^(\d{6,10})", name)
+        if m:
+            return m.group(1)
+    return "NR"
+
+
 def expand_abbreviations(text: str) -> str:
     out = str(text or "")
     for short, full in ABBREVIATION_MAP.items():
@@ -1003,6 +1058,10 @@ def _pick_preferred_column(columns: List[str], primary_patterns: List[str], fall
 
 def _pick_pvalue_column(columns: List[str]) -> Optional[str]:
     nmap = {c: _norm_colname(c) for c in columns}
+    p_meta_candidates = [c for c in columns if ("p meta" in nmap[c] or "meta p" in nmap[c])]
+    if p_meta_candidates:
+        return p_meta_candidates[-1]
+
     p_joint_candidates = [c for c in columns if "p joint" in nmap[c]]
     if p_joint_candidates:
         return p_joint_candidates[-1]
@@ -1040,6 +1099,23 @@ def _pick_pvalue_column(columns: List[str]) -> Optional[str]:
     if relaxed:
         return relaxed[-1]
     return None
+
+
+def _infer_group_label_from_columns(columns: List[str]) -> str:
+    """
+    Infer a table-level analysis group label from column headers, e.g. 'HTN-P group'.
+    """
+    candidates: List[str] = []
+    for col in columns:
+        parts = [p.strip() for p in str(col).split("|")]
+        for p in parts:
+            if re.search(r"\bgroup\b", p, flags=re.I):
+                candidates.append(re.sub(r"\s+", " ", p).strip())
+    # prefer non-generic label
+    for c in candidates:
+        if c.lower() not in {"group", "analysis group"}:
+            return c
+    return candidates[0] if candidates else ""
 
 
 def _pick_effect_column(columns: List[str]) -> Tuple[Optional[str], str]:
@@ -1185,6 +1261,7 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
     parsed = _parse_pipe_grouped_columns(columns)
     if not parsed:
         return []
+    table_group_label = _infer_group_label_from_columns(columns)
 
     records: List[Dict[str, Any]] = []
 
@@ -1243,7 +1320,8 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
                 rec["Table links"] = table_link
                 rec["TopSNP"] = snp_val
                 rec["SNP-based, Gene-based"] = "SNP-based"
-                rec["Analysis group"] = re.sub(r"\s+[a-z]$", "", re.sub(r"\s+", " ", str(subgroup)).strip(), flags=re.I)
+                subgroup_clean = re.sub(r"\s+[a-z]$", "", re.sub(r"\s+", " ", str(subgroup)).strip(), flags=re.I)
+                rec["Analysis group"] = table_group_label or subgroup_clean
                 rec["LocusName"] = gene_val if not _looks_missing(gene_val) else ""
                 rec["Chr"] = chr_val
                 rec["BP(Position)"] = pos_val
@@ -1304,7 +1382,7 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
     defs: Dict[str, Dict[str, str]] = {}
 
     metric_tokens = {
-        "p": [r"\bp\b", r"p value", r"p-value", r"meta p"],
+        "p": [r"\bp\b", r"p value", r"p-value", r"meta p", r"p meta", r"p min", r"p q", r"p abs"],
         "ci": [r"95", r"\bci\b", r"confidence interval"],
         "effect": [r"\bor\b", r"odds ratio", r"\bbeta\b", r"β", r"\bhr\b", r"hazard ratio", r"z-score", r"effect"],
     }
@@ -1328,11 +1406,20 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
         group_label = ""
         if "|" in raw:
             parts = [p.strip() for p in raw.split("|") if p.strip()]
-            if len(parts) >= 2:
-                group_label = parts[-2]
+            if parts:
+                # Prefer the part explicitly containing 'group'
+                grp_parts = [p for p in parts if re.search(r"\bgroup\b", p, flags=re.I)]
+                if grp_parts:
+                    group_label = grp_parts[0]
+                elif len(parts) >= 2:
+                    group_label = parts[-2]
+        if not group_label:
+            gm = re.search(r"([A-Za-z0-9\-]+(?:\s*[-/]\s*[A-Za-z0-9]+)?\s+group)\b", raw, flags=re.I)
+            if gm:
+                group_label = gm.group(1)
         if not group_label:
             group_label = re.sub(
-                r"(p\s*-?value.*|meta p.*|95.*ci.*|confidence interval.*|odds ratio.*|\bor\b.*|\bbeta\b.*|β.*|\bhr\b.*|hazard ratio.*|z-?score.*|effect.*)$",
+                r"(p\s*-?value.*|p\s*meta.*|meta p.*|p\s*min.*|p\s*q.*|p\s*abs.*|95.*ci.*|confidence interval.*|odds ratio.*|\bor\b.*|\bbeta\b.*|β.*|\bhr\b.*|hazard ratio.*|z-?score.*|effect.*)$",
                 "",
                 raw,
                 flags=re.I,
@@ -1343,8 +1430,12 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
             continue
 
         defs.setdefault(group_label, {})
-        # keep first metric hit for stability
-        defs[group_label].setdefault(metric, col)
+        # For p-metrics, prioritize P meta over all others.
+        if metric == "p" and re.search(r"p\s*meta|meta p", n, flags=re.I):
+            defs[group_label]["p"] = col
+        else:
+            # keep first metric hit for stability
+            defs[group_label].setdefault(metric, col)
 
     return defs
 
@@ -1375,6 +1466,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         return pipe_records
 
     columns = list(body.columns)
+    table_group_label = _infer_group_label_from_columns(columns)
     col_mapping = map_columns_to_reference(columns, threshold=0.4)
 
     def mapped_col(ref_col: str) -> Optional[str]:
@@ -1601,7 +1693,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                 rec["_row_imputation_hint"] = row_imputation_hint
                 rec["_row_population_hint"] = row_population_hint
                 rec["_row_sample_size_hint"] = row_sample_size_hint
-                rec["Analysis group"] = sub["label"]
+                rec["Analysis group"] = table_group_label or sub["label"]
                 rec["Phenotype-derived"] = sub["label"].split("(")[-1].replace(")", "").strip() if sub["label"] else rec.get("Phenotype-derived", "")
                 rec["_confidence"] = 0.55 if rsid != "NR" else 0.4
                 low_map = [f"{c}:{m['score']}" for c, m in col_mapping.items() if m.get("needs_review")]
@@ -1657,6 +1749,11 @@ def run_pipeline(pdf_or_url: Optional[str],
     else:
         full_text, fulltext_source = "", "none"
     section_text = _sectionize_text(full_text)
+    # ID policy: do not infer from paper text; use table filename only.
+    resolved_pmid = infer_pmid_from_source_name(pdf_or_url, table_input)
+    ids_evidence = f"PMID inferred from source filename -> {resolved_pmid}" if resolved_pmid != "NR" else ""
+    # Per current requirement, keep PMCID empty.
+    resolved_pmcid = ""
     section_scoped_text = "\n".join([
         section_text.get("methods", ""),
         section_text.get("results", ""),
@@ -1698,10 +1795,12 @@ def run_pipeline(pdf_or_url: Optional[str],
     audits: Dict[str, Any] = {
         "paper": {
             "paper_id": paper_id,
-            "pmcid": pmcid,
+            "pmcid": resolved_pmcid,
+            "pmid": resolved_pmid,
             "pdf": pdf_path,
             "table_input": table_input or "NR",
             "full_text_source": fulltext_source,
+            "id_evidence": ids_evidence,
         },
         "table_source_errors": table_source_errors,
         "global_field_audit": [
@@ -1730,7 +1829,7 @@ def run_pipeline(pdf_or_url: Optional[str],
         else:
             table_link = pdf_or_url if (pdf_or_url and pdf_or_url.lower().startswith("http")) else "local_pdf"
 
-        recs = extract_records_from_table(df, logical_idx, paper_id, pmcid, table_ref, table_link)
+        recs = extract_records_from_table(df, logical_idx, paper_id, resolved_pmcid, table_ref, table_link)
         for r in recs:
             # Apply global inferred values as pre-fill
             r["Stage"] = stage_val
@@ -1740,6 +1839,8 @@ def run_pipeline(pdf_or_url: Optional[str],
             r["Meta/Joint"] = meta_joint
             row_imp = to_canonical_imputation_codes(r.get("_row_imputation_hint", ""))
             r["Imputation_simple2"] = row_imp if row_imp != "NR" else imp_val
+            r["PMCID"] = resolved_pmcid if resolved_pmcid != "NR" else r.get("PMCID", "")
+            r["Pubmed PMID"] = resolved_pmid if resolved_pmid != "NR" else r.get("Pubmed PMID", "")
             row_pop = _normalize_cell_text(r.get("_row_population_hint", ""))
             r["Population"] = row_pop if row_pop else pop_val
             row_sample = _normalize_cell_text(r.get("_row_sample_size_hint", ""))
@@ -1781,7 +1882,8 @@ def run_pipeline(pdf_or_url: Optional[str],
                              f"[Imputation evidence] {imp_audit.evidence[:240]}\n" +
                              f"[Population evidence] {pop_audit.evidence[:240]}\n" +
                              f"[Sample size evidence] {sample_size_audit.evidence[:240]}\n" +
-                             f"[Cohort evidence] {cohort_evidence[:240]}").strip()
+                             f"[Cohort evidence] {cohort_evidence[:240]}\n" +
+                             f"[ID evidence] {ids_evidence[:240]}").strip()
 
             records.append(r)
 
@@ -1821,7 +1923,8 @@ def run_pipeline(pdf_or_url: Optional[str],
         shell = {k: "NR" for k in CURATED_COLUMNS}
         shell["PaperIDX"] = paper_id
         shell["RecordID"] = f"{paper_id}_R00001"
-        shell["PMCID"] = pmcid
+        shell["PMCID"] = resolved_pmcid
+        shell["Pubmed PMID"] = resolved_pmid
         shell["Stage"] = stage_val
         shell["Analyses type"] = assoc_val
         shell["Model type"] = model_val

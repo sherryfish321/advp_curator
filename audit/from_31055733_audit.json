@@ -1,0 +1,3144 @@
+{
+  "paper": {
+    "paper_id": "31055733_table4",
+    "pmcid": "",
+    "pmid": "31055733",
+    "pdf": "/Users/sherryhuang/advp_curator/paper/11357_2019_Article_71.pdf",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/31055733_table4.xlsx",
+    "full_text_source": "pdfplumber",
+    "id_evidence": "PMID inferred from source filename -> 31055733"
+  },
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and HTN-N that there is a moderate to substantial between-groups groups, the GWA results from the four investigated geneticdiversity(i.e.,populationstratification)thatcan cohortswerecombinedbyaconv",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "es of possible functional variants. cerebralhypoperfusioninAlzheimerdiseaseandmildcog- Bioinforma Oxf Engl 31:3555–3557. https://doi. nitiveimpairmentmeasuredwitharterialspin-labelingMR org/10.1093/bioinformatics/btv402 imaging: initial experience. Radiology 234:851–859. MaebaR,NakaharaS(2017)Extrinsiceffectorsregulatinggenes https://doi.org/10.1148/radiol.2343040197 for plasmalogen biosynthetic enzymes in HepG2 cells. KesselsHW,NabaviS,Malino",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated cohorts, their genotype data were models(seebelow)areshowninTableS3.Theλvalues made comparable by imputing non-genotyped loci were all smaller than 1.1 suggesting that population in each data",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those older than 60 years single-nucleotide polymorphism (SNPs). Each dataset (Nwankwoetal.2013),isofgreatimportanceandhas wasdividedintotwogroupsofsubjectswithandwith- beenimplicatedinbothini",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no population cues found in methods/results/supplement",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no sample size cues found",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "31055733_table4_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs61095322",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00736,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs61095322",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.12e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs61095322",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.79e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs61095322",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.342,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000060971 | ACAA1 | rs61095322 | 3 | 38126634 | A | 0.955 | 7.36E−03 | 2.12E−10 | − 0.639 | 0.159 | 5.79E−05 | 3.42E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111388896",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00515,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111388896",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.27e-24,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111388896",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.95e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111388896",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.93,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000163945 | UVSSA | rs111388896 | 4 | 1166078 | C | 0.957 | 5.15E−03 | 2.27E−24 | 0.399 | 0.079 | 3.95E−07 | 9.30E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs62286001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00549,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs62286001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.84e-14,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs62286001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.82e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs62286001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.1,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000087008 | ACOX3 | rs62286001 | 4 | 8377136 | C | 0.943 | 5.49E−03 | 7.84E−14 | 0.524 | 0.127 | 3.82E−05 | 1.00E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17867001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0101,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17867001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.63e-17,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17867001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.72e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17867001",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.946,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000223969 | CDK14 | rs17867001 | 7 | 90631335 | G | 0.947 | 1.01E−02 | 4.63E−17 | 0.239 | 0.061 | 7.72E−05 | 9.46E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7106970",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000588,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7106970",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.15e-43,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00019",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7106970",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.18e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00020",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7106970",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.885,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000166788 | SAAL1 | rs7106970 | 11 | 18074035 | C | 0.407 | 5.88E−04 | 1.15E−43 | − 0.536 | 0.115 | 3.18E−06 | 8.85E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00021",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11602981",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00134,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00022",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11602981",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00023",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11602981",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.23e-146,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00024",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11602981",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.492,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000086205 | FOLH1 | rs11602981 | 11 | 49980436 | C | 0.076 | 1.34E−03 | 0 | 0.002 | 0.0001 | 3.23E−146 | 4.92E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"}, \"Gen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00025",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34008994",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000155,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00026",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34008994",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.79e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00027",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34008994",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.3e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00028",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34008994",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.334,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000149418 | ST14 | rs34008994 | 11 | 130165703 | C | 0.904 | 1.55E−04 | 2.79E−08 | − 1.072 | 0.246 | 1.30E−05 | 3.34E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00029",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17182607",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00478,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00030",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17182607",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00031",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17182607",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.2e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00032",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs17182607",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.421,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000259065 | LOC100506476 | rs17182607 | 14 | 73809286 | A | 0.846 | 4.78E−03 | 0 | 0.178 | 0.043 | 3.20E−05 | 4.21E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"},",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00033",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74019790",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0005,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00034",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74019790",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.3e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00035",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74019790",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.07e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00036",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74019790",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.157,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000070761 | C16orf80 | rs74019790 | 16 | 58107923 | T | 0.931 | 5.00E−04 | 6.30E−09 | − 0.927 | 0.211 | 1.07E−05 | 1.57E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00037",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12984273",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00271,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00038",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12984273",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.3e-21,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00039",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12984273",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.61e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table4_R00040",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12984273",
+          "confidence": 0.9,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.574,
+          "confidence": 0.7,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS;ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ENSG00000105298 | CACTIN | rs12984273 | 19 | 3647903 | T | 0.571 | 2.71E−03 | 1.30E−21 | − 0.592 | 0.151 | 8.61E−05 | 5.74E−01\n[column_mapping] {\"Probe ID\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2381, \"needs_review\": true, \"match_hint\": \"Probe ID\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

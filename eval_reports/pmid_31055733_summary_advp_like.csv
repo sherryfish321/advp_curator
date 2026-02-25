@@ -1,0 +1,5 @@
+file,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
+harmonized_tables_advp/from_31055733_table1_v1.xlsx,"pmid,snp,chr,bp,pvalue",16,79,0.0,0.0,0.0
+harmonized_tables_advp/from_31055733_table3_v1.xlsx,"pmid,snp,chr,bp,pvalue",96,79,0.4583333333333333,0.5569620253164557,0.5028571428571429
+harmonized_tables_advp/from_31055733_table4_v1.xlsx,"pmid,snp,chr,bp,pvalue",40,79,0.5,0.25316455696202533,0.33613445378151263
+combined_inputs,"pmid,snp,chr,bp,pvalue",152,79,0.4144736842105263,0.7974683544303798,0.5454545454545455

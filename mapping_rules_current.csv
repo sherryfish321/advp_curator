@@ -1,0 +1,16 @@
+column,description,is_numeric
+TopSNP,"Primary SNP identifier. Keywords: snp all, variant all, variant, rsid, snp, marker; also supports pipe-layout columns like '... | SNP ID | ...'. Examples: rs12345, rs4844600.",FALSE
+Chr,"Chromosome field. Keywords: chr:position, chr, chromosome. If chr:position exists, chr is parsed from prefix before ':'.",FALSE
+BP(Position),"Base-pair position. Keywords: position, bp, base pair, pos. If chr:position exists, position is parsed from suffix after ':'.",TRUE
+RA 1(Reported Allele 1),"Effect/risk allele mapping. Priority: A1/A2a(MAF) -> first allele; EA/OA -> EA; A1/A2 -> A1; major/minor string -> minor.",FALSE
+RA 2(Reported Allele 2),"Other/reference allele mapping. Priority: A1/A2a(MAF) -> second allele; EA/OA -> OA; A1/A2 -> A2; major/minor string -> major.",FALSE
+ReportedAF(MAF),"Allele frequency. Keywords: eaf, maf, af. Also parses from A1/A2a(MAF) pattern like 'A/G (0.198)' -> 0.198.",TRUE
+P-value,"Significance column selection priority: P Joint > P value All > Meta P > standard P/P-value/P value/Pval > relaxed P-like columns (excluding het p, pf). Supports scientific notation parsing.",TRUE
+Effect Size Type (OR or Beta),"Type inferred from column names. Priority: main-effect Beta (e.g., β G) > OR > Beta > HR > Zscore; otherwise NR.",FALSE
+EffectSize(altvsref),"Numeric effect value from selected effect column. Also parses strings like '1.26 (0.83–1.92)' -> effect 1.26.",TRUE
+95%ConfidenceInterval,"From explicit 95/CI columns, or parsed from effect strings like '1.26 (0.83–1.92)' when effect type is OR/HR.",FALSE
+LocusName,"Gene/locus label. Keywords: nearest gene, closest gene, nearestgene, locusname, locus name. In pipe-layout tables, gene can be section-level fallback.",FALSE
+Analysis group,"Subgroup label from wide tables (e.g., ADGC/ADSP; i-Share/Nagahama; European ancestry/Multi-ethnic/Replication). Used for row expansion.",FALSE
+Cohort,"Controlled-vocab cohort inference. Vocab includes ADGC, IGAP, EADI, GERAD, CHARGE, PENN, ADNI, AGES, HRS, ADSP. Uses row context first, then table-local/full-text fallback; low certainty -> needs_review.",FALSE
+Population,"Section-aware text extraction (Methods/Results/Supplement). Keywords/rules include European ancestry, Asian ancestry, African ancestry, Hispanic/Latino, Multi-ethnic.",FALSE
+Sample size,"Section-aware extraction from full text. Patterns include sample size/total N/N=... and participants/subjects/individuals/cases/controls.",TRUE
