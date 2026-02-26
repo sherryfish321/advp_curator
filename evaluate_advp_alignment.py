@@ -148,13 +148,21 @@ def build_keys(df: pd.DataFrame, key_cols: List[str]) -> List[tuple]:
     return keys
 
 
-def evaluate_one(pred_df: pd.DataFrame, gold_df: pd.DataFrame, path: str, key_mode: str = "auto") -> Dict:
+def evaluate_one(
+    pred_df: pd.DataFrame,
+    gold_df: pd.DataFrame,
+    path: str,
+    key_mode: str = "auto",
+    ignore_bp: bool = False,
+) -> Dict:
     if key_mode == "pmid_snp_pvalue":
         key_cols = [c for c in ["pmid", "snp", "pvalue"] if c in pred_df.columns and c in gold_df.columns]
         if "snp" not in key_cols:
             key_cols.insert(0, "snp")
     else:
         key_candidates = ["pmid", "snp", "chr", "bp", "ra1", "pvalue"]
+        if ignore_bp:
+            key_candidates = [c for c in key_candidates if c != "bp"]
         key_cols = []
         for c in key_candidates:
             if c in pred_df.columns and c in gold_df.columns:
@@ -177,6 +185,8 @@ def evaluate_one(pred_df: pd.DataFrame, gold_df: pd.DataFrame, path: str, key_mo
 
     field_metrics = {}
     compare_fields = ["pvalue", "effect", "cohort", "sample_size", "analysis_group", "population", "chr", "bp", "ra1"]
+    if ignore_bp:
+        compare_fields = [f for f in compare_fields if f != "bp"]
     row_key_cols = key_cols
     for field in compare_fields:
         if field not in pred_rows.columns or field not in gold_rows.columns:
@@ -300,6 +310,11 @@ def main():
         choices=["auto", "pmid_snp_pvalue"],
         help="auto: use richer composite key; pmid_snp_pvalue: match only on PMID+SNP+P-value",
     )
+    ap.add_argument(
+        "--ignore_bp",
+        action="store_true",
+        help="Ignore BP(Position) in key matching and field metrics (useful for hg37/hg38 coordinate differences).",
+    )
     args = ap.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
@@ -311,11 +326,11 @@ def main():
         pred = load_pred(p)
         pred = apply_pred_scope(pred, args.pred_scope)
         preds.append(pred)
-        reports.append(evaluate_one(pred, gold, p, key_mode=args.key_mode))
+        reports.append(evaluate_one(pred, gold, p, key_mode=args.key_mode, ignore_bp=args.ignore_bp))
 
     if len(preds) > 1:
         combined = pd.concat(preds, ignore_index=True)
-        reports.append(evaluate_one(combined, gold, "combined_inputs", key_mode=args.key_mode))
+        reports.append(evaluate_one(combined, gold, "combined_inputs", key_mode=args.key_mode, ignore_bp=args.ignore_bp))
 
     summary_rows = []
     for r in reports:

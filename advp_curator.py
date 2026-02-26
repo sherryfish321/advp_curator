@@ -1276,7 +1276,7 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
                 row_chr = _normalize_cell_text(row.get(c))
             if (not row_pos) and ("position" in lc or "bp" in lc):
                 row_pos = _normalize_cell_text(row.get(c))
-            if (not row_gene) and ("closest gene" in lc or "nearest gene" in lc):
+            if (not row_gene) and ("closest gene" in lc or "nearest gene" in lc or lc == "gene"):
                 row_gene = _normalize_cell_text(row.get(c))
 
         for section, subgroup_map in parsed.items():
@@ -1368,7 +1368,7 @@ def _effect_type_from_colname(colname: str) -> str:
         return "OR"
     if re.search(r"\bhr\b", n) or "hazard ratio" in n:
         return "HR"
-    if "z-score" in n or "zscore" in n:
+    if "z-score" in n or "zscore" in n or re.search(r"\bz\b", n):
         return "Zscore"
     return "NR"
 
@@ -1377,14 +1377,15 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
     """
     Detect melt-able subgroup metric columns from broad naming patterns.
     Expected output:
-      { "<group label>": {"p": col, "effect": col, "ci": col}, ... }
+      { "<group label>": {"snp": col, "p": col, "effect": col, "ci": col}, ... }
     """
     defs: Dict[str, Dict[str, str]] = {}
 
     metric_tokens = {
+        "snp": [r"\bsnp\b", r"\bvariant\b", r"\brsid\b", r"\bmarker\b"],
         "p": [r"\bp\b", r"p value", r"p-value", r"meta p", r"p meta", r"p min", r"p q", r"p abs"],
         "ci": [r"95", r"\bci\b", r"confidence interval"],
-        "effect": [r"\bor\b", r"odds ratio", r"\bbeta\b", r"β", r"\bhr\b", r"hazard ratio", r"z-score", r"effect"],
+        "effect": [r"\bor\b", r"odds ratio", r"\bbeta\b", r"β", r"\bhr\b", r"hazard ratio", r"z-score", r"\bz\b", r"effect"],
     }
 
     def metric_of(col_norm: str) -> str:
@@ -1419,11 +1420,12 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
                 group_label = gm.group(1)
         if not group_label:
             group_label = re.sub(
-                r"(p\s*-?value.*|p\s*meta.*|meta p.*|p\s*min.*|p\s*q.*|p\s*abs.*|95.*ci.*|confidence interval.*|odds ratio.*|\bor\b.*|\bbeta\b.*|β.*|\bhr\b.*|hazard ratio.*|z-?score.*|effect.*)$",
+                r"(p\s*-?value.*|p\s*meta.*|meta p.*|p\s*min.*|p\s*q.*|p\s*abs.*|95.*ci.*|confidence interval.*|odds ratio.*|\bor\b.*|\bbeta\b.*|β.*|\bhr\b.*|hazard ratio.*|z-?score.*|\bz\b.*|effect.*)$",
                 "",
                 raw,
                 flags=re.I,
             ).strip(" -_:|")
+        group_label = re.sub(r"\b(snp|variant|rsid|marker)\b.*$", "", group_label, flags=re.I).strip(" -_:|")
 
         group_label = re.sub(r"\s+", " ", group_label).strip()
         if not group_label:
@@ -1486,7 +1488,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     bp_col = _pick_preferred_column(columns, ["position", "bp", "base pair", "pos"])
     if not bp_col:
         bp_col = mapped_col("BP(Position)")
-    locus_col = _pick_preferred_column(columns, ["nearest gene", "closest gene", "nearestgene", "locusname", "locus name"])
+    locus_col = _pick_preferred_column(columns, ["nearest gene", "closest gene", "nearestgene", "locusname", "locus name", "gene"])
     if not locus_col:
         locus_col = mapped_col("LocusName")
     maf_col = _pick_preferred_column(columns, ["eaf", "maf", "af"])
@@ -1633,6 +1635,8 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         subgroup_records = []
         if subgroup_defs:
             for sub_label, metric_cols in subgroup_defs.items():
+                sub_snp_text = _normalize_cell_text(row.get(metric_cols["snp"])) if metric_cols.get("snp") else ""
+                sub_rsids = sorted(set([r.lower() for r in RSID_RE.findall(sub_snp_text)])) if sub_snp_text else []
                 sp = safe_float(row.get(metric_cols["p"])) if metric_cols.get("p") else None
                 subgroup_effect_type = _effect_type_from_colname(metric_cols["effect"]) if metric_cols.get("effect") else effect_type
                 se = safe_float(row.get(metric_cols["effect"])) if metric_cols.get("effect") else None
@@ -1653,6 +1657,8 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                     continue
                 subgroup_records.append({
                     "label": sub_label,
+                    "sub_snp_text": sub_snp_text,
+                    "sub_rsids": sub_rsids,
                     "p": sp,
                     "effect": se,
                     "ci": sci,
@@ -1667,17 +1673,19 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                 "effect_type": effect_type,
             }]
 
-        for rsid in names:
-            for sub in subgroup_records:
+        for sub in subgroup_records:
+            sub_names = sub.get("sub_rsids") or names
+            for rsid in sub_names:
+                snp_for_sub = sub.get("sub_snp_text") or variant_text or (rsid if rsid != "NR" else "")
                 rec = {k: "" for k in CURATED_COLUMNS}
-                rec["Name"] = rsid if rsid != "NR" else (variant_text or "")
+                rec["Name"] = rsid if rsid != "NR" else (snp_for_sub or "")
                 rec["PaperIDX"] = paper_id
                 rec["PMCID"] = pmcid
                 rec["TableIDX"] = f"T{table_idx:05d}"
                 rec["Table Ref in paper"] = table_ref
                 rec["Table links"] = table_link
-                rec["TopSNP"] = variant_text if variant_text else (rsid if rsid != "NR" else "")
-                rec["SNP-based, Gene-based"] = "SNP-based" if (rsid != "NR" or variant_text.lower().startswith("rs")) else ("Gene-based" if locus_name else "")
+                rec["TopSNP"] = snp_for_sub
+                rec["SNP-based, Gene-based"] = "SNP-based" if (rsid != "NR" or snp_for_sub.lower().startswith("rs")) else ("Gene-based" if locus_name else "")
                 rec["Interactions"] = interaction_val
                 rec["Chr"] = chr_val
                 rec["P-value"] = sub["p"] if sub["p"] is not None else ""

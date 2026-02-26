@@ -1,0 +1,2 @@
+file,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
+harmonized_tables_advp/from_30617256_table1_v1.xlsx,"pmid,snp,chr,ra1,pvalue",93,90,0.9354838709677419,0.9666666666666667,0.9508196721311476

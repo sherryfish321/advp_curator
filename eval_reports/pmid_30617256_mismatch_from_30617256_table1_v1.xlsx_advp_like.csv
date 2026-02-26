@@ -1,0 +1,10 @@
+type,reason,snp,pmid,chr,bp,ra1,pvalue,effect
+pred_unmatched,pvalue_mismatch,rs4663105,30617256.0,2,127891427.0,C,5.460000000000001e-26,
+pred_unmatched,key_mismatch,rs184384746,30617256.0,3,57226150.0,T,1.24e-08,5.69
+pred_unmatched,key_mismatch,rs187370608,30617256.0,6,40942196.0,A,1.45e-16,8.26
+pred_unmatched,key_mismatch,rs114360492,30617256.0,7,145950029.0,T,2.1e-09,5.99
+pred_unmatched,pvalue_mismatch,rs8093731,30617256.0,18,29088958.0,T,0.03,-2.17
+pred_unmatched,pvalue_mismatch,rs41289512,30617256.0,19,45351516.0,G,5.790000000000001e-276,35.5
+gold_unmatched,missing_in_prediction,rs8093731,30617256.0,18,31508995.0,T,0.003,
+gold_unmatched,missing_in_prediction,rs41289512,30617256.0,19,44848259.0,G,5.79e-276,
+gold_unmatched,missing_in_prediction,rs4663105,30617256.0,2,127133851.0,C,5.46e-26,
