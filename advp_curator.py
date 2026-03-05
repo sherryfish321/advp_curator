@@ -1719,8 +1719,19 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
 # Export to Excel
 # -----------------------------
 def write_curated_xlsx(records: List[Dict[str, Any]], out_path: str, template_xlsx: Optional[str] = None) -> None:
+    def _normalize_topsnp(v: Any) -> Any:
+        s = _normalize_cell_text(v)
+        if not s:
+            return v
+        m = re.search(r"\b(rs\d+)\b[a-z]+\b", s, flags=re.I)
+        if m:
+            return m.group(1).lower()
+        return v
+
     headers = CURATED_COLUMNS
     df = pd.DataFrame(records)
+    if "TopSNP" in df.columns:
+        df["TopSNP"] = df["TopSNP"].map(_normalize_topsnp)
     # Ensure all headers exist
     for h in headers:
         if h not in df.columns:

@@ -1,0 +1,4 @@
+type,reason,snp,pmid,chr,bp,ra1,pvalue,effect,source_mismatch_file
+pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,7.8e-07,0.69,/Users/sherryhuang/advp_curator/eval_reports/pmid_30820047_mismatch_from_30820047_table2_v1.xlsx_advp_like.csv
+pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,0.12,0.58,/Users/sherryhuang/advp_curator/eval_reports/pmid_30820047_mismatch_from_30820047_table2_v1.xlsx_advp_like.csv
+pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,2.6e-07,0.68,/Users/sherryhuang/advp_curator/eval_reports/pmid_30820047_mismatch_from_30820047_table2_v1.xlsx_advp_like.csv

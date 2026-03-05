@@ -18,7 +18,14 @@ def to_str(v) -> Optional[str]:
 
 def norm_snp(v) -> Optional[str]:
     s = to_str(v)
-    return s.lower() if s else None
+    if not s:
+        return None
+    s = s.lower()
+    # Normalize rs IDs like "rs7920721g" -> "rs7920721".
+    m = re.match(r"^(rs\d+)[a-z]+$", s)
+    if m:
+        return m.group(1)
+    return s
 
 
 def norm_chr(v) -> Optional[str]:
@@ -36,23 +43,24 @@ def norm_num(v) -> Optional[float]:
         f = float(v)
         if math.isnan(f):
             return None
-        return f
+        # Stabilize floating representation for equality-based matching.
+        return float(f"{f:.12g}")
     s = str(v).strip().replace("×", "x").replace("−", "-").replace("–", "-")
     s = s.replace("X", "x")
     try:
-        return float(s)
+        return float(f"{float(s):.12g}")
     except Exception:
         pass
     m = re.match(r"^\s*([+-]?\d*\.?\d+)\s*[x]\s*10\s*\^?\s*([+-]?\d+)\s*$", s)
     if m:
         base = float(m.group(1))
         exp = int(m.group(2))
-        return base * (10 ** exp)
+        return float(f"{(base * (10 ** exp)):.12g}")
     m = re.match(r"^\s*([+-]?\d*\.?\d+)\s*e\s*([+-]?\d+)\s*$", s, re.IGNORECASE)
     if m:
         base = float(m.group(1))
         exp = int(m.group(2))
-        return base * (10 ** exp)
+        return float(f"{(base * (10 ** exp)):.12g}")
     return None
 
 
