@@ -1,7 +1,4 @@
 type,reason,snp,pmid,chr,bp,ra1,pvalue,effect
-pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,7.8e-07,0.69
-pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,0.12,0.58
-pred_unmatched,ra1_mismatch,rs35868327,30820047.0,5,52665230.0,C,2.6e-07,0.68
 gold_unmatched,missing_in_prediction,rs4844610,30820047.0,1,207629207.0,A,3.6e-24,1.17
 gold_unmatched,missing_in_prediction,rs4844610,30820047.0,1,207629207.0,A,3.8e-10,1.2
 gold_unmatched,missing_in_prediction,rs4844610,30820047.0,1,207629207.0,A,8.2e-16,1.16
@@ -40,9 +37,6 @@ gold_unmatched,missing_in_prediction,rs10933431,30820047.0,2,233117202.0,G,3.4e-
 gold_unmatched,missing_in_prediction,rs6024870,30820047.0,20,56422512.0,A,3.5e-08,0.88
 gold_unmatched,missing_in_prediction,rs6024870,30820047.0,20,56422512.0,A,1.1e-06,0.88
 gold_unmatched,missing_in_prediction,rs6024870,30820047.0,20,56422512.0,A,0.009,0.9
-gold_unmatched,missing_in_prediction,rs35868327,30820047.0,5,53369400.0,A,2.6e-07,0.68
-gold_unmatched,missing_in_prediction,rs35868327,30820047.0,5,53369400.0,A,7.8e-07,0.69
-gold_unmatched,missing_in_prediction,rs35868327,30820047.0,5,53369400.0,A,0.12,0.58
 gold_unmatched,missing_in_prediction,rs190982,30820047.0,5,88927603.0,G,2.8e-06,0.94
 gold_unmatched,missing_in_prediction,rs190982,30820047.0,5,88927603.0,G,0.00028,0.95
 gold_unmatched,missing_in_prediction,rs190982,30820047.0,5,88927603.0,G,0.0027,0.93

@@ -104,6 +104,9 @@ def load_gold(advp_tsv: str, pmid: int) -> pd.DataFrame:
     out["population"] = g["Population_map"].map(norm_token_set)
     out["sample_size"] = g["Sample size"].map(norm_num)
     out["analysis_group"] = g["Analysis group"].map(norm_token_set)
+    out["locus_name"] = g["LocusName"].map(to_str) if "LocusName" in g.columns else None
+    out["phenotype"] = g["Phenotype"].map(norm_token_set) if "Phenotype" in g.columns else None
+    out["phenotype_derived"] = g["Phenotype-derived"].map(norm_token_set) if "Phenotype-derived" in g.columns else None
     return out
 
 
@@ -135,7 +138,36 @@ def load_pred(path: str) -> pd.DataFrame:
     out["population"] = d["Population_map"].map(norm_token_set) if "Population_map" in d.columns else None
     out["sample_size"] = d["Sample size"].map(norm_num) if "Sample size" in d.columns else None
     out["analysis_group"] = d["Analysis group"].map(norm_token_set) if "Analysis group" in d.columns else None
+    out["locus_name"] = d["LocusName"].map(to_str) if "LocusName" in d.columns else None
+    out["phenotype"] = d["Phenotype"].map(norm_token_set) if "Phenotype" in d.columns else None
+    out["phenotype_derived"] = d["Phenotype-derived"].map(norm_token_set) if "Phenotype-derived" in d.columns else None
     return out
+
+
+def aggregate_field_metrics(
+    pred_rows: pd.DataFrame,
+    gold_rows: pd.DataFrame,
+    row_key_cols: List[str],
+    fields: List[str],
+) -> Dict[str, float]:
+    pred_pairs = Counter()
+    gold_pairs = Counter()
+    for field in fields:
+        if field not in pred_rows.columns or field not in gold_rows.columns:
+            continue
+        if not pred_rows[field].notna().any() and not gold_rows[field].notna().any():
+            continue
+        pred_df = pred_rows[pred_rows[field].notna()].copy()
+        gold_df = gold_rows[gold_rows[field].notna()].copy()
+        for key, value in zip(build_keys(pred_df, row_key_cols), pred_df[field].tolist()):
+            pred_pairs[tuple(list(key) + [field, value])] += 1
+        for key, value in zip(build_keys(gold_df, row_key_cols), gold_df[field].tolist()):
+            gold_pairs[tuple(list(key) + [field, value])] += 1
+    inter = pred_pairs & gold_pairs
+    tp = sum(inter.values())
+    fp = sum(pred_pairs.values()) - tp
+    fn = sum(gold_pairs.values()) - tp
+    return safe_f1(tp, fp, fn)
 
 
 def apply_pred_scope(pred_df: pd.DataFrame, scope: str) -> pd.DataFrame:
@@ -162,6 +194,7 @@ def evaluate_one(
     path: str,
     key_mode: str = "auto",
     ignore_bp: bool = False,
+    ignore_ra1: bool = False,
 ) -> Dict:
     if key_mode == "pmid_snp_pvalue":
         key_cols = [c for c in ["pmid", "snp", "pvalue"] if c in pred_df.columns and c in gold_df.columns]
@@ -171,6 +204,8 @@ def evaluate_one(
         key_candidates = ["pmid", "snp", "chr", "bp", "ra1", "pvalue"]
         if ignore_bp:
             key_candidates = [c for c in key_candidates if c != "bp"]
+        if ignore_ra1:
+            key_candidates = [c for c in key_candidates if c != "ra1"]
         key_cols = []
         for c in key_candidates:
             if c in pred_df.columns and c in gold_df.columns:
@@ -195,6 +230,8 @@ def evaluate_one(
     compare_fields = ["pvalue", "effect", "cohort", "sample_size", "analysis_group", "population", "chr", "bp", "ra1"]
     if ignore_bp:
         compare_fields = [f for f in compare_fields if f != "bp"]
+    if ignore_ra1:
+        compare_fields = [f for f in compare_fields if f != "ra1"]
     row_key_cols = key_cols
     for field in compare_fields:
         if field not in pred_rows.columns or field not in gold_rows.columns:
@@ -215,6 +252,23 @@ def evaluate_one(
         fn_f = sum(gold_pairs.values()) - tp_f
         field_metrics[field] = safe_f1(tp_f, fp_f, fn_f)
 
+    easy_fields = ["pvalue", "effect", "cohort", "sample_size", "analysis_group", "population", "chr"]
+    all_advp_fields = ["pmid", "snp", "chr", "bp", "pvalue", "effect", "cohort", "sample_size", "analysis_group", "population", "locus_name", "phenotype", "phenotype_derived", "ra1"]
+    if ignore_bp:
+        all_advp_fields = [f for f in all_advp_fields if f != "bp"]
+    if ignore_ra1:
+        all_advp_fields = [f for f in all_advp_fields if f != "ra1"]
+    aggregate_metrics = {
+        "easy_fields": {
+            "fields": easy_fields,
+            "metrics": aggregate_field_metrics(pred_rows, gold_rows, row_key_cols, easy_fields),
+        },
+        "all_advp_fields": {
+            "fields": all_advp_fields,
+            "metrics": aggregate_field_metrics(pred_rows, gold_rows, row_key_cols, all_advp_fields),
+        },
+    }
+
     unmatched_pred = list((pred_key_counter - gold_key_counter).elements())[:10]
     unmatched_gold = list((gold_key_counter - pred_key_counter).elements())[:10]
 
@@ -225,6 +279,7 @@ def evaluate_one(
         "n_gold_rows": int(sum(gold_key_counter.values())),
         "row_metrics": row_metrics,
         "field_metrics": field_metrics,
+        "aggregate_metrics": aggregate_metrics,
         "unmatched_pred_examples": unmatched_pred,
         "unmatched_gold_examples": unmatched_gold,
     }
@@ -323,6 +378,11 @@ def main():
         action="store_true",
         help="Ignore BP(Position) in key matching and field metrics (useful for hg37/hg38 coordinate differences).",
     )
+    ap.add_argument(
+        "--ignore_ra1",
+        action="store_true",
+        help="Ignore RA1 allele in key matching and field metrics.",
+    )
     args = ap.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
@@ -334,11 +394,29 @@ def main():
         pred = load_pred(p)
         pred = apply_pred_scope(pred, args.pred_scope)
         preds.append(pred)
-        reports.append(evaluate_one(pred, gold, p, key_mode=args.key_mode, ignore_bp=args.ignore_bp))
+        reports.append(
+            evaluate_one(
+                pred,
+                gold,
+                p,
+                key_mode=args.key_mode,
+                ignore_bp=args.ignore_bp,
+                ignore_ra1=args.ignore_ra1,
+            )
+        )
 
     if len(preds) > 1:
         combined = pd.concat(preds, ignore_index=True)
-        reports.append(evaluate_one(combined, gold, "combined_inputs", key_mode=args.key_mode, ignore_bp=args.ignore_bp))
+        reports.append(
+            evaluate_one(
+                combined,
+                gold,
+                "combined_inputs",
+                key_mode=args.key_mode,
+                ignore_bp=args.ignore_bp,
+                ignore_ra1=args.ignore_ra1,
+            )
+        )
 
     summary_rows = []
     for r in reports:
