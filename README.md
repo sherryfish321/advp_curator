@@ -2,6 +2,32 @@
 
 `advp_curator.py` converts paper tables (PDF/URL/Excel/CSV/HTML) into a fixed ADVP curated schema and exports an Excel file.
 
+## Web UI
+The project also includes a lightweight web interface, [`advp_run_ui.py`](./advp_run_ui.py), for running the full curation and validation workflow from a browser.
+
+### What the UI does
+- Accepts paper metadata, table links, and the responsible curator name
+- Runs the end-to-end workflow:
+  - table link to spreadsheet extraction
+  - table-to-ADVP column mapping
+  - ADVP alignment evaluation
+- Shows tabbed result views for:
+  - `Overview`
+  - `Accuracy`
+  - `Issues`
+  - `Files`
+- Generates downloadable review artifacts such as:
+  - `fix_ready.csv`
+  - mismatch reports
+  - summary and details evaluation files
+- Supports direct editing of curated sheets from the browser
+
+### UI screenshots
+
+![ADVP Curator UI Overview](docs/images/UI1.jpeg)
+
+![ADVP Curator UI Accuracy View](docs/images/UI2.jpeg)
+
 ## Features
 - Outputs a fixed set of 46 curated columns (independent of raw table layout)
 - Text extraction fallback chain for PDF context fields:
@@ -74,6 +100,60 @@ python3 advp_curator.py \
   --out "/path/to/curated.xlsx" \
   --paper_id "paper_table1"
 ```
+
+### 3) Web UI mode
+Start the local UI:
+
+```bash
+python3 advp_run_ui.py web --host 127.0.0.1 --port 8899
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8899
+```
+
+### How to use the UI
+1. Enter the curator name in `Owner`
+2. Enter the paper `PMID`
+3. Provide the paper PDF path
+4. Paste one or more PMC table links
+5. Confirm the ADVP TSV path
+6. Click `Run`
+
+### What the UI shows after a run
+- `Overview`
+  - processed table count
+  - success rows
+  - failed rows
+  - download button for `fix_ready.csv`
+- `Accuracy`
+  - `Row Match Accuracy`
+  - `Field Accuracy: Easy Fields`
+  - `Field Accuracy: All Mapped ADVP Fields`
+- `Issues`
+  - `Predicted But Not In ADVP`
+  - `In ADVP But Missing From Prediction`
+  - `Missing ADVP Fields`
+- `Files`
+  - summary CSV path
+  - details JSON path
+  - fix file path
+  - run log path
+
+### Accuracy views in the UI
+- `Row Match Accuracy`
+  - Uses `PMID`, `SNP`, `chromosome`, and `p-value` as the row matching key
+- `Field Accuracy: Easy Fields`
+  - Compares `pvalue`, `effect`, `cohort`, `sample_size`, `analysis_group`, `population`, and `chr`
+- `Field Accuracy: All Mapped ADVP Fields`
+  - Compares all currently mapped ADVP-compatible fields available in the evaluator
+
+### Notes
+- The current UI workflow intentionally ignores `RA1/RA2` in matching to focus on stabilizing the core mapping fields first
+- The browser editor is intended for lightweight manual correction of curated output files
+- For multi-table papers, evaluation is performed on the combined prediction set
 
 ## Current Field Mapping Rules
 - `TopSNP`: `SNP ALL` / `Variant` / `rsID`-like columns
