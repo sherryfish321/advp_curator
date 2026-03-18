@@ -451,6 +451,16 @@ def main():
         diag.to_csv(diag_path, index=False)
         print(f"Saved mismatch details: {diag_path}")
 
+    if len(preds) > 1:
+        combined_rep = next((r for r in reports if r["file"] == "combined_inputs"), None)
+        if combined_rep:
+            combined_diag = diagnose_unmatched(combined, gold, combined_rep["row_key_cols"])
+            combined_diag_path = os.path.join(
+                args.out_dir, f"pmid_{args.pmid}_mismatch_combined_inputs_{args.pred_scope}.csv"
+            )
+            combined_diag.to_csv(combined_diag_path, index=False)
+            print(f"Saved mismatch details: {combined_diag_path}")
+
     print(f"Saved summary: {summary_csv}")
     print(f"Saved details: {details_json}")
     print(summary_df.to_string(index=False))

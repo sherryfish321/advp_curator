@@ -1,0 +1,1450 @@
+{
+  "paper": {
+    "paper_id": "31055733_table1",
+    "pmcid": "",
+    "pmid": "31055733",
+    "pdf": "/Users/sherryhuang/advp_curator/paper/11357_2019_Article_71 (1).pdf",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/31055733_table1.xlsx",
+    "full_text_source": "pdfplumber",
+    "id_evidence": "PMID inferred from source filename -> 31055733"
+  },
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and HTN-N that there is a moderate to substantial between-groups groups, the GWA results from the four investigated geneticdiversity(i.e.,populationstratification)thatcan cohortswerecombinedbyaconv",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "es of possible functional variants. cerebralhypoperfusioninAlzheimerdiseaseandmildcog- Bioinforma Oxf Engl 31:3555–3557. https://doi. nitiveimpairmentmeasuredwitharterialspin-labelingMR org/10.1093/bioinformatics/btv402 imaging: initial experience. Radiology 234:851–859. MaebaR,NakaharaS(2017)Extrinsiceffectorsregulatinggenes https://doi.org/10.1148/radiol.2343040197 for plasmalogen biosynthetic enzymes in HepG2 cells. KesselsHW,NabaviS,Malino",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated cohorts, their genotype data were models(seebelow)areshowninTableS3.Theλvalues made comparable by imputing non-genotyped loci were all smaller than 1.1 suggesting that population in each data",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those older than 60 years single-nucleotide polymorphism (SNPs). Each dataset (Nwankwoetal.2013),isofgreatimportanceandhas wasdividedintotwogroupsofsubjectswithandwith- beenimplicatedinbothini",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no population cues found in methods/results/supplement",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no sample size cues found",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "31055733_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "HTN-P group",
+          "confidence": 0.9,
+          "evidence": "Row text: HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group\n[column_mappin",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group\n[column_mappin",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group\n[column_mappin",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group | HTN-P group\n[column_mappin",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74528420",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs74528420 | 104209719 | T | YYNN | 4.63E−04 | −−−− | 0.867 | 0.716 (0.048) | 4.42E−06 | 6.68E−01 | 0 | 4.42E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.42e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs74528420 | 104209719 | T | YYNN | 4.63E−04 | −−−− | 0.867 | 0.716 (0.048) | 4.42E−06 | 6.68E−01 | 0 | 4.42E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.716,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs74528420 | 104209719 | T | YYNN | 4.63E−04 | −−−− | 0.867 | 0.716 (0.048) | 4.42E−06 | 6.68E−01 | 0 | 4.42E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs74528420 | 104209719 | T | YYNN | 4.63E−04 | −−−− | 0.867 | 0.716 (0.048) | 4.42E−06 | 6.68E−01 | 0 | 4.42E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28868104",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs28868104 | 104241993 | C | YYYY | 2.89E−03 | −−−− | 0.869 | 0.688 (0.047) | 3.51E−07 | 9.88E−01 | 0 | 3.50E−07 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.51e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs28868104 | 104241993 | C | YYYY | 2.89E−03 | −−−− | 0.869 | 0.688 (0.047) | 3.51E−07 | 9.88E−01 | 0 | 3.50E−07 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.688,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs28868104 | 104241993 | C | YYYY | 2.89E−03 | −−−− | 0.869 | 0.688 (0.047) | 3.51E−07 | 9.88E−01 | 0 | 3.50E−07 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs28868104 | 104241993 | C | YYYY | 2.89E−03 | −−−− | 0.869 | 0.688 (0.047) | 3.51E−07 | 9.88E−01 | 0 | 3.50E−07 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4501143",
+          "confidence": 0.9,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs4501143 | 104256947 | T | YYYY | 1.59E−03 | ++++ | 0.126 | 1.437 (0.100) | 1.23E−06 | 8.86E−01 | 0 | 1.23E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.23e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs4501143 | 104256947 | T | YYYY | 1.59E−03 | ++++ | 0.126 | 1.437 (0.100) | 1.23E−06 | 8.86E−01 | 0 | 1.23E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.437,
+          "confidence": 0.65,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs4501143 | 104256947 | T | YYYY | 1.59E−03 | ++++ | 0.126 | 1.437 (0.100) | 1.23E−06 | 8.86E−01 | 0 | 1.23E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 3q13.11 | MIR548AB | rs4501143 | 104256947 | T | YYYY | 1.59E−03 | ++++ | 0.126 | 1.437 (0.100) | 1.23E−06 | 8.86E−01 | 0 | 1.23E−06 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1925458",
+          "confidence": 0.9,
+          "evidence": "Row text: 6p22.3 | NRSN1 | rs1925458 | 23378723 | G | Y?YY | 4.27E−04 | −?−− | 0.883 | 0.644 (0.054) | 1.26E−06 | 9.36E−01 | 0 | 1.26E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hint\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.26e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 6p22.3 | NRSN1 | rs1925458 | 23378723 | G | Y?YY | 4.27E−04 | −?−− | 0.883 | 0.644 (0.054) | 1.26E−06 | 9.36E−01 | 0 | 1.26E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hint\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.644,
+          "confidence": 0.65,
+          "evidence": "Row text: 6p22.3 | NRSN1 | rs1925458 | 23378723 | G | Y?YY | 4.27E−04 | −?−− | 0.883 | 0.644 (0.054) | 1.26E−06 | 9.36E−01 | 0 | 1.26E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hint\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 6p22.3 | NRSN1 | rs1925458 | 23378723 | G | Y?YY | 4.27E−04 | −?−− | 0.883 | 0.644 (0.054) | 1.26E−06 | 9.36E−01 | 0 | 1.26E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hint\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs78210707",
+          "confidence": 0.9,
+          "evidence": "Row text: 12p13.1 | GRIN2B | rs78210707 | 13763366 | G | N?YY | 2.02E−03 | −?−− | 0.989 | 0.375 (0.065) | 4.28E−06 | 9.73E−01 | 0 | 4.29E−06 | N | Y | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hin",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.28e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 12p13.1 | GRIN2B | rs78210707 | 13763366 | G | N?YY | 2.02E−03 | −?−− | 0.989 | 0.375 (0.065) | 4.28E−06 | 9.73E−01 | 0 | 4.29E−06 | N | Y | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hin",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.375,
+          "confidence": 0.65,
+          "evidence": "Row text: 12p13.1 | GRIN2B | rs78210707 | 13763366 | G | N?YY | 2.02E−03 | −?−− | 0.989 | 0.375 (0.065) | 4.28E−06 | 9.73E−01 | 0 | 4.29E−06 | N | Y | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hin",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 12p13.1 | GRIN2B | rs78210707 | 13763366 | G | N?YY | 2.02E−03 | −?−− | 0.989 | 0.375 (0.065) | 4.28E−06 | 9.73E−01 | 0 | 4.29E−06 | N | Y | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hin",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs75036080",
+          "confidence": 0.9,
+          "evidence": "Row text: 12q12 | SLC2A13 | rs75036080 | 39882501 | G | YNYN | 2.13E−04 | −−−− | 0.98 | 0.486 (0.065) | 3.07E−06 | 3.22E−01 | 0.14 | 3.09E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.07e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 12q12 | SLC2A13 | rs75036080 | 39882501 | G | YNYN | 2.13E−04 | −−−− | 0.98 | 0.486 (0.065) | 3.07E−06 | 3.22E−01 | 0.14 | 3.09E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.486,
+          "confidence": 0.65,
+          "evidence": "Row text: 12q12 | SLC2A13 | rs75036080 | 39882501 | G | YNYN | 2.13E−04 | −−−− | 0.98 | 0.486 (0.065) | 3.07E−06 | 3.22E−01 | 0.14 | 3.09E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 12q12 | SLC2A13 | rs75036080 | 39882501 | G | YNYN | 2.13E−04 | −−−− | 0.98 | 0.486 (0.065) | 3.07E−06 | 3.22E−01 | 0.14 | 3.09E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_hi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "HTN-N group",
+          "confidence": 0.9,
+          "evidence": "Row text: HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group\n[column_mappin",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group\n[column_mappin",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group\n[column_mappin",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group | HTN-N group\n[column_mappin",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11658260",
+          "confidence": 0.9,
+          "evidence": "Row text: 17q21.2 | SMARCE1 | rs11658260* | 40597298 | A | NYYN | 1.79E−06 | −−+− | 0.501 | 0.967 (0.070) | 6.65E−01 | 1.50E−06 | 0.899 | 2.75E−03 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.665,
+          "confidence": 0.7,
+          "evidence": "Row text: 17q21.2 | SMARCE1 | rs11658260* | 40597298 | A | NYYN | 1.79E−06 | −−+− | 0.501 | 0.967 (0.070) | 6.65E−01 | 1.50E−06 | 0.899 | 2.75E−03 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.967,
+          "confidence": 0.65,
+          "evidence": "Row text: 17q21.2 | SMARCE1 | rs11658260* | 40597298 | A | NYYN | 1.79E−06 | −−+− | 0.501 | 0.967 (0.070) | 6.65E−01 | 1.50E−06 | 0.899 | 2.75E−03 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 17q21.2 | SMARCE1 | rs11658260* | 40597298 | A | NYYN | 1.79E−06 | −−+− | 0.501 | 0.967 (0.070) | 6.65E−01 | 1.50E−06 | 0.899 | 2.75E−03 | N | N | N\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs72934313",
+          "confidence": 0.9,
+          "evidence": "Row text: 18q21.33 | RNF152 | rs72934313* | 61948797 | C | YYN? | 4.77E−06 | +−+? | 0.924 | 1.074 (0.147) | 6.55E−01 | 6.64E−07 | 0.93 | 6.05E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"matc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.655,
+          "confidence": 0.7,
+          "evidence": "Row text: 18q21.33 | RNF152 | rs72934313* | 61948797 | C | YYN? | 4.77E−06 | +−+? | 0.924 | 1.074 (0.147) | 6.55E−01 | 6.64E−07 | 0.93 | 6.05E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"matc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.074,
+          "confidence": 0.65,
+          "evidence": "Row text: 18q21.33 | RNF152 | rs72934313* | 61948797 | C | YYN? | 4.77E−06 | +−+? | 0.924 | 1.074 (0.147) | 6.55E−01 | 6.64E−07 | 0.93 | 6.05E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"matc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 18q21.33 | RNF152 | rs72934313* | 61948797 | C | YYN? | 4.77E−06 | +−+? | 0.924 | 1.074 (0.147) | 6.55E−01 | 6.64E−07 | 0.93 | 6.05E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"matc",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs243034",
+          "confidence": 0.9,
+          "evidence": "Row text: 2p16.1 | MIR4432 | rs243034 | 60375757 | C | YYYN | 2.54E−03 | ++++ | 0.394 | 1.521 (0.121) | 1.31E−06 | 1.58E−01 | 0.422 | 1.31E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.31e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 2p16.1 | MIR4432 | rs243034 | 60375757 | C | YYYN | 2.54E−03 | ++++ | 0.394 | 1.521 (0.121) | 1.31E−06 | 1.58E−01 | 0.422 | 1.31E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.521,
+          "confidence": 0.65,
+          "evidence": "Row text: 2p16.1 | MIR4432 | rs243034 | 60375757 | C | YYYN | 2.54E−03 | ++++ | 0.394 | 1.521 (0.121) | 1.31E−06 | 1.58E−01 | 0.422 | 1.31E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 2p16.1 | MIR4432 | rs243034 | 60375757 | C | YYYN | 2.54E−03 | ++++ | 0.394 | 1.521 (0.121) | 1.31E−06 | 1.58E−01 | 0.422 | 1.31E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1353581",
+          "confidence": 0.9,
+          "evidence": "Row text: 4q35.2 | LINC01060 | rs1353581 | 189068835 | G | YYYN | 3.00E−05 | −−−+ | 0.766 | 0.650 (0.056) | 4.80E−06 | 3.76E−03 | 0.777 | 4.54E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.8e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 4q35.2 | LINC01060 | rs1353581 | 189068835 | G | YYYN | 3.00E−05 | −−−+ | 0.766 | 0.650 (0.056) | 4.80E−06 | 3.76E−03 | 0.777 | 4.54E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.65,
+          "confidence": 0.65,
+          "evidence": "Row text: 4q35.2 | LINC01060 | rs1353581 | 189068835 | G | YYYN | 3.00E−05 | −−−+ | 0.766 | 0.650 (0.056) | 4.80E−06 | 3.76E−03 | 0.777 | 4.54E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 4q35.2 | LINC01060 | rs1353581 | 189068835 | G | YYYN | 3.00E−05 | −−−+ | 0.766 | 0.650 (0.056) | 4.80E−06 | 3.76E−03 | 0.777 | 4.54E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10968750",
+          "confidence": 0.9,
+          "evidence": "Row text: 9p21.1 | LINGO2 | rs10968750 | 28753984 | T | Y?NN | 1.90E−06 | +?+− | 0.941 | 2.633 (0.442) | 1.97E−06 | 1.97E−01 | 0.385 | 6.45E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.97e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 9p21.1 | LINGO2 | rs10968750 | 28753984 | T | Y?NN | 1.90E−06 | +?+− | 0.941 | 2.633 (0.442) | 1.97E−06 | 1.97E−01 | 0.385 | 6.45E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.633,
+          "confidence": 0.65,
+          "evidence": "Row text: 9p21.1 | LINGO2 | rs10968750 | 28753984 | T | Y?NN | 1.90E−06 | +?+− | 0.941 | 2.633 (0.442) | 1.97E−06 | 1.97E−01 | 0.385 | 6.45E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 9p21.1 | LINGO2 | rs10968750 | 28753984 | T | Y?NN | 1.90E−06 | +?+− | 0.941 | 2.633 (0.442) | 1.97E−06 | 1.97E−01 | 0.385 | 6.45E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1447575",
+          "confidence": 0.9,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447575 | 45688426 | T | YNYN | 4.67E−05 | −−−− | 0.909 | 0.507 (0.061) | 6.42E−07 | 5.16E−01 | 0 | 6.42E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.42e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447575 | 45688426 | T | YNYN | 4.67E−05 | −−−− | 0.909 | 0.507 (0.061) | 6.42E−07 | 5.16E−01 | 0 | 6.42E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.507,
+          "confidence": 0.65,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447575 | 45688426 | T | YNYN | 4.67E−05 | −−−− | 0.909 | 0.507 (0.061) | 6.42E−07 | 5.16E−01 | 0 | 6.42E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447575 | 45688426 | T | YNYN | 4.67E−05 | −−−− | 0.909 | 0.507 (0.061) | 6.42E−07 | 5.16E−01 | 0 | 6.42E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1447576",
+          "confidence": 0.9,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447576 | 45689102 | G | YNYN | 4.67E−05 | −−−− | 0.909 | 0.505 (0.060) | 5.46E−07 | 5.54E−01 | 0 | 5.46E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.46e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447576 | 45689102 | G | YNYN | 4.67E−05 | −−−− | 0.909 | 0.505 (0.060) | 5.46E−07 | 5.54E−01 | 0 | 5.46E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.505,
+          "confidence": 0.65,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447576 | 45689102 | G | YNYN | 4.67E−05 | −−−− | 0.909 | 0.505 (0.060) | 5.46E−07 | 5.54E−01 | 0 | 5.46E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs1447576 | 45689102 | G | YNYN | 4.67E−05 | −−−− | 0.909 | 0.505 (0.060) | 5.46E−07 | 5.54E−01 | 0 | 5.46E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2666895",
+          "confidence": 0.9,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs2666895 | 45689480 | G | YNYN | 3.67E−05 | −−−− | 0.908 | 0.502 (0.060) | 4.48E−07 | 5.56E−01 | 0 | 4.48E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.48e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs2666895 | 45689480 | G | YNYN | 3.67E−05 | −−−− | 0.908 | 0.502 (0.060) | 4.48E−07 | 5.56E−01 | 0 | 4.48E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.502,
+          "confidence": 0.65,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs2666895 | 45689480 | G | YNYN | 3.67E−05 | −−−− | 0.908 | 0.502 (0.060) | 4.48E−07 | 5.56E−01 | 0 | 4.48E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 11p11.2 | MIR7154,CHST1 | rs2666895 | 45689480 | G | YNYN | 3.67E−05 | −−−− | 0.908 | 0.502 (0.060) | 4.48E−07 | 5.56E−01 | 0 | 4.48E−07 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs3814837",
+          "confidence": 0.9,
+          "evidence": "Row text: 14q32.12 | CATSPERB | rs3814837 | 91725006 | C | YNYN | 3.88E−05 | −−−+ | 0.753 | 0.643 (0.056) | 3.26E−06 | 3.68E−01 | 0.051 | 3.03E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.26e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 14q32.12 | CATSPERB | rs3814837 | 91725006 | C | YNYN | 3.88E−05 | −−−+ | 0.753 | 0.643 (0.056) | 3.26E−06 | 3.68E−01 | 0.051 | 3.03E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.643,
+          "confidence": 0.65,
+          "evidence": "Row text: 14q32.12 | CATSPERB | rs3814837 | 91725006 | C | YNYN | 3.88E−05 | −−−+ | 0.753 | 0.643 (0.056) | 3.26E−06 | 3.68E−01 | 0.051 | 3.03E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 14q32.12 | CATSPERB | rs3814837 | 91725006 | C | YNYN | 3.88E−05 | −−−+ | 0.753 | 0.643 (0.056) | 3.26E−06 | 3.68E−01 | 0.051 | 3.03E−06 | N | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"mat",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "31055733_table1_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11909995",
+          "confidence": 0.9,
+          "evidence": "Row text: 21q21.3 | ATP5J | rs11909995 | 25725147 | G | YYYN | 1.62E−03 | −−−− | 0.824 | 0.617 (0.059) | 4.41E−06 | 3.23E−01 | 0.14 | 4.41E−06 | Y | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.41e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: 21q21.3 | ATP5J | rs11909995 | 25725147 | G | YYYN | 1.62E−03 | −−−− | 0.824 | 0.617 (0.059) | 4.41E−06 | 3.23E−01 | 0.14 | 4.41E−06 | Y | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.617,
+          "confidence": 0.65,
+          "evidence": "Row text: 21q21.3 | ATP5J | rs11909995 | 25725147 | G | YYYN | 1.62E−03 | −−−− | 0.824 | 0.617 (0.059) | 4.41E−06 | 3.23E−01 | 0.14 | 4.41E−06 | Y | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "iate in addition to the aforemen- the SNPs that passed QC measures in the four in- tionedfixed-effectscovariates.TheGLMMswerefitted vestigated datasets. bythelme4Rpackage(Batesetal.2015). 140 GeroScience(2019)41:137–154 Meta-analysis: in each of the HTN-P and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "spectively,and Genotypedataandqualitycontrol the GENESIS R package (Conomos et al. 2015) was usedtoperformthePCA.Thegenomicinflationfactors Since different genotyping platforms were used by (λvalues)basedontheresultsfromlogisticregression four investigated coh",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "ofADbetweenthem.Thegeneticanalyseswere brain(Stampfer2006;Poweretal.2011;Thorin2015). performed in four independent cohorts using genetic AmongADvascularriskfactors,HTN,withaprev- information on ~2 million genotyped and imputed alence rate of 65% among those o",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "EADI;AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: 21q21.3 | ATP5J | rs11909995 | 25725147 | G | YYYN | 1.62E−03 | −−−− | 0.824 | 0.617 (0.059) | 4.41E−06 | 3.23E−01 | 0.14 | 4.41E−06 | Y | N | Y\n[column_mapping] {\"Chromosome\": {\"reference_col\": \"Chr\", \"score\": 0.4545, \"needs_review\": false, \"match_h",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

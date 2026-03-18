@@ -48,6 +48,13 @@ def collect_mismatch_paths(out_dir: Path, pmid: int, pred_scope: str, harmonized
     return paths
 
 
+def collect_issue_paths(out_dir: Path, pmid: int, pred_scope: str, harmonized_paths: List[Path]) -> List[Path]:
+    combined = out_dir / f"pmid_{pmid}_mismatch_combined_inputs_{pred_scope}.csv"
+    if combined.exists():
+        return [combined]
+    return collect_mismatch_paths(out_dir, pmid, pred_scope, harmonized_paths)
+
+
 def build_fix_file(mismatch_paths: List[Path], out_dir: Path, pmid: int) -> Path:
     ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
     fix_path = out_dir / f"pmid_{pmid}_fix_ready_{ts}.csv"
@@ -90,12 +97,14 @@ def append_run_log(log_dir: Path, payload: Dict[str, object]) -> Path:
     return log_path
 
 
-def summarize_mismatch_reasons(mismatch_paths: List[Path]) -> List[Dict[str, object]]:
+def summarize_mismatch_reasons(mismatch_paths: List[Path], mismatch_type: str) -> List[Dict[str, object]]:
     counts: Dict[str, int] = {}
     for mp in mismatch_paths:
         with mp.open("r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
+                if (row.get("type") or "").strip() != mismatch_type:
+                    continue
                 reason = (row.get("reason") or "").strip()
                 if not reason:
                     continue
@@ -345,8 +354,10 @@ def run_pipeline(
     summary_csv = eval_dir / f"pmid_{pmid}_summary_{pred_scope}.csv"
     details_json = eval_dir / f"pmid_{pmid}_details_{pred_scope}.json"
     mismatch_paths = collect_mismatch_paths(eval_dir, pmid, pred_scope, generated_harmonized)
+    issue_paths = collect_issue_paths(eval_dir, pmid, pred_scope, generated_harmonized)
     fix_file = build_fix_file(mismatch_paths, eval_dir, pmid)
-    mismatch_summary = summarize_mismatch_reasons(mismatch_paths)
+    predicted_issue_summary = summarize_mismatch_reasons(issue_paths, "pred_unmatched")
+    missing_prediction_summary = summarize_mismatch_reasons(issue_paths, "gold_unmatched")
     missing_summary = summarize_missing_fields(generated_harmonized)
     aggregate_metrics = read_details_aggregate_metrics(details_json)
     row_match_metrics = read_row_match_metrics(summary_csv)
@@ -381,7 +392,8 @@ def run_pipeline(
         "success_rows": success_rows,
         "failed_rows": mismatch_counts["failed_rows"],
         "table_count": len(generated_harmonized),
-        "mismatch_summary": mismatch_summary,
+        "predicted_issue_summary": predicted_issue_summary,
+        "missing_prediction_summary": missing_prediction_summary,
         "missing_summary": missing_summary,
         "aggregate_metrics": aggregate_metrics,
         "row_match_metrics": row_match_metrics,
@@ -511,7 +523,8 @@ def render_tabbed_sections(result: Dict[str, object], download_link: str, edit_l
         + "</div></section>"
         "<section class='tab-panel' data-panel='issues'>"
         "<div class='panel-grid'>"
-        + render_summary_table("Mismatch Reasons", result["mismatch_summary"], "reason", "count")
+        + render_summary_table("Predicted But Not In ADVP", result["predicted_issue_summary"], "reason", "count")
+        + render_summary_table("In ADVP But Missing From Prediction", result["missing_prediction_summary"], "reason", "count")
         + render_summary_table("Missing ADVP Fields", result["missing_summary"], "field", "missing_rows")
         + "</div></section>"
         "<section class='tab-panel' data-panel='files'>"
