@@ -1,0 +1,3221 @@
+{
+  "paper": {
+    "paper_id": "30636644_table2",
+    "pmcid": "",
+    "pmid": "30636644",
+    "pdf": "/Users/sherryhuang/advp_curator/paper/13195_2018_Article_458.pdf",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/30636644_table2.xlsx",
+    "full_text_source": "pdfplumber",
+    "id_evidence": "PMID inferred from source filename -> 30636644"
+  },
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Correspondence:alireza.nazarian@duke.edu;kulminsk@duke.edu BiodemographyofAgingResearchUnit,SocialScienceResearchInstitute, DukeUniversity,ErwinMillBuilding,2024W.MainSt.,Durham,NC27705, USA ©TheAu",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "sand3,000sharedcontrols. Cell.2017;16:61–72. Nature.2007;447:661–78. 62. FurneySJ,SimmonsA,BreenG,PedrosoI,LunnonK,ProitsiP,etal. 36. WinklerTW,DayFR,Croteau-ChonkaDC,WoodAR,LockeAE,MägiR,etal. Genome-wideassociationwithMRIatrophymeasuresasaquantitativetrait Qualitycontrolandconductofgenome-wideassociationmeta-analyses. locusforAlzheimer’sdisease.MolPsychiatry.2011;16:1130–8. NatProtoc.2014;9:1192–212. 63. WijsmanEM,PankratzND,ChoiY,Rothst",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to address potential population stratification. In earlier were subjected to fitting generalized linear each dataset, PCA was performed over a subset of un- mixed models (GLMMs) by including all a",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females than males [9]. Henderson and Buckwalter the genetic sex disparity of AD was of particular inter- [12] reported that female AD patients had greater im- est, in addition to analyzing th",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes from 1000 Caucasian participants who were older than 65 years and European population (EUR) haplotypes from 1000 and had not been institutionalized. Later, a new cohort Genomes Phase 3data (r",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "5220",
+      "confidence": 0.7,
+      "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- affecte",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "30636644_table2_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "83",
+          "confidence": 0.9,
+          "evidence": "Row text: CEACAM16 | 19q13.32 | 44699150 | 44710714 | 83 | 330.47 | 7.52E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.52e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: CEACAM16 | 19q13.32 | 44699150 | 44710714 | 83 | 330.47 | 7.52E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CEACAM16 | 19q13.32 | 44699150 | 44710714 | 83 | 330.47 | 7.52E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CEACAM16 | 19q13.32 | 44699150 | 44710714 | 83 | 330.47 | 7.52E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "63",
+          "confidence": 0.9,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.95e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "63",
+          "confidence": 0.9,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.44e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: BCL3 | 19q13.32 | 44748720 | 44760044 | 63 | 274.81 | 3.95E–06 | NS | NS | 254.31 | 5.44E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "52",
+          "confidence": 0.9,
+          "evidence": "Row text: MIR8085 | 19q13.32 | 44758656 | 44758721 | 52 | 235.68 | 8.72E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.72e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: MIR8085 | 19q13.32 | 44758656 | 44758721 | 52 | 235.68 | 8.72E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: MIR8085 | 19q13.32 | 44758656 | 44758721 | 52 | 235.68 | 8.72E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: MIR8085 | 19q13.32 | 44758656 | 44758721 | 52 | 235.68 | 8.72E–06 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "62",
+          "confidence": 0.9,
+          "evidence": "Row text: CBLC | 19q13.32 | 44777868 | 44800646 | 62 | 419.91 | 2.02E–10 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.02e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: CBLC | 19q13.32 | 44777868 | 44800646 | 62 | 419.91 | 2.02E–10 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CBLC | 19q13.32 | 44777868 | 44800646 | 62 | 419.91 | 2.02E–10 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CBLC | 19q13.32 | 44777868 | 44800646 | 62 | 419.91 | 2.02E–10 | NS | NS | NS | NS\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "51",
+          "confidence": 0.9,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.07e-10,
+          "confidence": 0.7,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "51",
+          "confidence": 0.9,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: BCAM | 19q13.32 | 44809058 | 44821421 | 51 | 455.39 | 1.07E–10 | NS | NS | 298.41 | 5.00E–07\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosoma",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "90",
+          "confidence": 0.9,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.74e-72,
+          "confidence": 0.7,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "90",
+          "confidence": 0.9,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.52e-25,
+          "confidence": 0.7,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "90",
+          "confidence": 0.9,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.11e-43,
+          "confidence": 0.7,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: PVRL2 | 19q13.32 | 44846135 | 44889228 | 90 | 3861.00 | 4.74E–72 | 1357.12 | 4.52E–25 | 2304.33 | 7.11E–43\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "73",
+          "confidence": 0.9,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.12e-86,
+          "confidence": 0.7,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "73",
+          "confidence": 0.9,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.98e-30,
+          "confidence": 0.7,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "73",
+          "confidence": 0.9,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.26e-50,
+          "confidence": 0.7,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: TOMM40 | 19q13.32 | 44891219 | 44903689 | 73 | 3664.74 | 9.12E–86 | 1288.14 | 8.98E–30 | 2171.92 | 1.26E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "70",
+          "confidence": 0.9,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.32e-85,
+          "confidence": 0.7,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "70",
+          "confidence": 0.9,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.09e-29,
+          "confidence": 0.7,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "70",
+          "confidence": 0.9,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.58e-50,
+          "confidence": 0.7,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOE | 19q13.32 | 44905781 | 44909393 | 70 | 3590.18 | 4.32E–85 | 1262.22 | 1.09E–29 | 2121.68 | 3.58E–50\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "67",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.76e-87,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "67",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.63e-30,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00019",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "67",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.25e-51,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1 | 19q13.32 | 44914663 | 44919349 | 67 | 3482.70 | 4.76E–87 | 1230.83 | 1.63E–30 | 2049.54 | 4.25E–51\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00020",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "57",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.6e-93,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00021",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "57",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.01e-32,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00022",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "57",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2e-54,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC1P1 | 19q13.32 | 44926802 | 44931386 | 57 | 3427.13 | 6.60E–93 | 1209.89 | 1.01E–32 | 2008.34 | 2.00E–54\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal reg",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00023",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.63e-89,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00024",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.9e-31,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00025",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.94e-52,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4 | 19q13.32 | 44942237 | 44945496 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00026",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.63e-89,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00027",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.9e-31,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00028",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "46",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.94e-52,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC4–APOC2 | 19q13.32 | 44942237 | 44949565 | 46 | 3063.64 | 5.63E–89 | 1058.60 | 7.90E–31 | 1792.11 | 3.94E–52\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00029",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "42",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.65e-73,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00030",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "42",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.16e-24,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00031",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "42",
+          "confidence": 0.9,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.14e-44,
+          "confidence": 0.7,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: APOC2 | 19q13.32 | 44945981 | 44949566 | 42 | 2242.85 | 8.65E–73 | 760.49 | 1.16E–24 | 1347.91 | 9.14E–44\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00032",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "47",
+          "confidence": 0.9,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.42e-60,
+          "confidence": 0.7,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00033",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "47",
+          "confidence": 0.9,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.56e-21,
+          "confidence": 0.7,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00034",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "47",
+          "confidence": 0.9,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.03e-36,
+          "confidence": 0.7,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CLPTM1 | 19q13.32 | 44954584 | 44993346 | 47 | 2037.76 | 3.42E–60 | 700.13 | 9.56E–21 | 1217.18 | 5.03E–36\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00035",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "39",
+          "confidence": 0.9,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.2e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00036",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "39",
+          "confidence": 0.9,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.27e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: LINC00158 | 21q21.3 | 25385819 | 25431701 | 39 | 223.58 | 1.20E–06 | NS | NS | 181.03 | 2.27E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromo",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00037",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "27",
+          "confidence": 0.9,
+          "evidence": "Row text: MIR155HG | 21q21.3 | 25562144 | 25575168 | 27 | NS | NS | NS | NS | 170.35 | 1.52E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.52e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: MIR155HG | 21q21.3 | 25562144 | 25575168 | 27 | NS | NS | NS | NS | 170.35 | 1.52E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: MIR155HG | 21q21.3 | 25562144 | 25575168 | 27 | NS | NS | NS | NS | 170.35 | 1.52E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: MIR155HG | 21q21.3 | 25562144 | 25575168 | 27 | NS | NS | NS | NS | 170.35 | 1.52E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00038",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "22",
+          "confidence": 0.9,
+          "evidence": "Row text: MIR155 | 21q21.3 | 25573979 | 25574044 | 22 | NS | NS | NS | NS | 152.69 | 7.00E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: MIR155 | 21q21.3 | 25573979 | 25574044 | 22 | NS | NS | NS | NS | 152.69 | 7.00E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: MIR155 | 21q21.3 | 25573979 | 25574044 | 22 | NS | NS | NS | NS | 152.69 | 7.00E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: MIR155 | 21q21.3 | 25573979 | 25574044 | 22 | NS | NS | NS | NS | 152.69 | 7.00E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00039",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "24",
+          "confidence": 0.9,
+          "evidence": "Row text: LINC00515 | 21q21.3 | 25582774 | 25583224 | 24 | NS | NS | NS | NS | 156.49 | 9.36E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.36e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: LINC00515 | 21q21.3 | 25582774 | 25583224 | 24 | NS | NS | NS | NS | 156.49 | 9.36E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: LINC00515 | 21q21.3 | 25582774 | 25583224 | 24 | NS | NS | NS | NS | 156.49 | 9.36E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: LINC00515 | 21q21.3 | 25582774 | 25583224 | 24 | NS | NS | NS | NS | 156.49 | 9.36E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal regi",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00040",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "36",
+          "confidence": 0.9,
+          "evidence": "Row text: MRPL39 | 21q21.3 | 25585655 | 25607489 | 36 | NS | NS | NS | NS | 269.62 | 4.20E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.2e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: MRPL39 | 21q21.3 | 25585655 | 25607489 | 36 | NS | NS | NS | NS | 269.62 | 4.20E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: MRPL39 | 21q21.3 | 25585655 | 25607489 | 36 | NS | NS | NS | NS | 269.62 | 4.20E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: MRPL39 | 21q21.3 | 25585655 | 25607489 | 36 | NS | NS | NS | NS | 269.62 | 4.20E–06\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30636644_table2_R00041",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "53",
+          "confidence": 0.9,
+          "evidence": "Row text: JAM2 | 21q21.3 | 25639281 | 25717562 | 53 | NS | NS | NS | NS | 276.76 | 3.02E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\": ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.02e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: JAM2 | 21q21.3 | 25639281 | 25717562 | 53 | NS | NS | NS | NS | 276.76 | 3.02E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\": ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: JAM2 | 21q21.3 | 25639281 | 25717562 | 53 | NS | NS | NS | NS | 276.76 | 3.02E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\": ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "cific genetic contributors, provide novel insight into the genetic architecture of AD and can advance our understanding of its pathogenesis. Keywords: Alzheimer’s disease, Sex disparities, Genome-wide association study, Meta-analysis, Gene-based analysis *Corr",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ysis [37]. For the LOADFS and FHS co- data were obtained through principal component ana- horts, we adopted a two-step approach in which the lysis (PCA) to be included in downstream genetic ana- SNPs with p <0.05 in the logistic models explained lyses to addre",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "esigns and two with population de- sponding risks forheterozygote APOE-ε3ε4 carriers were signs) using genetic information for approximately 2 23% and 30%, respectively [11]. AD is also more severe million genotyped and imputed SNPs. Since exploring in females",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " were run using default values for input arguments initiated by recruiting an original cohort of 5221 mainly mac3 were run using default values for input arguments Caucasian participants who were older than 65 years and European population (EUR) haplotypes fro",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "5220",
+          "confidence": 0.7,
+          "evidence": "of interest were genotyped using atric disorders or life-threatening conditions. Of 9468 Since the four datasets of interest were genotyped using participants with phenotype data, 5220 subjects (2319 different platforms, imputation was conducted to gener- part",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "AGES;HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: JAM2 | 21q21.3 | 25639281 | 25717562 | 53 | NS | NS | NS | NS | 276.76 | 3.02E–05\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Chromosomal region | Chromosomal region\": ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

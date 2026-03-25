@@ -155,6 +155,42 @@ http://127.0.0.1:8899
 - The browser editor is intended for lightweight manual correction of curated output files
 - For multi-table papers, evaluation is performed on the combined prediction set
 
+## Render Demo Deployment
+This project can be deployed as a lightweight demo on Render.
+
+### Included deployment files
+- [`requirements.txt`](./requirements.txt)
+- [`render.yaml`](./render.yaml)
+
+### What the Render demo is good for
+- sharing the UI with collaborators
+- testing the end-to-end workflow
+- demonstrating table extraction, curation, and evaluation in a browser
+
+### Render free plan caveats
+- services may sleep when idle
+- the first request after sleeping may be slow
+- local files are ephemeral and not guaranteed to persist
+- uploaded PDFs, generated spreadsheets, and review artifacts should be treated as temporary demo data
+
+### Deploy on Render
+1. Push this repository to GitHub
+2. Create a new Render account or sign in
+3. Click `New` -> `Blueprint`
+4. Connect your GitHub repository
+5. Render will detect [`render.yaml`](./render.yaml)
+6. Deploy the web service
+
+### Start command used on Render
+```bash
+python3 advp_run_ui.py web --host 0.0.0.0 --port $PORT
+```
+
+### Recommended demo usage
+- use URL-based paper input when possible
+- upload PDFs only for temporary review sessions
+- do not rely on the deployed instance for long-term file storage
+
 ## Current Field Mapping Rules
 - `TopSNP`: `SNP ALL` / `Variant` / `rsID`-like columns
 - `SNP-based, Gene-based`: `SNP-based` if rsID exists; otherwise `Gene-based` if a gene column exists

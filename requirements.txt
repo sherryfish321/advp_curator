@@ -1,0 +1,7 @@
+pandas
+openpyxl
+requests
+pdfplumber
+camelot-py
+lxml
+beautifulsoup4

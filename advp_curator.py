@@ -1,7 +1,10 @@
 import re
 import json
 import argparse
+import io
+import html as html_lib
 import os
+import tarfile
 import difflib
 from dataclasses import dataclass, asdict
 from typing import List, Dict, Optional, Tuple, Any
@@ -13,6 +16,11 @@ try:
     import requests
 except Exception:
     requests = None
+
+try:
+    from bs4 import BeautifulSoup
+except Exception:
+    BeautifulSoup = None
 
 try:
     import pdfplumber
@@ -211,11 +219,114 @@ class FieldAudit:
 def download_pdf(url: str, out_path: str) -> str:
     if requests is None:
         raise RuntimeError("requests is not installed; cannot download from URL.")
-    r = requests.get(url, timeout=60)
-    r.raise_for_status()
+
+    def _extract_pmcid(src: str) -> Optional[str]:
+        m = re.search(r"/articles/(PMC\d+)(?:/|$)", src, flags=re.I)
+        if m:
+            return m.group(1).upper()
+        return None
+
+    def _download_from_pmc_oa(pmcid: str) -> Optional[bytes]:
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/xml,text/xml,*/*",
+        }
+        oa_api = f"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id={pmcid}"
+        resp = requests.get(oa_api, timeout=60, headers=headers, allow_redirects=True)
+        resp.raise_for_status()
+        text = resp.text
+        m = re.search(r'href="([^"]+\.(?:tgz|tar\.gz))"', text, flags=re.I)
+        if not m:
+            return None
+        tgz_url = m.group(1)
+        if tgz_url.startswith("ftp://ftp.ncbi.nlm.nih.gov"):
+            tgz_url = tgz_url.replace("ftp://ftp.ncbi.nlm.nih.gov", "https://ftp.ncbi.nlm.nih.gov", 1)
+        tgz_resp = requests.get(tgz_url, timeout=60, headers=headers, allow_redirects=True)
+        tgz_resp.raise_for_status()
+        with tarfile.open(fileobj=io.BytesIO(tgz_resp.content), mode="r:gz") as tar:
+            for member in tar.getmembers():
+                if member.isfile() and member.name.lower().endswith(".pdf"):
+                    f = tar.extractfile(member)
+                    if f is not None:
+                        return f.read()
+        return None
+
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/pdf,application/octet-stream;q=0.9,*/*;q=0.8",
+        "Referer": "https://pmc.ncbi.nlm.nih.gov/",
+    }
+    try:
+        r = requests.get(url, timeout=60, headers=headers, allow_redirects=True)
+        r.raise_for_status()
+        content_type = (r.headers.get("Content-Type") or "").lower()
+        content = r.content or b""
+        is_pdf = "application/pdf" in content_type or content.startswith(b"%PDF")
+        if not is_pdf:
+            raise RuntimeError(
+                "Downloaded content is not a PDF. "
+                f"URL={url} Content-Type={content_type or 'unknown'}"
+            )
+    except Exception as direct_err:
+        pmcid = _extract_pmcid(url)
+        if not pmcid:
+            raise direct_err
+        content = _download_from_pmc_oa(pmcid)
+        if not content or not content.startswith(b"%PDF"):
+            raise RuntimeError(
+                f"Unable to download PDF from PMC direct URL or OA fallback for {pmcid}. "
+                f"Direct error: {repr(direct_err)}"
+            )
     with open(out_path, "wb") as f:
-        f.write(r.content)
+        f.write(content)
     return out_path
+
+
+def extract_pmcid_from_url(url: str) -> Optional[str]:
+    m = re.search(r"/articles/(PMC\d+)(?:/|$)", url, flags=re.I)
+    if m:
+        return m.group(1).upper()
+    return None
+
+
+def fetch_pmc_fulltext_xml(pmcid: str, timeout: int = 60) -> str:
+    if requests is None:
+        raise RuntimeError("requests is not installed; cannot fetch PMC XML.")
+
+    headers = {"User-Agent": "Mozilla/5.0", "Accept": "application/xml,text/xml,*/*"}
+    errors: List[str] = []
+
+    api_url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/{pmcid}/fullTextXML"
+    try:
+        resp = requests.get(api_url, timeout=timeout, headers=headers)
+        if resp.ok and ("<article" in resp.text or "<pmc-articleset" in resp.text):
+            return resp.text
+        errors.append(f"europepmc_fullTextXML:{resp.status_code}")
+    except Exception as e:
+        errors.append(f"europepmc_fullTextXML:{repr(e)}")
+
+    pmcid_num = re.sub(r"^PMC", "", pmcid, flags=re.I)
+    oai_url = (
+        "https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi"
+        f"?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:{pmcid_num}&metadataPrefix=pmc"
+    )
+    try:
+        resp = requests.get(oai_url, timeout=timeout, headers=headers)
+        if resp.ok and ("<article" in resp.text or "<GetRecord" in resp.text):
+            return resp.text
+        errors.append(f"ncbi_oai:{resp.status_code}")
+    except Exception as e:
+        errors.append(f"ncbi_oai:{repr(e)}")
+
+    raise RuntimeError(f"Unable to fetch PMC full text XML for {pmcid}. Errors: {'; '.join(errors)}")
+
+
+def xml_to_text(xml_text: str) -> str:
+    if BeautifulSoup is not None:
+        soup = BeautifulSoup(xml_text, "xml")
+        return soup.get_text(" ", strip=True)
+    text = re.sub(r"<[^>]+>", " ", xml_text)
+    return html_lib.unescape(re.sub(r"\s+", " ", text)).strip()
 
 
 def normalize_text(s: str) -> str:
@@ -1755,18 +1866,39 @@ def run_pipeline(pdf_or_url: Optional[str],
 
     # 1) Get PDF
     pdf_path = pdf_or_url or ""
+    paper_source_errors: List[Dict[str, str]] = []
+    online_full_text = ""
+    online_fulltext_source = ""
     if pdf_or_url and pdf_or_url.lower().startswith("http"):
         if requests is None:
             raise RuntimeError("URL provided but requests not installed.")
-        pdf_path = "input_paper.pdf"
-        download_pdf(pdf_or_url, pdf_path)
+        if pdf_or_url.lower().endswith(".pdf"):
+            pdf_path = "input_paper.pdf"
+            try:
+                download_pdf(pdf_or_url, pdf_path)
+            except Exception as e:
+                paper_source_errors.append({"source": pdf_or_url, "error": repr(e)})
+                pdf_path = ""
+        else:
+            pdf_path = ""
+            pmcid_from_url = extract_pmcid_from_url(pdf_or_url)
+            if pmcid_from_url:
+                try:
+                    online_full_text = xml_to_text(fetch_pmc_fulltext_xml(pmcid_from_url))
+                    online_fulltext_source = "pmc_xml"
+                except Exception as e:
+                    paper_source_errors.append({"source": pdf_or_url, "error": repr(e)})
+            else:
+                paper_source_errors.append({"source": pdf_or_url, "error": "Unsupported non-PMC article URL"})
 
     # 2) Extract full text with fallback:
     # pdfplumber -> Docling -> OCR(+rotation), only when section signal is weak.
     if pdf_path:
         full_text, fulltext_source = extract_full_text_with_fallback(pdf_path)
+    elif online_full_text:
+        full_text, fulltext_source = online_full_text, online_fulltext_source
     else:
-        full_text, fulltext_source = "", "none"
+        full_text, fulltext_source = "", ("paper_unavailable" if paper_source_errors else "none")
     section_text = _sectionize_text(full_text)
     # ID policy: do not infer from paper text; use table filename only.
     resolved_pmid = infer_pmid_from_source_name(pdf_or_url, table_input)
@@ -1817,10 +1949,12 @@ def run_pipeline(pdf_or_url: Optional[str],
             "pmcid": resolved_pmcid,
             "pmid": resolved_pmid,
             "pdf": pdf_path,
+            "pdf_source": pdf_or_url or "",
             "table_input": table_input or "NR",
             "full_text_source": fulltext_source,
             "id_evidence": ids_evidence,
         },
+        "paper_source_errors": paper_source_errors,
         "table_source_errors": table_source_errors,
         "global_field_audit": [
             asdict(stage_audit),

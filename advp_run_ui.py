@@ -2,9 +2,11 @@
 import argparse
 import csv
 import datetime as dt
+import email
 import html
 import json
 import os
+import re
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
@@ -156,6 +158,99 @@ def metric_pct(v: object) -> str:
         return "NA"
 
 
+def is_http_url(value: str) -> bool:
+    return value.lower().startswith("http://") or value.lower().startswith("https://")
+
+
+def parse_request_data(handler: BaseHTTPRequestHandler) -> Dict[str, List[str]]:
+    content_type = handler.headers.get("Content-Type", "")
+    length = int(handler.headers.get("Content-Length", "0"))
+    raw = handler.rfile.read(length)
+    if "multipart/form-data" not in content_type:
+        return parse_qs(raw.decode("utf-8"))
+
+    message = email.message_from_bytes(
+        b"Content-Type: " + content_type.encode("utf-8") + b"\r\n\r\n" + raw
+    )
+    data: Dict[str, List[str]] = {}
+    for part in message.walk():
+        if part.get_content_maintype() == "multipart":
+            continue
+        disposition = part.get("Content-Disposition", "")
+        if "form-data" not in disposition:
+            continue
+        name = part.get_param("name", header="content-disposition")
+        filename = part.get_param("filename", header="content-disposition")
+        payload = part.get_payload(decode=True) or b""
+        if not name:
+            continue
+        if filename:
+            upload_dir = Path(os.getcwd()) / "uploaded_papers"
+            upload_dir.mkdir(parents=True, exist_ok=True)
+            safe_name = re.sub(r"[^A-Za-z0-9._-]+", "_", Path(filename).name)
+            save_path = upload_dir / f"{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}_{safe_name}"
+            save_path.write_bytes(payload)
+            data.setdefault(name, []).append(str(save_path))
+        else:
+            data.setdefault(name, []).append(payload.decode("utf-8", errors="ignore"))
+    return data
+
+
+def infer_pmid_from_sheet_path(path: Path) -> str:
+    match = re.search(r"from_(\d+)_table\d+_v\d+\.xlsx$", path.name)
+    return match.group(1) if match else ""
+
+
+def infer_table_number_from_sheet_path(path: Path) -> int:
+    match = re.search(r"_table(\d+)_v\d+\.xlsx$", path.name)
+    return int(match.group(1)) if match else 1
+
+
+def find_related_tables(path: Path) -> List[Path]:
+    pmid = infer_pmid_from_sheet_path(path)
+    if not pmid:
+        return [path]
+    pattern = f"from_{pmid}_table*_v*.xlsx"
+    tables = sorted(path.parent.glob(pattern))
+    return tables or [path]
+
+
+def load_run_context_for_sheet(path: Path) -> Dict[str, object]:
+    log_dir = path.parent.parent / "ui_run_logs"
+    if not log_dir.exists():
+        return {}
+    latest_match: Dict[str, object] = {}
+    for log_path in sorted(log_dir.glob("*.json"), reverse=True):
+        with log_path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        generated = data.get("generated_harmonized", [])
+        if str(path) in generated:
+            latest_match = data
+            break
+    return latest_match
+
+
+def annotation_store_path(path: Path) -> Path:
+    ann_dir = path.parent.parent / "ui_annotations"
+    ann_dir.mkdir(parents=True, exist_ok=True)
+    return ann_dir / f"{path.stem}.json"
+
+
+def load_annotations(path: Path) -> Dict[str, Dict[str, Dict[str, str]]]:
+    ann_path = annotation_store_path(path)
+    if not ann_path.exists():
+        return {}
+    with ann_path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_annotations(path: Path, annotations: Dict[str, Dict[str, Dict[str, str]]]) -> Path:
+    ann_path = annotation_store_path(path)
+    with ann_path.open("w", encoding="utf-8") as f:
+        json.dump(annotations, f, indent=2, ensure_ascii=False)
+    return ann_path
+
+
 def curated_editable_columns() -> List[str]:
     return [
         "RecordID",
@@ -174,6 +269,7 @@ def curated_editable_columns() -> List[str]:
 
 def load_curated_rows(path: Path, limit: int = 50) -> Dict[str, object]:
     df = pd.read_excel(path)
+    annotations = load_annotations(path)
     cols = [c for c in curated_editable_columns() if c in df.columns]
     rows = []
     for idx, row in df.head(limit).iterrows():
@@ -181,14 +277,19 @@ def load_curated_rows(path: Path, limit: int = 50) -> Dict[str, object]:
         for col in cols:
             val = row.get(col)
             row_dict[col] = "" if pd.isna(val) else str(val)
+            row_ann = annotations.get(str(idx), {}).get(col, {})
+            row_dict[f"{col}__status"] = row_ann.get("status", "")
+            row_dict[f"{col}__comment"] = row_ann.get("comment", "")
         rows.append(row_dict)
     return {"columns": cols, "rows": rows, "total_rows": int(len(df))}
 
 
-def save_curated_edits(path: Path, form_data: Dict[str, List[str]]) -> int:
+def save_curated_edits(path: Path, form_data: Dict[str, List[str]]) -> Dict[str, object]:
     df = pd.read_excel(path)
+    annotations = load_annotations(path)
     row_indexes = form_data.get("row_index", [])
     updated = 0
+    annotated = 0
     editable = [c for c in curated_editable_columns() if c in df.columns]
     for pos, row_idx_raw in enumerate(row_indexes):
         if not row_idx_raw.strip():
@@ -207,11 +308,23 @@ def save_curated_edits(path: Path, form_data: Dict[str, List[str]]) -> int:
             if old_norm != new_val:
                 df.at[row_idx, col] = new_val if new_val != "" else None
                 changed = True
+            status_values = form_data.get(f"status__{col}", [])
+            comment_values = form_data.get(f"comment__{col}", [])
+            status = status_values[pos].strip() if pos < len(status_values) else ""
+            comment = comment_values[pos].strip() if pos < len(comment_values) else ""
+            if status or comment:
+                annotations.setdefault(str(row_idx), {})[col] = {"status": status, "comment": comment}
+                annotated += 1
+            elif str(row_idx) in annotations and col in annotations[str(row_idx)]:
+                del annotations[str(row_idx)][col]
+                if not annotations[str(row_idx)]:
+                    del annotations[str(row_idx)]
         if changed:
             updated += 1
     with pd.ExcelWriter(path, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="curated")
-    return updated
+    ann_path = save_annotations(path, annotations)
+    return {"updated_rows": updated, "annotated_cells": annotated, "annotation_path": str(ann_path)}
 
 
 def summarize_counts(mismatch_paths: List[Path]) -> Dict[str, int]:
@@ -451,6 +564,15 @@ def render_metric_panel(title: str, payload: Dict[str, object], description: str
 
 def render_edit_table(file_path: str) -> str:
     path = Path(file_path).resolve()
+    run_context = load_run_context_for_sheet(path)
+    if isinstance(run_context.get("generated_harmonized"), list) and run_context.get("generated_harmonized"):
+        related_tables = [Path(p) for p in run_context["generated_harmonized"]]
+    else:
+        related_tables = find_related_tables(path)
+    table_num = infer_table_number_from_sheet_path(path)
+    paper_input = str(run_context.get("paper_input", ""))
+    table_links = run_context.get("table_links", []) if isinstance(run_context.get("table_links", []), list) else []
+    current_table_link = table_links[table_num - 1] if table_num - 1 < len(table_links) else ""
     data = load_curated_rows(path)
     header = "".join(f"<th>{html.escape(col)}</th>" for col in data["columns"])
     rows_html = []
@@ -458,16 +580,63 @@ def render_edit_table(file_path: str) -> str:
         cells = [f"<td><input type='hidden' name='row_index' value='{row['_row_index']}' />{row['_row_index']}</td>"]
         for col in data["columns"]:
             val = html.escape(row[col])
+            status = row.get(f"{col}__status", "")
+            comment = html.escape(row.get(f"{col}__comment", ""))
+            status_class = f"mark-{status}" if status else ""
             cells.append(
-                "<td>"
+                f"<td class='edit-cell {status_class}'>"
+                "<div class='cell-stack'>"
                 f"<input name='field__{html.escape(col)}' value='{val}' />"
+                f"<select name='status__{html.escape(col)}' class='status-select'>"
+                f"<option value='' {'selected' if status == '' else ''}>No Mark</option>"
+                f"<option value='review' {'selected' if status == 'review' else ''}>Needs Review</option>"
+                f"<option value='issue' {'selected' if status == 'issue' else ''}>Issue</option>"
+                f"<option value='resolved' {'selected' if status == 'resolved' else ''}>Resolved</option>"
+                "</select>"
+                f"<input name='comment__{html.escape(col)}' value='{comment}' placeholder='Comment' class='comment-input' />"
+                "</div>"
                 "</td>"
             )
         rows_html.append("<tr>" + "".join(cells) + "</tr>")
+    ref_actions = []
+    if current_table_link:
+        ref_actions.append(f"<a class='btn-link accent' href='{html.escape(current_table_link)}' target='_blank' rel='noopener noreferrer'>Open Current Table Link</a>")
+    if paper_input:
+        if is_http_url(paper_input):
+            ref_actions.append(f"<a class='btn-link' href='{html.escape(paper_input)}' target='_blank' rel='noopener noreferrer'>Open Paper File</a>")
+        else:
+            ref_actions.append(f"<a class='btn-link' href='/download?{urlencode({'path': paper_input})}'>Open Paper File</a>")
+    table_reference_rows = []
+    for idx, table_path in enumerate(related_tables, start=1):
+        linked_url = table_links[idx - 1] if idx - 1 < len(table_links) else ""
+        is_current = "Current" if table_path == path else f"Table {idx}"
+        row_class = "ref-row current" if table_path == path else "ref-row"
+        open_btn = (
+            f"<a class='btn-link accent' href='{html.escape(linked_url)}' target='_blank' rel='noopener noreferrer' onclick='event.stopPropagation()'>Open Link</a>"
+            if linked_url else
+            "<span class='muted'>No link available</span>"
+        )
+        table_reference_rows.append(
+            f"<a class='{row_class}' href='/edit?{urlencode({'path': str(table_path)})}'>"
+            f"<div class='ref-title'><span class='table-badge'>{html.escape(is_current)}</span><span class='table-name'>{html.escape(table_path.name)}</span></div>"
+            f"<div class='muted ref-url'>{html.escape(linked_url or 'No link available')}</div>"
+            f"<div class='ref-actions'>{open_btn}</div>"
+            "</a>"
+        )
     return (
         "<h2>Edit Curated Sheet</h2>"
         f"<p class='muted'>Editing <code>{html.escape(str(path))}</code>. "
         f"Showing first {len(data['rows'])} rows out of {data['total_rows']}.</p>"
+        "<div class='subcard'>"
+        "<h3>Reference Links</h3>"
+        f"<p><strong>Paper</strong><br><code>{html.escape(paper_input or 'Not available')}</code></p>"
+        f"<p><strong>Current Table Link</strong><br><span class='link-pill'>{html.escape(current_table_link or 'Not available')}</span></p>"
+        "<div class='ref-grid'>"
+        + "".join(table_reference_rows)
+        + "</div>"
+        "<div class='actions'>"
+        + "".join(ref_actions)
+        + "</div></div>"
         "<form method='post' action='/save-edits'>"
         f"<input type='hidden' name='path' value='{html.escape(str(path))}' />"
         "<div class='table-wrap'><table class='editor-table'><thead><tr><th>Row</th>"
@@ -556,6 +725,15 @@ def html_page(body: str) -> bytes:
       --brand-900: #24364a;
       --brand-700: #3f5465;
       --brand-600: #52658e;
+      --accent-100: #edf6ff;
+      --accent-200: #d9ebff;
+      --accent-300: #bdd9ff;
+      --contrast-100: #fff3e8;
+      --contrast-200: #ffe1c5;
+      --contrast-500: #c96f2d;
+      --gold-100: #fff8df;
+      --rose-100: #fff0f0;
+      --mint-100: #e9f8ee;
       --ok-bg: #ebf8f1;
       --ok-ink: #25603b;
       --bad-bg: #fff2f2;
@@ -623,13 +801,18 @@ def html_page(body: str) -> bytes:
     button {{
       margin-top: 16px;
       border: 0;
-      border-radius: 10px;
+      border-radius: 12px;
       background: linear-gradient(90deg, var(--brand-700), var(--brand-600));
       color: #fff;
       font-weight: 700;
       font-size: 14px;
-      padding: 11px 16px;
+      padding: 0 18px;
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      line-height: 1;
     }}
     button:hover {{ filter: brightness(.97); }}
     .stats {{
@@ -678,7 +861,7 @@ def html_page(body: str) -> bytes:
     .tab-panel.active {{ display: block; }}
     .panel-grid {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }}
     .subcard {{
-      background: #fcfdff;
+      background: linear-gradient(180deg, #fcfdff 0%, #f7fbff 100%);
       border: 1px solid var(--line);
       border-radius: 12px;
       padding: 16px;
@@ -769,26 +952,123 @@ def html_page(body: str) -> bytes:
     .summary-table, .editor-table {{ width: 100%; border-collapse: collapse; }}
     .summary-table th, .summary-table td, .editor-table th, .editor-table td {{
       border-top: 1px solid #e4eaf1;
-      padding: 10px 8px;
+      padding: 14px 12px;
       text-align: left;
       vertical-align: top;
       font-size: 13px;
     }}
     .summary-table th, .editor-table th {{ color: #516377; font-size: 12px; text-transform: uppercase; letter-spacing: .25px; }}
     .table-wrap {{ overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }}
-    .editor-table input {{ min-width: 120px; margin: 0; padding: 8px 9px; background: #fff; }}
+    .editor-table {{ border-collapse: separate; border-spacing: 0 10px; }}
+    .editor-table tbody tr td {{ background: #fff; }}
+    .editor-table input {{ min-width: 120px; margin: 0; padding: 10px 11px; background: #fff; }}
+    .cell-stack {{ display: grid; gap: 8px; min-width: 190px; }}
+    .status-select, .comment-input {{ margin: 0; }}
+    .edit-cell {{ border-radius: 14px; }}
+    .edit-cell.mark-review {{ background: #fff6d8; }}
+    .edit-cell.mark-issue {{ background: #ffe4e4; }}
+    .edit-cell.mark-resolved {{ background: #e3f6e9; }}
+    .edit-cell.mark-review .cell-stack {{
+      background: #fff6d8;
+      border: 1px solid #f0cf67;
+      border-radius: 12px;
+      padding: 10px;
+    }}
+    .edit-cell.mark-issue .cell-stack {{
+      background: #ffe4e4;
+      border: 1px solid #e89292;
+      border-radius: 12px;
+      padding: 10px;
+    }}
+    .edit-cell.mark-resolved .cell-stack {{
+      background: #e3f6e9;
+      border: 1px solid #86c89b;
+      border-radius: 12px;
+      padding: 10px;
+    }}
+    .ref-grid {{ display: grid; gap: 12px; margin-top: 12px; }}
+    .ref-row {{
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #dce5ef;
+      border-radius: 12px;
+      padding: 14px;
+      background: linear-gradient(135deg, #fbfdff 0%, #f6faff 70%, #fff8ef 100%);
+      display: grid;
+      gap: 8px;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }}
+    .ref-row:hover {{
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(48, 79, 122, 0.08);
+      border-color: #c7d9ee;
+    }}
+    .ref-row.current {{
+      background: linear-gradient(135deg, #dcecff 0%, #f3f8ff 45%, #ffffff 100%);
+      border-color: #7eaee6;
+      box-shadow:
+        inset 0 0 0 2px rgba(64, 106, 165, 0.18),
+        0 10px 22px rgba(69, 112, 171, 0.12);
+    }}
+    .ref-title {{ display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }}
+    .table-badge {{
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #334c68, #4a6784);
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }}
+    .ref-row.current .table-badge {{
+      background: linear-gradient(90deg, #244568, #3e72a6);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.65);
+    }}
+    .ref-row.current .table-name {{
+      color: #1f4f80;
+    }}
+    .table-name {{ font-weight: 700; color: #2b4560; }}
+    .ref-url {{ word-break: break-all; }}
+    .ref-actions {{ display: flex; gap: 10px; flex-wrap: wrap; }}
+    .link-pill {{
+      display: inline-block;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+      border: 1px solid #d3deee;
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #45617d;
+      word-break: break-all;
+    }}
     .btn-link {{
       display: inline-block;
       text-decoration: none;
       border: 1px solid #cfd8e3;
-      background: #fff;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
       color: #25425f;
-      border-radius: 10px;
-      padding: 9px 12px;
+      border-radius: 12px;
+      padding: 0 16px;
+      min-height: 46px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 600;
       font-size: 14px;
     }}
-    .btn-link.primary {{ background: #2f4d68; border-color: #2f4d68; color: #fff; }}
+    .btn-link:hover {{ border-color: #adc4da; background: linear-gradient(180deg, #ffffff 0%, #eef5fc 100%); }}
+    .btn-link.primary {{ background: linear-gradient(90deg, #2f4d68, #496788); border-color: #2f4d68; color: #fff; }}
+    .btn-link.accent {{
+      background: linear-gradient(180deg, #fff8f1 0%, var(--contrast-100) 100%);
+      border-color: var(--contrast-200);
+      color: #9a5523;
+    }}
+    .btn-link.accent:hover {{
+      background: linear-gradient(180deg, #fffdf9 0%, #ffe9d3 100%);
+      border-color: #f2cda9;
+      color: #86471c;
+    }}
     pre {{
       background: #f4f7fb;
       border: 1px solid #d9e1ea;
@@ -863,13 +1143,15 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
   <li class="check-item"><span class="check-icon">3</span>Mismatch report, fix-ready CSV, and missing-field summary</li>
 </ul>
 </details>
-<form method="post" action="/run">
+<form method="post" action="/run" enctype="multipart/form-data">
 <label>Owner</label>
 <input name="owner_name" value="" placeholder="Your name" />
 <label>PMID</label>
 <input name="pmid" value="30448613" required />
-<label>Paper path (PDF)</label>
-<input name="paper_input" value="/Users/sherryhuang/advp_curator/paper/nihms-1510343.pdf" required />
+<label>Paper URL</label>
+<input name="paper_input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/" placeholder="PMC article page or PDF link" />
+<label>Or upload paper PDF</label>
+<input type="file" name="paper_upload" accept=".pdf,application/pdf" />
 <label>Source type</label>
 <select name="source_type">
   <option value="pmc_table_link" selected>pmc_table_link</option>
@@ -912,8 +1194,15 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 self.end_headers()
                 self.wfile.write(b"File not found")
                 return
+            content_type = "application/octet-stream"
+            if p.suffix.lower() == ".csv":
+                content_type = "text/csv; charset=utf-8"
+            elif p.suffix.lower() == ".json":
+                content_type = "application/json; charset=utf-8"
+            elif p.suffix.lower() == ".pdf":
+                content_type = "application/pdf"
             self.send_response(200)
-            self.send_header("Content-Type", "text/csv; charset=utf-8")
+            self.send_header("Content-Type", content_type)
             self.send_header("Content-Disposition", f"attachment; filename={p.name}")
             self.end_headers()
             self.wfile.write(p.read_bytes())
@@ -928,9 +1217,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
             self.end_headers()
             return
 
-        length = int(self.headers.get("Content-Length", "0"))
-        raw = self.rfile.read(length).decode("utf-8")
-        data = parse_qs(raw)
+        data = parse_request_data(self)
 
         try:
             if self.path == "/save-edits":
@@ -938,10 +1225,12 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 root = Path(os.getcwd()).resolve()
                 if not str(path).startswith(str(root)) or not path.exists() or not path.is_file():
                     raise ValueError("Invalid curated sheet path")
-                updated = save_curated_edits(path, data)
+                save_result = save_curated_edits(path, data)
                 body = (
                     "<h2>Curated Sheet Saved</h2>"
-                    f"<p class='muted'>{updated} row(s) updated in <code>{html.escape(str(path))}</code>.</p>"
+                    f"<p class='muted'>{save_result['updated_rows']} row(s) updated in <code>{html.escape(str(path))}</code>.</p>"
+                    f"<p class='muted'>{save_result['annotated_cells']} annotated cell(s) saved. "
+                    f"Annotations file: <code>{html.escape(save_result['annotation_path'])}</code></p>"
                     "<div class='actions'>"
                     f"<a class='btn-link primary' href='/edit?{urlencode({'path': str(path)})}'>Continue Editing</a>"
                     "<a class='btn-link' href='/'>Back</a>"
@@ -956,12 +1245,16 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
             pmid = int(data.get("pmid", [""])[0])
             owner_name = data.get("owner_name", [""])[0].strip()
             paper_input = data.get("paper_input", [""])[0].strip()
+            paper_upload = data.get("paper_upload", [""])[0].strip() if data.get("paper_upload") else ""
+            paper_input = paper_upload or paper_input
             source_type = data.get("source_type", ["pmc_table_link"])[0].strip()
             links_raw = data.get("table_links", [""])[0]
             advp_tsv = data.get("advp_tsv", ["advp.variant.records.hg38.tsv"])[0].strip()
             links = parse_links(links_raw)
             if not links:
                 raise ValueError("No table links provided")
+            if not paper_input:
+                raise ValueError("Provide a paper URL or upload a PDF file")
 
             result = run_pipeline(
                 pmid=pmid,
@@ -1041,7 +1334,7 @@ def build_parser() -> argparse.ArgumentParser:
     run = sub.add_parser("run", help="Run pipeline from CLI")
     run.add_argument("--owner_name", default="", help="Person responsible for this run")
     run.add_argument("--pmid", type=int, required=True)
-    run.add_argument("--paper_input", required=True, help="Paper PDF path")
+    run.add_argument("--paper_input", required=True, help="Paper PDF path or URL")
     run.add_argument("--table_links", required=True, help="Comma or newline-separated links")
     run.add_argument("--source_type", default="pmc_table_link", choices=["pmc_table_link"])
     run.add_argument("--advp_tsv", default="advp.variant.records.hg38.tsv")

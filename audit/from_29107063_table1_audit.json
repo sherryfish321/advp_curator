@@ -1,0 +1,1452 @@
+{
+  "paper": {
+    "paper_id": "29107063_table1",
+    "pmcid": "",
+    "pmid": "29107063",
+    "pdf": "/Users/sherryhuang/advp_curator/uploaded_papers/20260325_011231_nihms918530.pdf",
+    "pdf_source": "/Users/sherryhuang/advp_curator/uploaded_papers/20260325_011231_nihms918530.pdf",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/29107063_table1.xlsx",
+    "full_text_source": "pdfplumber",
+    "id_evidence": "PMID inferred from source filename -> 29107063"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40 gene (Bao et al., 2016) showed that minor allele of rs157580 (TOMM40 intron area) was significantly associated with a reduced risk of AD whereas minor allele of rs2075650 was significantly ass",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "tropmi )5102 ,.la te ,.la te uL ;7102 ,.la te gnaW( evitingoc ;DA ,ytivegnoL seussit 01 2LRVP ,EOPA 2LRVP ;04MMOT ni sPNS ,ekorts ,DA ,tropsnart dipil( EOPA 905504sr ,.la te aM ;6102 ,.la te uyR ;4102 htiw stcaretni( tnemriapmi supmacoppih ,ytivegnol ,recnac )6102 )4e EOPA sesuriv ot esnopser ,yhporta b))VCH( ,.la te vohkalaS ;6102 ,.la te niL( GT ;ytivegnoL doolb 2LRVP 2LRVP ;EOPA ni sPNS ’srosrucerp nietorp( 04MMOT 2296018sr )4102 )DA ,a",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression were used as statistical models in GWAS. The results of analyses confirmed strong associations of genetic variants from well-known genes APOE, TOMM40, PVRL2 (NECTIN2), and APOC1 with AD. ",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GWAS of Alzheimer’s disease obtained in the analyses using logistic regression (GLIMMIX in LOADFS) for male and females combined. a). CHS (case: 286; control: 4732); b). FHS (case: 308; c",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "African ancestry",
+      "confidence": 0.75,
+      "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE, PVRL2, GWAS of the late onset AD in African Americans, SNPs related to APOE, PVRL2, TOMM40 and APOC1 also showed genome-wide significant associations with AD (Logue TOMM40 and APOC1 also",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no sample size cues found",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29107063_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2075650",
+          "confidence": 0.9,
+          "evidence": "Row text: CHS | rs2075650 | 9.32E–15 | 2.3 | 19 | G | A | 0.22 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.32e-15,
+          "confidence": 0.7,
+          "evidence": "Row text: CHS | rs2075650 | 9.32E–15 | 2.3 | 19 | G | A | 0.22 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.3,
+          "confidence": 0.65,
+          "evidence": "Row text: CHS | rs2075650 | 9.32E–15 | 2.3 | 19 | G | A | 0.22 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: CHS | rs2075650 | 9.32E–15 | 2.3 | 19 | G | A | 0.22 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs405509",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs405509 | 1.31E–06 | 1.5 | 19 | T | G | 0.53 | 0.43 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.31e-06,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs405509 | 1.31E–06 | 1.5 | 19 | T | G | 0.53 | 0.43 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs405509 | 1.31E–06 | 1.5 | 19 | T | G | 0.53 | 0.43 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs405509 | 1.31E–06 | 1.5 | 19 | T | G | 0.53 | 0.43 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs8106922",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs8106922 | 4.54E–05 | 0.7 | 19 | G | A | 0.3 | 0.39 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.54e-05,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs8106922 | 4.54E–05 | 0.7 | 19 | G | A | 0.3 | 0.39 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.7,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs8106922 | 4.54E–05 | 0.7 | 19 | G | A | 0.3 | 0.39 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs8106922 | 4.54E–05 | 0.7 | 19 | G | A | 0.3 | 0.39 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6859",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs6859 | 5.34E–05 | 1.4 | 19 | A | G | 0.49 | 0.4 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"ne",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.34e-05,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs6859 | 5.34E–05 | 1.4 | 19 | A | G | 0.49 | 0.4 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"ne",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.4,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs6859 | 5.34E–05 | 1.4 | 19 | A | G | 0.49 | 0.4 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"ne",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs6859 | 5.34E–05 | 1.4 | 19 | A | G | 0.49 | 0.4 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"ne",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs769450",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs769450 | 1.59E–04 | 0.7 | 19 | A | G | 0.33 | 0.41 | APOE | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000159,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs769450 | 1.59E–04 | 0.7 | 19 | A | G | 0.33 | 0.41 | APOE | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.7,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs769450 | 1.59E–04 | 0.7 | 19 | A | G | 0.33 | 0.41 | APOE | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs769450 | 1.59E–04 | 0.7 | 19 | A | G | 0.33 | 0.41 | APOE | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2075650",
+          "confidence": 0.9,
+          "evidence": "Row text: FHS | rs2075650 | 4.02E–09 | 2.3 | 19 | G | A | 0.17 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.02e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: FHS | rs2075650 | 4.02E–09 | 2.3 | 19 | G | A | 0.17 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.3,
+          "confidence": 0.65,
+          "evidence": "Row text: FHS | rs2075650 | 4.02E–09 | 2.3 | 19 | G | A | 0.17 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: FHS | rs2075650 | 4.02E–09 | 2.3 | 19 | G | A | 0.17 | 0.12 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12721046",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs12721046 | 4.87E–09 | 2.2 | 19 | A | G | 0.18 | 0.12 | APOC1 | Intron (LD with rs769449 and rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.87e-09,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs12721046 | 4.87E–09 | 2.2 | 19 | A | G | 0.18 | 0.12 | APOC1 | Intron (LD with rs769449 and rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.2,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs12721046 | 4.87E–09 | 2.2 | 19 | A | G | 0.18 | 0.12 | APOC1 | Intron (LD with rs769449 and rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs12721046 | 4.87E–09 | 2.2 | 19 | A | G | 0.18 | 0.12 | APOC1 | Intron (LD with rs769449 and rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"re",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs769449",
+          "confidence": 0.9,
+          "evidence": "Row text: HRS | rs769449 | 3.00E–12 | 1.9 | 19 | A | G | 0.15 | 0.09 | APOE | Intron (strong LD with rs429358 in APOE; moderate LD with rs12721046 in APOC1, rs2075650 in TOMM40)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3e-12,
+          "confidence": 0.7,
+          "evidence": "Row text: HRS | rs769449 | 3.00E–12 | 1.9 | 19 | A | G | 0.15 | 0.09 | APOE | Intron (strong LD with rs429358 in APOE; moderate LD with rs12721046 in APOC1, rs2075650 in TOMM40)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.9,
+          "confidence": 0.65,
+          "evidence": "Row text: HRS | rs769449 | 3.00E–12 | 1.9 | 19 | A | G | 0.15 | 0.09 | APOE | Intron (strong LD with rs429358 in APOE; moderate LD with rs12721046 in APOC1, rs2075650 in TOMM40)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: HRS | rs769449 | 3.00E–12 | 1.9 | 19 | A | G | 0.15 | 0.09 | APOE | Intron (strong LD with rs429358 in APOE; moderate LD with rs12721046 in APOC1, rs2075650 in TOMM40)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs157582",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs157582 | 3.32E–09 | 1.5 | 19 | T | C | 0.31 | 0.24 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.32e-09,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs157582 | 3.32E–09 | 1.5 | 19 | T | C | 0.31 | 0.24 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs157582 | 3.32E–09 | 1.5 | 19 | T | C | 0.31 | 0.24 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs157582 | 3.32E–09 | 1.5 | 19 | T | C | 0.31 | 0.24 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs283815",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs283815 | 1.41E–08 | 1.5 | 19 | G | A | 0.31 | 0.25 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.41e-08,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs283815 | 1.41E–08 | 1.5 | 19 | G | A | 0.31 | 0.25 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs283815 | 1.41E–08 | 1.5 | 19 | G | A | 0.31 | 0.25 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs283815 | 1.41E–08 | 1.5 | 19 | G | A | 0.31 | 0.25 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs71352238",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs71352238 | 7.54E–08 | 1.6 | 19 | C | T | 0.17 | 0.12 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.12",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.54e-08,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs71352238 | 7.54E–08 | 1.6 | 19 | C | T | 0.17 | 0.12 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.12",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.6,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs71352238 | 7.54E–08 | 1.6 | 19 | C | T | 0.17 | 0.12 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.12",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs71352238 | 7.54E–08 | 1.6 | 19 | C | T | 0.17 | 0.12 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.12",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2075650",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs2075650 | 1.65E–07 | 1.5 | 19 | G | A | 0.18 | 0.13 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refer",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.65e-07,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs2075650 | 1.65E–07 | 1.5 | 19 | G | A | 0.18 | 0.13 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refer",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs2075650 | 1.65E–07 | 1.5 | 19 | G | A | 0.18 | 0.13 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refer",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs2075650 | 1.65E–07 | 1.5 | 19 | G | A | 0.18 | 0.13 | TOMM40 | Intron (LD with rs429358, rs769449 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refer",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2075650",
+          "confidence": 0.9,
+          "evidence": "Row text: LOADFS | rs2075650 | 2.86E–64 | 3.6 | 19 | G | A | 0.34 | 0.18 | TOMM40 | Intron (LD with rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.86e-64,
+          "confidence": 0.7,
+          "evidence": "Row text: LOADFS | rs2075650 | 2.86E–64 | 3.6 | 19 | G | A | 0.34 | 0.18 | TOMM40 | Intron (LD with rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 3.6,
+          "confidence": 0.65,
+          "evidence": "Row text: LOADFS | rs2075650 | 2.86E–64 | 3.6 | 19 | G | A | 0.34 | 0.18 | TOMM40 | Intron (LD with rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text: LOADFS | rs2075650 | 2.86E–64 | 3.6 | 19 | G | A | 0.34 | 0.18 | TOMM40 | Intron (LD with rs429358 in APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs8106922",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs8106922 | 1.14E–23 | 0.5 | 19 | G | A | 0.26 | 0.37 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.14e-23,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs8106922 | 1.14E–23 | 0.5 | 19 | G | A | 0.26 | 0.37 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs8106922 | 1.14E–23 | 0.5 | 19 | G | A | 0.26 | 0.37 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs8106922 | 1.14E–23 | 0.5 | 19 | G | A | 0.26 | 0.37 | TOMM40 | Intron\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs157580",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs157580 | 1.50E–23 | 0.5 | 19 | G | A | 0.23 | 0.33 | TOMM40 | Intron (LD with rs405509, rs769449 near APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refe",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.5e-23,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs157580 | 1.50E–23 | 0.5 | 19 | G | A | 0.23 | 0.33 | TOMM40 | Intron (LD with rs405509, rs769449 near APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refe",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs157580 | 1.50E–23 | 0.5 | 19 | G | A | 0.23 | 0.33 | TOMM40 | Intron (LD with rs405509, rs769449 near APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refe",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs157580 | 1.50E–23 | 0.5 | 19 | G | A | 0.23 | 0.33 | TOMM40 | Intron (LD with rs405509, rs769449 near APOE)\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"refe",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs405509",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs405509 | 1.50E–20 | 1.7 | 19 | T | G | 0.59 | 0.49 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.5e-20,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs405509 | 1.50E–20 | 1.7 | 19 | T | G | 0.59 | 0.49 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.7,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs405509 | 1.50E–20 | 1.7 | 19 | T | G | 0.59 | 0.49 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs405509 | 1.50E–20 | 1.7 | 19 | T | G | 0.59 | 0.49 | APOE | Upstream, promoter\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6859",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs6859 | 1.12E–18 | 1.7 | 19 | A | G | 0.52 | 0.42 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"n",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.12e-18,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs6859 | 1.12E–18 | 1.7 | 19 | A | G | 0.52 | 0.42 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"n",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.7,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs6859 | 1.12E–18 | 1.7 | 19 | A | G | 0.52 | 0.42 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"n",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs6859 | 1.12E–18 | 1.7 | 19 | A | G | 0.52 | 0.42 | PVRL2 | 3′-UTR\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125, \"n",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29107063_table1_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs439401",
+          "confidence": 0.9,
+          "evidence": "Row text:  | rs439401 | 5.17E–17 | 0.6 | 19 | T | C | 0.26 | 0.33 | APOE, APOC1 | Between genes\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.17e-17,
+          "confidence": 0.7,
+          "evidence": "Row text:  | rs439401 | 5.17E–17 | 0.6 | 19 | T | C | 0.26 | 0.33 | APOE, APOC1 | Between genes\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.6,
+          "confidence": 0.65,
+          "evidence": "Row text:  | rs439401 | 5.17E–17 | 0.6 | 19 | T | C | 0.26 | 0.33 | APOE, APOC1 | Between genes\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "lopment of cognitive function in humans (Larsen et al., 2017). Strong connection between genetic variants from TOMM40 gene and AD has been detected in a number of genetic association studies of this health disorder. The meta-analysis of polymorphisms in TOMM40",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "ers. The data collected in the Framingham Heart Study (FHS), Cardiovascular Health Study (CHS), Health and Retirement Study (HRS) and Late Onset Alzheimer’s Disease Family Study (LOADFS) were used in these analyses. The logistic regression and Cox’s regression",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": " PLoS ONE. 2014; 9(1):e87017. [PubMed: 24498013] Exp Gerontol. Author manuscript; available in PMC 2019 July 01. Author Manuscript Author Manuscript Author Manuscript Author Manuscript Yashin et al. Page 22 Fig. 1. Left panel. The QQ-plots of the results of GW",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "African ancestry",
+          "confidence": 0.75,
+          "evidence": "e in the inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In inhibit ion of apoptosis in hepatoma cells (Kurokawa et al., 2006; Logue et al., 2011). In GWAS of the late onset AD in African Americans, SNPs related to APOE,",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "HRS",
+          "confidence": 0.8,
+          "evidence": "Row text:  | rs439401 | 5.17E–17 | 0.6 | 19 | T | C | 0.26 | 0.33 | APOE, APOC1 | Between genes\n[column_mapping] {\"Dataset\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1935, \"needs_review\": true, \"match_hint\": \"Dataset\"}, \"SNP\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+file,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table1_v1.xlsx,snp,0,14,0.0,0.0,0.0
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table2_v1.xlsx,snp,0,14,0.0,0.0,0.0
+combined_inputs,snp,0,14,0.0,0.0,0.0
