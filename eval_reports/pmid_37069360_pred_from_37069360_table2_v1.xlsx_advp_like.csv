@@ -1,0 +1,78 @@
+pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+37069360.0,rs6011998,20,45269867.0,C,0.28,1.26,,,,i-share (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs6011998,20,45269867.0,C,4.2e-05,0.164,,,,i-share (continuous),SLC13A3,,continuous
+37069360.0,rs6011998,20,45269867.0,C,1.22e-05,1.69,,,,nagahama (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs6011998,20,45269867.0,C,6.21e-07,0.037,,,,nagahama (continuous),SLC13A3,,continuous
+37069360.0,rs13079464,3,13822439.0,C,0.29,1.12,,,,i-share (dichotomous),WNT7A,,dichotomous
+37069360.0,rs13079464,3,13822439.0,C,0.5,0.014,,,,i-share (continuous),WNT7A,,continuous
+37069360.0,rs13079464,3,13822439.0,C,0.11,1.16,,,,nagahama (dichotomous),WNT7A,,dichotomous
+37069360.0,rs13079464,3,13822439.0,C,0.015,0.015,,,,nagahama (continuous),WNT7A,,continuous
+37069360.0,rs2425884,20,45258292.0,C,0.13,1.18,,,,i-share (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs2425884,20,45258292.0,C,0.000298,0.077,,,,i-share (continuous),SLC13A3,,continuous
+37069360.0,rs2425884,20,45258292.0,C,0.00348,1.29,,,,nagahama (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs2425884,20,45258292.0,C,1.77e-06,0.026,,,,nagahama (continuous),SLC13A3,,continuous
+37069360.0,rs10817108,9,113658671.0,A,0.44,0.9,,,,i-share (dichotomous),LPAR1,,dichotomous
+37069360.0,rs10817108,9,113658671.0,A,0.0223,0.058,,,,i-share (continuous),LPAR1,,continuous
+37069360.0,rs10817108,9,113658671.0,A,0.07,1.18,,,,nagahama (dichotomous),LPAR1,,dichotomous
+37069360.0,rs10817108,9,113658671.0,A,0.0041,0.017,,,,nagahama (continuous),LPAR1,,continuous
+37069360.0,rs2425881,20,45255618.0,A,0.014,1.47,,,,i-share (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs2425881,20,45255618.0,A,0.0262,0.063,,,,i-share (continuous),SLC13A3,,continuous
+37069360.0,rs2425881,20,45255618.0,A,0.0366,1.18,,,,nagahama (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs2425881,20,45255618.0,A,0.00468,0.014,,,,nagahama (continuous),SLC13A3,,continuous
+37069360.0,rs3772833,3,124518362.0,G,0.21,1.22,,,,i-share (dichotomous),"ITGB5, UMPS",,dichotomous
+37069360.0,rs3772833,3,124518362.0,G,0.85,0.006,,,,i-share (continuous),"ITGB5, UMPS",,continuous
+37069360.0,rs3772833,3,124518362.0,G,0.51,1.06,,,,nagahama (dichotomous),"ITGB5, UMPS",,dichotomous
+37069360.0,rs3772833,3,124518362.0,G,0.16,0.008,,,,nagahama (continuous),"ITGB5, UMPS",,continuous
+37069360.0,rs112407396,20,45276381.0,T,0.24,1.47,,,,i-share (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs112407396,20,45276381.0,T,0.0313,0.147,,,,i-share (continuous),SLC13A3,,continuous
+37069360.0,rs10494988,1,215141570.0,C,0.14,1.18,,,,i-share (dichotomous),"CENPF, KCNK2",,dichotomous
+37069360.0,rs10494988,1,215141570.0,C,0.000194,0.079,,,,i-share (continuous),"CENPF, KCNK2",,continuous
+37069360.0,rs10494988,1,215141570.0,C,0.9,1.01,,,,nagahama (dichotomous),"CENPF, KCNK2",,dichotomous
+37069360.0,rs10494988,1,215141570.0,C,0.67,-0.002,,,,nagahama (continuous),"CENPF, KCNK2",,continuous
+37069360.0,rs72485816,20,45314435.0,T,0.98,1.01,,,,i-share (dichotomous),"TP53RK, SLC13A3",,dichotomous
+37069360.0,rs72485816,20,45314435.0,T,0.095,0.093,,,,i-share (continuous),"TP53RK, SLC13A3",,continuous
+37069360.0,rs72485816,20,45314435.0,T,0.00283,1.32,,,,nagahama (dichotomous),"TP53RK, SLC13A3",,dichotomous
+37069360.0,rs72485816,20,45314435.0,T,1.91e-08,0.033,,,,nagahama (continuous),"TP53RK, SLC13A3",,continuous
+37069360.0,rs8041189,15,85686327.0,G,0.3,1.14,,,,i-share (dichotomous),PDE8A,,dichotomous
+37069360.0,rs8041189,15,85686327.0,G,0.073,0.041,,,,i-share (continuous),PDE8A,,continuous
+37069360.0,rs8041189,15,85686327.0,G,0.14,1.67,,,,nagahama (dichotomous),PDE8A,,dichotomous
+37069360.0,rs8041189,15,85686327.0,G,0.024,0.046,,,,nagahama (continuous),PDE8A,,continuous
+37069360.0,rs4685022,3,13832611.0,G,0.34,1.12,,,,i-share (dichotomous),WNT7A,,dichotomous
+37069360.0,rs4685022,3,13832611.0,G,0.31,0.023,,,,i-share (continuous),WNT7A,,continuous
+37069360.0,rs4685022,3,13832611.0,G,0.1,1.15,,,,nagahama (dichotomous),WNT7A,,dichotomous
+37069360.0,rs7596872,2,56128091.0,C,0.0114,1.65,,,,i-share (dichotomous),EFEMP1,,dichotomous
+37069360.0,rs7596872,2,56128091.0,C,0.011,0.089,,,,i-share (continuous),EFEMP1,,continuous
+37069360.0,rs1126642,17,42989063.0,C,0.67,1.13,,,,i-share (dichotomous),GFAP,,dichotomous
+37069360.0,rs1126642,17,42989063.0,C,0.0127,0.127,,,,i-share (continuous),GFAP,,continuous
+37069360.0,rs1126642,17,42989063.0,C,0.11,1.35,,,,nagahama (dichotomous),GFAP,,dichotomous
+37069360.0,rs1126642,17,42989063.0,C,9.88e-07,0.033,,,,nagahama (continuous),GFAP,,continuous
+37069360.0,rs687610,3,193515781.0,G,0.000488,1.46,,,,i-share (dichotomous),OPA1,,dichotomous
+37069360.0,rs687610,3,193515781.0,G,1.29e-07,0.109,,,,i-share (continuous),OPA1,,continuous
+37069360.0,rs687610,3,193515781.0,G,0.59,0.95,,,,nagahama (dichotomous),OPA1,,dichotomous
+37069360.0,rs687610,3,193515781.0,G,0.28,0.006,,,,nagahama (continuous),OPA1,,continuous
+37069360.0,rs4959689,6,2617122.0,C,0.37,1.1,,,,i-share (dichotomous),C6orf195,,dichotomous
+37069360.0,rs4959689,6,2617122.0,C,0.3,0.022,,,,i-share (continuous),C6orf195,,continuous
+37069360.0,rs56104388,20,45302135.0,T,0.67,1.3,,,,i-share (dichotomous),SLC13A3,,dichotomous
+37069360.0,rs56104388,20,45302135.0,T,0.0147,0.274,,,,i-share (continuous),SLC13A3,,continuous
+37069360.0,rs12417836,11,70089700.0,T,0.99,0.99,,,,i-share (dichotomous),"FADD, PPFIA1",,dichotomous
+37069360.0,rs12417836,11,70089700.0,T,0.29,0.045,,,,i-share (continuous),"FADD, PPFIA1",,continuous
+37069360.0,rs12417836,11,70089700.0,T,0.4,0.87,,,,nagahama (dichotomous),"FADD, PPFIA1",,dichotomous
+37069360.0,rs12417836,11,70089700.0,T,0.84,-0.002,,,,nagahama (continuous),"FADD, PPFIA1",,continuous
+37069360.0,rs2923437,8,42425399.0,A,0.88,0.98,,,,i-share (dichotomous),"SMIM19, CHRNB3, SLC20A2",,dichotomous
+37069360.0,rs2923437,8,42425399.0,A,0.026,0.047,,,,i-share (continuous),"SMIM19, CHRNB3, SLC20A2",,continuous
+37069360.0,rs2923437,8,42425399.0,A,0.23,1.11,,,,nagahama (dichotomous),"SMIM19, CHRNB3, SLC20A2",,dichotomous
+37069360.0,rs2923437,8,42425399.0,A,0.11,0.008,,,,nagahama (continuous),"SMIM19, CHRNB3, SLC20A2",,continuous
+37069360.0,rs1922930,6,1364691.0,C,0.7,0.93,,,,i-share (dichotomous),"FOXQ1, FOXF2",,dichotomous
+37069360.0,rs1922930,6,1364691.0,C,0.33,0.035,,,,i-share (continuous),"FOXQ1, FOXF2",,continuous
+37069360.0,rs2385089,19,18550434.0,A,0.14,1.2,,,,i-share (dichotomous),"ISYNA1, ELL, LRRC25",,dichotomous
+37069360.0,rs2385089,19,18550434.0,A,0.057,0.049,,,,i-share (continuous),"ISYNA1, ELL, LRRC25",,continuous
+37069360.0,rs10954468,7,134434661.0,C,0.5,1.08,,,,i-share (dichotomous),"BPGM, CALD1",,dichotomous
+37069360.0,rs10954468,7,134434661.0,C,0.13,0.033,,,,i-share (continuous),"BPGM, CALD1",,continuous
+37069360.0,rs4675310,2,203880834.0,A,0.61,1.07,,,,i-share (dichotomous),"NBEAL1, ICA1L",,dichotomous
+37069360.0,rs4675310,2,203880834.0,A,0.78,0.01,,,,i-share (continuous),"NBEAL1, ICA1L",,continuous
+37069360.0,rs4675310,2,203880834.0,A,0.26,1.88,,,,nagahama (dichotomous),"NBEAL1, ICA1L",,dichotomous
+37069360.0,rs4675310,2,203880834.0,A,0.11,0.046,,,,nagahama (continuous),"NBEAL1, ICA1L",,continuous
+37069360.0,rs6769442,3,171565463.0,G,0.37,1.1,,,,i-share (dichotomous),TMEM212,,dichotomous
+37069360.0,rs6769442,3,171565463.0,G,0.33,0.03,,,,i-share (continuous),TMEM212,,continuous
+37069360.0,rs6769442,3,171565463.0,G,0.82,1.04,,,,nagahama (dichotomous),TMEM212,,dichotomous
+37069360.0,rs6769442,3,171565463.0,G,0.35,0.008,,,,nagahama (continuous),TMEM212,,continuous

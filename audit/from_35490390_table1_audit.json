@@ -1,0 +1,302 @@
+{
+  "paper": {
+    "paper_id": "35490390_table1",
+    "pmcid": "",
+    "pmid": "35490390",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9622429/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/35490390_table1.xlsx",
+    "full_text_source": "paper_unavailable",
+    "id_evidence": "PMID inferred from source filename -> 35490390"
+  },
+  "paper_source_errors": [
+    {
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9622429/",
+      "error": "RuntimeError('Unable to fetch PMC full text XML for PMC9622429. Errors: europepmc_fullTextXML:404; ncbi_oai:403')"
+    }
+  ],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no stage cues found",
+      "needs_review": true
+    },
+    {
+      "field": "Analyses type",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no association cues found",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no model cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no population cues found in methods/results/supplement",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no sample size cues found",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "35490390_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs145348074",
+          "confidence": 0.9,
+          "evidence": "Row text: 6:149756107_C_G | rs145348074 | 0.0237382 | Intergenic | 3.35 | 5.26e-08 | Intergenic variant. Closest gene: ZC3H12D | UST, UST-AS1, LOC105378047, TAB2, TAB2-AS1, SUMO4, ZC3H12D, PPIL4, GINM1, KATNA1, LATS1, LOC645967, NUP43, PCMT1, LRP11, RAET1E-AS1",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.26e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 6:149756107_C_G | rs145348074 | 0.0237382 | Intergenic | 3.35 | 5.26e-08 | Intergenic variant. Closest gene: ZC3H12D | UST, UST-AS1, LOC105378047, TAB2, TAB2-AS1, SUMO4, ZC3H12D, PPIL4, GINM1, KATNA1, LATS1, LOC645967, NUP43, PCMT1, LRP11, RAET1E-AS1",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 3.35,
+          "confidence": 0.65,
+          "evidence": "Row text: 6:149756107_C_G | rs145348074 | 0.0237382 | Intergenic | 3.35 | 5.26e-08 | Intergenic variant. Closest gene: ZC3H12D | UST, UST-AS1, LOC105378047, TAB2, TAB2-AS1, SUMO4, ZC3H12D, PPIL4, GINM1, KATNA1, LATS1, LOC645967, NUP43, PCMT1, LRP11, RAET1E-AS1",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Row text: 6:149756107_C_G | rs145348074 | 0.0237382 | Intergenic | 3.35 | 5.26e-08 | Intergenic variant. Closest gene: ZC3H12D | UST, UST-AS1, LOC105378047, TAB2, TAB2-AS1, SUMO4, ZC3H12D, PPIL4, GINM1, KATNA1, LATS1, LOC645967, NUP43, PCMT1, LRP11, RAET1E-AS1",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs534551495",
+          "confidence": 0.9,
+          "evidence": "Row text: 9:128627091_C_G | rs534551495 | 0.0379333 | Intron | 2.82 | 4.83e-08 | PBX3 | GAPVD1, MAPKAP1, LOC51145, PBX3, LOC10192911, MVB12B\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"nee",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.83e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 9:128627091_C_G | rs534551495 | 0.0379333 | Intron | 2.82 | 4.83e-08 | PBX3 | GAPVD1, MAPKAP1, LOC51145, PBX3, LOC10192911, MVB12B\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"nee",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.82,
+          "confidence": 0.65,
+          "evidence": "Row text: 9:128627091_C_G | rs534551495 | 0.0379333 | Intron | 2.82 | 4.83e-08 | PBX3 | GAPVD1, MAPKAP1, LOC51145, PBX3, LOC10192911, MVB12B\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"nee",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Row text: 9:128627091_C_G | rs534551495 | 0.0379333 | Intron | 2.82 | 4.83e-08 | PBX3 | GAPVD1, MAPKAP1, LOC51145, PBX3, LOC10192911, MVB12B\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"nee",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Row text: 17:11183894_G_A | rs146729640 | 0.0119911 | Intron | 6.38 | 5.59e-09 | SHISA6 | TMEM220-AS1, DNAH9, TMEM238L, PIRT, SHISA6,\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"needs_revi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.59e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 17:11183894_G_A | rs146729640 | 0.0119911 | Intron | 6.38 | 5.59e-09 | SHISA6 | TMEM220-AS1, DNAH9, TMEM238L, PIRT, SHISA6,\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"needs_revi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 6.38,
+          "confidence": 0.65,
+          "evidence": "Row text: 17:11183894_G_A | rs146729640 | 0.0119911 | Intron | 6.38 | 5.59e-09 | SHISA6 | TMEM220-AS1, DNAH9, TMEM238L, PIRT, SHISA6,\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"needs_revi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Row text: 17:11183894_G_A | rs146729640 | 0.0119911 | Intron | 6.38 | 5.59e-09 | SHISA6 | TMEM220-AS1, DNAH9, TMEM238L, PIRT, SHISA6,\n[column_mapping] {\"Location and base pair change (build hg19)\": {\"reference_col\": \"BP(Position)\", \"score\": 0.4301, \"needs_revi",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+29777097.0,rs593742,15,59045774.0,A,6.2e-11,1.06,igap,,74046.0,,,,
+29777097.0,rs889555,16,31122571.0,T,3.2e-08,0.95,igap,,74046.0,,,,
+29777097.0,rs6504163,17,61545779.0,T,5.4e-09,1.05,igap,,74046.0,,,,

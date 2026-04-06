@@ -3,18 +3,25 @@
     "paper_id": "31497858_table2",
     "pmcid": "",
     "pmid": "31497858",
-    "pdf": "/Users/sherryhuang/advp_curator/paper/awz206.pdf",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/",
     "table_input": "/Users/sherryhuang/advp_curator/table_from_link/31497858_table2.xlsx",
-    "full_text_source": "pdfplumber",
+    "full_text_source": "pmc_html",
     "id_evidence": "PMID inferred from source filename -> 31497858"
   },
+  "paper_source_errors": [
+    {
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/",
+      "error": "RuntimeError('Unable to fetch PMC full text XML for PMC6736148. Errors: europepmc_fullTextXML:404; ncbi_oai:400')"
+    }
+  ],
   "table_source_errors": [],
   "global_field_audit": [
     {
       "field": "Stage",
       "value": "Meta-analysis",
       "confidence": 0.8,
-      "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) outside of the APOE locus reached 2584 | BRAIN 2019: 142; 2581–2589 L. Dumitrescu et al. Figure1 Sex-stratifiedgenome-wideassociationresultsfortanglepositivity.(A)Miamiplotillustratingneurofibr",
+      "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ( http://www.geenivaramu.ee/en/tools/gwama ) ( Mägi and Morris, 2010 ). Meta-analysis results were limited to SNPs (single nucleotide polymorphisms) that were genotyped or imputed, passed quali",
       "rule": "found meta-analysis cues",
       "needs_review": false
     },
@@ -22,7 +29,7 @@
       "field": "Analyses type",
       "value": "Imaging",
       "confidence": 0.7,
-      "evidence": " levels of tau. JAMA Neurol 2018; 75: 989–98. and analysis, decision to publish, or preparation of the HuaX,HibarDP,LeeS,TogaAW,JackCR,WeinerMW,etal.Sex manuscript. andagedifferencesinatrophicrates:anADNIstudywithn=1368 MRI scans. Neurobiol Aging 2010; 31: 1463–80. HuangK-L,MarcoraE,PimenovaA,DiNarzoA,KapoorM,JinSC, etal.AcommonhaplotypelowersPU.1expressioninmyeloidcells Competing interests and delays onset of Alzheime’s disease. Nat Neuro",
+      "evidence": " JAMA Neurol 2018; 75: 989–98. [ DOI ] [ PMC free article ] [ PubMed ] [ Google Scholar ] Hua X, Hibar DP, Lee S, Toga AW, Jack CR, Weiner MW et al. Sex and age differences in atrophic rates: an ADNI study with n = 1368 MRI scans. Neurobiol Aging 2010; 31: 1463–80. [ DOI ] [ PMC free article ] [ PubMed ] [ Google Scholar ] Huang K-L, Marcora E, Pimenova A, Di Narzo A, Kapoor M, Jin SC et al. A common haplotype lowers PU.1 expression in mye",
       "rule": "matched association keywords -> Imaging",
       "needs_review": true
     },
@@ -30,7 +37,7 @@
       "field": "Model type",
       "value": "logistic regression (with covariates)",
       "confidence": 0.75,
-      "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://www.cog-genomics.org/plink/1.9). Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (",
+      "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA (",
       "rule": "model family + covariate cues",
       "needs_review": true
     },
@@ -38,7 +45,7 @@
       "field": "Imputation_simple2",
       "value": "NR",
       "confidence": 0.3,
-      "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control protocols 81(cid:5)9 years, P50.001) and were more frequently (Supplementary material). Alzheimer’s disease cases (males: 68%, females: 71%, P=0.02), APOE \"4 carriers (males: 49%, femal",
+      "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic",
       "rule": "no imputation keywords found",
       "needs_review": true
     },
@@ -46,7 +53,7 @@
       "field": "Population",
       "value": "European ancestry",
       "confidence": 0.75,
-      "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control proto",
+      "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https:",
       "rule": "section-aware population keyword",
       "needs_review": true
     },
@@ -54,7 +61,7 @@
       "field": "Sample size",
       "value": "213",
       "confidence": 0.7,
-      "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017). Associations between dual leucine zipper proteins and neurodegenerative disease have been reported in th",
+      "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific genetic associations with Alzheimer’s disease neuropathology measured at autopsy. Results implicate one nov",
       "rule": "section-aware sample size extraction",
       "needs_review": true
     }
@@ -67,23 +74,23 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_re",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.59,
+          "value": 0.76,
           "confidence": 0.7,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_re",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": -2.069,
+          "value": 1.263,
           "confidence": 0.65,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_re",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -91,7 +98,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -99,7 +106,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -107,7 +114,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -115,7 +122,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -123,7 +130,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -131,7 +138,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_re",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -144,23 +151,23 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_revi",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.6,
+          "value": 0.21,
           "confidence": 0.7,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_revi",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": -0.824,
+          "value": 0.42,
           "confidence": 0.65,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_revi",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -168,7 +175,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -176,7 +183,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -184,7 +191,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -192,7 +199,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -200,7 +207,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -208,7 +215,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_revi",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -221,23 +228,23 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10 −4 | −0.041 | 0.28\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.76,
+          "value": 0.28,
           "confidence": 0.7,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10 −4 | −0.041 | 0.28\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.263,
+          "value": -0.041,
           "confidence": 0.65,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10 −4 | −0.041 | 0.28\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -245,7 +252,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -253,7 +260,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -261,7 +268,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -269,7 +276,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -277,7 +284,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -285,7 +292,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: AGR2 | −2.069 | 0.59 | −0.824 | 0.60 | 1.263 | 0.76\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_rev",
+          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10 −4 | −0.041 | 0.28\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -298,23 +305,23 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10 −3 | −0.064 | 0.18\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"n",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.42,
+          "value": 0.18,
           "confidence": 0.7,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10 −3 | −0.064 | 0.18\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"n",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": -0.233,
+          "value": -0.064,
           "confidence": 0.65,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10 −3 | −0.064 | 0.18\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"n",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -322,7 +329,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -330,7 +337,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -338,7 +345,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -346,7 +353,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -354,7 +361,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -362,7 +369,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10 −3 | −0.064 | 0.18\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"n",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -375,23 +382,23 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.70\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.29,
+          "value": 0.7,
           "confidence": 0.7,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.70\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.189,
+          "value": -0.145,
           "confidence": 0.65,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.70\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -399,7 +406,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -407,7 +414,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -415,7 +422,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -423,7 +430,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -431,7 +438,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -439,7 +446,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
+          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.70\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"needs_",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -452,931 +459,7 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.21,
-          "confidence": 0.7,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.42,
-          "confidence": 0.65,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: AHR | −0.233 | 0.42 | 0.189 | 0.29 | 0.420 | 0.21\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_revie",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00007",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.22,
-          "confidence": 0.7,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.037,
-          "confidence": 0.65,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00008",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.000993,
-          "confidence": 0.7,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.078,
-          "confidence": 0.65,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00009",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.28,
-          "confidence": 0.7,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.041,
-          "confidence": 0.65,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ANKMY2 | −0.037 | 0.22 | −0.078 | 9.93×10−4 | −0.041 | 0.28\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"n",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00010",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.48,
-          "confidence": 0.7,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.027,
-          "confidence": 0.65,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00011",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.00202,
-          "confidence": 0.7,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.093,
-          "confidence": 0.65,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00012",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.18,
-          "confidence": 0.7,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.064,
-          "confidence": 0.65,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: BZW2 | −0.027 | 0.48 | −0.093 | 2.02×10−3 | −0.064 | 0.18\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"nee",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00013",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.18,
-          "confidence": 0.7,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.395,
-          "confidence": 0.65,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00014",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.018,
-          "confidence": 0.7,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.537,
-          "confidence": 0.65,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00015",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.7,
-          "confidence": 0.7,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.145,
-          "confidence": 0.65,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: ISPD | −0.395 | 0.18 | −0.537 | 0.018 | −0.145 | 0.7\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs_re",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00016",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.94,
-          "confidence": 0.7,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.001,
-          "confidence": 0.65,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00017",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.049,
-          "confidence": 0.7,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": -0.01,
-          "confidence": 0.65,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
-        },
-        {
-          "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
-          "rule": "no imputation keywords found",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "ADGC",
-          "confidence": 0.8,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "31497858_table2_R00018",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "",
-          "confidence": 0.9,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
+          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.30\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"nee",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1384,7 +467,7 @@
           "field": "P-value",
           "value": 0.3,
           "confidence": 0.7,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
+          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.30\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"nee",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1392,7 +475,7 @@
           "field": "EffectSize(altvsref)",
           "value": -0.01,
           "confidence": 0.65,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
+          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.30\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"nee",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -1400,7 +483,7 @@
           "field": "Stage",
           "value": "Meta-analysis",
           "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
+          "evidence": "tic plaques were performed using logistic regression in PLINK ( https://www.cog-genomics.org/plink/1.9 ). Analyses were carried out within each cohort, used additive coding, and co-varied for age at death. Fixed-effects meta-analysis was performed using GWAMA ",
           "rule": "found meta-analysis cues",
           "needs_review": false
         },
@@ -1408,7 +491,7 @@
           "field": "Model type",
           "value": "logistic regression (with covariates)",
           "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
+          "evidence": "trol protocols ( Supplementary material ). Statistical analyses Descriptive statistics were quantified in R v3.3.1 ( https://www.r-project.org/ ). Sex-stratified analyses of NFT and neuritic plaques were performed using logistic regression in PLINK ( https://w",
           "rule": "model family + covariate cues",
           "needs_review": true
         },
@@ -1416,7 +499,7 @@
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data were processed using the same imputation and standard quality control ",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
@@ -1424,7 +507,7 @@
           "field": "Population",
           "value": "European ancestry",
           "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
+          "evidence": "ive’ and stages III/IV/V/VI were considered ‘NFT positive’ ( Hyman et al. , 2012 ). Genotyping and quality control Genome-wide genotyping was carried out by each study on a variety of platforms. All participants were of European descent, and all genotype data ",
           "rule": "section-aware population keyword",
           "needs_review": true
         },
@@ -1432,7 +515,7 @@
           "field": "Sample size",
           "value": "213",
           "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
+          "evidence": "49 −0.010 0.30 Open in a new tab Gene expression data were collected from prefrontal cortex tissue of participants from the Religious Orders Study/Memory and Aging Project (males: n = 213, females: n = 380). Discussion The present study evaluated sex-specific ",
           "rule": "section-aware sample size extraction",
           "needs_review": true
         },
@@ -1440,7 +523,7 @@
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.3\n[column_mapping] {\"Gene | Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1429, \"needs_review\": true, \"match_hint\": \"Gene\"}, \"Males | Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2051, \"needs",
+          "evidence": "Row text: TSPAN13 | −0.001 | 0.94 | −0.010 | 0.049 | −0.010 | 0.30\n[column_mapping] {\"Gene Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2222, \"needs_review\": true, \"match_hint\": \"Gene Gene\"}, \"Males Beta\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2545, \"nee",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

@@ -1,0 +1,4 @@
+pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+35490390.0,rs146729640,17,11183894.0,A,5.59e-09,6.38,amish,,,no,SHISA6,,age at onset of cognitive impairment (ci)
+35490390.0,rs146729640,17,11183894.0,A,0.0232,2.93,amish,,,apoe4 carriers,SHISA6,,age at onset of cognitive impairment (ci)
+35490390.0,rs146729640,17,11183894.0,A,8.44e-09,8.96,amish,,,non- apoe4 carriers,SHISA6,,age at onset of cognitive impairment (ci)

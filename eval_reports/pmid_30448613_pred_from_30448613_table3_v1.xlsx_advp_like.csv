@@ -1,0 +1,6 @@
+pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+30448613.0,rs8093731,,,,1.36e-08,0.77,igap,,74046.0,,DLGAP1,,
+30448613.0,rs8093731,,,,1.11e-05,0.706,igap,,74046.0,,NETO1,,
+30448613.0,rs4147929,,,,3.94e-06,0.259,igap,,74046.0,,EID2B,,
+30448613.0,rs10948363,,,,1.64e-05,0.343,igap,,74046.0,,AK9,,
+30448613.0,rs3865444,,,,1.96e-05,-0.255,igap,,74046.0,,IER2,,

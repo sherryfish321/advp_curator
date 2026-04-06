@@ -3,59 +3,66 @@
     "paper_id": "31497858_table1",
     "pmcid": "",
     "pmid": "31497858",
-    "pdf": "/Users/sherryhuang/advp_curator/paper/awz206.pdf",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/",
     "table_input": "/Users/sherryhuang/advp_curator/table_from_link/31497858_table1.xlsx",
-    "full_text_source": "pdfplumber",
+    "full_text_source": "pmc_html",
     "id_evidence": "PMID inferred from source filename -> 31497858"
   },
+  "paper_source_errors": [
+    {
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/",
+      "error": "RuntimeError('Unable to fetch PMC full text XML for PMC6736148. Errors: europepmc_fullTextXML:404; ncbi_oai:400')"
+    }
+  ],
   "table_source_errors": [],
   "global_field_audit": [
     {
       "field": "Stage",
-      "value": "Meta-analysis",
-      "confidence": 0.8,
-      "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) outside of the APOE locus reached 2584 | BRAIN 2019: 142; 2581–2589 L. Dumitrescu et al. Figure1 Sex-stratifiedgenome-wideassociationresultsfortanglepositivity.(A)Miamiplotillustratingneurofibr",
-      "rule": "found meta-analysis cues",
-      "needs_review": false
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no stage cues found",
+      "needs_review": true
     },
     {
       "field": "Analyses type",
       "value": "Imaging",
       "confidence": 0.7,
-      "evidence": " levels of tau. JAMA Neurol 2018; 75: 989–98. and analysis, decision to publish, or preparation of the HuaX,HibarDP,LeeS,TogaAW,JackCR,WeinerMW,etal.Sex manuscript. andagedifferencesinatrophicrates:anADNIstudywithn=1368 MRI scans. Neurobiol Aging 2010; 31: 1463–80. HuangK-L,MarcoraE,PimenovaA,DiNarzoA,KapoorM,JinSC, etal.AcommonhaplotypelowersPU.1expressioninmyeloidcells Competing interests and delays onset of Alzheime’s disease. Nat Neuro",
+      "evidence": "Checking your browser - reCAPTCHA Checking your browser before accessing pmc.ncbi.nlm.nih.gov ... Click here if you are not automatically redirected after 5 seconds.",
       "rule": "matched association keywords -> Imaging",
       "needs_review": true
     },
     {
       "field": "Model type",
-      "value": "logistic regression (with covariates)",
-      "confidence": 0.75,
-      "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://www.cog-genomics.org/plink/1.9). Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (",
-      "rule": "model family + covariate cues",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no model cues",
       "needs_review": true
     },
     {
       "field": "Imputation_simple2",
       "value": "NR",
       "confidence": 0.3,
-      "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control protocols 81(cid:5)9 years, P50.001) and were more frequently (Supplementary material). Alzheimer’s disease cases (males: 68%, females: 71%, P=0.02), APOE \"4 carriers (males: 49%, femal",
+      "evidence": "",
       "rule": "no imputation keywords found",
       "needs_review": true
     },
     {
       "field": "Population",
-      "value": "European ancestry",
-      "confidence": 0.75,
-      "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control proto",
-      "rule": "section-aware population keyword",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no population cues found in methods/results/supplement",
       "needs_review": true
     },
     {
       "field": "Sample size",
-      "value": "213",
-      "confidence": 0.7,
-      "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017). Associations between dual leucine zipper proteins and neurodegenerative disease have been reported in th",
-      "rule": "section-aware sample size extraction",
+      "value": "NR",
+      "confidence": 0.25,
+      "evidence": "",
+      "rule": "no sample size cues found",
       "needs_review": true
     }
   ],
@@ -89,51 +96,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF tau | 2926 | 0.006 | 0.69 | −0.009 | 0.58 | −0.013 | 0.55\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -166,51 +173,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF tau | 2926 | 0.006 | 0.69 | −0.009 | 0.58 | −0.013 | 0.55\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -243,51 +250,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF tau | 2926 | 0.006 | 0.69 | −0.009 | 0.58 | −0.013 | 0.55\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.125,",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -320,51 +327,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF p-tau | 2759 | −0.002 | 0.89 | −0.011 | 0.47 | −0.010 | 0.63\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -397,51 +404,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF p-tau | 2759 | −0.002 | 0.89 | −0.011 | 0.47 | −0.010 | 0.63\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -474,51 +481,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: CSF p-tau | 2759 | −0.002 | 0.89 | −0.011 | 0.47 | −0.010 | 0.63\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -551,51 +558,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Episodic memory | 1182 | 0.104 | 0.14 | 0.038 | 0.73 | −0.063 | 0.62\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -628,51 +635,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Episodic memory | 1182 | 0.104 | 0.14 | 0.038 | 0.73 | −0.063 | 0.62\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -705,51 +712,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Episodic memory | 1182 | 0.104 | 0.14 | 0.038 | 0.73 | −0.063 | 0.62\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -782,51 +789,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Executive function | 1182 | 0.266 | 0.001 | −0.016 | 0.88 | −0.283 | 0.039\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -859,51 +866,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Executive function | 1182 | 0.266 | 0.001 | −0.016 | 0.88 | −0.283 | 0.039\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -936,51 +943,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Executive function | 1182 | 0.266 | 0.001 | −0.016 | 0.88 | −0.283 | 0.039\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1013,51 +1020,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Hippocampal volume | 1086 | 252.17 | 0.014 | −33.18 | 0.8 | −284.70 | 0.09\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1090,51 +1097,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Hippocampal volume | 1086 | 252.17 | 0.014 | −33.18 | 0.8 | −284.70 | 0.09\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1167,51 +1174,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Hippocampal volume | 1086 | 252.17 | 0.014 | −33.18 | 0.8 | −284.70 | 0.09\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1244,42 +1251,42 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
@@ -1321,42 +1328,42 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
@@ -1398,42 +1405,42 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
@@ -1475,51 +1482,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Age of onset in CERAD | 3552 | 0.076 | 0.47 | 0.077 | 0.35 | 0.015 | 0.91\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1552,51 +1559,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Age of onset in CERAD | 3552 | 0.076 | 0.47 | 0.077 | 0.35 | 0.015 | 0.91\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     },
@@ -1629,51 +1636,51 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
-          "confidence": 0.8,
-          "evidence": " Analyses were car- In the sex-stratified GWAS analysis of NFT, one inter- ried out within each cohort, used additive coding, and co- genic SNP on chr7p21.1 (rs34331204; Fig. 1 and varied for age at death. Fixed-effects meta-analysis was Supplementary Fig. 2) ",
-          "rule": "found meta-analysis cues",
-          "needs_review": false
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no stage cues found",
+          "needs_review": true
         },
         {
           "field": "Model type",
-          "value": "logistic regression (with covariates)",
-          "confidence": 0.75,
-          "evidence": "R v3.3.1 (https://www. P-values50.01) than males. Participant characteristics by r-project.org/). Sex-stratified analyses of NFT and neuritic pla- cohort are presented in Supplementary Table 1. ques were performed using logistic regression in PLINK (https://ww",
-          "rule": "model family + covariate cues",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no model cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
           "value": "NR",
           "confidence": 0.3,
-          "evidence": " platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females cent, and all genotype data were processed using the same were older than males (males: 79(cid:5)9 years, females: imputation and standard quality control ",
+          "evidence": "",
           "rule": "no imputation keywords found",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "European ancestry",
-          "confidence": 0.75,
-          "evidence": "Genotyping and quality control Genome-wide genotyping was carried out by each study on a A total of 2701 males and 3275 females across six inde- variety of platforms. All participants were of European des- pendentautopsydatasetswereanalysed.In general,females ",
-          "rule": "section-aware population keyword",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no population cues found in methods/results/supplement",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "213",
-          "confidence": 0.7,
-          "evidence": "xpressiondatawerecollectedfromprefrontalcortextissueofparticipantsfrom with a known role in cell proliferation through the Akt/ theReligiousOrdersStudy/MemoryandAgingProject(males:n=213,females: mTOR pathway, particularly in cancer (Cheng et al., n=380). 2017)",
-          "rule": "section-aware sample size extraction",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "",
+          "rule": "no sample size cues found",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "ADGC;AGES",
-          "confidence": 0.8,
+          "value": "NR",
+          "confidence": 0.25,
           "evidence": "Row text: Age of onset in CERAD | 3552 | 0.076 | 0.47 | 0.077 | 0.35 | 0.015 | 0.91\n[column_mapping] {\"Outcome | Outcome\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1951, \"needs_review\": true, \"match_hint\": \"Outcome\"}, \"n | n\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "cohort keyword mapping",
-          "needs_review": false
+          "needs_review": true
         }
       ]
     }

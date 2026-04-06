@@ -1,0 +1,297 @@
+{
+  "paper": {
+    "paper_id": "29777097_table1",
+    "pmcid": "",
+    "pmid": "29777097",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5959890/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/29777097_table1.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 29777097"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "enome-wide association study (GWAS) for LOAD employed a two-stage study design. First, 17,008 cases were compared to 37,154 controls. A total of 11,632 single-nucleotide polymorphisms (SNPs) with P < 1 × 10 −3 from this meta-analysis were included in the second stage that compared 8,572 cases to 11,312 controls. A meta-analysis of the SNPs included in stages 1 and 2 was also performed 3 . One difficulty in traditional studies of AD is case ascertain",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "zheimer’s disease/dementia?” and “Has/did your mother ever suffer from Alzheimer’s disease/dementia?” Self-report data from the initial assessment visit (2006–2010), the first repeat assessment visit (2012–2013) and the imaging visit (2014+) were aggregated with exclusions made for participants whose parents were: aged under 60 years; dead before reaching age 60 years; without age information. After merging with the genetic data, this left 27,",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "linear regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "mothers compared to fathers—GWA studies were performed separately for maternal and paternal AD. Genome-wide association study The GWA studies were conducted using BGENIE 7 . The outcome variable was the residuals from a linear regression model of maternal or paternal AD on age of parent at death or at time of the offspring’s self-report, assessment centre, genotype batch, array and 40 genetic principal components. The predictor variable was the autosoma",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "1000G;HRC",
+      "confidence": 0.65,
+      "evidence": "ilised with 49,950 participants typed using the UK BiLEVE Axiom Array and 438,427 participants typed using the UK Biobank Axiom Array 7 , 8 . The released genotyped data contained 805,426 markers on 488,377 individuals. Imputed genotypes were supplied with the UK Biobank data with the Haplotype Reference Consortium (HRC) used as the imputation reference panel 7 . Downstream quality control steps conducted for the current analysis included re",
+      "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": "kely to be driven by a single causal variant affecting both expression/methylation and AD. Different top QTL SNPs in TOMM40 were identified in the two analyses: rs760136 and rs7259620 although they were in perfect LD in European samples 19 , 20 ( R 2 = 1.00). The SNPs have differing LD patterns with the APOE allele defining SNPs, rs7412 ( R 2 = 0.001, D ′ = 0.03) and rs429358 ( R 2 = 0.15, D ′ = 1.0). A significant SMR association with HEIDI P ",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "74046",
+      "confidence": 0.7,
+      "evidence": "314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data ( n = 74,046 with 25,580 cases across the discovery and replication analyses), three new AD-associated loci ( P < 5 × 10 −8 ) are identified. These contain genes relevant for AD and neurodegen",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29777097_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs593742",
+          "confidence": 0.9,
+          "evidence": "Row text: 1 | 15 | rs593742 | A | G | 59045774 | 0.69 | 58873555 | 59120077 | 1.06 (1.04, 1.07) | 6.20E−11 | ++?+\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.2e-11,
+          "confidence": 0.7,
+          "evidence": "Row text: 1 | 15 | rs593742 | A | G | 59045774 | 0.69 | 58873555 | 59120077 | 1.06 (1.04, 1.07) | 6.20E−11 | ++?+\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.06,
+          "confidence": 0.65,
+          "evidence": "Row text: 1 | 15 | rs593742 | A | G | 59045774 | 0.69 | 58873555 | 59120077 | 1.06 (1.04, 1.07) | 6.20E−11 | ++?+\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "enome-wide association study (GWAS) for LOAD employed a two-stage study design. First, 17,008 cases were compared to 37,154 controls. A total of 11,632 single-nucleotide polymorphisms (SNPs) with P < 1 × 10 −3 from this meta-analysis were included in the secon",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "mothers compared to fathers—GWA studies were performed separately for maternal and paternal AD. Genome-wide association study The GWA studies were conducted using BGENIE 7 . The outcome variable was the residuals from a linear regression model of maternal or p",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "ilised with 49,950 participants typed using the UK BiLEVE Axiom Array and 438,427 participants typed using the UK Biobank Axiom Array 7 , 8 . The released genotyped data contained 805,426 markers on 488,377 individuals. Imputed genotypes were supplied with the",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "kely to be driven by a single causal variant affecting both expression/methylation and AD. Different top QTL SNPs in TOMM40 were identified in the two analyses: rs760136 and rs7259620 although they were in perfect LD in European samples 19 , 20 ( R 2 = 1.00). ",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data ( n = 74,046 with 25,580 cases across the discovery and replication analyses), thr",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "IGAP",
+          "confidence": 0.8,
+          "evidence": "Row text: 1 | 15 | rs593742 | A | G | 59045774 | 0.69 | 58873555 | 59120077 | 1.06 (1.04, 1.07) | 6.20E−11 | ++?+\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29777097_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs889555",
+          "confidence": 0.9,
+          "evidence": "Row text: 2 | 16 | rs889555 | T | C | 31122571 | 0.29 | 30916129 | 31155458 | 0.95 (0.94, 0.97) | 3.20E−08 | −−?−\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.2e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: 2 | 16 | rs889555 | T | C | 31122571 | 0.29 | 30916129 | 31155458 | 0.95 (0.94, 0.97) | 3.20E−08 | −−?−\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.95,
+          "confidence": 0.65,
+          "evidence": "Row text: 2 | 16 | rs889555 | T | C | 31122571 | 0.29 | 30916129 | 31155458 | 0.95 (0.94, 0.97) | 3.20E−08 | −−?−\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "enome-wide association study (GWAS) for LOAD employed a two-stage study design. First, 17,008 cases were compared to 37,154 controls. A total of 11,632 single-nucleotide polymorphisms (SNPs) with P < 1 × 10 −3 from this meta-analysis were included in the secon",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "mothers compared to fathers—GWA studies were performed separately for maternal and paternal AD. Genome-wide association study The GWA studies were conducted using BGENIE 7 . The outcome variable was the residuals from a linear regression model of maternal or p",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "ilised with 49,950 participants typed using the UK BiLEVE Axiom Array and 438,427 participants typed using the UK Biobank Axiom Array 7 , 8 . The released genotyped data contained 805,426 markers on 488,377 individuals. Imputed genotypes were supplied with the",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "kely to be driven by a single causal variant affecting both expression/methylation and AD. Different top QTL SNPs in TOMM40 were identified in the two analyses: rs760136 and rs7259620 although they were in perfect LD in European samples 19 , 20 ( R 2 = 1.00). ",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data ( n = 74,046 with 25,580 cases across the discovery and replication analyses), thr",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "IGAP",
+          "confidence": 0.8,
+          "evidence": "Row text: 2 | 16 | rs889555 | T | C | 31122571 | 0.29 | 30916129 | 31155458 | 0.95 (0.94, 0.97) | 3.20E−08 | −−?−\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29777097_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6504163",
+          "confidence": 0.9,
+          "evidence": "Row text: 3 | 17 | rs6504163 | T | C | 61545779 | 0.63 | 61545779 | 61578207 | 1.05 (1.03, 1.07) | 5.40E−09 | +++?\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.4e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: 3 | 17 | rs6504163 | T | C | 61545779 | 0.63 | 61545779 | 61578207 | 1.05 (1.03, 1.07) | 5.40E−09 | +++?\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.05,
+          "confidence": 0.65,
+          "evidence": "Row text: 3 | 17 | rs6504163 | T | C | 61545779 | 0.63 | 61545779 | 61578207 | 1.05 (1.03, 1.07) | 5.40E−09 | +++?\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "enome-wide association study (GWAS) for LOAD employed a two-stage study design. First, 17,008 cases were compared to 37,154 controls. A total of 11,632 single-nucleotide polymorphisms (SNPs) with P < 1 × 10 −3 from this meta-analysis were included in the secon",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "mothers compared to fathers—GWA studies were performed separately for maternal and paternal AD. Genome-wide association study The GWA studies were conducted using BGENIE 7 . The outcome variable was the residuals from a linear regression model of maternal or p",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "ilised with 49,950 participants typed using the UK BiLEVE Axiom Array and 438,427 participants typed using the UK Biobank Axiom Array 7 , 8 . The released genotyped data contained 805,426 markers on 488,377 individuals. Imputed genotypes were supplied with the",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "kely to be driven by a single causal variant affecting both expression/methylation and AD. Different top QTL SNPs in TOMM40 were identified in the two analyses: rs760136 and rs7259620 although they were in perfect LD in European samples 19 , 20 ( R 2 = 1.00). ",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data ( n = 74,046 with 25,580 cases across the discovery and replication analyses), thr",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "IGAP",
+          "confidence": 0.8,
+          "evidence": "Row text: 3 | 17 | rs6504163 | T | C | 61545779 | 0.63 | 61545779 | 61578207 | 1.05 (1.03, 1.07) | 5.40E−09 | +++?\n[column_mapping] {\"Locus\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1695, \"needs_review\": true, \"match_hint\": \"Locus\"}, \"Chr\": {\"reference_col\": ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

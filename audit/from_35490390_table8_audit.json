@@ -1,0 +1,528 @@
+{
+  "paper": {
+    "paper_id": "35490390_table8",
+    "pmcid": "",
+    "pmid": "35490390",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9622429/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/35490390_table8.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 35490390"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the stratified analysis was also performed using the R package meta [ 22 ]. 3. RESULTS 3.1 Demographic statistics and genotype quality control for Amish dataset The demographic characteristics of t",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "/api/oai/v1/mh/ oai:pubmedcentral.nih.gov:9622429 2024-02-01 pmc-open pmc Alzheimers Dement Alzheimers Dement 319 nihpa Alzheimer's & dementia : the journal of the Alzheimer's Association 1552-5260 1552-5279 pmc-is-collection-domain yes pmc-collection-title NIHPA Author Manuscripts PMC9622429 PMC9622429.1 9622429 9622429 NIHMS1797266 35490390 10.1002/alz.12686 NIHMS1797266 NIHPA1797266 1 Article Genetic variants in the SHISA6 gene are ass",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "cox regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined association between age and single nucleotide variants (SNV). RESULTS: Three SNVs were significantly associated (p<5 × 10 −8 ) with AAO on chromosomes 6 (rs14538074; Hazard Ratio (HR)=3.35)",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "1000G;HRC",
+      "confidence": 0.65,
+      "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing markers missing more than 2% of the data, monomorphic markers, markers that had MAF < 0.05 and markers that failed Hardy Weinberg exact test at P value < 10 −6 , the MEGAex final set bef",
+      "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of 73 at the last examination (range: 43 to 99). Women were 58.3% of the sample. Individuals were residents of Amish communities in Ohio (Holmes County) and Indiana (Adams, Elkhart, and LaGr",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "362",
+      "confidence": 0.7,
+      "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58.0 %) 677 (58.4 %) 887 (58.3 %) AGE at the last exam 81.6 70.6 73.23 AAO 81.2 NA 81.2 APOE4 carriers 105 290 39",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "35490390_table8_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (NO | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "<0.0001",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (NO | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 2.07,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (NO | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Fixed effect",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "4872.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (NO | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table8_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (NO | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "0.1308",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (NO | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 3.0,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (NO | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Random effects",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "4872.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (NO | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table8_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "0.0178",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.5,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Fixed effect",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "2293.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table8_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivid",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "0.1219",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivid",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.76,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivid",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Random effects",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "2293.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivid",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table8_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdiv",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "<0.0001",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdiv",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 3.56,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdiv",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Fixed effect",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "2579.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Fixed effect)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdiv",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "35490390_table8_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs146729640",
+          "confidence": 0.9,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subd",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "0.0831",
+          "confidence": 0.7,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subd",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 3.99,
+          "confidence": 0.65,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subd",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subdivided into APOE-4 carriers and non-carriers. Meta-analysis of hazard ratios from the ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "Random effects",
+          "confidence": 0.75,
+          "evidence": "ls may carry protective alleles delaying age at onset (AAO) of CI. METHODS: 1,522 individuals screened for CI were genotyped. The outcome studied was AAO for CI individuals or age at last normal exam for CU individuals. Cox mixed-effects models examined associ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "nal review boards (IRB’s). 2.2 Genotyping DNA extracted from peripheral blood samples was used for genotyping on the Illumina Infinium Global Screening (GSA) or Expanded Multi-Ethnic Genotyping (MEGAex) Array. After pre-imputation QC, which included removing m",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "ed risk due to age and family history of dementia. 2. METHODS 2.1 Study Populations and Clinical Assessment A description of the sample of 1,522 Amish used in this study is provided in Table 1 . All participants were of European descent, with an average age of",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "2579.0",
+          "confidence": 0.7,
+          "evidence": "gnitively impaired individuals were older at the last examination, and the two groups had similar proportions of men and women. Column1 COGNITIVELY IMPAIRED COGNITIVELY UNIMPAIRED TOTAL N 362 1160 1522 MALE 152 (42.0 %) 483 (41.6 %) 635 (41.7 %) FEMALE 210 (58",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "Amish and NIA-LOAD",
+          "confidence": 0.8,
+          "evidence": "Stratified survival row parsed (non-APOE4 carriers | Random effects)\n[Stage evidence] discovery dataset. To assess potential interaction of genome-wide significant effects with APOE genotype, stratified analysis was conducted in Amish and NIA-LOAD samples subd",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

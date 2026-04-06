@@ -1,0 +1,53 @@
+{
+  "pmid": 31497858,
+  "owner_name": "",
+  "paper_input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/",
+  "table_links": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/table/awz206-T1/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/table/awz206-T2/"
+  ],
+  "auto_discovered_tables": [
+    {
+      "pmcid": "PMC6736148",
+      "table_index": 1,
+      "table_id": "awz206-T1",
+      "caption": "Table - PMC",
+      "score": 5,
+      "reasons": [
+        "p-value-like keyword",
+        "association-statistic keyword",
+        "association-table support"
+      ],
+      "preview": "Table - PMC 0 1 2 3 4 5 6 7 Outcome n Males Males Females Females Sex interaction Sex interaction Outcome n Beta P Beta P Beta P CSF tau 2926 0.006 0.69 −0.009 0.58 −0.013 0.55 CSF p-tau 2759 −0.002 0.89 −0.011 0.47 −0.010 0.63 Episodic memory 1182 0.104 0.14 0.038 0.73 −0.063 0.62 Executive function 1182 0.266 0.001 −0.016 0.88 −0.283 0.039 Hippocampal volume 1086 252.17 0.014 −33.18 0.80 −284.70",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/table/awz206-T1/",
+      "selected": true,
+      "source": "pmc_html"
+    },
+    {
+      "pmcid": "PMC6736148",
+      "table_index": 2,
+      "table_id": "awz206-T2",
+      "caption": "Table - PMC",
+      "score": 10,
+      "reasons": [
+        "gene-like keyword",
+        "p-value-like keyword",
+        "association-statistic keyword",
+        "gene+p-value rule matched",
+        "association-table support"
+      ],
+      "preview": "Table - PMC 0 1 2 3 4 5 6 Gene Males Males Females Females Sex interaction Sex interaction Gene Beta P Beta P Beta P AGR2 −2.069 0.59 −0.824 0.60 1.263 0.76 AHR −0.233 0.42 0.189 0.29 0.420 0.21 ANKMY2 −0.037 0.22 −0.078 9.93×10 −4 −0.041 0.28 BZW2 −0.027 0.48 −0.093 2.02×10 −3 −0.064 0.18 ISPD −0.395 0.18 −0.537 0.018 −0.145 0.70 TSPAN13 −0.001 0.94 −0.010 0.049 −0.010 0.30",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6736148/table/awz206-T2/",
+      "selected": true,
+      "source": "pmc_html"
+    }
+  ],
+  "generated_harmonized": [
+    "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table1_v1.xlsx",
+    "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table2_v1.xlsx"
+  ],
+  "summary_csv": "/Users/sherryhuang/advp_curator/eval_reports/pmid_31497858_summary_advp_like.csv",
+  "details_json": "/Users/sherryhuang/advp_curator/eval_reports/pmid_31497858_details_advp_like.json",
+  "fix_file": "/Users/sherryhuang/advp_curator/eval_reports/pmid_31497858_fix_ready_20260406_184317.csv",
+  "created_at": "2026-04-06T18:43:17.289668"
+}

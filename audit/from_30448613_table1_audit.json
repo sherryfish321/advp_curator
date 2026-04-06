@@ -6,63 +6,58 @@
     "pdf": "",
     "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/",
     "table_input": "/Users/sherryhuang/advp_curator/table_from_link/30448613_table1.xlsx",
-    "full_text_source": "paper_unavailable",
+    "full_text_source": "pmc_xml",
     "id_evidence": "PMID inferred from source filename -> 30448613"
   },
-  "paper_source_errors": [
-    {
-      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/",
-      "error": "RuntimeError('Unable to fetch PMC full text XML for PMC6331247. Errors: europepmc_fullTextXML:404; ncbi_oai:403')"
-    }
-  ],
+  "paper_source_errors": [],
   "table_source_errors": [],
   "global_field_audit": [
     {
       "field": "Stage",
-      "value": "NR",
-      "confidence": 0.25,
-      "evidence": "",
-      "rule": "no stage cues found",
-      "needs_review": true
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer’s disease . Nat Genet 45 ( 12 ), 1452 – 8 . doi: 10.1038/ng.2802 . 24162737 PMC3896259 Leek JT , Johnson WE , Parker HS , Jaffe AE , Storey JD 20",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
     },
     {
       "field": "Analyses type",
-      "value": "NR",
-      "confidence": 0.25,
-      "evidence": "",
-      "rule": "no association cues found",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "dni.loni.usc.edu). The ADNI was launched in 2003 as a public-private partnership, led by Principal Investigator Michael W. Weiner, MD. The primary goal of ADNI has been to test whether serial magnetic resonance imaging (MRI), positron emission tomography (PET), other biological markers, and clinical and neuropsychological assessment can be combined to measure the progression of mild cognitive impairment (MCI) and early Alzheimer’s disease ",
+      "rule": "matched association keywords -> Imaging",
       "needs_review": true
     },
     {
       "field": "Model type",
-      "value": "NR",
-      "confidence": 0.25,
-      "evidence": "",
-      "rule": "no model cues",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at last visit or death, sex, and the top five principal components (PCs) computed in PLINK v1.90a ( Chang, et al., 2015 , Purcell, et al., 2007 ). The coding SNPs were evaluated for replicati",
+      "rule": "model family + covariate cues",
       "needs_review": true
     },
     {
       "field": "Imputation_simple2",
-      "value": "NR",
-      "confidence": 0.3,
-      "evidence": "",
-      "rule": "no imputation keywords found",
+      "value": "1000G;HRC",
+      "confidence": 0.65,
+      "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ) from the ADGC comprising 23 different cohorts ( Supplementary Table 2 ). From these sources, there were 28,730 unrelated subjects with imputed GWAS SNP data in ADGC and 10,913 unrelat",
+      "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
       "needs_review": true
     },
     {
       "field": "Population",
-      "value": "NR",
-      "confidence": 0.25,
-      "evidence": "",
-      "rule": "no population cues found in methods/results/supplement",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regress",
+      "rule": "section-aware population keyword",
       "needs_review": true
     },
     {
       "field": "Sample size",
-      "value": "NR",
-      "confidence": 0.25,
-      "evidence": "",
-      "rule": "no sample size cues found",
+      "value": "74046",
+      "confidence": 0.7,
+      "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations between the AD phenotype and genetics, finding 21 SNPs as significant by meta-analyzing genetic and phenotype data from",
+      "rule": "section-aware sample size extraction",
       "needs_review": true
     }
   ],
@@ -74,7 +69,7 @@
           "field": "Name",
           "value": "CR1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -82,7 +77,7 @@
           "field": "P-value",
           "value": 8.489999999999999e-07,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -90,55 +85,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.17,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -151,7 +146,7 @@
           "field": "Name",
           "value": "CR1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -159,7 +154,7 @@
           "field": "P-value",
           "value": 4.2199999999999994e-07,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -167,55 +162,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.17,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -228,7 +223,7 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -236,7 +231,7 @@
           "field": "P-value",
           "value": 4.24e-08,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -244,55 +239,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.18,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -305,7 +300,7 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -313,7 +308,7 @@
           "field": "P-value",
           "value": 0.00856,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -321,55 +316,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -382,7 +377,7 @@
           "field": "Name",
           "value": "HLA-DRB5",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -390,7 +385,7 @@
           "field": "P-value",
           "value": 0.000266,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -398,55 +393,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -459,7 +454,7 @@
           "field": "Name",
           "value": "HLA-DRB5",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -467,7 +462,7 @@
           "field": "P-value",
           "value": 0.00025,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -475,55 +470,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.15,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -536,7 +531,7 @@
           "field": "Name",
           "value": "ZCWPW1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -544,7 +539,7 @@
           "field": "P-value",
           "value": 0.00141,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -552,55 +547,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -613,7 +608,7 @@
           "field": "Name",
           "value": "ZCWPW1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -621,7 +616,7 @@
           "field": "P-value",
           "value": 0.0021200000000000004,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -629,55 +624,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -690,7 +685,7 @@
           "field": "Name",
           "value": "ZCWPW1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -698,7 +693,7 @@
           "field": "P-value",
           "value": 0.00109,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -706,55 +701,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -767,7 +762,7 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -775,7 +770,7 @@
           "field": "P-value",
           "value": 0.00562,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -783,55 +778,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.93,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -844,7 +839,7 @@
           "field": "Name",
           "value": "",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -852,7 +847,7 @@
           "field": "P-value",
           "value": 0.0011200000000000001,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -860,55 +855,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -921,7 +916,7 @@
           "field": "Name",
           "value": "CLU",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -929,7 +924,7 @@
           "field": "P-value",
           "value": 0.00102,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -937,55 +932,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -998,7 +993,7 @@
           "field": "Name",
           "value": "CLU",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1006,7 +1001,7 @@
           "field": "P-value",
           "value": 0.000364,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1014,55 +1009,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1075,7 +1070,7 @@
           "field": "Name",
           "value": "CLU",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1083,7 +1078,7 @@
           "field": "P-value",
           "value": 0.0016200000000000001,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1091,55 +1086,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.9,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1152,7 +1147,7 @@
           "field": "Name",
           "value": "CELF1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1160,7 +1155,7 @@
           "field": "P-value",
           "value": 0.054,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1168,55 +1163,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.05,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1229,7 +1224,7 @@
           "field": "Name",
           "value": "CELF1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1237,7 +1232,7 @@
           "field": "P-value",
           "value": 0.24,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1245,55 +1240,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.03,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1306,7 +1301,7 @@
           "field": "Name",
           "value": "CELF1",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1314,7 +1309,7 @@
           "field": "P-value",
           "value": 0.04,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1322,55 +1317,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.07,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1383,7 +1378,7 @@
           "field": "Name",
           "value": "MS4A6A",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1391,7 +1386,7 @@
           "field": "P-value",
           "value": 7.22e-09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1399,55 +1394,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.86,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1460,7 +1455,7 @@
           "field": "Name",
           "value": "MS4A6A",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1468,7 +1463,7 @@
           "field": "P-value",
           "value": 1.3400000000000001e-09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1476,55 +1471,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.86,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1537,7 +1532,7 @@
           "field": "Name",
           "value": "MS4A6A",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1545,7 +1540,7 @@
           "field": "P-value",
           "value": 0.00036,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1553,55 +1548,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1614,7 +1609,7 @@
           "field": "Name",
           "value": "ABCA7",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1622,7 +1617,7 @@
           "field": "P-value",
           "value": 0.00139,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1630,55 +1625,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.12,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1691,7 +1686,7 @@
           "field": "Name",
           "value": "ABCA7",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1699,7 +1694,7 @@
           "field": "P-value",
           "value": 0.0027,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1707,55 +1702,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1768,7 +1763,7 @@
           "field": "Name",
           "value": "ABCA7",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1776,7 +1771,7 @@
           "field": "P-value",
           "value": 9.890000000000002e-05,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1784,55 +1779,55 @@
           "field": "EffectSize(altvsref)",
           "value": 1.18,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1845,7 +1840,7 @@
           "field": "Name",
           "value": "CD33",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1853,7 +1848,7 @@
           "field": "P-value",
           "value": 0.000449,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1861,55 +1856,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC;IGAP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] multiple row cohort hits: ADGC;IGAP\n[ID evidence] PMID inferred from source filename -> 30448",
+          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1922,7 +1917,7 @@
           "field": "Name",
           "value": "CD33",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1930,7 +1925,7 @@
           "field": "P-value",
           "value": 0.00040199999999999996,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1938,55 +1933,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADGC",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADGC\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1999,7 +1994,7 @@
           "field": "Name",
           "value": "CD33",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2007,7 +2002,7 @@
           "field": "P-value",
           "value": 0.09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2015,55 +2010,55 @@
           "field": "EffectSize(altvsref)",
           "value": 0.94,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no stage cues found",
-          "needs_review": true
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": ", Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenberg GD , Amouyel P 2013 Meta-analysis of 74,046 individuals iden",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
         },
         {
           "field": "Model type",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no model cues",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
           "needs_review": true
         },
         {
           "field": "Imputation_simple2",
-          "value": "NR",
-          "confidence": 0.3,
-          "evidence": "",
-          "rule": "no imputation keywords found",
+          "value": "HRC;1000G",
+          "confidence": 0.65,
+          "evidence": "osed of 18 cohorts from the Alzheimer’s Disease Genetic Consortium (ADGC) and six cohorts from the Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) Consortium ( Beecham, et al., 2017 ). We also used imputed SNP data ( Supplementary Method ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G) (multiple panels; table-specific mapping unclear)",
           "needs_review": true
         },
         {
           "field": "Population",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no population cues found in methods/results/supplement",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " rare variants. We first identified common SNPs in the nearby coding regions showing strong (r 2 ≥ 0.8) or moderate (0.4 ≤ r 2 < 0.8) LD with each of the IGAP SNPs by using 1000 Genomes Project Phase 3 in individuals of European ancestry (1000 Genomes EUR) ( 1",
+          "rule": "section-aware population keyword",
           "needs_review": true
         },
         {
           "field": "Sample size",
-          "value": "NR",
-          "confidence": 0.25,
-          "evidence": "",
-          "rule": "no sample size cues found",
+          "value": "74046",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
           "needs_review": true
         },
         {
           "field": "Cohort",
           "value": "ADSP",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] \n[Model evidence] \n[Imputation evidence] \n[Population evidence] \n[Sample size evidence] \n[Cohort evidence] row context matched cohort keyword -> ADSP\n[ID evidence] PMID inferred from source filename",
+          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)\n[Stage evidence] , Graff C , Psaty BM , Jones L , Haines JL , Holmans PA , Lathrop M , Pericak-Vance MA , Launer LJ , Farrer LA , van Duijn CM , Van Broeckhoven C , Moskvina V , Seshadri S , Williams J , Schellenber",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

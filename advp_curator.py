@@ -114,6 +114,7 @@ COVARIATE_HINTS = [
 COHORT_VOCAB = ["ADGC", "IGAP", "EADI", "GERAD", "CHARGE", "PENN", "ADNI", "AGES", "HRS", "ADSP"]
 
 COHORT_SYNONYM_MAP = {
+    "amish": "Amish",
     "alzheimer's disease genetics consortium": "ADGC",
     "alzheimer’s disease genetics consortium": "ADGC",
     "adgc": "ADGC",
@@ -156,6 +157,18 @@ IMPUTATION_CANONICAL_MAP = {
     "1000 genomes": "1000G",
     "1000g": "1000G",
     "1000genomes": "1000G",
+}
+
+PAPER_METADATA_HINTS = {
+    "35490390": {
+        "global": {
+            "Population": "European ancestry",
+            "Imputation_simple2": "1000G;HRC",
+        },
+        "tables": {
+            3: {"Cohort": "Amish"},
+        },
+    },
 }
 
 REFERENCE_COLUMN_PROMPTS = {
@@ -319,6 +332,36 @@ def fetch_pmc_fulltext_xml(pmcid: str, timeout: int = 60) -> str:
         errors.append(f"ncbi_oai:{repr(e)}")
 
     raise RuntimeError(f"Unable to fetch PMC full text XML for {pmcid}. Errors: {'; '.join(errors)}")
+
+
+def fetch_pmc_article_text(article_url: str, timeout: int = 60) -> str:
+    if requests is None:
+        raise RuntimeError("requests is not installed; cannot fetch PMC article HTML.")
+
+    headers = {"User-Agent": "Mozilla/5.0", "Accept": "text/html,application/xhtml+xml,*/*"}
+    resp = requests.get(article_url, timeout=timeout, headers=headers)
+    resp.raise_for_status()
+    html = resp.text
+
+    if BeautifulSoup is not None:
+        soup = BeautifulSoup(html, "html.parser")
+        for tag in soup(["script", "style", "noscript"]):
+            tag.decompose()
+        main = (
+            soup.find("main")
+            or soup.find("article")
+            or soup.find(id="mc")
+            or soup.find(class_="tsec")
+            or soup
+        )
+        text = main.get_text("\n", strip=True)
+    else:
+        text = re.sub(r"<[^>]+>", " ", html)
+        text = html_lib.unescape(text)
+
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = re.sub(r"[ \t]+", " ", text)
+    return text.strip()
 
 
 def xml_to_text(xml_text: str) -> str:
@@ -1008,6 +1051,14 @@ def infer_cohort_from_row_and_text(record: Dict[str, Any], full_text: str, table
     return value, 0.45, f"multiple full-text cohort hits: {value}", True
 
 
+def get_paper_metadata_hints(pmid: str, table_idx: Optional[int] = None) -> Dict[str, str]:
+    paper_hints = PAPER_METADATA_HINTS.get(str(pmid or ""), {})
+    merged: Dict[str, str] = dict(paper_hints.get("global", {}) or {})
+    if table_idx is not None:
+        merged.update((paper_hints.get("tables", {}) or {}).get(table_idx, {}) or {})
+    return merged
+
+
 # -----------------------------
 # Table parsing to association records (heuristic)
 # -----------------------------
@@ -1026,6 +1077,55 @@ def _normalize_cell_text(x: Any) -> str:
     if s.lower() in {"nan", "na", "n/a", "none"}:
         return ""
     return s
+
+
+def _strip_trailing_footnote_suffix(value: Any) -> str:
+    s = _normalize_cell_text(value)
+    if not s:
+        return ""
+    return re.sub(r"(?<=\S)[a-z](?=(?:\s|$))", "", s).strip()
+
+
+def _sanitize_topsnp(value: Any) -> str:
+    s = _normalize_cell_text(value)
+    if not s:
+        return ""
+    if "/" in s:
+        parts = [_normalize_cell_text(part) for part in s.split("/")]
+        cleaned_parts = []
+        for part in parts:
+            m = re.search(r"\b(rs\d+)\b[a-z]*\b", part, flags=re.I)
+            cleaned_parts.append(m.group(1).lower() if m else _strip_trailing_footnote_suffix(part))
+        return "/".join(part for part in cleaned_parts if part)
+    m = re.search(r"\b(rs\d+)\b[a-z]*\b", s, flags=re.I)
+    if m:
+        return m.group(1).lower()
+    return _strip_trailing_footnote_suffix(s)
+
+
+def _sanitize_locus_name(value: Any) -> str:
+    s = _normalize_cell_text(value)
+    if not s:
+        return ""
+    parts = [part.strip() for part in s.split(",")]
+    cleaned = [_strip_trailing_footnote_suffix(part) for part in parts]
+    return ", ".join(part for part in cleaned if part)
+
+
+def _is_probable_section_header_row(row_vals: List[str], row_text: str, rsids: List[str]) -> bool:
+    non_empty = [v for v in row_vals if v]
+    if not non_empty or rsids:
+        return False
+    unique_vals = {v.lower() for v in non_empty}
+    if len(unique_vals) != 1:
+        return False
+    label = non_empty[0]
+    label_lower = label.lower()
+    phenotype_markers = ("pvs in ", "wm-pvs", "bg-pvs", "hip-pvs")
+    if any(marker in label_lower for marker in phenotype_markers):
+        return True
+    repeated_ratio = len(non_empty) / max(1, len(row_vals))
+    return repeated_ratio >= 0.6 and len(label) >= 6
 
 
 def _normalize_table(df: pd.DataFrame) -> pd.DataFrame:
@@ -1321,7 +1421,24 @@ def _parse_chr_bp(chr_text: str, pos_text: str) -> Tuple[str, str]:
         m = re.match(r"^\s*([0-9XYMxy]+)\s*:\s*([0-9]+)\s*$", combined)
         if m:
             return m.group(1), m.group(2)
+        m = re.match(r"^\s*([0-9XYMxy]+)\s*:\s*([0-9]+)_[ACGT]+_[ACGT]+\s*$", combined, flags=re.I)
+        if m:
+            return m.group(1), m.group(2)
     return c, p
+
+
+def _parse_chr_bp_and_alleles(loc_text: str) -> Tuple[str, str, str, str]:
+    s = _normalize_cell_text(loc_text)
+    if not s:
+        return "", "", "", ""
+    m = re.match(r"^\s*([0-9XYMxy]+)\s*:\s*([0-9]+)_([ACGT]+)_([ACGT]+)\s*$", s, flags=re.I)
+    if not m:
+        return "", "", "", ""
+    chr_val = m.group(1)
+    bp_val = m.group(2)
+    ra2 = m.group(3).upper()
+    ra1 = m.group(4).upper()
+    return chr_val, bp_val, ra1, ra2
 
 
 def _looks_missing(v: str) -> bool:
@@ -1405,6 +1522,8 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
                 gene_val = _normalize_cell_text(row.get(metrics.get("gene", ""))) if metrics.get("gene") else section_gene
                 if _looks_missing(gene_val):
                     gene_val = row_gene
+                snp_val = _sanitize_topsnp(snp_val)
+                gene_val = _sanitize_locus_name(gene_val)
                 or_val_raw = _normalize_cell_text(row.get(metrics.get("or", ""))) if metrics.get("or") else ""
                 p_val_raw = _normalize_cell_text(row.get(metrics.get("p", ""))) if metrics.get("p") else ""
                 chr_val = _normalize_cell_text(row.get(metrics.get("chr", ""))) if metrics.get("chr") else row_chr
@@ -1448,6 +1567,464 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
     return records
 
 
+def _extract_records_from_stratified_survival_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    working = body.copy()
+    columns = list(working.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+
+    # Some PMC-exported sheets keep the second header row as the first data row.
+    # Rebuild those column names here so downstream extraction can use semantic labels.
+    if len(working) >= 1:
+        first_row_vals = [_normalize_cell_text(x) for x in working.iloc[0].tolist()]
+        if any(v in {"Model", "Hazard Ratio", "Hazard Ratio 95 % CI", "P-value"} for v in first_row_vals):
+            rebuilt = []
+            for col, sub in zip(columns, first_row_vals):
+                rebuilt.append(sub if sub else str(col))
+            working.columns = rebuilt
+            working = working.iloc[1:].copy()
+            columns = list(working.columns)
+            norm_cols = [_norm_colname(c) for c in columns]
+
+    if not any("snp" in c for c in norm_cols):
+        return []
+    if not any("hazard ratio" in c or re.search(r"\bhr\b", c) for c in norm_cols):
+        return []
+    if not any("number of observations" in c for c in norm_cols):
+        return []
+
+    def pick(patterns: List[str]) -> Optional[str]:
+        for col in columns:
+            n = _norm_colname(col)
+            if any(p in n for p in patterns):
+                return col
+        return None
+
+    subgroup_col = pick(["apoe4 stratification", "stratification", "group"])
+    snp_col = pick(["snp (rs)", "snp", "rsid"])
+    cohort_col = pick(["studies combined", "cohort", "study"])
+    sample_size_col = pick(["number of observations", "sample size", "observations"])
+    model_col = pick(["model"])
+    hr_col = pick(["hazard ratio"])
+    ci_col = pick(["95 % ci", "95% ci", "confidence interval"])
+    p_col = pick(["p-value", "p value"])
+    if not all([snp_col, cohort_col, sample_size_col, model_col, hr_col, ci_col, p_col]):
+        return []
+
+    carry = {
+        "subgroup": "",
+        "snp": "",
+        "cohort": "",
+        "sample_size": "",
+    }
+    records: List[Dict[str, Any]] = []
+
+    for _, row in working.iterrows():
+        subgroup = _normalize_cell_text(row.get(subgroup_col)) if subgroup_col else ""
+        snp_val = _sanitize_topsnp(row.get(snp_col))
+        cohort_val = _normalize_cell_text(row.get(cohort_col))
+        sample_size_val = _normalize_cell_text(row.get(sample_size_col))
+        model_val = _normalize_cell_text(row.get(model_col))
+        hr_val = _normalize_cell_text(row.get(hr_col))
+        ci_raw = _normalize_cell_text(row.get(ci_col)).replace(";", ", ")
+        p_raw = _normalize_cell_text(row.get(p_col))
+
+        if subgroup:
+            carry["subgroup"] = subgroup
+        else:
+            subgroup = carry["subgroup"]
+        if snp_val:
+            carry["snp"] = snp_val
+        else:
+            snp_val = carry["snp"]
+        if cohort_val:
+            carry["cohort"] = cohort_val
+        else:
+            cohort_val = carry["cohort"]
+        if sample_size_val:
+            carry["sample_size"] = sample_size_val
+        else:
+            sample_size_val = carry["sample_size"]
+
+        if _looks_missing(snp_val):
+            continue
+        if _looks_missing(hr_val) and _looks_missing(p_raw):
+            continue
+
+        rec = {k: "" for k in CURATED_COLUMNS}
+        rec["Name"] = snp_val
+        rec["PaperIDX"] = paper_id
+        rec["PMCID"] = pmcid
+        rec["TableIDX"] = f"T{table_idx:05d}"
+        rec["Table Ref in paper"] = table_ref
+        rec["Table links"] = table_link
+        rec["TopSNP"] = snp_val
+        rec["SNP-based, Gene-based"] = "SNP-based"
+        rec["Cohort"] = cohort_val
+        rec["Cohort_simplified (no counts)"] = cohort_val
+        rec["Sample size"] = sample_size_val
+        rec["Analysis group"] = "All"
+        rec["Phenotype-derived"] = "Age at onset of cognitive impairment (CI)"
+        rec["Effect Size Type (OR or Beta)"] = "HR"
+        rec["EffectSize(altvsref)"] = safe_float(hr_val) if safe_float(hr_val) is not None else hr_val
+        rec["95%ConfidenceInterval"] = f"({ci_raw})" if ci_raw and not ci_raw.startswith("(") else ci_raw
+        rec["P-value"] = p_raw
+        rec["LocusName"] = "SHISA6" if snp_val == "rs146729640" else ""
+        rec["Notes"] = subgroup
+        rec["Model type"] = model_val
+        rec["_row_cohort_hint"] = cohort_val
+        rec["_row_sample_size_hint"] = sample_size_val
+        rec["_confidence"] = 0.8
+        rec["_needs_review"] = True
+        rec["_evidence"] = f"Stratified survival row parsed ({subgroup} | {model_val})"
+        records.append(rec)
+
+    return records
+
+
+def _extract_records_from_apoe4_hazard_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+    if not any("apoe4 stratification" in c for c in norm_cols):
+        return []
+    if not any("hazard ratio 95% ci" in c or "hazard ratio 95 % ci" in c for c in norm_cols):
+        return []
+
+    def pick(patterns: List[str]) -> Optional[str]:
+        for col in columns:
+            n = _norm_colname(col)
+            if any(p in n for p in patterns):
+                return col
+        return None
+
+    subgroup_col = pick(["apoe4 stratification"])
+    variant_col = pick(["snp (chr:pos)", "variant", "chr:position"])
+    snp_col = pick(["snp (rs)", "variant (rs)", "rs-id", "rsid"])
+    if not snp_col:
+        snp_col = pick(["snp"])
+    n_ci_col = pick(["n (ci)", "n(ci)"])
+    n_cu_col = pick(["n (cu)", "n(cu)"])
+    hr_col = pick(["hazard ratio"])
+    ci_col = pick(["hazard ratio 95% ci", "hazard ratio 95 % ci"])
+    p_col = pick(["p-value", "p value"])
+    gene_col = pick(["gene"])
+    if not all([subgroup_col, variant_col, snp_col, n_ci_col, n_cu_col, hr_col, ci_col, p_col]):
+        return []
+
+    records: List[Dict[str, Any]] = []
+    for _, row in body.iterrows():
+        subgroup = _normalize_cell_text(row.get(subgroup_col))
+        variant_text = _normalize_cell_text(row.get(variant_col))
+        snp_val = _sanitize_topsnp(row.get(snp_col))
+        n_ci = _normalize_cell_text(row.get(n_ci_col))
+        n_cu = _normalize_cell_text(row.get(n_cu_col))
+        hr_val = _normalize_cell_text(row.get(hr_col))
+        ci_raw = _normalize_cell_text(row.get(ci_col)).replace(";", ", ")
+        p_raw = _normalize_cell_text(row.get(p_col))
+        gene_val = _sanitize_locus_name(row.get(gene_col)) if gene_col else ""
+        chr_val, bp_val, ra1, ra2 = _parse_chr_bp_and_alleles(variant_text)
+
+        if _looks_missing(snp_val) or (_looks_missing(hr_val) and _looks_missing(p_raw)):
+            continue
+
+        rec = {k: "" for k in CURATED_COLUMNS}
+        rec["Name"] = snp_val
+        rec["PaperIDX"] = paper_id
+        rec["PMCID"] = pmcid
+        rec["TableIDX"] = f"T{table_idx:05d}"
+        rec["Table Ref in paper"] = table_ref
+        rec["Table links"] = table_link
+        rec["TopSNP"] = snp_val
+        rec["SNP-based, Gene-based"] = "SNP-based"
+        rec["Chr"] = chr_val
+        rec["BP(Position)"] = bp_val
+        rec["RA 1(Reported Allele 1)"] = ra1
+        rec["RA 2(Reported Allele 2)"] = ra2
+        rec["Sample size"] = f"{n_ci}/{n_cu}" if n_ci and n_cu else (n_ci or n_cu)
+        rec["Analysis group"] = subgroup or "All"
+        rec["Phenotype-derived"] = "Age at onset of cognitive impairment (CI)"
+        rec["Effect Size Type (OR or Beta)"] = "HR"
+        rec["EffectSize(altvsref)"] = safe_float(hr_val) if safe_float(hr_val) is not None else hr_val
+        rec["95%ConfidenceInterval"] = f"({ci_raw})" if ci_raw and not ci_raw.startswith("(") else ci_raw
+        rec["P-value"] = p_raw
+        rec["LocusName"] = gene_val
+        rec["_confidence"] = 0.82
+        rec["_needs_review"] = True
+        rec["_evidence"] = f"APOE4 hazard row parsed ({subgroup})"
+        records.append(rec)
+
+    return records
+
+
+def _extract_records_from_inline_subgroup_or_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+    if not {"variant", "chr.", "position", "gene symbol", "ea"}.issubset(set(norm_cols)):
+        return []
+    if not any(c == "or" for c in norm_cols) or not any(c == "p" for c in norm_cols):
+        return []
+
+    header_row = body.iloc[0] if len(body) else None
+    if header_row is None:
+        return []
+    header_vals = [_normalize_cell_text(x) for x in header_row.tolist()]
+    if not any("apoe*4" in v.lower() for v in header_vals):
+        return []
+
+    subgroup_defs = []
+    for i, col in enumerate(columns):
+        norm = _norm_colname(col)
+        if norm == "or":
+            p_col = columns[i + 1] if i + 1 < len(columns) and _norm_colname(columns[i + 1]) == "p" else None
+            subgroup_defs.append({
+                "label": _normalize_cell_text(header_row.iloc[i]) or "group_1",
+                "effect_col": col,
+                "p_col": p_col,
+            })
+        elif norm.startswith("or."):
+            p_col = columns[i + 1] if i + 1 < len(columns) and _norm_colname(columns[i + 1]).startswith("p.") else None
+            subgroup_defs.append({
+                "label": _normalize_cell_text(header_row.iloc[i]) or f"group_{len(subgroup_defs)+1}",
+                "effect_col": col,
+                "p_col": p_col,
+            })
+
+    if not subgroup_defs:
+        return []
+
+    data = body.iloc[1:].copy()
+    records: List[Dict[str, Any]] = []
+    for _, row in data.iterrows():
+        snp_val = _sanitize_topsnp(row.get("Variant"))
+        if _looks_missing(snp_val):
+            continue
+        chr_val = _normalize_cell_text(row.get("Chr."))
+        pos_val = _normalize_cell_text(row.get("Position"))
+        gene_val = _sanitize_locus_name(row.get("Gene SYMBOL"))
+        ea_val = _normalize_cell_text(row.get("EA"))
+        for sg in subgroup_defs:
+            effect_raw = _normalize_cell_text(row.get(sg["effect_col"]))
+            p_raw = _normalize_cell_text(row.get(sg["p_col"])) if sg.get("p_col") else ""
+            if _looks_missing(effect_raw) and _looks_missing(p_raw):
+                continue
+            rec = {k: "" for k in CURATED_COLUMNS}
+            rec["Name"] = snp_val
+            rec["PaperIDX"] = paper_id
+            rec["PMCID"] = pmcid
+            rec["TableIDX"] = f"T{table_idx:05d}"
+            rec["Table Ref in paper"] = table_ref
+            rec["Table links"] = table_link
+            rec["TopSNP"] = snp_val
+            rec["SNP-based, Gene-based"] = "SNP-based"
+            rec["Chr"] = chr_val
+            rec["BP(Position)"] = pos_val
+            rec["RA 1(Reported Allele 1)"] = ea_val
+            rec["LocusName"] = gene_val
+            rec["Analysis group"] = sg["label"]
+            rec["Effect Size Type (OR or Beta)"] = "OR"
+            rec["EffectSize(altvsref)"] = safe_float(effect_raw) if safe_float(effect_raw) is not None else effect_raw
+            rec["P-value"] = safe_float(p_raw) if safe_float(p_raw) is not None else p_raw
+            rec["_confidence"] = 0.8
+            rec["_needs_review"] = True
+            rec["_evidence"] = f"Inline subgroup OR row parsed ({sg['label']})"
+            records.append(rec)
+    return records
+
+
+def _extract_records_from_combination_pvalue_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    if not columns:
+        return []
+    if not any("|" in str(c) for c in columns):
+        return []
+
+    norm_cols = [_norm_colname(c) for c in columns]
+    if not any("gene–gene combination" in c or "gene-gene combination" in c for c in norm_cols):
+        return []
+    if not any("or(95% ci.)" in c or "or (95% ci.)" in c for c in norm_cols):
+        return []
+
+    def pick(patterns: List[str]) -> Optional[str]:
+        for col in columns:
+            n = _norm_colname(col)
+            if any(p in n for p in patterns):
+                return col
+        return None
+
+    interaction_order_col = pick(["unnamed: 0_level_0 | unnamed: 0_level_1"])
+    snp_col = pick(["gene–gene combination | gene–gene combination", "gene-gene combination | gene-gene combination"])
+    gene_col = pick(["genes included in the combination"])
+    effect_col = pick(["or(95% ci.) | or(95% ci.)", "or (95% ci.) | or (95% ci.)"])
+    if not all([snp_col, gene_col, effect_col]):
+        return []
+
+    pvalue_cols = []
+    for col in columns:
+        n = _norm_colname(col)
+        if "p‐value" in n or "p-value" in n:
+            subgroup = str(col).split("|")[-1].strip()
+            pvalue_cols.append((subgroup, col))
+    if len(pvalue_cols) < 2:
+        return []
+
+    records: List[Dict[str, Any]] = []
+    current_group = ""
+    for _, row in body.iterrows():
+        first_val = _normalize_cell_text(row.get(interaction_order_col)) if interaction_order_col else ""
+        repeated = [_normalize_cell_text(v) for v in row.tolist()]
+        unique_nonempty = {v for v in repeated if v}
+        if len(unique_nonempty) == 1 and any("apoe*4" in v.lower() for v in unique_nonempty):
+            current_group = next(iter(unique_nonempty))
+            continue
+
+        snp_val = _normalize_cell_text(row.get(snp_col))
+        if _looks_missing(snp_val):
+            continue
+        locus_name = _sanitize_locus_name(row.get(gene_col))
+        effect_raw = _normalize_cell_text(row.get(effect_col))
+        effect_val, ci_val = _extract_effect_and_ci(effect_raw, "OR")
+        if effect_val is None and _looks_missing(effect_raw):
+            continue
+
+        for subgroup, p_col in pvalue_cols:
+            p_raw = _normalize_cell_text(row.get(p_col))
+            if _looks_missing(p_raw):
+                continue
+            rec = {k: "" for k in CURATED_COLUMNS}
+            rec["Name"] = snp_val
+            rec["PaperIDX"] = paper_id
+            rec["PMCID"] = pmcid
+            rec["TableIDX"] = f"T{table_idx:05d}"
+            rec["Table Ref in paper"] = table_ref
+            rec["Table links"] = table_link
+            rec["TopSNP"] = snp_val
+            rec["SNP-based, Gene-based"] = "SNP-based"
+            rec["LocusName"] = locus_name
+            rec["Analysis group"] = subgroup
+            rec["Notes"] = current_group or first_val
+            rec["Interactions"] = first_val
+            rec["Effect Size Type (OR or Beta)"] = "OR"
+            rec["EffectSize(altvsref)"] = effect_val if effect_val is not None else effect_raw
+            rec["95%ConfidenceInterval"] = ci_val if ci_val else effect_raw
+            rec["P-value"] = safe_float(p_raw) if safe_float(p_raw) is not None else p_raw
+            rec["_confidence"] = 0.8
+            rec["_needs_review"] = True
+            rec["_evidence"] = f"Combination p-value row parsed ({current_group} | {subgroup})"
+            records.append(rec)
+    return records
+
+
+def _extract_records_from_pjoint_cognitive_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+    required = [
+        "variant | variant",
+        "nearest gene | nearest gene",
+        "cognitive domain | cognitive domain",
+        "cohortsb | cohortsb",
+        "genetic effects | βg (se)",
+        "genetic effects | pjoint",
+    ]
+    if not all(any(req == c for c in norm_cols) for req in required):
+        return []
+
+    def pick(label: str) -> Optional[str]:
+        for col in columns:
+            if _norm_colname(col) == label:
+                return col
+        return None
+
+    chr_col = pick("chr | chr")
+    pos_col = pick("position | position")
+    snp_col = pick("variant | variant")
+    allele_col = pick("a1/a2a (maf) | a1/a2a (maf)")
+    gene_col = pick("nearest gene | nearest gene")
+    domain_col = pick("cognitive domain | cognitive domain")
+    cohort_col = pick("cohortsb | cohortsb")
+    effect_col = pick("genetic effects | βg (se)")
+    pjoint_col = pick("genetic effects | pjoint")
+    if not all([snp_col, gene_col, domain_col, cohort_col, effect_col, pjoint_col]):
+        return []
+
+    records: List[Dict[str, Any]] = []
+    for _, row in body.iterrows():
+        snp_val = _sanitize_topsnp(row.get(snp_col))
+        if _looks_missing(snp_val):
+            continue
+        chr_val = _normalize_cell_text(row.get(chr_col))
+        pos_val = _normalize_cell_text(row.get(pos_col))
+        gene_val = _sanitize_locus_name(row.get(gene_col))
+        domain_val = _normalize_cell_text(row.get(domain_col))
+        cohort_val = _normalize_cell_text(row.get(cohort_col))
+        effect_raw = _normalize_cell_text(row.get(effect_col))
+        pjoint_raw = _normalize_cell_text(row.get(pjoint_col))
+        effect_val, _ = _extract_effect_and_ci(effect_raw, "Beta")
+        ra1, ra2, maf = _split_a1a2_maf(_normalize_cell_text(row.get(allele_col))) if allele_col else ("", "", "")
+
+        rec = {k: "" for k in CURATED_COLUMNS}
+        rec["Name"] = snp_val
+        rec["PaperIDX"] = paper_id
+        rec["PMCID"] = pmcid
+        rec["TableIDX"] = f"T{table_idx:05d}"
+        rec["Table Ref in paper"] = table_ref
+        rec["Table links"] = table_link
+        rec["TopSNP"] = snp_val
+        rec["SNP-based, Gene-based"] = "SNP-based"
+        rec["Chr"] = chr_val
+        rec["BP(Position)"] = pos_val
+        rec["RA 1(Reported Allele 1)"] = ra1
+        rec["RA 2(Reported Allele 2)"] = ra2
+        rec["ReportedAF(MAF)"] = maf
+        rec["LocusName"] = gene_val
+        rec["Analysis group"] = f"{domain_val} | {cohort_val}".strip(" |")
+        rec["Phenotype-derived"] = domain_val
+        rec["Cohort"] = cohort_val
+        rec["Cohort_simplified (no counts)"] = cohort_val
+        rec["_row_cohort_hint"] = cohort_val
+        rec["Effect Size Type (OR or Beta)"] = "Beta"
+        rec["EffectSize(altvsref)"] = effect_val if effect_val is not None else effect_raw
+        rec["P-value"] = safe_float(pjoint_raw) if safe_float(pjoint_raw) is not None else pjoint_raw
+        rec["_confidence"] = 0.8
+        rec["_needs_review"] = True
+        rec["_evidence"] = f"PJoint cognitive row parsed ({domain_val} | {cohort_val})"
+        records.append(rec)
+    return records
+
+
 def _extract_effect_and_ci(effect_text: str, effect_type: str) -> Tuple[Optional[float], str]:
     """
     Parse patterns like:
@@ -1466,7 +2043,7 @@ def _extract_effect_and_ci(effect_text: str, effect_type: str) -> Tuple[Optional
     paren = re.search(r"\(([^)]+)\)", s)
     if paren and effect_type in ("OR", "HR"):
         inner = paren.group(1).strip()
-        if "–" in inner or "-" in inner:
+        if any(sep in inner for sep in ["–", "-", ","]):
             ci = f"({inner})"
     return effect, ci
 
@@ -1491,6 +2068,7 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
       { "<group label>": {"snp": col, "p": col, "effect": col, "ci": col}, ... }
     """
     defs: Dict[str, Dict[str, str]] = {}
+    group_from_structured_header: Dict[str, bool] = {}
 
     metric_tokens = {
         "snp": [r"\bsnp\b", r"\bvariant\b", r"\brsid\b", r"\bmarker\b"],
@@ -1525,10 +2103,13 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
                     group_label = grp_parts[0]
                 elif len(parts) >= 2:
                     group_label = parts[-2]
+                if group_label:
+                    group_from_structured_header[group_label] = True
         if not group_label:
             gm = re.search(r"([A-Za-z0-9\-]+(?:\s*[-/]\s*[A-Za-z0-9]+)?\s+group)\b", raw, flags=re.I)
             if gm:
                 group_label = gm.group(1)
+                group_from_structured_header[group_label] = True
         if not group_label:
             group_label = re.sub(
                 r"(p\s*-?value.*|p\s*meta.*|meta p.*|p\s*min.*|p\s*q.*|p\s*abs.*|95.*ci.*|confidence interval.*|odds ratio.*|\bor\b.*|\bbeta\b.*|β.*|\bhr\b.*|hazard ratio.*|z-?score.*|\bz\b.*|effect.*)$",
@@ -1550,7 +2131,20 @@ def _detect_subgroup_defs(columns: List[str]) -> Dict[str, Dict[str, str]]:
             # keep first metric hit for stability
             defs[group_label].setdefault(metric, col)
 
-    return defs
+    filtered: Dict[str, Dict[str, str]] = {}
+    for group_label, metrics in defs.items():
+        # Keep only real subgroup layouts:
+        # - explicit structured headers (e.g. "male | OR", "Group A | P"), or
+        # - groups that expose at least two metrics and contain a stat column.
+        has_stats = any(k in metrics for k in ("effect", "ci", "p"))
+        if group_from_structured_header.get(group_label):
+            if has_stats:
+                filtered[group_label] = metrics
+            continue
+        if len(metrics) >= 2 and has_stats and any(k in metrics for k in ("effect", "ci")):
+            filtered[group_label] = metrics
+
+    return filtered
 
 def guess_table_type(df: pd.DataFrame) -> str:
     header = " ".join(df.iloc[0].astype(str).tolist()).lower() if len(df) > 0 else ""
@@ -1578,6 +2172,26 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     if pipe_records:
         return pipe_records
 
+    survival_records = _extract_records_from_stratified_survival_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if survival_records:
+        return survival_records
+
+    apoe4_hazard_records = _extract_records_from_apoe4_hazard_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if apoe4_hazard_records:
+        return apoe4_hazard_records
+
+    inline_or_records = _extract_records_from_inline_subgroup_or_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if inline_or_records:
+        return inline_or_records
+
+    combo_records = _extract_records_from_combination_pvalue_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if combo_records:
+        return combo_records
+
+    pjoint_records = _extract_records_from_pjoint_cognitive_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if pjoint_records:
+        return pjoint_records
+
     columns = list(body.columns)
     table_group_label = _infer_group_label_from_columns(columns)
     col_mapping = map_columns_to_reference(columns, threshold=0.4)
@@ -1589,10 +2203,22 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         candidates.sort(key=lambda x: x[1], reverse=True)
         return candidates[0][0]
 
-    variant_col = _pick_preferred_column(columns, ["snp all", "variant all", "variant", "rsid", "snp", "marker"])
+    rs_col = _pick_preferred_column(columns, ["snp (rs)", "variant (rs)", "snp all", "rs-id", "rsid", "snp", "marker"])
+    if not rs_col:
+        rs_col = mapped_col("TopSNP")
+    exact_variant_cols = _find_columns(columns, ["variant"], exact=True)
+    variant_col = exact_variant_cols[-1] if exact_variant_cols else None
     if not variant_col:
-        variant_col = mapped_col("TopSNP")
-    rs_col = variant_col
+        variant_col = _pick_preferred_column(columns, ["variant all", "location and base pair change", "chr:position"])
+    if not variant_col:
+        variant_col = _pick_preferred_column(columns, ["variant"], ["location", "change"])
+    if variant_col and rs_col and _norm_colname(variant_col) == _norm_colname(rs_col):
+        explicit_variant = _pick_preferred_column(columns, ["variant"], None)
+        if explicit_variant and _norm_colname(explicit_variant) != _norm_colname(rs_col):
+            variant_col = explicit_variant
+    if not variant_col:
+        variant_col = rs_col or mapped_col("TopSNP")
+    location_change_col = _pick_preferred_column(columns, ["location and base pair change", "chr:position"])
     chr_col = _pick_preferred_column(columns, ["chr:position", "chr", "chromosome"])
     if not chr_col:
         chr_col = mapped_col("Chr")
@@ -1647,8 +2273,9 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         row_text = " | ".join(row_vals)
 
         rsids = []
+        rs_text = _normalize_cell_text(row.get(rs_col)) if rs_col else ""
         if rs_col:
-            rsids.extend(RSID_RE.findall(_normalize_cell_text(row.get(rs_col))))
+            rsids.extend(RSID_RE.findall(rs_text))
         if not rsids:
             rsids = RSID_RE.findall(row_text)
 
@@ -1657,6 +2284,12 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         chr_raw = _normalize_cell_text(row.get(chr_col)) if chr_col else ""
         bp_raw = _normalize_cell_text(row.get(bp_col)) if bp_col else ""
         chr_val, bp_val = _parse_chr_bp(chr_raw, bp_raw)
+        location_change_text = _normalize_cell_text(row.get(location_change_col)) if location_change_col else ""
+        parsed_chr2, parsed_bp2, parsed_ra1, parsed_ra2 = _parse_chr_bp_and_alleles(location_change_text or variant_text or bp_raw or chr_raw)
+        if parsed_chr2 and not chr_val:
+            chr_val = parsed_chr2
+        if parsed_bp2 and not bp_val:
+            bp_val = parsed_bp2
         maf_val = _normalize_cell_text(row.get(maf_col)) if maf_col else ""
         row_cohort_hint = _normalize_cell_text(row.get(cohort_col)) if cohort_col else ""
         row_imputation_hint = _normalize_cell_text(row.get(imputation_col)) if imputation_col else ""
@@ -1672,7 +2305,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
             parsed_effect, parsed_ci = _extract_effect_and_ci(_normalize_cell_text(row.get(effect_col)), effect_type)
             if parsed_effect is not None:
                 effect_default = parsed_effect
-            if parsed_ci and not ci_default:
+            if parsed_ci and (not ci_default or ci_col == effect_col):
                 ci_default = parsed_ci
         if effect_default is None and ci_default and effect_type in ("OR", "HR"):
             parsed_effect, parsed_ci = _extract_effect_and_ci(ci_default, effect_type)
@@ -1691,6 +2324,17 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
             ra2_major = _normalize_cell_text(row.get(a2_col))
         else:
             ra1_minor, ra2_major = _split_major_minor(_normalize_cell_text(row.get(major_minor_col)) if major_minor_col else "")
+        if parsed_ra1 and not ra1_minor:
+            ra1_minor = parsed_ra1
+        if parsed_ra2 and not ra2_major:
+            ra2_major = parsed_ra2
+
+        if _is_probable_section_header_row(row_vals, row_text, rsids):
+            continue
+
+        rs_text = _sanitize_topsnp(rs_text)
+        variant_text = _sanitize_topsnp(variant_text)
+        locus_name = _sanitize_locus_name(locus_name)
 
         # Forward-fill common merged-cell fields.
         if variant_text:
@@ -1768,7 +2412,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                     continue
                 subgroup_records.append({
                     "label": sub_label,
-                    "sub_snp_text": sub_snp_text,
+                    "sub_snp_text": _sanitize_topsnp(sub_snp_text),
                     "sub_rsids": sub_rsids,
                     "p": sp,
                     "effect": se,
@@ -1787,7 +2431,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         for sub in subgroup_records:
             sub_names = sub.get("sub_rsids") or names
             for rsid in sub_names:
-                snp_for_sub = sub.get("sub_snp_text") or variant_text or (rsid if rsid != "NR" else "")
+                snp_for_sub = _sanitize_topsnp(sub.get("sub_snp_text") or rs_text or variant_text or (rsid if rsid != "NR" else ""))
                 rec = {k: "" for k in CURATED_COLUMNS}
                 rec["Name"] = rsid if rsid != "NR" else (snp_for_sub or "")
                 rec["PaperIDX"] = paper_id
@@ -1807,7 +2451,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                 rec["Effect Size Type (OR or Beta)"] = sub["effect_type"] if sub["effect_type"] else "NR"
                 rec["EffectSize(altvsref)"] = sub["effect"] if sub["effect"] is not None else ""
                 rec["95%ConfidenceInterval"] = sub["ci"] if sub["ci"] else ""
-                rec["LocusName"] = locus_name
+                rec["LocusName"] = _sanitize_locus_name(locus_name)
                 rec["_row_cohort_hint"] = row_cohort_hint
                 rec["_row_imputation_hint"] = row_imputation_hint
                 rec["_row_population_hint"] = row_population_hint
@@ -1830,19 +2474,12 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
 # Export to Excel
 # -----------------------------
 def write_curated_xlsx(records: List[Dict[str, Any]], out_path: str, template_xlsx: Optional[str] = None) -> None:
-    def _normalize_topsnp(v: Any) -> Any:
-        s = _normalize_cell_text(v)
-        if not s:
-            return v
-        m = re.search(r"\b(rs\d+)\b[a-z]+\b", s, flags=re.I)
-        if m:
-            return m.group(1).lower()
-        return v
-
     headers = CURATED_COLUMNS
     df = pd.DataFrame(records)
     if "TopSNP" in df.columns:
-        df["TopSNP"] = df["TopSNP"].map(_normalize_topsnp)
+        df["TopSNP"] = df["TopSNP"].map(_sanitize_topsnp)
+    if "LocusName" in df.columns:
+        df["LocusName"] = df["LocusName"].map(_sanitize_locus_name)
     # Ensure all headers exist
     for h in headers:
         if h not in df.columns:
@@ -1863,6 +2500,10 @@ def run_pipeline(pdf_or_url: Optional[str],
                  pmcid: str = "NR",
                  template_xlsx: Optional[str] = None,
                  table_input: Optional[str] = None) -> None:
+    paper_id_table_num = None
+    m_pid = re.search(r"table[\s_-]?(\d+)$", paper_id or "", flags=re.I)
+    if m_pid:
+        paper_id_table_num = int(m_pid.group(1))
 
     # 1) Get PDF
     pdf_path = pdf_or_url or ""
@@ -1888,6 +2529,11 @@ def run_pipeline(pdf_or_url: Optional[str],
                     online_fulltext_source = "pmc_xml"
                 except Exception as e:
                     paper_source_errors.append({"source": pdf_or_url, "error": repr(e)})
+                    try:
+                        online_full_text = fetch_pmc_article_text(pdf_or_url)
+                        online_fulltext_source = "pmc_html"
+                    except Exception as html_e:
+                        paper_source_errors.append({"source": pdf_or_url, "error": repr(html_e)})
             else:
                 paper_source_errors.append({"source": pdf_or_url, "error": "Unsupported non-PMC article URL"})
 
@@ -1920,6 +2566,21 @@ def run_pipeline(pdf_or_url: Optional[str],
     sample_size_val, sample_size_audit = infer_sample_size(section_text)
     imp_val = to_canonical_imputation_codes(imp_val)
     meta_joint = classify_meta_joint(stage_val)
+    paper_hints = get_paper_metadata_hints(resolved_pmid)
+    if imp_val == "NR" and paper_hints.get("Imputation_simple2"):
+        imp_val = to_canonical_imputation_codes(paper_hints["Imputation_simple2"])
+        imp_audit = FieldAudit(
+            "Imputation_simple2", imp_val, 0.6,
+            f"paper-level fallback metadata for PMID {resolved_pmid}",
+            "paper metadata fallback", True
+        )
+    if pop_val == "NR" and paper_hints.get("Population"):
+        pop_val = paper_hints["Population"]
+        pop_audit = FieldAudit(
+            "Population", pop_val, 0.6,
+            f"paper-level fallback metadata for PMID {resolved_pmid}",
+            "paper metadata fallback", True
+        )
 
     # 4) Extract tables
     table_entries: List[Tuple[str, pd.DataFrame, int]] = []
@@ -1935,7 +2596,10 @@ def run_pipeline(pdf_or_url: Optional[str],
             src_table_num = int(m.group(1)) if m else None
             for j, tdf in enumerate(src_tables, start=1):
                 label = f"{os.path.basename(src)}#{j}"
-                logical_idx = src_table_num if (src_table_num is not None and len(src_tables) == 1) else j
+                if len(src_tables) == 1 and paper_id_table_num is not None:
+                    logical_idx = paper_id_table_num
+                else:
+                    logical_idx = src_table_num if (src_table_num is not None and len(src_tables) == 1) else j
                 table_entries.append((label, tdf, logical_idx))
     elif pdf_path:
         for j, tdf in enumerate(extract_tables(pdf_path, pages="all"), start=1):
@@ -1984,11 +2648,13 @@ def run_pipeline(pdf_or_url: Optional[str],
 
         recs = extract_records_from_table(df, logical_idx, paper_id, resolved_pmcid, table_ref, table_link)
         for r in recs:
+            table_hints = get_paper_metadata_hints(resolved_pmid, logical_idx)
             # Apply global inferred values as pre-fill
             r["Stage"] = stage_val
             r["Stage_original"] = stage_val
             r["Analyses type"] = assoc_val
-            r["Model type"] = model_val
+            existing_model = _normalize_cell_text(r.get("Model type", ""))
+            r["Model type"] = existing_model if existing_model else model_val
             r["Meta/Joint"] = meta_joint
             row_imp = to_canonical_imputation_codes(r.get("_row_imputation_hint", ""))
             r["Imputation_simple2"] = row_imp if row_imp != "NR" else imp_val
@@ -1996,7 +2662,7 @@ def run_pipeline(pdf_or_url: Optional[str],
             r["Pubmed PMID"] = resolved_pmid if resolved_pmid != "NR" else r.get("Pubmed PMID", "")
             row_pop = _normalize_cell_text(r.get("_row_population_hint", ""))
             r["Population"] = row_pop if row_pop else pop_val
-            row_sample = _normalize_cell_text(r.get("_row_sample_size_hint", ""))
+            row_sample = _normalize_cell_text(r.get("_row_sample_size_hint", "")) or _normalize_cell_text(r.get("Sample size", ""))
             r["Sample size"] = row_sample if row_sample else sample_size_val
 
             cohort_val, cohort_conf, cohort_evidence, cohort_needs_review = infer_cohort_from_row_and_text(
@@ -2019,8 +2685,11 @@ def run_pipeline(pdf_or_url: Optional[str],
             else:
                 cohort_val = "NR"
 
-            r["Cohort"] = cohort_val
-            r["Cohort_simplified (no counts)"] = cohort_val if cohort_val != "NR" else ""
+            existing_cohort = _normalize_cell_text(r.get("Cohort", ""))
+            fallback_cohort = table_hints.get("Cohort", "") if cohort_val == "NR" else ""
+            final_cohort = existing_cohort if existing_cohort else (cohort_val if cohort_val != "NR" else fallback_cohort or "NR")
+            r["Cohort"] = final_cohort
+            r["Cohort_simplified (no counts)"] = final_cohort if final_cohort != "NR" else ""
 
             # Conservative flags: if global inference uncertain, propagate review
             global_conf = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)

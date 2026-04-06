@@ -1,0 +1,8 @@
+file,status,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table3_v1.xlsx,not_in_advp,,3,0,,,
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table4_v1.xlsx,not_in_advp,,22,0,,,
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table5_v1.xlsx,not_in_advp,,6,0,,,
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table6_v1.xlsx,not_in_advp,,3,0,,,
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table7_v1.xlsx,not_in_advp,,3,0,,,
+/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table8_v1.xlsx,not_in_advp,,4,0,,,
+combined_inputs,not_in_advp,,41,0,,,

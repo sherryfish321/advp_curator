@@ -15,6 +15,8 @@ from urllib.parse import parse_qs, urlencode, urlparse
 
 import pandas as pd
 
+from table_link_to_excel import discover_relevant_pmc_tables
+
 
 def run_cmd(cmd: List[str]) -> str:
     proc = subprocess.run(cmd, capture_output=True, text=True)
@@ -39,6 +41,22 @@ def parse_links(raw: str) -> List[str]:
         if u:
             links.append(u)
     return links
+
+
+def parse_bool(raw: str) -> bool:
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def maybe_auto_discover_links(paper_input: str, links: List[str], auto_discover: bool) -> tuple[List[str], List[Dict[str, object]]]:
+    if links:
+        return links, []
+    if not auto_discover:
+        return links, []
+    discovered = discover_relevant_pmc_tables(paper_input)
+    selected = [item["link"] for item in discovered if item.get("selected")]
+    if not selected:
+        raise ValueError("Auto-discovery found PMC tables, but none matched the current gene + p-value rule")
+    return selected, discovered
 
 
 def collect_mismatch_paths(out_dir: Path, pmid: int, pred_scope: str, harmonized_paths: List[Path]) -> List[Path]:
@@ -206,6 +224,38 @@ def infer_table_number_from_sheet_path(path: Path) -> int:
     return int(match.group(1)) if match else 1
 
 
+def build_table_link_map(table_links: List[str]) -> Dict[int, str]:
+    mapping: Dict[int, str] = {}
+    for idx, link in enumerate(table_links, start=1):
+        mapping[infer_table_number_from_link(link, idx)] = link
+    return mapping
+
+
+def infer_table_number_from_link(link: str, fallback: int) -> int:
+    match = re.search(r"/table/T(\d+)/?$", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"/table/Tab(\d+)/?$", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"/table/[^/?#]*tbl[-_]?0*(\d+)/?$", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"/table/[^/?#]*table[-_]?0*(\d+)/?$", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"/table/[^/?#]*-T(\d+)/?$", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"[?&]table=T(\d+)\b", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    match = re.search(r"[?&]table_id=T(\d+)\b", link, flags=re.I)
+    if match:
+        return int(match.group(1))
+    return fallback
+
+
 def find_related_tables(path: Path) -> List[Path]:
     pmid = infer_pmid_from_sheet_path(path)
     if not pmid:
@@ -267,12 +317,13 @@ def curated_editable_columns() -> List[str]:
     ]
 
 
-def load_curated_rows(path: Path, limit: int = 50) -> Dict[str, object]:
+def load_curated_rows(path: Path, limit: int = None) -> Dict[str, object]:
     df = pd.read_excel(path)
     annotations = load_annotations(path)
     cols = [c for c in curated_editable_columns() if c in df.columns]
     rows = []
-    for idx, row in df.head(limit).iterrows():
+    view = df if limit is None else df.head(limit)
+    for idx, row in view.iterrows():
         row_dict = {"_row_index": int(idx)}
         for col in cols:
             val = row.get(col)
@@ -342,6 +393,19 @@ def summarize_counts(mismatch_paths: List[Path]) -> Dict[str, int]:
     return {"success_rows": success, "failed_rows": failed}
 
 
+def count_harmonized_rows(harmonized_paths: List[Path]) -> int:
+    total = 0
+    for path in harmonized_paths:
+        if not path.exists():
+            continue
+        try:
+            df = pd.read_excel(path)
+        except Exception:
+            continue
+        total += int(len(df))
+    return total
+
+
 def read_summary_metrics(summary_csv: Path, harmonized_paths: List[Path]) -> Dict[str, int]:
     pred_total = 0
     for_name = {p.name for p in harmonized_paths}
@@ -354,7 +418,10 @@ def read_summary_metrics(summary_csv: Path, harmonized_paths: List[Path]) -> Dic
                     pred_total += int(float(r.get("n_pred_rows", "0") or 0))
                 except ValueError:
                     pass
-    return {"pred_total": pred_total}
+    return {
+        "pred_total": pred_total,
+        "actual_total": count_harmonized_rows(harmonized_paths),
+    }
 
 
 def read_row_match_metrics(summary_csv: Path) -> Dict[str, object]:
@@ -387,6 +454,7 @@ def run_pipeline(
     ignore_bp: bool,
     ignore_ra1: bool,
     base_dir: str,
+    auto_discovered_tables: List[Dict[str, object]] = None,
 ) -> Dict[str, object]:
     if source_type != "pmc_table_link":
         raise ValueError("Only source_type=pmc_table_link is supported in current MVP")
@@ -404,7 +472,8 @@ def run_pipeline(
     generated_harmonized = []
 
     for idx, link in enumerate(table_links, start=1):
-        tag = f"{pmid}_table{idx}"
+        table_num = infer_table_number_from_link(link, idx)
+        tag = f"{pmid}_table{table_num}"
         table_xlsx = table_dir / f"{tag}.xlsx"
         harmonized_xlsx = harmonized_dir / f"from_{tag}_v1.xlsx"
         audit_json = audit_dir / f"from_{tag}_audit.json"
@@ -477,7 +546,8 @@ def run_pipeline(
 
     mismatch_counts = summarize_counts(mismatch_paths)
     summary_counts = read_summary_metrics(summary_csv, generated_harmonized)
-    success_rows = max(0, summary_counts["pred_total"] - mismatch_counts["failed_rows"])
+    pred_total = summary_counts.get("actual_total") or summary_counts.get("pred_total", 0)
+    success_rows = max(0, pred_total - mismatch_counts["failed_rows"])
     run_log = append_run_log(
         run_log_dir,
         {
@@ -485,6 +555,7 @@ def run_pipeline(
             "owner_name": owner_name,
             "paper_input": paper_input,
             "table_links": table_links,
+            "auto_discovered_tables": auto_discovered_tables or [],
             "generated_harmonized": [str(p) for p in generated_harmonized],
             "summary_csv": str(summary_csv),
             "details_json": str(details_json),
@@ -505,6 +576,7 @@ def run_pipeline(
         "success_rows": success_rows,
         "failed_rows": mismatch_counts["failed_rows"],
         "table_count": len(generated_harmonized),
+        "auto_discovered_tables": auto_discovered_tables or [],
         "predicted_issue_summary": predicted_issue_summary,
         "missing_prediction_summary": missing_prediction_summary,
         "missing_summary": missing_summary,
@@ -572,7 +644,8 @@ def render_edit_table(file_path: str) -> str:
     table_num = infer_table_number_from_sheet_path(path)
     paper_input = str(run_context.get("paper_input", ""))
     table_links = run_context.get("table_links", []) if isinstance(run_context.get("table_links", []), list) else []
-    current_table_link = table_links[table_num - 1] if table_num - 1 < len(table_links) else ""
+    table_link_map = build_table_link_map(table_links)
+    current_table_link = table_link_map.get(table_num, "")
     data = load_curated_rows(path)
     header = "".join(f"<th>{html.escape(col)}</th>" for col in data["columns"])
     rows_html = []
@@ -608,8 +681,9 @@ def render_edit_table(file_path: str) -> str:
             ref_actions.append(f"<a class='btn-link' href='/download?{urlencode({'path': paper_input})}'>Open Paper File</a>")
     table_reference_rows = []
     for idx, table_path in enumerate(related_tables, start=1):
-        linked_url = table_links[idx - 1] if idx - 1 < len(table_links) else ""
-        is_current = "Current" if table_path == path else f"Table {idx}"
+        related_table_num = infer_table_number_from_sheet_path(table_path)
+        linked_url = table_link_map.get(related_table_num, "")
+        is_current = "Current" if table_path == path else f"Table {related_table_num}"
         row_class = "ref-row current" if table_path == path else "ref-row"
         open_btn = (
             f"<a class='btn-link accent' href='{html.escape(linked_url)}' target='_blank' rel='noopener noreferrer' onclick='event.stopPropagation()'>Open Link</a>"
@@ -936,6 +1010,68 @@ def html_page(body: str) -> bytes:
       color: #334a63;
       font-size: 13px;
     }}
+    .option-toggle {{
+      display: block;
+      margin: 8px 0 2px;
+      cursor: pointer;
+    }}
+    .option-toggle input {{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }}
+    .option-card {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid #d7e2ee;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: linear-gradient(180deg, #fcfdff 0%, #f6faff 100%);
+      transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease, background .15s ease;
+    }}
+    .option-toggle:hover .option-card {{
+      border-color: #bdd0e5;
+      box-shadow: 0 8px 20px rgba(58, 88, 126, 0.08);
+      transform: translateY(-1px);
+    }}
+    .option-indicator {{
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 2px solid #9db3ca;
+      background: #fff;
+      box-shadow: inset 0 0 0 4px #fff;
+      flex: 0 0 auto;
+      transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
+    }}
+    .option-copy {{
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }}
+    .option-title {{
+      font-weight: 700;
+      color: #2a4763;
+      font-size: 14px;
+    }}
+    .option-help {{
+      color: #607286;
+      font-size: 12px;
+      line-height: 1.4;
+    }}
+    .option-toggle input:checked + .option-card {{
+      border-color: #7eaee6;
+      background: linear-gradient(135deg, #dcecff 0%, #f3f8ff 48%, #ffffff 100%);
+      box-shadow:
+        inset 0 0 0 2px rgba(64, 106, 165, 0.16),
+        0 10px 24px rgba(69, 112, 171, 0.12);
+    }}
+    .option-toggle input:checked + .option-card .option-indicator {{
+      border-color: #2f5f95;
+      background: #2f5f95;
+      box-shadow: inset 0 0 0 4px #dcecff;
+    }}
     .check-icon {{
       display: inline-flex;
       align-items: center;
@@ -1157,9 +1293,19 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
   <option value="pmc_table_link" selected>pmc_table_link</option>
 </select>
 <label>Table links (one per line)</label>
-<textarea name="table_links" rows="6" required>https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T1/
+<textarea name="table_links" rows="6">https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T1/
 https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T2/
 https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
+<label class="option-toggle">
+  <input type="checkbox" name="auto_discover_tables" value="1" />
+  <span class="option-card">
+    <span class="option-indicator"></span>
+    <span class="option-copy">
+      <span class="option-title">Auto-discover PMC tables when links are empty</span>
+      <span class="option-help">Find candidate tables directly from the article page and select tables with genetics and association signals.</span>
+    </span>
+  </span>
+</label>
 <label>ADVP TSV path (relative to project root)</label>
 <input name="advp_tsv" value="advp.variant.records.hg38.tsv" required />
 <button type="submit">Run</button>
@@ -1249,12 +1395,14 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
             paper_input = paper_upload or paper_input
             source_type = data.get("source_type", ["pmc_table_link"])[0].strip()
             links_raw = data.get("table_links", [""])[0]
+            auto_discover_tables = parse_bool(data.get("auto_discover_tables", [""])[0]) if data.get("auto_discover_tables") else False
             advp_tsv = data.get("advp_tsv", ["advp.variant.records.hg38.tsv"])[0].strip()
             links = parse_links(links_raw)
-            if not links:
-                raise ValueError("No table links provided")
             if not paper_input:
                 raise ValueError("Provide a paper URL or upload a PDF file")
+            links, discovered = maybe_auto_discover_links(paper_input, links, auto_discover_tables)
+            if not links:
+                raise ValueError("No table links provided")
 
             result = run_pipeline(
                 pmid=pmid,
@@ -1268,6 +1416,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 ignore_bp=True,
                 ignore_ra1=True,
                 base_dir=os.getcwd(),
+                auto_discovered_tables=discovered,
             )
 
             dl = "/download?" + urlencode({"path": result["fix_file"]})
@@ -1300,6 +1449,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
 
 def cli_mode(args: argparse.Namespace) -> None:
     links = parse_links(args.table_links)
+    links, discovered = maybe_auto_discover_links(args.paper_input, links, args.auto_discover_tables)
     result = run_pipeline(
         pmid=args.pmid,
         paper_input=args.paper_input,
@@ -1312,6 +1462,7 @@ def cli_mode(args: argparse.Namespace) -> None:
         ignore_bp=args.ignore_bp,
         ignore_ra1=args.ignore_ra1,
         base_dir=args.base_dir,
+        auto_discovered_tables=discovered,
     )
     print(f"PMID: {result['pmid']}")
     print(f"Tables processed: {result['table_count']}")
@@ -1335,7 +1486,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--owner_name", default="", help="Person responsible for this run")
     run.add_argument("--pmid", type=int, required=True)
     run.add_argument("--paper_input", required=True, help="Paper PDF path or URL")
-    run.add_argument("--table_links", required=True, help="Comma or newline-separated links")
+    run.add_argument("--table_links", default="", help="Comma or newline-separated links")
+    run.add_argument("--auto_discover_tables", action="store_true", help="Auto-discover relevant PMC tables when links are omitted")
     run.add_argument("--source_type", default="pmc_table_link", choices=["pmc_table_link"])
     run.add_argument("--advp_tsv", default="advp.variant.records.hg38.tsv")
     run.add_argument("--pred_scope", default="advp_like", choices=["raw", "advp_like"])

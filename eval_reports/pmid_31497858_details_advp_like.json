@@ -1,6 +1,7 @@
 [
   {
     "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table1_v1.xlsx",
+    "status": "evaluated",
     "row_key_cols": [
       "snp"
     ],
@@ -87,6 +88,7 @@
   },
   {
     "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_31497858_table2_v1.xlsx",
+    "status": "evaluated",
     "row_key_cols": [
       "snp"
     ],
@@ -173,6 +175,7 @@
   },
   {
     "file": "combined_inputs",
+    "status": "evaluated",
     "row_key_cols": [
       "snp"
     ],

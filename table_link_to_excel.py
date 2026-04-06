@@ -3,7 +3,7 @@ import io
 import re
 import subprocess
 import tarfile
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 
@@ -70,7 +70,13 @@ def _curl_get_text(url: str, timeout: int = 60) -> Optional[str]:
 def _extract_pmc_info(url: str) -> Tuple[Optional[str], Optional[str]]:
     m = re.search(r"/articles/(PMC\d+)(?:/table/([^/?#]+)/?)?", url, flags=re.I)
     if not m:
-        return None, None
+        m2 = re.search(r"/articles/(PMC\d+)/?", url, flags=re.I)
+        if not m2:
+            return None, None
+        pmcid = m2.group(1).upper()
+        q = re.search(r"[?&]table_id=([^&#]+)", url, flags=re.I)
+        table_id = q.group(1) if q else None
+        return pmcid, table_id
     pmcid = m.group(1).upper()
     table_id = m.group(2)
     return pmcid, table_id
@@ -265,6 +271,311 @@ def sanitize_sheet_name(name: str, fallback: str) -> str:
     return name[:31]
 
 
+def _table_wrap_to_link(pmcid: str, table_wrap) -> str:
+    table_id = (table_wrap.get("id") or "").strip()
+    if table_id:
+        return f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/table/{table_id}/"
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/"
+
+
+def _normalize_pmc_article_url(article_url: str, pmcid: str) -> str:
+    if re.search(rf"/articles/{pmcid}/?$", article_url, flags=re.I):
+        return article_url
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/"
+
+
+def _normalize_table_link(href: str, pmcid: str) -> Optional[str]:
+    href = (href or "").strip()
+    if not href:
+        return None
+    absolute_patterns = [
+        rf"https?://pmc\.ncbi\.nlm\.nih\.gov/articles/{pmcid}/table/[^/?#]+/?",
+        rf"/articles/{pmcid}/table/[^/?#]+/?",
+        r"^/table/[^/?#]+/?",
+        r"^table/[^/?#]+/?",
+    ]
+    for pattern in absolute_patterns:
+        m = re.search(pattern, href, flags=re.I)
+        if not m:
+            continue
+        link = m.group(0)
+        if link.startswith("http://") or link.startswith("https://"):
+            full = link
+        elif link.startswith("/articles/"):
+            full = "https://pmc.ncbi.nlm.nih.gov" + link
+        elif link.startswith("/table/"):
+            full = f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}" + link
+        else:
+            full = f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/" + link
+        if not full.endswith("/"):
+            full += "/"
+        return full
+    return None
+
+
+def _table_wrap_caption(table_wrap) -> str:
+    for tag_name in ("label", "caption", "title"):
+        tag = table_wrap.find(tag_name)
+        if tag is not None:
+            text = _clean_text(tag.get_text(" ", strip=True))
+            if text:
+                return text
+    table = table_wrap.find("table")
+    if table is not None:
+        cap = table.find("caption")
+        if cap is not None:
+            text = _clean_text(cap.get_text(" ", strip=True))
+            if text:
+                return text
+    return ""
+
+
+def _table_keyword_score(text: str) -> Tuple[int, List[str]]:
+    norm = normalize_for_match(text)
+    reasons: List[str] = []
+    score = 0
+
+    gene_patterns = [
+        r"\bgene\b",
+        r"\bgenes\b",
+        r"\bgene symbol\b",
+        r"\bnearest gene\b",
+        r"\bmapped gene\b",
+        r"\blocus\b",
+        r"\brsid\b",
+        r"\brs\d+\b",
+    ]
+    pvalue_patterns = [
+        r"\bp[\s\-_]*value\b",
+        r"\bpvalue\b",
+        r"\bp-val\b",
+        r"\bmeta[- ]?p\b",
+        r"\bnominal p\b",
+        r"\badjusted p\b",
+        r"\bp for\b",
+        r"(^|[\s(])p([\s)_:/-]|$)",
+    ]
+    effect_patterns = [r"\bor\b", r"\bbeta\b", r"\beffect\b", r"\bhazard ratio\b", r"\b95% ci\b", r"\bci\b"]
+    variant_patterns = [r"\bsnp\b", r"\bvariant\b", r"\bchr\b", r"\bchromosome\b", r"\bposition\b"]
+
+    if any(re.search(pattern, norm) for pattern in gene_patterns):
+        score += 3
+        reasons.append("gene-like keyword")
+    if any(re.search(pattern, norm) for pattern in pvalue_patterns):
+        score += 3
+        reasons.append("p-value-like keyword")
+    if any(re.search(pattern, norm) for pattern in effect_patterns):
+        score += 1
+        reasons.append("association-statistic keyword")
+    if any(re.search(pattern, norm) for pattern in variant_patterns):
+        score += 1
+        reasons.append("variant-like keyword")
+    return score, reasons
+
+
+def _looks_like_gene_count_table(text: str) -> bool:
+    norm = normalize_for_match(text)
+    bad_patterns = [
+        r"\bnumber of genes\b",
+        r"\bno\.?\s+of genes\b",
+        r"\bcount of genes\b",
+        r"\bgenes? overlapping\b",
+        r"\bgenes? enriched\b",
+        r"\bgenes? identified\b",
+        r"\bset of genes\b",
+    ]
+    return any(re.search(pattern, norm) for pattern in bad_patterns)
+
+
+def normalize_for_match(text: str) -> str:
+    text = _clean_text(text).lower()
+    text = text.replace("−", "-").replace("–", "-")
+    return text
+
+
+def score_table_wrap(table_wrap) -> Dict[str, object]:
+    table = table_wrap.find("table")
+    if table is None:
+        return {"score": 0, "reasons": ["missing table"], "caption": "", "preview": ""}
+
+    caption = _table_wrap_caption(table_wrap)
+    df = _flatten_columns(table_to_dataframe(table))
+    label = _clean_text(text_or_empty_bs4(table_wrap.find("label")))
+    parts = [label, caption]
+    if not df.empty:
+        header_text = " ".join(str(c) for c in df.columns if str(c).strip())
+        parts.append(header_text)
+        sample_df = df.head(15).astype(str).fillna("")
+        preview_values = sample_df.values.flatten().tolist()
+        parts.append(" ".join(preview_values[:180]))
+    combined_text = " ".join(p for p in parts if p)
+    score, reasons = _table_keyword_score(combined_text)
+
+    if _looks_like_gene_count_table(combined_text):
+        score -= 4
+        reasons.append("gene-count summary table")
+
+    if "gene-like keyword" in reasons and "p-value-like keyword" in reasons:
+        score += 2
+        reasons.append("gene+p-value rule matched")
+
+    # Accept classic association tables even when "gene" itself is sparse,
+    # as long as we see variants plus p-values/effect statistics.
+    if "p-value-like keyword" in reasons and ("variant-like keyword" in reasons or "association-statistic keyword" in reasons):
+        score += 1
+        reasons.append("association-table support")
+
+    return {
+        "score": score,
+        "reasons": reasons,
+        "caption": f"{label} {caption}".strip(),
+        "preview": _clean_text(combined_text)[:400],
+    }
+
+
+def _discover_relevant_pmc_tables_from_xml(pmcid: str, min_score: int) -> List[Dict[str, object]]:
+    xml = fetch_pmc_fulltext_xml(pmcid)
+    soup = BeautifulSoup(xml, "xml")
+    wraps = soup.find_all("table-wrap")
+
+    discovered: List[Dict[str, object]] = []
+    for idx, wrap in enumerate(wraps, start=1):
+        table = wrap.find("table")
+        if table is None:
+            continue
+        score_info = score_table_wrap(wrap)
+        item = {
+            "pmcid": pmcid,
+            "table_index": idx,
+            "table_id": (wrap.get("id") or "").strip(),
+            "caption": score_info["caption"],
+            "score": score_info["score"],
+            "reasons": score_info["reasons"],
+            "preview": score_info["preview"],
+            "link": _table_wrap_to_link(pmcid, wrap),
+            "selected": bool(score_info["score"] >= min_score),
+            "source": "pmc_xml",
+        }
+        discovered.append(item)
+    discovered.sort(key=lambda row: row["table_index"])
+    return discovered
+
+
+def _discover_relevant_pmc_tables_from_html(article_url: str, pmcid: str, min_score: int) -> List[Dict[str, object]]:
+    article_html = fetch_html(_normalize_pmc_article_url(article_url, pmcid))
+    soup = BeautifulSoup(article_html, "lxml")
+
+    hrefs: List[str] = []
+    for anchor in soup.find_all("a", href=True):
+        href = anchor.get("href") or ""
+        normalized = _normalize_table_link(href, pmcid)
+        if normalized:
+            hrefs.append(normalized)
+    raw_patterns = [
+        rf"https?://pmc\.ncbi\.nlm\.nih\.gov/articles/{pmcid}/table/[^\"'?#\s>]+/?",
+        rf"/articles/{pmcid}/table/[^\"'?#\s>]+/?",
+        r"/table/[^\"'?#\s>]+/?",
+        r"table/[^\"'?#\s>]+/?",
+    ]
+    for pattern in raw_patterns:
+        for match in re.finditer(pattern, article_html, flags=re.I):
+            normalized = _normalize_table_link(match.group(0), pmcid)
+            if normalized:
+                hrefs.append(normalized)
+    table_links = []
+    seen = set()
+    for link in hrefs:
+        if link not in seen:
+            seen.add(link)
+            table_links.append(link)
+
+    discovered: List[Dict[str, object]] = []
+    for idx, link in enumerate(table_links, start=1):
+        table_html = fetch_html(link)
+        table_soup = BeautifulSoup(table_html, "lxml")
+        table = table_soup.find("table")
+        if table is None:
+            continue
+        pseudo_wrap = table_soup
+        score_info = score_table_wrap(pseudo_wrap)
+        _, table_id = _extract_pmc_info(link)
+        discovered.append(
+            {
+                "pmcid": pmcid,
+                "table_index": _extract_table_number_from_id(table_id or "") or idx,
+                "table_id": table_id or "",
+                "caption": score_info["caption"],
+                "score": score_info["score"],
+                "reasons": score_info["reasons"],
+                "preview": score_info["preview"],
+                "link": link,
+                "selected": bool(score_info["score"] >= min_score),
+                "source": "pmc_html",
+            }
+        )
+
+    if not discovered:
+        inline_tables = _extract_tables_from_html_text(article_html)
+        for idx, df in enumerate(inline_tables, start=1):
+            html_table_id = f"T{idx}"
+            preview_df = _flatten_columns(df)
+            combined_text = " ".join(str(x) for x in preview_df.head(15).astype(str).fillna("").values.flatten().tolist()[:180])
+            score, reasons = _table_keyword_score(combined_text)
+            if _looks_like_gene_count_table(combined_text):
+                score -= 4
+                reasons.append("gene-count summary table")
+            if "gene-like keyword" in reasons and "p-value-like keyword" in reasons:
+                score += 2
+                reasons.append("gene+p-value rule matched")
+            if "p-value-like keyword" in reasons and ("variant-like keyword" in reasons or "association-statistic keyword" in reasons):
+                score += 1
+                reasons.append("association-table support")
+            discovered.append(
+                {
+                    "pmcid": pmcid,
+                    "table_index": idx,
+                    "table_id": html_table_id,
+                    "caption": f"Table {idx}",
+                    "score": score,
+                    "reasons": reasons,
+                    "preview": _clean_text(combined_text)[:400],
+                    "link": f"https://pmc.ncbi.nlm.nih.gov/articles/{pmcid}/?table_id={html_table_id}",
+                    "selected": bool(score >= min_score),
+                    "source": "pmc_article_html",
+                }
+            )
+
+    if not discovered:
+        raise RuntimeError(f"No PMC table links found on article HTML for {pmcid}, and no inline HTML tables were parseable")
+
+    discovered.sort(key=lambda row: row["table_index"])
+    return discovered
+
+
+def discover_relevant_pmc_tables(article_url: str, min_score: int = 5) -> List[Dict[str, object]]:
+    if BeautifulSoup is None:
+        raise RuntimeError("beautifulsoup4 is not installed. Run: python3 -m pip install beautifulsoup4")
+
+    pmcid, _ = _extract_pmc_info(article_url)
+    if not pmcid:
+        m = re.search(r"/articles/(PMC\d+)/?", article_url, flags=re.I)
+        pmcid = m.group(1).upper() if m else None
+    if not pmcid:
+        raise ValueError("Article URL must be a PMC article URL like https://pmc.ncbi.nlm.nih.gov/articles/PMCxxxx/")
+    try:
+        return _discover_relevant_pmc_tables_from_xml(pmcid, min_score=min_score)
+    except Exception as xml_error:
+        try:
+            discovered = _discover_relevant_pmc_tables_from_html(article_url, pmcid, min_score=min_score)
+            if discovered:
+                return discovered
+            raise RuntimeError(f"HTML fallback returned 0 discovered tables for {pmcid}")
+        except Exception as html_error:
+            raise RuntimeError(
+                f"Unable to auto-discover PMC tables for {pmcid}. XML error: {xml_error}. HTML fallback error: {html_error}"
+            ) from html_error
+
+
 def _flatten_columns(df: pd.DataFrame) -> pd.DataFrame:
     if isinstance(df.columns, pd.MultiIndex):
         flat_cols = []
@@ -275,6 +586,138 @@ def _flatten_columns(df: pd.DataFrame) -> pd.DataFrame:
         out.columns = flat_cols
         return out
     return df
+
+
+def _extract_tables_from_html_text(html_text: str) -> List[pd.DataFrame]:
+    dfs: List[pd.DataFrame] = []
+    try:
+        parsed = pd.read_html(io.StringIO(html_text))
+        dfs = [d for d in parsed if not d.empty]
+    except Exception:
+        return []
+    return dfs
+
+
+def _is_special_table_page_id(table_id: Optional[str]) -> bool:
+    if not table_id:
+        return False
+    tid = table_id.strip()
+    return bool(re.match(r"^.+-T\d+$", tid, flags=re.I))
+
+
+def _try_extract_from_article_html(pmcid: str, table_id: Optional[str]) -> Optional[List[pd.DataFrame]]:
+    article_url = _normalize_pmc_article_url("", pmcid)
+    article_html = fetch_html(article_url)
+    soup = BeautifulSoup(article_html, "lxml")
+    wanted_num = _extract_table_number_from_id(table_id or "") if table_id else None
+
+    if table_id:
+        try:
+            tables = pick_table(soup, table_id=table_id, table_selector=None, table_index=0)
+            dfs = [table_to_dataframe(table) for table in tables]
+            dfs = [df for df in dfs if not df.empty]
+            if dfs:
+                return dfs
+        except Exception:
+            pass
+
+    if wanted_num is not None:
+        # Some PMC article pages render "Table N" as a heading/label near the inline table
+        # without exposing a stable table id. Search for that label and then grab the nearest table.
+        label_re = re.compile(rf"^\s*table\s*{wanted_num}\b", flags=re.I)
+        for node in soup.find_all(string=label_re):
+            parent = node.parent
+            if parent is None:
+                continue
+            candidate = parent.find_next("table")
+            if candidate is not None:
+                df = table_to_dataframe(candidate)
+                if not df.empty:
+                    return [df]
+
+    html_dfs = _extract_tables_from_html_text(article_html)
+    if wanted_num is not None and 1 <= wanted_num <= len(html_dfs):
+        return [html_dfs[wanted_num - 1]]
+    return html_dfs or None
+
+
+def _extract_table_number_from_id(table_id: str) -> Optional[int]:
+    if not table_id:
+        return None
+    patterns = [
+        r"^t0*(\d+)$",
+        r"^tbl0*(\d+)$",
+        r"^table0*(\d+)$",
+        r"^tab0*(\d+)$",
+        r"^.+-t0*(\d+)$",
+    ]
+    tid = table_id.strip().lower()
+    for pattern in patterns:
+        m = re.match(pattern, tid)
+        if m:
+            return int(m.group(1))
+    m = re.search(r"(\d+)$", tid)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def _find_table_by_label_or_number(soup, table_id: str):
+    wanted_num = _extract_table_number_from_id(table_id)
+    if wanted_num is None:
+        return None
+
+    wraps = soup.find_all("table-wrap")
+    if wraps:
+        for idx, wrap in enumerate(wraps, start=1):
+            label = _clean_text(text_or_empty_bs4(wrap.find("label"))).lower()
+            caption = _table_wrap_caption(wrap).lower()
+            if label in {f"table {wanted_num}", f"t{wanted_num}"}:
+                table = wrap.find("table")
+                if table is not None:
+                    return table
+            if caption.startswith(f"table {wanted_num}"):
+                table = wrap.find("table")
+                if table is not None:
+                    return table
+            if idx == wanted_num:
+                fallback_table = wrap.find("table")
+                if fallback_table is not None:
+                    sequential_candidate = fallback_table
+                else:
+                    sequential_candidate = None
+        if "sequential_candidate" in locals() and sequential_candidate is not None:
+            return sequential_candidate
+
+    tables = soup.find_all("table")
+    if wanted_num >= 1 and wanted_num <= len(tables):
+        return tables[wanted_num - 1]
+    return None
+
+
+def text_or_empty_bs4(node) -> str:
+    if node is None:
+        return ""
+    return node.get_text(" ", strip=True)
+
+
+def _describe_available_tables(soup) -> str:
+    entries: List[str] = []
+    wraps = soup.find_all("table-wrap")
+    if wraps:
+        for idx, wrap in enumerate(wraps, start=1):
+            wrap_id = (wrap.get("id") or "").strip() or "-"
+            label = _clean_text(text_or_empty_bs4(wrap.find("label"))) or "-"
+            caption = _table_wrap_caption(wrap) or "-"
+            entries.append(f"{idx}: id={wrap_id}; label={label}; caption={caption[:120]}")
+    else:
+        tables = soup.find_all("table")
+        for idx, table in enumerate(tables[:20], start=1):
+            table_id = (table.get("id") or "").strip() or "-"
+            caption_tag = table.find("caption")
+            caption = _clean_text(text_or_empty_bs4(caption_tag)) if caption_tag is not None else "-"
+            entries.append(f"{idx}: id={table_id}; caption={caption[:120]}")
+    return " | ".join(entries) if entries else "no tables found"
 
 
 def pick_table(soup, table_id: Optional[str], table_selector: Optional[str], table_index: int):
@@ -293,7 +736,10 @@ def pick_table(soup, table_id: Optional[str], table_selector: Optional[str], tab
                 if wrap is not None:
                     t = wrap.find("table")
         if t is None:
-            raise ValueError(f"Cannot find table with id={table_id}")
+            t = _find_table_by_label_or_number(soup, table_id)
+        if t is None:
+            available = _describe_available_tables(soup)
+            raise ValueError(f"Cannot find table with id={table_id}. Available tables: {available}")
         return [t]
 
     if table_selector:
@@ -352,26 +798,80 @@ def main():
         else:
             raise e
 
+    # Some PMC table URLs are already single-table pages whose DOM does not preserve
+    # the original XML table id. If we can parse exactly one HTML table, use it directly.
+    if resolved_table_id and html:
+        html_dfs = _extract_tables_from_html_text(html)
+        if len(html_dfs) == 1:
+            with pd.ExcelWriter(args.out, engine="openpyxl") as writer:
+                df2 = _flatten_columns(html_dfs[0])
+                df2.to_excel(writer, index=False, sheet_name=sanitize_sheet_name(resolved_table_id, "table_1"))
+            print(f"Saved 1 table(s) to {args.out}")
+            return
+
     if parse_with_xml and not resolved_table_id and url_table_id:
         resolved_table_id = url_table_id
 
-    if resolved_table_id:
-        tables = pick_table(soup, table_id=resolved_table_id, table_selector=None, table_index=args.table_index)
-    elif args.all_tables:
-        if parse_with_xml:
-            wraps = soup.find_all("table-wrap")
-            tables = [w.find("table") for w in wraps if w.find("table") is not None]
+    try:
+        if resolved_table_id:
+            tables = pick_table(soup, table_id=resolved_table_id, table_selector=None, table_index=args.table_index)
+        elif args.all_tables:
+            if parse_with_xml:
+                wraps = soup.find_all("table-wrap")
+                tables = [w.find("table") for w in wraps if w.find("table") is not None]
+            else:
+                tables = soup.select(args.table_selector) if args.table_selector else soup.find_all("table")
+            if not tables:
+                raise ValueError("No matched tables found.")
         else:
-            tables = soup.select(args.table_selector) if args.table_selector else soup.find_all("table")
-        if not tables:
-            raise ValueError("No matched tables found.")
-    else:
-        tables = pick_table(
-            soup,
-            table_id=None,
-            table_selector=args.table_selector,
-            table_index=args.table_index,
-        )
+            tables = pick_table(
+                soup,
+                table_id=None,
+                table_selector=args.table_selector,
+                table_index=args.table_index,
+            )
+    except ValueError:
+        # Some PMC table pages return HTML shells/check pages to scripts. Retry against full-text XML.
+        if pmcid and not parse_with_xml:
+            if html:
+                html_dfs = _extract_tables_from_html_text(html)
+                if html_dfs:
+                    with pd.ExcelWriter(args.out, engine="openpyxl") as writer:
+                        for i, df in enumerate(html_dfs, start=1):
+                            df2 = _flatten_columns(df)
+                            df2.to_excel(writer, index=False, sheet_name=sanitize_sheet_name(resolved_table_id or "", f"table_{i}"))
+                    print(f"Saved {len(html_dfs)} table(s) to {args.out}")
+                    return
+            # For PMC table URLs like awz206-T1/T2, the dedicated table page may not expose
+            # a parseable DOM table to scripts, but the article page often still contains the
+            # inline Table 1 / Table 2 content. Prefer that before attempting XML.
+            article_dfs = _try_extract_from_article_html(pmcid, resolved_table_id)
+            if article_dfs:
+                with pd.ExcelWriter(args.out, engine="openpyxl") as writer:
+                    for i, df in enumerate(article_dfs, start=1):
+                        df2 = _flatten_columns(df)
+                        df2.to_excel(writer, index=False, header=False, sheet_name=sanitize_sheet_name(resolved_table_id or "", f"table_{i}"))
+                print(f"Saved {len(article_dfs)} table(s) to {args.out}")
+                return
+            wanted_num = _extract_table_number_from_id(resolved_table_id or "") if resolved_table_id else None
+            if wanted_num is not None and _is_special_table_page_id(resolved_table_id):
+                raise RuntimeError(
+                    f"Could not parse table page for {resolved_table_id}, and article HTML did not expose inline Table {wanted_num}."
+                )
+            xml = fetch_pmc_fulltext_xml(pmcid)
+            soup = BeautifulSoup(xml, "xml")
+            parse_with_xml = True
+            if resolved_table_id:
+                tables = pick_table(soup, table_id=resolved_table_id, table_selector=None, table_index=args.table_index)
+            elif args.all_tables:
+                wraps = soup.find_all("table-wrap")
+                tables = [w.find("table") for w in wraps if w.find("table") is not None]
+                if not tables:
+                    raise ValueError("No matched tables found in PMC XML.")
+            else:
+                tables = pick_table(soup, table_id=None, table_selector=None, table_index=args.table_index)
+        else:
+            raise
 
     with pd.ExcelWriter(args.out, engine="openpyxl") as writer:
         for i, table in enumerate(tables, start=1):

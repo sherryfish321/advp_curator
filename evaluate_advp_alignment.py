@@ -86,11 +86,11 @@ def safe_f1(tp: int, fp: int, fn: int) -> Dict[str, float]:
     return {"precision": p, "recall": r, "f1": f1}
 
 
-def load_gold(advp_tsv: str, pmid: int) -> pd.DataFrame:
+def load_gold(advp_tsv: str, pmid: int) -> Optional[pd.DataFrame]:
     g = pd.read_csv(advp_tsv, sep="\t")
     g = g[g["Pubmed PMID"] == pmid].copy()
     if g.empty:
-        raise ValueError(f"No ADVP rows found for PMID={pmid}")
+        return None
 
     out = pd.DataFrame()
     out["pmid"] = g["Pubmed PMID"].map(norm_num)
@@ -108,6 +108,16 @@ def load_gold(advp_tsv: str, pmid: int) -> pd.DataFrame:
     out["phenotype"] = g["Phenotype"].map(norm_token_set) if "Phenotype" in g.columns else None
     out["phenotype_derived"] = g["Phenotype-derived"].map(norm_token_set) if "Phenotype-derived" in g.columns else None
     return out
+
+
+def export_pred_table(pred_df: pd.DataFrame, out_dir: str, pmid: int, label: str, scope: str) -> str:
+    export_df = pred_df.copy()
+    export_path = os.path.join(
+        out_dir,
+        f"pmid_{pmid}_pred_{sanitize_filename(label)}_{scope}.csv",
+    )
+    export_df.to_csv(export_path, index=False)
+    return export_path
 
 
 def load_pred(path: str) -> pd.DataFrame:
@@ -190,12 +200,27 @@ def build_keys(df: pd.DataFrame, key_cols: List[str]) -> List[tuple]:
 
 def evaluate_one(
     pred_df: pd.DataFrame,
-    gold_df: pd.DataFrame,
+    gold_df: Optional[pd.DataFrame],
     path: str,
     key_mode: str = "auto",
     ignore_bp: bool = False,
     ignore_ra1: bool = False,
 ) -> Dict:
+    pred_rows = pred_df.dropna(subset=["snp"]).copy()
+    if gold_df is None:
+        return {
+            "file": path,
+            "status": "not_in_advp",
+            "row_key_cols": [],
+            "n_pred_rows": int(len(pred_rows)),
+            "n_gold_rows": 0,
+            "row_metrics": {"precision": None, "recall": None, "f1": None},
+            "field_metrics": {},
+            "aggregate_metrics": {},
+            "unmatched_pred_examples": [],
+            "unmatched_gold_examples": [],
+        }
+
     if key_mode == "pmid_snp_pvalue":
         key_cols = [c for c in ["pmid", "snp", "pvalue"] if c in pred_df.columns and c in gold_df.columns]
         if "snp" not in key_cols:
@@ -214,7 +239,6 @@ def evaluate_one(
         if "snp" not in key_cols:
             key_cols.insert(0, "snp")
 
-    pred_rows = pred_df.dropna(subset=["snp"]).copy()
     gold_rows = gold_df.dropna(subset=["snp"]).copy()
 
     pred_key_counter = Counter(build_keys(pred_rows, key_cols))
@@ -274,6 +298,7 @@ def evaluate_one(
 
     return {
         "file": path,
+        "status": "evaluated",
         "row_key_cols": key_cols,
         "n_pred_rows": int(sum(pred_key_counter.values())),
         "n_gold_rows": int(sum(gold_key_counter.values())),
@@ -285,7 +310,11 @@ def evaluate_one(
     }
 
 
-def diagnose_unmatched(pred_df: pd.DataFrame, gold_df: pd.DataFrame, key_cols: List[str]) -> pd.DataFrame:
+def diagnose_unmatched(pred_df: pd.DataFrame, gold_df: Optional[pd.DataFrame], key_cols: List[str]) -> pd.DataFrame:
+    if gold_df is None:
+        return pd.DataFrame(
+            [{"type": "info", "reason": "pmid_not_in_advp", "snp": None, "pmid": None, "chr": None, "bp": None, "ra1": None, "pvalue": None, "effect": None}]
+        )
     pred_rows = pred_df.dropna(subset=["snp"]).copy()
     gold_rows = gold_df.dropna(subset=["snp"]).copy()
     pred_keys = build_keys(pred_rows, key_cols)
@@ -390,10 +419,12 @@ def main():
 
     reports = []
     preds = []
+    exported_pred_paths = []
     for p in args.inputs:
         pred = load_pred(p)
         pred = apply_pred_scope(pred, args.pred_scope)
         preds.append(pred)
+        exported_pred_paths.append(export_pred_table(pred, args.out_dir, args.pmid, os.path.basename(p), args.pred_scope))
         reports.append(
             evaluate_one(
                 pred,
@@ -407,6 +438,7 @@ def main():
 
     if len(preds) > 1:
         combined = pd.concat(preds, ignore_index=True)
+        combined_export_path = export_pred_table(combined, args.out_dir, args.pmid, "combined_inputs", args.pred_scope)
         reports.append(
             evaluate_one(
                 combined,
@@ -423,6 +455,7 @@ def main():
         summary_rows.append(
             {
                 "file": r["file"],
+                "status": r.get("status", "evaluated"),
                 "key_cols": ",".join(r["row_key_cols"]),
                 "n_pred_rows": r["n_pred_rows"],
                 "n_gold_rows": r["n_gold_rows"],
@@ -463,6 +496,12 @@ def main():
 
     print(f"Saved summary: {summary_csv}")
     print(f"Saved details: {details_json}")
+    for export_path in exported_pred_paths:
+        print(f"Saved predicted ADVP-style table: {export_path}")
+    if len(preds) > 1:
+        print(f"Saved predicted ADVP-style table: {combined_export_path}")
+    if gold is None:
+        print(f"PMID {args.pmid} not found in ADVP gold data. Skipped precision/recall/F1 scoring.")
     print(summary_df.to_string(index=False))
 
 

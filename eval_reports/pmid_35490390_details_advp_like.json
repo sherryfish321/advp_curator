@@ -1,0 +1,114 @@
+[
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table3_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 3,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table4_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 22,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table5_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 6,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table6_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 3,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table7_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 3,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_35490390_table8_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 4,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "combined_inputs",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 41,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  }
+]
