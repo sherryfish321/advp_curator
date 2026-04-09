@@ -1,0 +1,1298 @@
+{
+  "paper": {
+    "paper_id": "29274321_table1",
+    "pmcid": "",
+    "pmid": "29274321",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/29274321_table1.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 29274321"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance weights as implemented in the METAL program [ 17 ]. AD cases from the two ADNI datasets were analyzed as one group because the ADNI-GO/2 sample included only 27 AD subjects, and regression models ",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "s of controls. DISCUSSION Our findings for AD-related brain changes prior to AD provide insight about early AD-related biological processes. Alzheimer’s disease Genome-wide association endophenotypes cerebrospinal fluid MRI logical memory biomarker ADNI tau co-expression network pmc-status-qastatus 0 pmc-status-live yes pmc-status-embargo no pmc-status-released yes pmc-prop-open-access no pmc-prop-olf no pmc-prop-manuscript yes pmc-prop-le",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "linear regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used as covariates for the six endophenotypes. A term for education level was also included in the regression models for LMiT and LMdT, and the model for HPV was further adjusted for total intracranial",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "NR",
+      "confidence": 0.3,
+      "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure Analysis Details of quality control, genotype imputation, and population substructure analyses are described in Supplementary Information . After QC, the ADNI-1 sample with genotype dat",
+      "rule": "no imputation keywords found",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs149454736 is located 1.5 kb away from rs149979685. AKAP9 has functional similarity with the tau protein in terms of microtubule stability and assembly [ 44 ]. With the exception of APOE , there i",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "757",
+      "confidence": 0.7,
+      "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD dementia) based on diagnosis at the baseline assessment as defined by the standard ADNI protocol. Demograph",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29274321_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs55644114",
+          "confidence": 0.9,
+          "evidence": "Row text: ALL | Aβ42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10−8 | GFRA2, LZTS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPP",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.5400000000000002e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: ALL | Aβ42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10−8 | GFRA2, LZTS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPP",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.41,
+          "confidence": 0.65,
+          "evidence": "Row text: ALL | Aβ42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10−8 | GFRA2, LZTS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPP",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: ALL | Aβ42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10−8 | GFRA2, LZTS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPP",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74442473",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | Aβ42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10−8 | GRIN2B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.5299999999999998e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | Aβ42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10−8 | GRIN2B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -1.02,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | Aβ42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10−8 | GRIN2B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | Aβ42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10−8 | GRIN2B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2378873",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | Aβ42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10−8 | BRIP1, NACA2\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.03e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | Aβ42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10−8 | BRIP1, NACA2\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.53,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | Aβ42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10−8 | BRIP1, NACA2\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | Aβ42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10−8 | BRIP1, NACA2\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2378873",
+          "confidence": 0.9,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10775009",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10−9 | SRRM4\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.59e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10−9 | SRRM4\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.51,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10−9 | SRRM4\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10−9 | SRRM4\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2819438",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | −0.80 | 0.14 | 6.94×10−9 | PLD4, C14orf79\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UN",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.9400000000000004e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | −0.80 | 0.14 | 6.94×10−9 | PLD4, C14orf79\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UN",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.8,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | −0.80 | 0.14 | 6.94×10−9 | PLD4, C14orf79\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UN",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | −0.80 | 0.14 | 6.94×10−9 | PLD4, C14orf79\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UN",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs2819438",
+          "confidence": 0.9,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4921790",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10−9 | PDGFRL, MTUS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.58e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10−9 | PDGFRL, MTUS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.61,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10−9 | PDGFRL, MTUS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10−9 | PDGFRL, MTUS1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4921790",
+          "confidence": 0.9,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tra",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs74834332",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10−8 | DAB1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.3e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10−8 | DAB1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.79,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10−8 | DAB1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10−8 | DAB1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs12268753",
+          "confidence": 0.9,
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10−8 | PRKG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.0099999999999998e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10−8 | PRKG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.3,
+          "confidence": 0.65,
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10−8 | PRKG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10−8 | PRKG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111882035",
+          "confidence": 0.9,
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10−8 | ARHGAP24\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.7400000000000004e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10−8 | ARHGAP24\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.93,
+          "confidence": 0.65,
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10−8 | ARHGAP24\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10−8 | ARHGAP24\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs73705514",
+          "confidence": 0.9,
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | −0.84 | 0.14 | 2.86×10−9 | ZNF804B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.86e-09,
+          "confidence": 0.7,
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | −0.84 | 0.14 | 2.86×10−9 | ZNF804B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.84,
+          "confidence": 0.65,
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | −0.84 | 0.14 | 2.86×10−9 | ZNF804B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | −0.84 | 0.14 | 2.86×10−9 | ZNF804B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs73705514",
+          "confidence": 0.9,
+          "evidence": "Row text: MCI |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tr",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: MCI |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tr",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: MCI |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tr",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: MCI |  |  |  |  |  |  |  |  |  | \n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Tr",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs118130881",
+          "confidence": 0.9,
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10−8 | NRG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.72e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10−8 | NRG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.61,
+          "confidence": 0.65,
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10−8 | NRG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10−8 | NRG1\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table1_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79846291",
+          "confidence": 0.9,
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10−8 | LINC00271, PDE7B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNM",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.7600000000000002e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10−8 | LINC00271, PDE7B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNM",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.85,
+          "confidence": 0.65,
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10−8 | LINC00271, PDE7B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNM",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10−8 | LINC00271, PDE7B\n[column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNM",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

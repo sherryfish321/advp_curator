@@ -1,0 +1,6 @@
+pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+29274321.0,cor,,,,0.00038,,adni,,757.0,hippocampus,C14orf79,,hippocampus
+29274321.0,cor,,,,0.0039,,adni,,757.0,other brain region,C14orf79,,other brain region
+29274321.0,cerebel,,,,0.00038,,adni,,757.0,hippocampus,C14orf79,,hippocampus
+29274321.0,cerebel,,,,0.006,,adni,,757.0,other brain region,C14orf79,,other brain region
+29274321.0,caud,,,,0.0097,,adni,,757.0,other brain region,MTUS1,,other brain region

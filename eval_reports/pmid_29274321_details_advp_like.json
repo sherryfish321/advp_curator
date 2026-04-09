@@ -1,0 +1,382 @@
+[
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_29274321_table1_v1.xlsx",
+    "status": "evaluated",
+    "row_key_cols": [
+      "pmid",
+      "snp",
+      "chr",
+      "pvalue"
+    ],
+    "n_pred_rows": 12,
+    "n_gold_rows": 11,
+    "row_metrics": {
+      "precision": 0.9166666666666666,
+      "recall": 1.0,
+      "f1": 0.9565217391304348
+    },
+    "field_metrics": {
+      "pvalue": {
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1": 0.9565217391304348
+      },
+      "effect": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "cohort": {
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1": 0.9565217391304348
+      },
+      "sample_size": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "analysis_group": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "chr": {
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1": 0.9565217391304348
+      }
+    },
+    "aggregate_metrics": {
+      "easy_fields": {
+        "fields": [
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "chr"
+        ],
+        "metrics": {
+          "precision": 0.4583333333333333,
+          "recall": 0.42857142857142855,
+          "f1": 0.44295302013422816
+        }
+      },
+      "all_advp_fields": {
+        "fields": [
+          "pmid",
+          "snp",
+          "chr",
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "locus_name",
+          "phenotype",
+          "phenotype_derived"
+        ],
+        "metrics": {
+          "precision": 0.6018518518518519,
+          "recall": 0.49242424242424243,
+          "f1": 0.5416666666666666
+        }
+      }
+    },
+    "unmatched_pred_examples": [
+      [
+        29274321.0,
+        "rs118130881",
+        "8",
+        1.72e-08
+      ]
+    ],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_29274321_table2_v1.xlsx",
+    "status": "evaluated",
+    "row_key_cols": [
+      "pmid",
+      "snp",
+      "pvalue"
+    ],
+    "n_pred_rows": 5,
+    "n_gold_rows": 11,
+    "row_metrics": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "field_metrics": {
+      "pvalue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "cohort": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "sample_size": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "analysis_group": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "aggregate_metrics": {
+      "easy_fields": {
+        "fields": [
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "chr"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "all_advp_fields": {
+        "fields": [
+          "pmid",
+          "snp",
+          "chr",
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "locus_name",
+          "phenotype",
+          "phenotype_derived"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "unmatched_pred_examples": [
+      [
+        29274321.0,
+        "cor",
+        0.00038
+      ],
+      [
+        29274321.0,
+        "cor",
+        0.0039
+      ],
+      [
+        29274321.0,
+        "cerebel",
+        0.00038
+      ],
+      [
+        29274321.0,
+        "cerebel",
+        0.006
+      ],
+      [
+        29274321.0,
+        "caud",
+        0.0097
+      ]
+    ],
+    "unmatched_gold_examples": [
+      [
+        29274321.0,
+        "rs74834332",
+        4.3e-08
+      ],
+      [
+        29274321.0,
+        "rs12268753",
+        2.01e-08
+      ],
+      [
+        29274321.0,
+        "rs74442473",
+        2.53e-08
+      ],
+      [
+        29274321.0,
+        "rs10775009",
+        1.59e-09
+      ],
+      [
+        29274321.0,
+        "rs2819438",
+        6.94e-09
+      ],
+      [
+        29274321.0,
+        "rs2378873",
+        2.03e-08
+      ],
+      [
+        29274321.0,
+        "rs111882035",
+        2.74e-08
+      ],
+      [
+        29274321.0,
+        "rs79846291",
+        1.76e-08
+      ],
+      [
+        29274321.0,
+        "rs73705514",
+        2.86e-09
+      ],
+      [
+        29274321.0,
+        "rs4921790",
+        4.58e-09
+      ]
+    ]
+  },
+  {
+    "file": "combined_inputs",
+    "status": "evaluated",
+    "row_key_cols": [
+      "pmid",
+      "snp",
+      "chr",
+      "pvalue"
+    ],
+    "n_pred_rows": 17,
+    "n_gold_rows": 11,
+    "row_metrics": {
+      "precision": 0.6470588235294118,
+      "recall": 1.0,
+      "f1": 0.7857142857142858
+    },
+    "field_metrics": {
+      "pvalue": {
+        "precision": 0.6470588235294118,
+        "recall": 1.0,
+        "f1": 0.7857142857142858
+      },
+      "effect": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "cohort": {
+        "precision": 0.6470588235294118,
+        "recall": 1.0,
+        "f1": 0.7857142857142858
+      },
+      "sample_size": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "analysis_group": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "chr": {
+        "precision": 0.6470588235294118,
+        "recall": 1.0,
+        "f1": 0.7857142857142858
+      }
+    },
+    "aggregate_metrics": {
+      "easy_fields": {
+        "fields": [
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "chr"
+        ],
+        "metrics": {
+          "precision": 0.358695652173913,
+          "recall": 0.42857142857142855,
+          "f1": 0.3905325443786982
+        }
+      },
+      "all_advp_fields": {
+        "fields": [
+          "pmid",
+          "snp",
+          "chr",
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "locus_name",
+          "phenotype",
+          "phenotype_derived"
+        ],
+        "metrics": {
+          "precision": 0.4391891891891892,
+          "recall": 0.49242424242424243,
+          "f1": 0.46428571428571425
+        }
+      }
+    },
+    "unmatched_pred_examples": [
+      [
+        29274321.0,
+        "rs118130881",
+        "8",
+        1.72e-08
+      ],
+      [
+        29274321.0,
+        "cor",
+        null,
+        0.00038
+      ],
+      [
+        29274321.0,
+        "cor",
+        null,
+        0.0039
+      ],
+      [
+        29274321.0,
+        "cerebel",
+        null,
+        0.00038
+      ],
+      [
+        29274321.0,
+        "cerebel",
+        null,
+        0.006
+      ],
+      [
+        29274321.0,
+        "caud",
+        null,
+        0.0097
+      ]
+    ],
+    "unmatched_gold_examples": []
+  }
+]

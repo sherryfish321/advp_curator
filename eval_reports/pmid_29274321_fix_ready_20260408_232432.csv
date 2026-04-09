@@ -1,0 +1,7 @@
+type,reason,snp,pmid,chr,bp,ra1,pvalue,effect,source_mismatch_file
+pred_unmatched,snp_not_in_gold,rs118130881,29274321.0,8,31228770.0,,1.72e-08,-0.61,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table1_v1.xlsx_advp_like.csv
+pred_unmatched,snp_not_in_gold,cor,29274321.0,,,,0.00038,,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table2_v1.xlsx_advp_like.csv
+pred_unmatched,snp_not_in_gold,cor,29274321.0,,,,0.0039,,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table2_v1.xlsx_advp_like.csv
+pred_unmatched,snp_not_in_gold,cerebel,29274321.0,,,,0.00038,,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table2_v1.xlsx_advp_like.csv
+pred_unmatched,snp_not_in_gold,cerebel,29274321.0,,,,0.006,,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table2_v1.xlsx_advp_like.csv
+pred_unmatched,snp_not_in_gold,caud,29274321.0,,,,0.0097,,/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_mismatch_from_29274321_table2_v1.xlsx_advp_like.csv

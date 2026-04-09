@@ -33,6 +33,8 @@ def norm_chr(v) -> Optional[str]:
     if not s:
         return None
     s = s.lower().replace("chr", "").strip()
+    if re.match(r"^\d+\.0+$", s):
+        s = s.split(".", 1)[0]
     return s if s else None
 
 
