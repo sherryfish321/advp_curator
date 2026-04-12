@@ -11,6 +11,10 @@ from typing import List, Dict, Optional, Tuple, Any
 
 import pandas as pd
 
+import advp_information_retriever as air
+import torch
+from transformers import AutoModel, AutoTokenizer, PreTrainedModel, PreTrainedTokenizer
+
 # Optional dependencies (script will degrade gracefully)
 try:
     import requests
@@ -2465,6 +2469,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                     f"Row text: {row_text[:340]}\n"
                     f"[column_mapping] {json.dumps(col_mapping, ensure_ascii=False)[:700]}"
                 )
+                rec["label"] = sub["label"] # add the label as the clue to map from global info to local info
                 records.append(rec)
 
     return records
@@ -2499,7 +2504,11 @@ def run_pipeline(pdf_or_url: Optional[str],
                  paper_id: str = "PAPER",
                  pmcid: str = "NR",
                  template_xlsx: Optional[str] = None,
-                 table_input: Optional[str] = None) -> None:
+                 table_input: Optional[str] = None,
+                 gwas_information_retriever: Optional[air.GWASInformationRetriever] = None,
+                 gwas_information_retriever_keyword: Optional[air.GWASInformationRetrieverKeyword] = None,
+                 embeddings_model: Optional[PreTrainedModel] = None,
+                 embeddings_model_tokenizer: Optional[PreTrainedTokenizer] = None) -> None:
     paper_id_table_num = None
     m_pid = re.search(r"table[\s_-]?(\d+)$", paper_id or "", flags=re.I)
     if m_pid:
@@ -2558,29 +2567,50 @@ def run_pipeline(pdf_or_url: Optional[str],
     ]).strip() or full_text
 
     # 3) Infer global fields (Stage / Model / Assoc type / Imputation / Population / Sample size)
-    stage_val, stage_audit = infer_stage(section_scoped_text)
-    assoc_val, assoc_audit = infer_association_type(section_scoped_text)
-    model_val, model_audit = infer_model_type(section_scoped_text)
-    imp_val, imp_audit = infer_imputation(section_scoped_text)
-    pop_val, pop_audit = infer_population(section_text)
-    sample_size_val, sample_size_audit = infer_sample_size(section_text)
-    imp_val = to_canonical_imputation_codes(imp_val)
-    meta_joint = classify_meta_joint(stage_val)
-    paper_hints = get_paper_metadata_hints(resolved_pmid)
-    if imp_val == "NR" and paper_hints.get("Imputation_simple2"):
-        imp_val = to_canonical_imputation_codes(paper_hints["Imputation_simple2"])
-        imp_audit = FieldAudit(
-            "Imputation_simple2", imp_val, 0.6,
-            f"paper-level fallback metadata for PMID {resolved_pmid}",
-            "paper metadata fallback", True
-        )
-    if pop_val == "NR" and paper_hints.get("Population"):
-        pop_val = paper_hints["Population"]
-        pop_audit = FieldAudit(
-            "Population", pop_val, 0.6,
-            f"paper-level fallback metadata for PMID {resolved_pmid}",
-            "paper metadata fallback", True
-        )
+    if gwas_information_retriever is None or gwas_information_retriever_keyword is None or paper_id == "PAPER":
+        stage_val, stage_audit = infer_stage(section_scoped_text)
+        assoc_val, assoc_audit = infer_association_type(section_scoped_text)
+        model_val, model_audit = infer_model_type(section_scoped_text)
+        imp_val, imp_audit = infer_imputation(section_scoped_text)
+        pop_val, pop_audit = infer_population(section_text)
+        sample_size_val, sample_size_audit = infer_sample_size(section_text)
+        imp_val = to_canonical_imputation_codes(imp_val)
+        meta_joint = classify_meta_joint(stage_val)
+        paper_hints = get_paper_metadata_hints(resolved_pmid)
+        if imp_val == "NR" and paper_hints.get("Imputation_simple2"):
+            imp_val = to_canonical_imputation_codes(paper_hints["Imputation_simple2"])
+            imp_audit = FieldAudit(
+                "Imputation_simple2", imp_val, 0.6,
+                f"paper-level fallback metadata for PMID {resolved_pmid}",
+                "paper metadata fallback", True
+            )
+        if pop_val == "NR" and paper_hints.get("Population"):
+            pop_val = paper_hints["Population"]
+            pop_audit = FieldAudit(
+                "Population", pop_val, 0.6,
+                f"paper-level fallback metadata for PMID {resolved_pmid}",
+                "paper metadata fallback", True
+            )    
+        col_require_rag_to_possible_info = {
+            "Stage": [stage_val],
+            "Association Type": [assoc_val],
+            "Model Type": [model_val],
+            "Imputation": [imp_val],
+            "Population": [pop_val],
+            "Study Type": [],
+            "Phenotype": [],
+            "Cohort": [],
+            "Sample Size": [sample_size_val]
+        }
+    else:
+        col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(paper_id), pmcid)
+        col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(paper_id), pmcid)
+        sample_size_val, _ = infer_sample_size(section_text)
+        col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
+        assoc_val, _ = infer_association_type(section_scoped_text)
+        col_require_rag_to_possible_info["Association Type"] = [assoc_val]
+        model_val, _ = infer_model_type(section_scoped_text)
+        col_require_rag_to_possible_info["Model Type"] = [model_val]
 
     # 4) Extract tables
     table_entries: List[Tuple[str, pd.DataFrame, int]] = []
@@ -2647,67 +2677,96 @@ def run_pipeline(pdf_or_url: Optional[str],
             table_link = pdf_or_url if (pdf_or_url and pdf_or_url.lower().startswith("http")) else "local_pdf"
 
         recs = extract_records_from_table(df, logical_idx, paper_id, resolved_pmcid, table_ref, table_link)
+        # NOTE: we will get col with text based on this process
+        # - First extract all possible groups => map these groups to valid text col name or just map all of them
+        possible_groups = set()
         for r in recs:
-            table_hints = get_paper_metadata_hints(resolved_pmid, logical_idx)
-            # Apply global inferred values as pre-fill
-            r["Stage"] = stage_val
-            r["Stage_original"] = stage_val
-            r["Analyses type"] = assoc_val
-            existing_model = _normalize_cell_text(r.get("Model type", ""))
-            r["Model type"] = existing_model if existing_model else model_val
-            r["Meta/Joint"] = meta_joint
-            row_imp = to_canonical_imputation_codes(r.get("_row_imputation_hint", ""))
-            r["Imputation_simple2"] = row_imp if row_imp != "NR" else imp_val
-            r["PMCID"] = resolved_pmcid if resolved_pmcid != "NR" else r.get("PMCID", "")
-            r["Pubmed PMID"] = resolved_pmid if resolved_pmid != "NR" else r.get("Pubmed PMID", "")
-            row_pop = _normalize_cell_text(r.get("_row_population_hint", ""))
-            r["Population"] = row_pop if row_pop else pop_val
-            row_sample = _normalize_cell_text(r.get("_row_sample_size_hint", "")) or _normalize_cell_text(r.get("Sample size", ""))
-            r["Sample size"] = row_sample if row_sample else sample_size_val
+            possible_groups.add(r['label'])
+        possible_groups = list(possible_groups)
+        if len(possible_groups) <= 1:
+            for r in recs:
+                for text_col in col_require_rag_to_possible_info:
+                    r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
+        else:
+            for text_col in col_require_rag_to_possible_info:
+                similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups, embeddings_model, embeddings_model_tokenizer)
+                possible_groups_to_possible_info = {}
+                if torch.min(torch.max(similarity_score, dim = 0).values) < 0.4:
+                    for i, u in enumerate(possible_groups):
+                        possible_groups_to_possible_info[u] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
+                else:
+                    # best_inx = torch.argmax(similarity_score, dim = 0)
+                    # unique_value_to_possible_info = {}
+                    # for i, u in enumerate(unique_value):
+                    #     unique_value_to_possible_info[u] = col_to_possible_info[col][best_inx[i]]
+                    for i, u in enumerate(possible_groups):
+                        valid_info = [col_require_rag_to_possible_info[text_col][inx] for inx in range(similarity_score.shape[0]) if similarity_score[inx, i] >= 0.4]
+                        possible_groups_to_possible_info[u] = air.combine_possible_info(valid_info)
+                for r in recs:
+                    r[text_col] = possible_groups_to_possible_info[r["label"]]
 
-            cohort_val, cohort_conf, cohort_evidence, cohort_needs_review = infer_cohort_from_row_and_text(
-                r, full_text, table_ref
-            )
-            row_hint = to_canonical_cohort_codes(r.get("_row_cohort_hint", ""))
-            inferred = to_canonical_cohort_codes(cohort_val)
-            merged_cohorts = []
-            for part in (row_hint, inferred):
-                if part and part != "NR":
-                    merged_cohorts.extend([x for x in part.split(";") if x])
-            if merged_cohorts:
-                dedup = []
-                seen = set()
-                for c in merged_cohorts:
-                    if c not in seen:
-                        dedup.append(c)
-                        seen.add(c)
-                cohort_val = ";".join(dedup)
-            else:
-                cohort_val = "NR"
 
-            existing_cohort = _normalize_cell_text(r.get("Cohort", ""))
-            fallback_cohort = table_hints.get("Cohort", "") if cohort_val == "NR" else ""
-            final_cohort = existing_cohort if existing_cohort else (cohort_val if cohort_val != "NR" else fallback_cohort or "NR")
-            r["Cohort"] = final_cohort
-            r["Cohort_simplified (no counts)"] = final_cohort if final_cohort != "NR" else ""
+        # for r in recs:
+        #     table_hints = get_paper_metadata_hints(resolved_pmid, logical_idx)
+        #     # Apply global inferred values as pre-fill
+        #     r["Stage"] = stage_val
+        #     r["Stage_original"] = stage_val
+        #     r["Analyses type"] = assoc_val
+        #     existing_model = _normalize_cell_text(r.get("Model type", ""))
+        #     r["Model type"] = existing_model if existing_model else model_val
+        #     r["Meta/Joint"] = meta_joint
+        #     row_imp = to_canonical_imputation_codes(r.get("_row_imputation_hint", ""))
+        #     r["Imputation_simple2"] = row_imp if row_imp != "NR" else imp_val
+        #     r["PMCID"] = resolved_pmcid if resolved_pmcid != "NR" else r.get("PMCID", "")
+        #     r["Pubmed PMID"] = resolved_pmid if resolved_pmid != "NR" else r.get("Pubmed PMID", "")
+        #     row_pop = _normalize_cell_text(r.get("_row_population_hint", ""))
+        #     r["Population"] = row_pop if row_pop else pop_val
+        #     row_sample = _normalize_cell_text(r.get("_row_sample_size_hint", "")) or _normalize_cell_text(r.get("Sample size", ""))
+        #     r["Sample size"] = row_sample if row_sample else sample_size_val
 
-            # Conservative flags: if global inference uncertain, propagate review
-            global_conf = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
-            r["_confidence"] = float(r.get("_confidence", 0.4)) * 0.4 + global_conf * 0.4 + cohort_conf * 0.2
-            if stage_audit.needs_review or assoc_audit.needs_review or model_audit.needs_review or imp_audit.needs_review or pop_audit.needs_review or sample_size_audit.needs_review or cohort_needs_review:
-                r["_needs_review"] = True
+        #     cohort_val, cohort_conf, cohort_evidence, cohort_needs_review = infer_cohort_from_row_and_text(
+        #         r, full_text, table_ref
+        #     )
+        #     row_hint = to_canonical_cohort_codes(r.get("_row_cohort_hint", ""))
+        #     inferred = to_canonical_cohort_codes(cohort_val)
+        #     merged_cohorts = []
+        #     for part in (row_hint, inferred):
+        #         if part and part != "NR":
+        #             merged_cohorts.extend([x for x in part.split(";") if x])
+        #     if merged_cohorts:
+        #         dedup = []
+        #         seen = set()
+        #         for c in merged_cohorts:
+        #             if c not in seen:
+        #                 dedup.append(c)
+        #                 seen.add(c)
+        #         cohort_val = ";".join(dedup)
+        #     else:
+        #         cohort_val = "NR"
 
-            # Add short evidence
-            r["_evidence"] = (r.get("_evidence", "") + "\n" +
-                             f"[Stage evidence] {stage_audit.evidence[:240]}\n" +
-                             f"[Model evidence] {model_audit.evidence[:240]}\n" +
-                             f"[Imputation evidence] {imp_audit.evidence[:240]}\n" +
-                             f"[Population evidence] {pop_audit.evidence[:240]}\n" +
-                             f"[Sample size evidence] {sample_size_audit.evidence[:240]}\n" +
-                             f"[Cohort evidence] {cohort_evidence[:240]}\n" +
-                             f"[ID evidence] {ids_evidence[:240]}").strip()
+        #     existing_cohort = _normalize_cell_text(r.get("Cohort", ""))
+        #     fallback_cohort = table_hints.get("Cohort", "") if cohort_val == "NR" else ""
+        #     final_cohort = existing_cohort if existing_cohort else (cohort_val if cohort_val != "NR" else fallback_cohort or "NR")
+        #     r["Cohort"] = final_cohort
+        #     r["Cohort_simplified (no counts)"] = final_cohort if final_cohort != "NR" else ""
 
-            records.append(r)
+        #     # Conservative flags: if global inference uncertain, propagate review
+        #     global_conf = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
+        #     r["_confidence"] = float(r.get("_confidence", 0.4)) * 0.4 + global_conf * 0.4 + cohort_conf * 0.2
+        #     if stage_audit.needs_review or assoc_audit.needs_review or model_audit.needs_review or imp_audit.needs_review or pop_audit.needs_review or sample_size_audit.needs_review or cohort_needs_review:
+        #         r["_needs_review"] = True
+
+        #     # Add short evidence
+        #     r["_evidence"] = (r.get("_evidence", "") + "\n" +
+        #                      f"[Stage evidence] {stage_audit.evidence[:240]}\n" +
+        #                      f"[Model evidence] {model_audit.evidence[:240]}\n" +
+        #                      f"[Imputation evidence] {imp_audit.evidence[:240]}\n" +
+        #                      f"[Population evidence] {pop_audit.evidence[:240]}\n" +
+        #                      f"[Sample size evidence] {sample_size_audit.evidence[:240]}\n" +
+        #                      f"[Cohort evidence] {cohort_evidence[:240]}\n" +
+        #                      f"[ID evidence] {ids_evidence[:240]}").strip()
+
+        #     records.append(r)
 
     # Stable IDs for downstream curation and dedupe
     for i, r in enumerate(records, start=1):
@@ -2753,13 +2812,13 @@ def run_pipeline(pdf_or_url: Optional[str],
         shell["Imputation_simple2"] = imp_val
         shell["Population"] = pop_val
         shell["Sample size"] = sample_size_val
-        shell["_confidence"] = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
-        shell["_needs_review"] = True
-        shell["_evidence"] = (
-            "No extractable association records from tables. "
-            f"Table entries={len(table_entries)}; source_errors={len(table_source_errors)}. "
-            "Use audit json for details."
-        )
+        # shell["_confidence"] = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
+        # shell["_needs_review"] = True
+        # shell["_evidence"] = (
+        #     "No extractable association records from tables. "
+        #     f"Table entries={len(table_entries)}; source_errors={len(table_source_errors)}. "
+        #     "Use audit json for details."
+        # )
         records.append(shell)
 
     # 7) Write outputs
@@ -2775,6 +2834,18 @@ def main():
         if len(s) >= 2 and ((s[0] == '"' and s[-1] == '"') or (s[0] == "'" and s[-1] == "'")):
             s = s[1:-1].strip()
         return s
+    
+    referencing_col_require_rag_df = pd.read_csv("ADVP context required col.csv")
+    gwas_information_retriever = air.GWASInformationRetriever(referencing_col_require_rag_df, use_hf = False, device = "mps")
+
+    # for cohort try to do keyword
+    # Cohort,"The specific study or database name. Keywords: Study, Dataset, Discovery. Examples: ADNI, IGAP, UK Biobank, ADGC, CHARGE, EADI.",
+    with open("cohort_keywords.json", "r") as f:
+        cohort_keyword_dict = json.load(f)
+    gwas_information_retriever_keyword = air.GWASInformationRetrieverKeyword("Cohort", cohort_keyword_dict)
+
+    embeddings_model = AutoModel.from_pretrained("NeuML/pubmedbert-base-embeddings")
+    embeddings_model_tokenizer = AutoTokenizer.from_pretrained("NeuML/pubmedbert-base-embeddings")
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=False, default=None, help="PDF path or URL")
@@ -2834,6 +2905,10 @@ def main():
         pmcid=args.pmcid,
         template_xlsx=args.template,
         table_input=args.table_input,
+        gwas_information_retriever=gwas_information_retriever,
+        gwas_information_retriever_keyword=gwas_information_retriever_keyword,
+        embeddings_model=embeddings_model,
+        embeddings_model_tokenizer=embeddings_model_tokenizer
     )
 
 
