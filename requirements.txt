@@ -13,3 +13,9 @@ langchain_community
 langchain-text-splitters
 sentence-transformers
 python-dotenv
+click==8.1.7
+infinity-emb[all]
+llama-cpp-python
+llama-cpp-python[server]
+optimum==1.16.2
+openai

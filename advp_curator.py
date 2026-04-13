@@ -2505,10 +2505,8 @@ def run_pipeline(pdf_or_url: Optional[str],
                  pmcid: str = "NR",
                  template_xlsx: Optional[str] = None,
                  table_input: Optional[str] = None,
-                 gwas_information_retriever: Optional[air.GWASInformationRetriever] = None,
-                 gwas_information_retriever_keyword: Optional[air.GWASInformationRetrieverKeyword] = None,
-                 embeddings_model: Optional[PreTrainedModel] = None,
-                 embeddings_model_tokenizer: Optional[PreTrainedTokenizer] = None) -> None:
+                 gwas_information_retriever: Optional[air.ADVPInformationRetriever] = None,
+                 gwas_information_retriever_keyword: Optional[air.ADVPInformationRetrieverKeyword] = None) -> None:
     paper_id_table_num = None
     m_pid = re.search(r"table[\s_-]?(\d+)$", paper_id or "", flags=re.I)
     if m_pid:
@@ -2689,7 +2687,7 @@ def run_pipeline(pdf_or_url: Optional[str],
                     r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
         else:
             for text_col in col_require_rag_to_possible_info:
-                similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups, embeddings_model, embeddings_model_tokenizer)
+                similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups)
                 possible_groups_to_possible_info = {}
                 if torch.min(torch.max(similarity_score, dim = 0).values) < 0.4:
                     for i, u in enumerate(possible_groups):
@@ -2836,16 +2834,13 @@ def main():
         return s
     
     referencing_col_require_rag_df = pd.read_csv("ADVP context required col.csv")
-    gwas_information_retriever = air.GWASInformationRetriever(referencing_col_require_rag_df, use_hf = False, device = "mps")
+    gwas_information_retriever = air.ADVPInformationRetriever(referencing_col_require_rag_df)
 
     # for cohort try to do keyword
     # Cohort,"The specific study or database name. Keywords: Study, Dataset, Discovery. Examples: ADNI, IGAP, UK Biobank, ADGC, CHARGE, EADI.",
     with open("cohort_keywords.json", "r") as f:
         cohort_keyword_dict = json.load(f)
-    gwas_information_retriever_keyword = air.GWASInformationRetrieverKeyword("Cohort", cohort_keyword_dict)
-
-    embeddings_model = AutoModel.from_pretrained("NeuML/pubmedbert-base-embeddings")
-    embeddings_model_tokenizer = AutoTokenizer.from_pretrained("NeuML/pubmedbert-base-embeddings")
+    gwas_information_retriever_keyword = air.ADVPInformationRetrieverKeyword("Cohort", cohort_keyword_dict)
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=False, default=None, help="PDF path or URL")
@@ -2906,9 +2901,7 @@ def main():
         template_xlsx=args.template,
         table_input=args.table_input,
         gwas_information_retriever=gwas_information_retriever,
-        gwas_information_retriever_keyword=gwas_information_retriever_keyword,
-        embeddings_model=embeddings_model,
-        embeddings_model_tokenizer=embeddings_model_tokenizer
+        gwas_information_retriever_keyword=gwas_information_retriever_keyword
     )
 
 

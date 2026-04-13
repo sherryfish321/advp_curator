@@ -10,13 +10,40 @@ from langchain_chroma import Chroma
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 import torch
 import torch.nn.functional as F
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, LogitsProcessor, AutoModel
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel, PreTrainedModel, PreTrainedTokenizer
 from sentence_transformers import CrossEncoder
 from llama_cpp import Llama, LogitsProcessorList
+from langchain_chroma import Chroma
+from langchain_core.documents import Document
+from langchain_core.embeddings import Embeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from openai import OpenAI
 from huggingface_hub import login
-from utils import *
 from dotenv import load_dotenv
 load_dotenv()
+
+INFINITY_URL = "http://localhost:7997"
+LLAMA_CLIENT = OpenAI(base_url="http://localhost:8001/v1", api_key="none")
+
+class InfinityEmbeddings(Embeddings):
+    def __init__(self, model: str, url: str = INFINITY_URL):
+        self.model = model
+        self.url = url
+
+    def _embed(self, texts: List[str]) -> List[List[float]]:
+        resp = requests.post(f"{self.url}/embeddings", json={
+            "input": texts,
+            "model": self.model
+        })
+        data = sorted(resp.json()["data"], key=lambda x: x["index"])
+        return [item["embedding"] for item in data]
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return self._embed(texts)
+
+    def embed_query(self, text: str) -> List[float]:
+        return self._embed([text])[0]
 
 # NOTE: need to move this function to a separate file later
 def clean_text(text: str) -> str:
@@ -39,7 +66,6 @@ def clean_document(document: Document) -> Document:
 
 def ingest_doc_from_pmc(pmid: int, pmcid: str,
                         chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                        embedding_model_name: str = "NeuML/pubmedbert-base-embeddings", 
                         chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
     documents = []
     metadata = []
@@ -83,7 +109,7 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
         print("Creating Chroma vector store...")
     chroma_db = Chroma(
         persist_directory=chroma_db_path,
-        embedding_function=HuggingFaceEmbeddings(model_name=embedding_model_name),
+        embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
         collection_name=chroma_db_collection_name,
         collection_metadata={"hnsw:space": "cosine"}
     )
@@ -99,27 +125,31 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
         print("Finished creating Chroma vector store.")
         print()
 
-def make_embeddings(sentences: str | List[str], embeddings_model: PreTrainedModel, embeddings_model_tokenizer: PreTrainedTokenizer) -> torch.Tensor:
-    input = embeddings_model_tokenizer(sentences, padding=True, truncation=True, return_tensors='pt')
+def make_embeddings(sentences: str | List[str]) -> torch.Tensor:
+    if isinstance(sentences, str):
+        sentences = [sentences]
+    resp = requests.post(f"{INFINITY_URL}/embeddings", json={
+        "input": sentences,
+        "model": "NeuML/pubmedbert-base-embeddings"
+    })
+    vecs = [item["embedding"] for item in sorted(resp.json()["data"], key=lambda x: x["index"])]
+    return F.normalize(torch.tensor(vecs), p=2, dim=1)
 
-    # get token embeddings
-    with torch.no_grad():
-        output = embeddings_model(**input)
-    token_embeddings = output[0]
-
-    # extract mask and mean pooling for sentence embeddings
-    input_mask_expanded = input['attention_mask'].unsqueeze(-1).expand(token_embeddings.size()).float()
-    embeddings = torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
-
-    # final normalization
-    embeddings = F.normalize(embeddings, p=2, dim=1)
-
-    # size (# senetences, # dim)
-    return embeddings
-
-def calculate_similarity_scores(sentences_1: str | List[str], sentences_2: str | List[str], embeddings_model: PreTrainedModel, embeddings_model_tokenizer: PreTrainedTokenizer) -> torch.Tensor:
-    embeddings_1, embeddings_2 = make_embeddings(sentences_1, embeddings_model, embeddings_model_tokenizer), make_embeddings(sentences_2, embeddings_model, embeddings_model_tokenizer)
+def calculate_similarity_scores(sentences_1: str | List[str], sentences_2: str | List[str]) -> torch.Tensor:
+    embeddings_1, embeddings_2 = make_embeddings(sentences_1), make_embeddings(sentences_2)
     return embeddings_1 @ embeddings_2.T 
+
+def rerank(query: str, documents: List[str]) -> List[float]:
+    resp = requests.post(f"{INFINITY_URL}/rerank", json={
+        "query": query,
+        "documents": documents,
+        "model": "jinaai/jina-reranker-v1-turbo-en"
+    })
+    results = resp.json()["results"]
+    scores = [0.0] * len(documents)
+    for item in results:
+        scores[item["index"]] = item["relevance_score"]
+    return scores
 
 def combine_possible_info(lst: List[str]):
     return " + ".join([x for x in list(set(lst)) if len(x) > 0])
@@ -130,31 +160,32 @@ def combine_possible_info_multilist(multilst: List[List[str]]):
         final_lst.extend(lst)
     return " + ".join([x for x in list(set(final_lst)) if len(x) > 0])
 
-class AllowedTokensProcessor(LogitsProcessor):
-    def __init__(self, allowed_token_ids):
-        self.allowed_token_ids = allowed_token_ids
+# class AllowedTokensProcessor(LogitsProcessor):
+#     def __init__(self, allowed_token_ids):
+#         self.allowed_token_ids = allowed_token_ids
 
-    def __call__(self, input_ids, scores):
-        mask = torch.full_like(scores, float("-inf"))
-        mask[:, list(self.allowed_token_ids)] = 0
-        return scores + mask
+#     def __call__(self, input_ids, scores):
+#         mask = torch.full_like(scores, float("-inf"))
+#         mask[:, list(self.allowed_token_ids)] = 0
+#         return scores + mask
 
-class AllowedTokensProcessorLlamaCpp:
-    def __init__(self, allowed_token_ids):
-        self.allowed_token_ids = allowed_token_ids
+# class AllowedTokensProcessorLlamaCpp:
+#     def __init__(self, allowed_token_ids):
+#         self.allowed_token_ids = allowed_token_ids
 
-    def __call__(self, input_ids, scores):
-        import numpy as np
-        mask = np.full_like(scores, float("-inf"))
-        for token_id in self.allowed_token_ids:
-            mask[token_id] = 0
-        return scores + mask
+#     def __call__(self, input_ids, scores):
+#         import numpy as np
+#         mask = np.full_like(scores, float("-inf"))
+#         for token_id in self.allowed_token_ids:
+#             mask[token_id] = 0
+#         return scores + mask
     
-class GWASInformationRetriever:
+class ADVPInformationRetriever:
     def __init__(self, referencing_col_df: pd.DataFrame, chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "gwas_paper_collection", 
-                 embeddings_model_name: str = "NeuML/pubmedbert-base-embeddings", reranker_model_name: str = "jinaai/jina-reranker-v1-turbo-en",
-                 llm_model_name: Optional[str] = "Qwen/Qwen2.5-1.5B-Instruct", llm_gguf_path: Optional[str] = "./qwen2.5-7b-instruct-q4/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
-                 use_hf: bool = True, device: Optional[str] = None):
+                 # embeddings_model_name: str = "NeuML/pubmedbert-base-embeddings", reranker_model_name: str = "jinaai/jina-reranker-v1-turbo-en",
+                 # llm_model_name: Optional[str] = "Qwen/Qwen2.5-1.5B-Instruct", llm_gguf_path: Optional[str] = "./qwen2.5-7b-instruct-q4/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+                 # use_hf: bool = True, 
+                 device: Optional[str] = None):
         # load ref col df
         self.referencing_col_lst = referencing_col_df["column"].to_list()
         self.referencing_col_context_lst = referencing_col_df.apply(lambda x: x["column"] if pd.isna(x["description"]) else x["column"] + ": " + x["description"], axis = 1).to_list()
@@ -163,7 +194,7 @@ class GWASInformationRetriever:
         # load vector store
         self.vector_store = Chroma(
             persist_directory=chroma_db_path,
-            embedding_function=HuggingFaceEmbeddings(model_name=embeddings_model_name),
+            embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
             collection_name=chroma_db_collection_name,
             collection_metadata={"hnsw:space": "cosine"}
         )
@@ -179,11 +210,11 @@ class GWASInformationRetriever:
         # )
 
         # load the reranker
-        self.reranker_model = CrossEncoder(
-            model_name_or_path=reranker_model_name, 
-            device = self.device,
-            trust_remote_code = True
-        ) 
+        # self.reranker_model = CrossEncoder(
+        #     model_name_or_path=reranker_model_name, 
+        #     device = self.device,
+        #     trust_remote_code = True
+        # ) 
 
         # load the llm
         # bnb_config = BitsAndBytesConfig(
@@ -193,40 +224,40 @@ class GWASInformationRetriever:
         #     bnb_4bit_use_double_quant=True,
         #     bnb_4bit_quant_type="nf4",
         # )
-        if use_hf and llm_model_name is not None:
-            self.use_hf = True
-            login(os.environ.get("HF_TOKEN", ""))
-            self.tokenizer = AutoTokenizer.from_pretrained(llm_model_name)
-            self.model = AutoModelForCausalLM.from_pretrained(
-                llm_model_name,
-                # quantization_config = bnb_config,
-                device_map = self.device,
-                # torch_dtype=torch.bfloat16,
-            )
-            self.model.eval()
-            allowed_chars = list("01")
-            allowed_token_ids = set()
-            for token, token_id in self.tokenizer.get_vocab().items():
-                if all(c in allowed_chars for c in token):
-                    allowed_token_ids.add(token_id)
-            self.allowed_tokens_processor = AllowedTokensProcessor(allowed_token_ids)
-        elif not use_hf and llm_gguf_path is not None:
-            self.use_hf = False
-            self.llm = Llama(
-                model_path=llm_gguf_path,
-                n_ctx=16384,
-                n_gpu_layers=-1,
-                verbose=False,
-            )
-            allowed_token_ids = set()
-            for token_id in range(self.llm.n_vocab()):
-                token_bytes = self.llm.detokenize([token_id])
-                token_str = token_bytes.decode("utf-8", errors="replace")
-                if all(c in "01" for c in token_str) and len(token_str) > 0:
-                    allowed_token_ids.add(token_id)
-            self.allowed_tokens_processor = AllowedTokensProcessorLlamaCpp(allowed_token_ids)
-        else:
-            raise Exception("Missing either llm_model_name (if use_hf=True) or llm_gguf_path (if use_hf=False)")
+        # if use_hf and llm_model_name is not None:
+        #     self.use_hf = True
+        #     login(os.environ.get("HF_TOKEN", ""))
+        #     self.tokenizer = AutoTokenizer.from_pretrained(llm_model_name)
+        #     self.model = AutoModelForCausalLM.from_pretrained(
+        #         llm_model_name,
+        #         # quantization_config = bnb_config,
+        #         device_map = self.device,
+        #         # torch_dtype=torch.bfloat16,
+        #     )
+        #     self.model.eval()
+        #     allowed_chars = list("01")
+        #     allowed_token_ids = set()
+        #     for token, token_id in self.tokenizer.get_vocab().items():
+        #         if all(c in allowed_chars for c in token):
+        #             allowed_token_ids.add(token_id)
+        #     # self.allowed_tokens_processor = AllowedTokensProcessor(allowed_token_ids)
+        # elif not use_hf and llm_gguf_path is not None:
+        #     self.use_hf = False
+        #     self.llm = Llama(
+        #         model_path=llm_gguf_path,
+        #         n_ctx=16384,
+        #         n_gpu_layers=-1,
+        #         verbose=False,
+        #     )
+        #     allowed_token_ids = set()
+        #     for token_id in range(self.llm.n_vocab()):
+        #         token_bytes = self.llm.detokenize([token_id])
+        #         token_str = token_bytes.decode("utf-8", errors="replace")
+        #         if all(c in "01" for c in token_str) and len(token_str) > 0:
+        #             allowed_token_ids.add(token_id)
+        #     # self.allowed_tokens_processor = AllowedTokensProcessorLlamaCpp(allowed_token_ids)
+        # else:
+        #     raise Exception("Missing either llm_model_name (if use_hf=True) or llm_gguf_path (if use_hf=False)")
 
         # NOTE: config for search and generate, add it as params later
         self.top_k = 20
@@ -279,56 +310,56 @@ Output:"""
         ]
         return messages
 
-    def make_prompt(self, query: str, documents: List[str]) -> str:    
-        messages = self.make_messages(query, documents)
-        prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        return prompt
+    # def make_prompt(self, query: str, documents: List[str]) -> str:    
+    #     messages = self.make_messages(query, documents)
+    #     prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    #     return prompt
     
 
-    def make_messages_with_choice(self, query: str, documents: List[str], choice: str) -> List[Dict]:
-        document_str = "\n\n".join([f"EXCERPT {i + 1}:\n{d}" for i, d in enumerate(documents)])
+#     def make_messages_with_choice(self, query: str, documents: List[str], choice: str) -> List[Dict]:
+#         document_str = "\n\n".join([f"EXCERPT {i + 1}:\n{d}" for i, d in enumerate(documents)])
 
-        messages = [
-            {
-                "role": "system",
-                "content": "You are a strict biomedical evidence verifier. Only use the provided excerpts. Never guess. Output only 0 or 1."
-            },
-            {
-                "role": "user",
-                "content": f"""Goal: decide whether the evidence excerpts clearly and explicitly support the candidate answer for the given field.
+#         messages = [
+#             {
+#                 "role": "system",
+#                 "content": "You are a strict biomedical evidence verifier. Only use the provided excerpts. Never guess. Output only 0 or 1."
+#             },
+#             {
+#                 "role": "user",
+#                 "content": f"""Goal: decide whether the evidence excerpts clearly and explicitly support the candidate answer for the given field.
 
-Field:
-{query}
+# Field:
+# {query}
 
-Candidate answer:
-{choice}
+# Candidate answer:
+# {choice}
 
-Evidence text:
-{document_str}
+# Evidence text:
+# {document_str}
 
-Rules:
-- Output 1 if the excerpts clearly and explicitly support the candidate answer.
-- Output 0 if the excerpts do not support it, or if the evidence is ambiguous.
-- Output only a single digit: 0 or 1. Nothing else.
+# Rules:
+# - Output 1 if the excerpts clearly and explicitly support the candidate answer.
+# - Output 0 if the excerpts do not support it, or if the evidence is ambiguous.
+# - Output only a single digit: 0 or 1. Nothing else.
 
-Example:
-Field: Type of association analysis
-Candidate answer: gene-based
-Evidence: We performed a gene-based test aggregating rare variants per gene.
-Output: 1
+# Example:
+# Field: Type of association analysis
+# Candidate answer: gene-based
+# Evidence: We performed a gene-based test aggregating rare variants per gene.
+# Output: 1
 
-Output: """
-            }
-        ]
-        return messages
+# Output: """
+#             }
+#         ]
+#         return messages
 
-    def make_prompt_lst_with_choices(self, query: str, documents: List[str], choices: List[str]) -> List[str]:
-        prompt_lst = []
-        for choice in choices:
-            messages = self.make_messages_with_choice(query, documents, choice)
-            prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-            prompt_lst.append(prompt)
-        return prompt_lst
+    # def make_prompt_lst_with_choices(self, query: str, documents: List[str], choices: List[str]) -> List[str]:
+    #     prompt_lst = []
+    #     for choice in choices:
+    #         messages = self.make_messages_with_choice(query, documents, choice)
+    #         prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    #         prompt_lst.append(prompt)
+    #     return prompt_lst
     
     def extract_lst_from_llm_output(self, text: str) -> List[str]:
         text = text.replace("```", "").strip()
@@ -341,21 +372,21 @@ Output: """
         except Exception:
             return []
         
-    def extract_lst_from_llm_output_choices(self, text: str) -> List[int]:
-        # Remove code fences and trim
-        text = text.replace("```", "").strip()
+    # def extract_lst_from_llm_output_choices(self, text: str) -> List[int]:
+    #     # Remove code fences and trim
+    #     text = text.replace("```", "").strip()
 
-        # Extract the last bracketed list
-        matches = re.findall(r"\[[^\]]*\]", text)
-        if not matches:
-            return []
+    #     # Extract the last bracketed list
+    #     matches = re.findall(r"\[[^\]]*\]", text)
+    #     if not matches:
+    #         return []
 
-        list_str = matches[-1]
+    #     list_str = matches[-1]
 
-        # Extract all integers inside the brackets
-        numbers = re.findall(r"\d+", list_str)
+    #     # Extract all integers inside the brackets
+    #     numbers = re.findall(r"\d+", list_str)
 
-        return [int(n) for n in numbers]
+    #     return [int(n) for n in numbers]
 
     def extract_possible_info_from_paper(self, pmid: int, pmcid: str) -> Dict[str, List]:
         """
@@ -379,118 +410,125 @@ Output: """
                 continue
 
             # rerank
-            scores = self.reranker_model.predict([(query, d) for d in documents])
+            scores = rerank(query, documents)
             documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
             documents = documents[:self.top_k_rerank]
 
             # extract a list of possible info from llm
             # full_query = f"What kind of {ref_col} is in the paper, given that {ref_col_context}"
-            if self.use_hf:
-                prompt = self.make_prompt(query, documents)
-                inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-                outputs = self.model.generate(
-                    **inputs,
-                    max_new_tokens=self.max_new_tokens,
-                    do_sample=False,
-                    temperature=self.temperature,
-                    top_p=self.top_p,
-                )
-                response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-            else:
-                messages = self.make_messages(query, documents)
-                response = self.llm.create_chat_completion(
-                    messages=messages,
-                    max_tokens=self.max_new_tokens,
-                    temperature=self.temperature,
-                    top_p=self.top_p,
-                )
-                response = response["choices"][0]["message"]["content"]
+            # if self.use_hf:
+            #     prompt = self.make_prompt(query, documents)
+            #     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+            #     outputs = self.model.generate(
+            #         **inputs,
+            #         max_new_tokens=self.max_new_tokens,
+            #         do_sample=False,
+            #         temperature=self.temperature,
+            #         top_p=self.top_p,
+            #     )
+            #     response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+            # else:
+            #     messages = self.make_messages(query, documents)
+            #     response = self.llm.create_chat_completion(
+            #         messages=messages,
+            #         max_tokens=self.max_new_tokens,
+            #         temperature=self.temperature,
+            #         top_p=self.top_p,
+            #     )
+            #     response = response["choices"][0]["message"]["content"]
+            messages = self.make_messages(query, documents)
+            response = LLAMA_CLIENT.chat.completions.create(
+                model="local",
+                messages=messages, max_tokens=self.max_new_tokens,
+                temperature=self.temperature, top_p=self.top_p,
+            )
+            response = response.choices[0].message.content
             res[ref_col] = self.extract_lst_from_llm_output(response)
     
         return res
     
-    def extract_possible_info_from_paper_with_choices(self, pmid: int, pmcid: str) -> Dict[str, List]:
-        """
-        Given a paper, extract all possible answer for each category.
-        - If no choices: falls back to the same free-form extraction as extract_possible_info_from_paper.
-        - If choices exist: for each choice, asks the LLM to return 1 (valid) or 0 (invalid) using the
-          logits processor, then collects all choices the LLM marked as valid.
-        """
-        res = {}
+    # def extract_possible_info_from_paper_with_choices(self, pmid: int, pmcid: str) -> Dict[str, List]:
+    #     """
+    #     Given a paper, extract all possible answer for each category.
+    #     - If no choices: falls back to the same free-form extraction as extract_possible_info_from_paper.
+    #     - If choices exist: for each choice, asks the LLM to return 1 (valid) or 0 (invalid) using the
+    #       logits processor, then collects all choices the LLM marked as valid.
+    #     """
+    #     res = {}
 
-        for ref_col, ref_col_context, ref_col_choices in zip(self.referencing_col_lst, self.referencing_col_context_lst, self.referencing_col_choices_lst):
-            query = ref_col_context
-            documents = self.vector_store.similarity_search_with_relevance_scores(
-                query=query,
-                k=self.top_k,
-                filter={"$and": [{"PMID": str(pmid)}, {"PMCID": pmcid}]},
-            )
-            documents = [d.page_content for d, score in documents if score >= self.similarity_score_threshold]
-            if len(documents) == 0:
-                res[ref_col] = []
-                continue
+    #     for ref_col, ref_col_context, ref_col_choices in zip(self.referencing_col_lst, self.referencing_col_context_lst, self.referencing_col_choices_lst):
+    #         query = ref_col_context
+    #         documents = self.vector_store.similarity_search_with_relevance_scores(
+    #             query=query,
+    #             k=self.top_k,
+    #             filter={"$and": [{"PMID": str(pmid)}, {"PMCID": pmcid}]},
+    #         )
+    #         documents = [d.page_content for d, score in documents if score >= self.similarity_score_threshold]
+    #         if len(documents) == 0:
+    #             res[ref_col] = []
+    #             continue
 
-            # rerank
-            scores = self.reranker_model.predict([(query, d) for d in documents])
-            documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
-            documents = documents[:self.top_k_rerank]
+    #         # rerank
+    #         scores = self.reranker_model.predict([(query, d) for d in documents])
+    #         documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
+    #         documents = documents[:self.top_k_rerank]
 
-            if len(ref_col_choices) > 0:
-                # For each choice, verify if it is supported by the documents (1 = valid, 0 = invalid)
-                if self.use_hf:
-                    prompt_lst = self.make_prompt_lst_with_choices(query, documents, ref_col_choices)
-                    inputs = self.tokenizer(prompt_lst, padding=True, padding_side="left", truncation=True, return_tensors="pt").to(self.device)
-                    input_len = inputs["input_ids"].shape[-1]
-                    outputs = self.model.generate(
-                        **inputs,
-                        max_new_tokens=1,
-                        do_sample=False,
-                        temperature=self.temperature,
-                        top_p=self.top_p,
-                        logits_processor=[self.allowed_tokens_processor],
-                    )
-                    decoded_outputs = self.tokenizer.batch_decode(outputs[:, input_len:], skip_special_tokens=True)
-                else:
-                    decoded_outputs = []
-                    for choice in ref_col_choices:
-                        messages = self.make_messages_with_choice(query, documents, choice)
-                        output = self.llm.create_chat_completion(
-                            messages=messages,
-                            max_tokens=1,
-                            temperature=self.temperature,
-                            top_p=self.top_p,
-                            logits_processor=LogitsProcessorList([self.allowed_tokens_processor]),
-                        )
-                        decoded_outputs.append(output["choices"][0]["message"]["content"])
-                res[ref_col] = [choice.split(":")[0] for i, choice in enumerate(ref_col_choices) if decoded_outputs[i].strip() == '1']
-            else:
-                # No choices: same flow as extract_possible_info_from_paper
-                if self.use_hf:
-                    prompt = self.make_prompt(query, documents)
-                    inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-                    outputs = self.model.generate(
-                        **inputs,
-                        max_new_tokens=self.max_new_tokens,
-                        do_sample=False,
-                        temperature=self.temperature,
-                        top_p=self.top_p,
-                    )
-                    response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-                else:
-                    messages = self.make_messages(query, documents)
-                    response = self.llm.create_chat_completion(
-                        messages=messages,
-                        max_tokens=self.max_new_tokens,
-                        temperature=self.temperature,
-                        top_p=self.top_p,
-                    )
-                    response = response["choices"][0]["message"]["content"]
-                res[ref_col] = self.extract_lst_from_llm_output(response)
+    #         if len(ref_col_choices) > 0:
+    #             # For each choice, verify if it is supported by the documents (1 = valid, 0 = invalid)
+    #             if self.use_hf:
+    #                 prompt_lst = self.make_prompt_lst_with_choices(query, documents, ref_col_choices)
+    #                 inputs = self.tokenizer(prompt_lst, padding=True, padding_side="left", truncation=True, return_tensors="pt").to(self.device)
+    #                 input_len = inputs["input_ids"].shape[-1]
+    #                 outputs = self.model.generate(
+    #                     **inputs,
+    #                     max_new_tokens=1,
+    #                     do_sample=False,
+    #                     temperature=self.temperature,
+    #                     top_p=self.top_p,
+    #                     logits_processor=[self.allowed_tokens_processor],
+    #                 )
+    #                 decoded_outputs = self.tokenizer.batch_decode(outputs[:, input_len:], skip_special_tokens=True)
+    #             else:
+    #                 decoded_outputs = []
+    #                 for choice in ref_col_choices:
+    #                     messages = self.make_messages_with_choice(query, documents, choice)
+    #                     output = self.llm.create_chat_completion(
+    #                         messages=messages,
+    #                         max_tokens=1,
+    #                         temperature=self.temperature,
+    #                         top_p=self.top_p,
+    #                         logits_processor=LogitsProcessorList([self.allowed_tokens_processor]),
+    #                     )
+    #                     decoded_outputs.append(output["choices"][0]["message"]["content"])
+    #             res[ref_col] = [choice.split(":")[0] for i, choice in enumerate(ref_col_choices) if decoded_outputs[i].strip() == '1']
+    #         else:
+    #             # No choices: same flow as extract_possible_info_from_paper
+    #             if self.use_hf:
+    #                 prompt = self.make_prompt(query, documents)
+    #                 inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+    #                 outputs = self.model.generate(
+    #                     **inputs,
+    #                     max_new_tokens=self.max_new_tokens,
+    #                     do_sample=False,
+    #                     temperature=self.temperature,
+    #                     top_p=self.top_p,
+    #                 )
+    #                 response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+    #             else:
+    #                 messages = self.make_messages(query, documents)
+    #                 response = self.llm.create_chat_completion(
+    #                     messages=messages,
+    #                     max_tokens=self.max_new_tokens,
+    #                     temperature=self.temperature,
+    #                     top_p=self.top_p,
+    #                 )
+    #                 response = response["choices"][0]["message"]["content"]
+    #             res[ref_col] = self.extract_lst_from_llm_output(response)
 
-        return res
+    #     return res
 
 
-class GWASInformationRetrieverKeyword:
+class ADVPInformationRetrieverKeyword:
     def __init__(self, info_type: str, keyword_dict: Dict[str, List]):
         if keyword_dict is None:
             raise Exception("Please include a keyword dictionary")
@@ -521,7 +559,6 @@ class GWASInformationRetrieverKeyword:
 
 
 def match_possible_info_to_df(df: pd.DataFrame, col_to_possible_info: Dict, 
-                              embeddings_model: PreTrainedModel, embeddings_model_tokenizer: PreTrainedTokenizer,
                               threshold: float = 0.6):
     notes_col = [col for col in df.columns if "notes" in col]
     if len(notes_col) == 0:
@@ -540,7 +577,7 @@ def match_possible_info_to_df(df: pd.DataFrame, col_to_possible_info: Dict,
                 for n_col in notes_col:
                     # for each note, check if the match is actually related to that note by check the max similarity
                     unique_value = df[[n_col]].dropna()[n_col].unique().tolist()
-                    similarity_score = calculate_similarity_scores(col_to_possible_info[col], unique_value, embeddings_model, embeddings_model_tokenizer) # #possible info * #unique value
+                    similarity_score = calculate_similarity_scores(col_to_possible_info[col], unique_value) # #possible info * #unique value
                     # if torch.max(similarity_score) < 0.6:
                     # if best match do not have sim score at least 0.4 - 0.6
                     unique_value_to_possible_info = {}
@@ -562,10 +599,10 @@ def match_possible_info_to_df(df: pd.DataFrame, col_to_possible_info: Dict,
                 df = df.drop(used_col, axis = 1)
     return df
 
-def match_possible_info_to_df_with_clues(df: pd.DataFrame, pmid: int, pmcid: str, gwas_information_retriever: GWASInformationRetriever):
+def match_possible_info_to_df_with_clues(df: pd.DataFrame, pmid: int, pmcid: str, advp_information_retriever: ADVPInformationRetriever):
     notes_col = [col for col in df.columns if "notes" in col]
     if len(notes_col) == 0:
-        col_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(pmid, pmcid)
+        col_to_possible_info = advp_information_retriever.extract_possible_info_from_paper(pmid, pmcid)
         for col in col_to_possible_info:
             if len(col_to_possible_info[col]) == 0:
                 df[col] = pd.NA
@@ -576,7 +613,7 @@ def match_possible_info_to_df_with_clues(df: pd.DataFrame, pmid: int, pmcid: str
         col_to_used_col = {}
         for n_col in notes_col:
             clues = df[[n_col]].dropna()[n_col].unique().tolist()
-            col_to_clues_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper_and_clues(pmid, pmcid, clues)
+            col_to_clues_to_possible_info = advp_information_retriever.extract_possible_info_from_paper_and_clues(pmid, pmcid, clues)
             for col in col_to_clues_to_possible_info:
                 if col not in col_to_used_col:
                     col_to_used_col[col] = []
