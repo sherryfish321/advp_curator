@@ -2,6 +2,7 @@ from typing import Optional, List, Tuple, Dict
 import re
 import ast
 import os
+import fitz
 from copy import deepcopy
 import requests
 import pandas as pd
@@ -66,7 +67,7 @@ def clean_document(document: Document) -> Document:
 
 def ingest_doc_from_pmc(pmid: int, pmcid: str,
                         chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = True):
+                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
     documents = []
     metadata = []
     try:
@@ -86,6 +87,59 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
         metadata.append({"PMID": str(pmid), "PMCID": pmcid})
     except Exception as e:
         raise Exception(f"Failed to extract paper {pmid}_{pmcid} from PMC with error {e}")
+    if print_progress:
+        print(f"Finished loading {len(documents)} documents.")
+        print()
+
+    # split documents into chunks
+    if print_progress:
+        print("Splitting documents into chunks...")
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size, 
+        chunk_overlap=chunk_overlap,
+        separators=["\n\n", "\n", " ", ""]
+    )
+    splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
+    splitted_documents = [clean_document(doc) for doc in splitted_documents]
+    if print_progress:
+        print(f"Finished splitting to make {len(splitted_documents)} chunks.")
+        print()
+
+    # create Chroma vector store
+    if print_progress:
+        print("Creating Chroma vector store...")
+    chroma_db = Chroma(
+        persist_directory=chroma_db_path,
+        embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
+        collection_name=chroma_db_collection_name,
+        collection_metadata={"hnsw:space": "cosine"}
+    )
+    # delete current collection contents before adding new documents
+    collection = chroma_db._collection
+    all_docs = collection.get(include=[])
+    all_ids = all_docs["ids"]
+    if all_ids:
+        collection.delete(ids=all_ids)
+    # add documents to Chroma vector store
+    chroma_db.add_documents(splitted_documents)
+    if print_progress:
+        print("Finished creating Chroma vector store.")
+        print()
+
+def ingest_doc_from_pdf(pmid: int, filename: str,
+                        chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
+                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
+    documents = []
+    metadata = []
+    try:
+        with fitz.open(f"{filename}") as doc:
+            text = ""
+            for page in doc:
+                text += page.get_text() + "\n\n" # special indicator of pages
+            documents.append(text)
+            metadata.append({"PMID": str(pmid)})
+    except Exception as e:
+        raise Exception(f"Failed to extract paper {pmid} from {filename} with error {e}")
     if print_progress:
         print(f"Finished loading {len(documents)} documents.")
         print()
@@ -404,6 +458,67 @@ Output:"""
                 query = query, 
                 k = self.top_k,
                 filter = {"$and": [{"PMID": str(pmid)}, {"PMCID": pmcid}]},
+            )
+            documents = [d.page_content for d, score in documents if score >= self.similarity_score_threshold]
+            # if no docs can found => no useful info 
+            if len(documents) == 0:
+                res[ref_col] = []
+                continue
+
+            # rerank
+            scores = rerank(query, documents)
+            documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
+            documents = documents[:self.top_k_rerank]
+
+            # extract a list of possible info from llm
+            # full_query = f"What kind of {ref_col} is in the paper, given that {ref_col_context}"
+            # if self.use_hf:
+            #     prompt = self.make_prompt(query, documents)
+            #     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+            #     outputs = self.model.generate(
+            #         **inputs,
+            #         max_new_tokens=self.max_new_tokens,
+            #         do_sample=False,
+            #         temperature=self.temperature,
+            #         top_p=self.top_p,
+            #     )
+            #     response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+            # else:
+            #     messages = self.make_messages(query, documents)
+            #     response = self.llm.create_chat_completion(
+            #         messages=messages,
+            #         max_tokens=self.max_new_tokens,
+            #         temperature=self.temperature,
+            #         top_p=self.top_p,
+            #     )
+            #     response = response["choices"][0]["message"]["content"]
+            messages = self.make_messages(query, documents)
+            response = LLAMA_CLIENT.chat.completions.create(
+                model="local",
+                messages=messages, max_tokens=self.max_new_tokens,
+                temperature=self.temperature, top_p=self.top_p,
+            )
+            response = response.choices[0].message.content
+            res[ref_col] = self.extract_lst_from_llm_output(response)
+    
+        return res
+    
+    def extract_possible_info_from_pdf_paper(self, pmid: int, filename: str) -> Dict[str, List]:
+        """
+        Given a paper, extract all possible answer for each category
+        """
+        res = {}
+
+        ingest_doc_from_pdf(pmid, filename)
+
+        for ref_col, ref_col_context in zip(self.referencing_col_lst, self.referencing_col_context_lst):
+            # search for related context
+            # full_query = f"What kind of {ref_col} is in the paper, given that {ref_col_context}"
+            query = ref_col_context
+            documents = self.vector_store.similarity_search_with_relevance_scores(
+                query = query, 
+                k = self.top_k,
+                filter = {"$and": [{"PMID": str(pmid)}]},
             )
             documents = [d.page_content for d, score in documents if score >= self.similarity_score_threshold]
             # if no docs can found => no useful info 

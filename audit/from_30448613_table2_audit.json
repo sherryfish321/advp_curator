@@ -76,5 +76,3240 @@
       "needs_review": true
     }
   ],
-  "record_field_audit": []
+  "record_field_audit": [
+    {
+      "RecordID": "30448613_table2_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6733839",
+          "confidence": 0.9,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.51e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.071,
+          "confidence": 0.65,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6733839",
+          "confidence": 0.9,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.28,
+          "confidence": 0.7,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6733839",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.05e-06,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.084,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs6733839",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.56,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.83e-11,
+          "confidence": 0.7,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.12,
+          "confidence": 0.65,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.91,
+          "confidence": 0.7,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.960000000000001e-09,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.114,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.68,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.71e-08,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.119,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs111418223",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.94,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.53e-17,
+          "confidence": 0.7,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.177,
+          "confidence": 0.65,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.53,
+          "confidence": 0.7,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.53e-09,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.129,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.95,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.150000000000001e-09,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.115,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.85,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.5800000000000003e-08,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.107,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.78,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00019",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.77e-08,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.128,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00020",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.89,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00021",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.2999999999999997e-07,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.147,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00022",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.15,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00023",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.0700000000000005e-05,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.086,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00024",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs1476679",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.82,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00025",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11771145",
+          "confidence": 0.9,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.68e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.109,
+          "confidence": 0.65,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00026",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs11771145",
+          "confidence": 0.9,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00027",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.8600000000000005e-18,
+          "confidence": 0.7,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.114,
+          "confidence": 0.65,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00028",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00029",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.18e-17,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.086,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00030",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.91,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00031",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.33e-12,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.094,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00032",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.47,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00033",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.31e-06,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.07,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00034",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs28834970",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.45,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00035",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10838725",
+          "confidence": 0.9,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.07e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.14,
+          "confidence": 0.65,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00036",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs10838725",
+          "confidence": 0.9,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.130000000000001e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00037",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.3399999999999997e-12,
+          "confidence": 0.7,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.082,
+          "confidence": 0.65,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00038",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00497,
+          "confidence": 0.7,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00039",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.1499999999999998e-06,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.15,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00040",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.85,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00041",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.59e-06,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.179,
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "30448613_table2_R00042",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs983392",
+          "confidence": 0.9,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.68,
+          "confidence": 0.7,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "A + o + - + e +   + D + P + M + G + t + n + + + y + s + r + i + l + I + v + a + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.75,
+          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1 + C + O + o +   + e + K + H + P + M + R + 0 + t + u + G + n + d + p + T + y + + + s + r + U + i + l + a + f + m + c",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "1 + E + C + A + o + e +   + D + P + R + 0 + S + G + u + n + p + + + s + U + r + I + a + m",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "S + I + H + D + C + E + A + G + B + P + N + + +   + R + U + K",
+          "confidence": 0.8,
+          "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
 }

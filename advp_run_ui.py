@@ -10,7 +10,7 @@ import re
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 from urllib.parse import parse_qs, urlencode, urlparse
 
 import pandas as pd
@@ -443,7 +443,7 @@ def read_row_match_metrics(summary_csv: Path) -> Dict[str, object]:
 
 def run_pipeline(
     pmid: int,
-    pmcid: str,
+    pmcid: Optional[str],
     paper_input: str,
     table_links: List[str],
     owner_name: str,
@@ -458,6 +458,9 @@ def run_pipeline(
 ) -> Dict[str, object]:
     if source_type != "pmc_table_link":
         raise ValueError("Only source_type=pmc_table_link is supported in current MVP")
+
+    if pmcid is None:
+        pmcid = "NR"
 
     root = Path(base_dir).resolve()
     table_dir = root / "table_from_link"
@@ -1287,7 +1290,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
 <label>PMID</label>
 <input name="pmid" value="30448613" required />
 <label>PMCID</label>
-<input name="pmcid" value="PMC6331247" required />
+<input name="pmcid" value="PMC6331247" />
 <label>Paper URL</label>
 <input name="paper_input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/" placeholder="PMC article page or PDF link" />
 <label>Or upload paper PDF</label>

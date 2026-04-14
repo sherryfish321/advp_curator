@@ -1,1 +1,6 @@
 pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+30448613.0,rs8093731,,,,1.36e-08,0.77,,,,,DLGAP1,alzheimer's disease + ad,
+30448613.0,rs8093731,,,,1.11e-05,0.706,,,,,NETO1,alzheimer's disease + ad,
+30448613.0,rs4147929,,,,3.94e-06,0.259,,,,,EID2B,alzheimer's disease + ad,
+30448613.0,rs10948363,,,,1.64e-05,0.343,,,,,AK9,alzheimer's disease + ad,
+30448613.0,rs3865444,,,,1.96e-05,-0.255,,,,,IER2,alzheimer's disease + ad,
