@@ -1,46 +1,18 @@
 [
   {
-    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table1_v1.xlsx",
+    "file": "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table1_v1.xlsx",
     "status": "evaluated",
     "row_key_cols": [
-      "pmid",
-      "snp",
-      "pvalue"
+      "snp"
     ],
-    "n_pred_rows": 26,
+    "n_pred_rows": 0,
     "n_gold_rows": 40,
     "row_metrics": {
-      "precision": 0.6538461538461539,
-      "recall": 0.425,
-      "f1": 0.5151515151515152
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
     },
-    "field_metrics": {
-      "pvalue": {
-        "precision": 0.6538461538461539,
-        "recall": 0.425,
-        "f1": 0.5151515151515152
-      },
-      "effect": {
-        "precision": 0.6538461538461539,
-        "recall": 0.425,
-        "f1": 0.5151515151515152
-      },
-      "cohort": {
-        "precision": 0.34615384615384615,
-        "recall": 0.225,
-        "f1": 0.27272727272727276
-      },
-      "sample_size": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "analysis_group": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      }
-    },
+    "field_metrics": {},
     "aggregate_metrics": {
       "easy_fields": {
         "fields": [
@@ -53,9 +25,9 @@
           "chr"
         ],
         "metrics": {
-          "precision": 0.33076923076923076,
-          "recall": 0.15357142857142858,
-          "f1": 0.20975609756097563
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
         }
       },
       "all_advp_fields": {
@@ -74,425 +46,217 @@
           "phenotype_derived"
         ],
         "metrics": {
-          "precision": 0.45098039215686275,
-          "recall": 0.19166666666666668,
-          "f1": 0.2690058479532164
-        }
-      }
-    },
-    "unmatched_pred_examples": [
-      [
-        30448613.0,
-        "rs2296160",
-        0.00856
-      ],
-      [
-        30448613.0,
-        "rs9270303",
-        0.00025
-      ],
-      [
-        30448613.0,
-        "rs2405442",
-        0.00109
-      ],
-      [
-        30448613.0,
-        "rs1859788",
-        0.00112
-      ],
-      [
-        30448613.0,
-        "rs7982",
-        0.00162
-      ],
-      [
-        30448613.0,
-        "rs2293576",
-        0.04
-      ],
-      [
-        30448613.0,
-        "rs12453",
-        0.00036
-      ],
-      [
-        30448613.0,
-        "rs3752246",
-        9.89e-05
-      ],
-      [
-        30448613.0,
-        "rs12459419",
-        0.09
-      ]
-    ],
-    "unmatched_gold_examples": [
-      [
-        30448613.0,
-        "rs10838725",
-        1.07e-07
-      ],
-      [
-        30448613.0,
-        "rs983392",
-        1.15e-06
-      ],
-      [
-        30448613.0,
-        "rs983392",
-        1.59e-06
-      ],
-      [
-        30448613.0,
-        "rs983392",
-        2.34e-12
-      ],
-      [
-        30448613.0,
-        "rs8093731",
-        1.11e-05
-      ],
-      [
-        30448613.0,
-        "rs8093731",
-        1.36e-08
-      ],
-      [
-        30448613.0,
-        "rs4147929",
-        3.94e-06
-      ],
-      [
-        30448613.0,
-        "rs3865444",
-        1.96e-05
-      ],
-      [
-        30448613.0,
-        "rs6733839",
-        1.51e-07
-      ],
-      [
-        30448613.0,
-        "rs6733839",
-        2.05e-06
-      ]
-    ]
-  },
-  {
-    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table2_v1.xlsx",
-    "status": "evaluated",
-    "row_key_cols": [
-      "pmid",
-      "snp",
-      "pvalue"
-    ],
-    "n_pred_rows": 42,
-    "n_gold_rows": 40,
-    "row_metrics": {
-      "precision": 0.42857142857142855,
-      "recall": 0.45,
-      "f1": 0.4390243902439024
-    },
-    "field_metrics": {
-      "pvalue": {
-        "precision": 0.42857142857142855,
-        "recall": 0.45,
-        "f1": 0.4390243902439024
-      },
-      "effect": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "cohort": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "sample_size": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "analysis_group": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      }
-    },
-    "aggregate_metrics": {
-      "easy_fields": {
-        "fields": [
-          "pvalue",
-          "effect",
-          "cohort",
-          "sample_size",
-          "analysis_group",
-          "population",
-          "chr"
-        ],
-        "metrics": {
-          "precision": 0.09523809523809523,
-          "recall": 0.06428571428571428,
-          "f1": 0.07675906183368869
-        }
-      },
-      "all_advp_fields": {
-        "fields": [
-          "pmid",
-          "snp",
-          "chr",
-          "pvalue",
-          "effect",
-          "cohort",
-          "sample_size",
-          "analysis_group",
-          "population",
-          "locus_name",
-          "phenotype",
-          "phenotype_derived"
-        ],
-        "metrics": {
-          "precision": 0.15966386554621848,
-          "recall": 0.11875,
-          "f1": 0.13620071684587812
-        }
-      }
-    },
-    "unmatched_pred_examples": [
-      [
-        30448613.0,
-        "rs6733839",
-        0.28
-      ],
-      [
-        30448613.0,
-        "rs6733839",
-        0.56
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        1.83e-11
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        0.91
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        6.96e-09
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        0.68
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        1.71e-08
-      ],
-      [
-        30448613.0,
-        "rs111418223",
-        0.94
-      ],
-      [
-        30448613.0,
-        "rs1476679",
-        0.53
-      ],
-      [
-        30448613.0,
-        "rs1476679",
-        0.95
-      ]
-    ],
-    "unmatched_gold_examples": [
-      [
-        30448613.0,
-        "rs4844600",
-        4.22e-07
-      ],
-      [
-        30448613.0,
-        "rs6656401",
-        8.49e-07
-      ],
-      [
-        30448613.0,
-        "rs2296160",
-        4.24e-08
-      ],
-      [
-        30448613.0,
-        "rs2293576",
-        0.24
-      ],
-      [
-        30448613.0,
-        "rs10838725",
-        0.054
-      ],
-      [
-        30448613.0,
-        "rs983392",
-        7.22e-09
-      ],
-      [
-        30448613.0,
-        "rs12453",
-        1.34e-09
-      ],
-      [
-        30448613.0,
-        "rs8093731",
-        1.11e-05
-      ],
-      [
-        30448613.0,
-        "rs8093731",
-        1.36e-08
-      ],
-      [
-        30448613.0,
-        "rs3752246",
-        0.0027
-      ]
-    ]
-  },
-  {
-    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table3_v1.xlsx",
-    "status": "evaluated",
-    "row_key_cols": [
-      "pmid",
-      "snp",
-      "pvalue"
-    ],
-    "n_pred_rows": 5,
-    "n_gold_rows": 40,
-    "row_metrics": {
-      "precision": 1.0,
-      "recall": 0.125,
-      "f1": 0.2222222222222222
-    },
-    "field_metrics": {
-      "pvalue": {
-        "precision": 1.0,
-        "recall": 0.125,
-        "f1": 0.2222222222222222
-      },
-      "effect": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "cohort": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "sample_size": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      }
-    },
-    "aggregate_metrics": {
-      "easy_fields": {
-        "fields": [
-          "pvalue",
-          "effect",
-          "cohort",
-          "sample_size",
-          "analysis_group",
-          "population",
-          "chr"
-        ],
-        "metrics": {
-          "precision": 0.25,
-          "recall": 0.017857142857142856,
-          "f1": 0.03333333333333333
-        }
-      },
-      "all_advp_fields": {
-        "fields": [
-          "pmid",
-          "snp",
-          "chr",
-          "pvalue",
-          "effect",
-          "cohort",
-          "sample_size",
-          "analysis_group",
-          "population",
-          "locus_name",
-          "phenotype",
-          "phenotype_derived"
-        ],
-        "metrics": {
-          "precision": 0.42857142857142855,
-          "recall": 0.03125,
-          "f1": 0.05825242718446602
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
         }
       }
     },
     "unmatched_pred_examples": [],
     "unmatched_gold_examples": [
       [
-        30448613.0,
-        "rs4844600",
-        4.22e-07
+        "rs4844600"
       ],
       [
-        30448613.0,
-        "rs6656401",
-        8.49e-07
+        "rs6656401"
       ],
       [
-        30448613.0,
-        "rs2296160",
-        4.24e-08
+        "rs2296160"
       ],
       [
-        30448613.0,
-        "rs2293576",
-        0.24
+        "rs2293576"
       ],
       [
-        30448613.0,
-        "rs10838725",
-        1.07e-07
+        "rs10838725"
       ],
       [
-        30448613.0,
-        "rs10838725",
-        0.054
+        "rs10838725"
       ],
       [
-        30448613.0,
-        "rs983392",
-        1.15e-06
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs983392",
-        1.59e-06
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs983392",
-        2.34e-12
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs983392",
-        7.22e-09
+        "rs983392"
+      ]
+    ]
+  },
+  {
+    "file": "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table2_v1.xlsx",
+    "status": "evaluated",
+    "row_key_cols": [
+      "snp"
+    ],
+    "n_pred_rows": 0,
+    "n_gold_rows": 40,
+    "row_metrics": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {
+      "easy_fields": {
+        "fields": [
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "chr"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "all_advp_fields": {
+        "fields": [
+          "pmid",
+          "snp",
+          "chr",
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "locus_name",
+          "phenotype",
+          "phenotype_derived"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": [
+      [
+        "rs4844600"
+      ],
+      [
+        "rs6656401"
+      ],
+      [
+        "rs2296160"
+      ],
+      [
+        "rs2293576"
+      ],
+      [
+        "rs10838725"
+      ],
+      [
+        "rs10838725"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
+      ]
+    ]
+  },
+  {
+    "file": "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table3_v1.xlsx",
+    "status": "evaluated",
+    "row_key_cols": [
+      "snp"
+    ],
+    "n_pred_rows": 0,
+    "n_gold_rows": 40,
+    "row_metrics": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {
+      "easy_fields": {
+        "fields": [
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "chr"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "all_advp_fields": {
+        "fields": [
+          "pmid",
+          "snp",
+          "chr",
+          "pvalue",
+          "effect",
+          "cohort",
+          "sample_size",
+          "analysis_group",
+          "population",
+          "locus_name",
+          "phenotype",
+          "phenotype_derived"
+        ],
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": [
+      [
+        "rs4844600"
+      ],
+      [
+        "rs6656401"
+      ],
+      [
+        "rs2296160"
+      ],
+      [
+        "rs2293576"
+      ],
+      [
+        "rs10838725"
+      ],
+      [
+        "rs10838725"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
+      ],
+      [
+        "rs983392"
       ]
     ]
   },
@@ -500,44 +264,16 @@
     "file": "combined_inputs",
     "status": "evaluated",
     "row_key_cols": [
-      "pmid",
-      "snp",
-      "pvalue"
+      "snp"
     ],
-    "n_pred_rows": 73,
+    "n_pred_rows": 0,
     "n_gold_rows": 40,
     "row_metrics": {
-      "precision": 0.547945205479452,
-      "recall": 1.0,
-      "f1": 0.7079646017699115
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
     },
-    "field_metrics": {
-      "pvalue": {
-        "precision": 0.547945205479452,
-        "recall": 1.0,
-        "f1": 0.7079646017699115
-      },
-      "effect": {
-        "precision": 0.2328767123287671,
-        "recall": 0.425,
-        "f1": 0.3008849557522124
-      },
-      "cohort": {
-        "precision": 0.1232876712328767,
-        "recall": 0.225,
-        "f1": 0.1592920353982301
-      },
-      "sample_size": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      },
-      "analysis_group": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0
-      }
-    },
+    "field_metrics": {},
     "aggregate_metrics": {
       "easy_fields": {
         "fields": [
@@ -550,9 +286,9 @@
           "chr"
         ],
         "metrics": {
-          "precision": 0.19469026548672566,
-          "recall": 0.2357142857142857,
-          "f1": 0.21324717285945072
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
         }
       },
       "all_advp_fields": {
@@ -571,64 +307,44 @@
           "phenotype_derived"
         ],
         "metrics": {
-          "precision": 0.2751677852348993,
-          "recall": 0.3416666666666667,
-          "f1": 0.30483271375464677
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
         }
       }
     },
-    "unmatched_pred_examples": [
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": [
       [
-        30448613.0,
-        "rs2296160",
-        0.00856
+        "rs4844600"
       ],
       [
-        30448613.0,
-        "rs9270303",
-        0.00025
+        "rs6656401"
       ],
       [
-        30448613.0,
-        "rs2405442",
-        0.00109
+        "rs2296160"
       ],
       [
-        30448613.0,
-        "rs1859788",
-        0.00112
+        "rs2293576"
       ],
       [
-        30448613.0,
-        "rs7982",
-        0.00162
+        "rs10838725"
       ],
       [
-        30448613.0,
-        "rs2293576",
-        0.04
+        "rs10838725"
       ],
       [
-        30448613.0,
-        "rs12453",
-        0.00036
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs3752246",
-        9.89e-05
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs12459419",
-        0.09
+        "rs983392"
       ],
       [
-        30448613.0,
-        "rs6733839",
-        0.28
+        "rs983392"
       ]
-    ],
-    "unmatched_gold_examples": []
+    ]
   }
 ]

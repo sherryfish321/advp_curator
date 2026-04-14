@@ -66,7 +66,7 @@ def clean_document(document: Document) -> Document:
 
 def ingest_doc_from_pmc(pmid: int, pmcid: str,
                         chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
+                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = True):
     documents = []
     metadata = []
     try:
@@ -143,7 +143,7 @@ def rerank(query: str, documents: List[str]) -> List[float]:
     resp = requests.post(f"{INFINITY_URL}/rerank", json={
         "query": query,
         "documents": documents,
-        "model": "jinaai/jina-reranker-v1-turbo-en"
+        "model": "BAAI/bge-reranker-base"
     })
     results = resp.json()["results"]
     scores = [0.0] * len(documents)
@@ -181,7 +181,7 @@ def combine_possible_info_multilist(multilst: List[List[str]]):
 #         return scores + mask
     
 class ADVPInformationRetriever:
-    def __init__(self, referencing_col_df: pd.DataFrame, chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "gwas_paper_collection", 
+    def __init__(self, referencing_col_df: pd.DataFrame, chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
                  # embeddings_model_name: str = "NeuML/pubmedbert-base-embeddings", reranker_model_name: str = "jinaai/jina-reranker-v1-turbo-en",
                  # llm_model_name: Optional[str] = "Qwen/Qwen2.5-1.5B-Instruct", llm_gguf_path: Optional[str] = "./qwen2.5-7b-instruct-q4/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
                  # use_hf: bool = True, 
@@ -394,6 +394,8 @@ Output:"""
         """
         res = {}
 
+        ingest_doc_from_pmc(pmid, pmcid)
+
         for ref_col, ref_col_context in zip(self.referencing_col_lst, self.referencing_col_context_lst):
             # search for related context
             # full_query = f"What kind of {ref_col} is in the paper, given that {ref_col_context}"
@@ -552,7 +554,6 @@ class ADVPInformationRetrieverKeyword:
         for keyword in self.keyword_dict:
             for keyword_variation in self.keyword_dict[keyword]:
                 if keyword_variation in curr_doc:
-                    print(keyword, keyword_variation)
                     possible_info.append(keyword)
                     break
         return possible_info

@@ -19,15 +19,14 @@ from table_link_to_excel import discover_relevant_pmc_tables
 
 
 def run_cmd(cmd: List[str]) -> str:
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    proc = subprocess.run(cmd, stderr=subprocess.PIPE, text=True)
     if proc.returncode != 0:
         raise RuntimeError(
             "Command failed\n"
             f"CMD: {' '.join(cmd)}\n"
-            f"STDOUT:\n{proc.stdout}\n"
             f"STDERR:\n{proc.stderr}"
         )
-    return proc.stdout.strip()
+    return ""
 
 
 def ensure_parent(path: Path) -> None:
@@ -444,6 +443,7 @@ def read_row_match_metrics(summary_csv: Path) -> Dict[str, object]:
 
 def run_pipeline(
     pmid: int,
+    pmcid: str,
     paper_input: str,
     table_links: List[str],
     owner_name: str,
@@ -503,6 +503,8 @@ def run_pipeline(
             str(audit_json),
             "--paper_id",
             tag,
+            "--pmcid",
+            pmcid
         ])
 
         generated_tables.append(table_xlsx)
@@ -1284,6 +1286,8 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
 <input name="owner_name" value="" placeholder="Your name" />
 <label>PMID</label>
 <input name="pmid" value="30448613" required />
+<label>PMCID</label>
+<input name="pmcid" value="PMC6331247" required />
 <label>Paper URL</label>
 <input name="paper_input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/" placeholder="PMC article page or PDF link" />
 <label>Or upload paper PDF</label>
@@ -1389,6 +1393,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 return
 
             pmid = int(data.get("pmid", [""])[0])
+            pmcid = data.get("pmcid", [""])[0]
             owner_name = data.get("owner_name", [""])[0].strip()
             paper_input = data.get("paper_input", [""])[0].strip()
             paper_upload = data.get("paper_upload", [""])[0].strip() if data.get("paper_upload") else ""
@@ -1406,6 +1411,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
 
             result = run_pipeline(
                 pmid=pmid,
+                pmcid=pmcid,
                 paper_input=paper_input,
                 table_links=links,
                 owner_name=owner_name,

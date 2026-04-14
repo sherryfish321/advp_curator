@@ -1,5 +1,5 @@
 file,status,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table1_v1.xlsx,evaluated,"pmid,snp,pvalue",26,40,0.6538461538461539,0.425,0.5151515151515152
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table2_v1.xlsx,evaluated,"pmid,snp,pvalue",42,40,0.42857142857142855,0.45,0.4390243902439024
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30448613_table3_v1.xlsx,evaluated,"pmid,snp,pvalue",5,40,1.0,0.125,0.2222222222222222
-combined_inputs,evaluated,"pmid,snp,pvalue",73,40,0.547945205479452,1.0,0.7079646017699115
+/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table1_v1.xlsx,evaluated,snp,0,40,0.0,0.0,0.0
+/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table2_v1.xlsx,evaluated,snp,0,40,0.0,0.0,0.0
+/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table3_v1.xlsx,evaluated,snp,0,40,0.0,0.0,0.0
+combined_inputs,evaluated,snp,0,40,0.0,0.0,0.0

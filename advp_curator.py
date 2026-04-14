@@ -2563,9 +2563,8 @@ def run_pipeline(pdf_or_url: Optional[str],
         section_text.get("results", ""),
         section_text.get("supplement", ""),
     ]).strip() or full_text
-
     # 3) Infer global fields (Stage / Model / Assoc type / Imputation / Population / Sample size)
-    if gwas_information_retriever is None or gwas_information_retriever_keyword is None or paper_id == "PAPER":
+    if gwas_information_retriever is None or gwas_information_retriever_keyword is None or resolved_pmid == "NR" or pmcid == "NR":
         stage_val, stage_audit = infer_stage(section_scoped_text)
         assoc_val, assoc_audit = infer_association_type(section_scoped_text)
         model_val, model_audit = infer_model_type(section_scoped_text)
@@ -2601,14 +2600,18 @@ def run_pipeline(pdf_or_url: Optional[str],
             "Sample Size": [sample_size_val]
         }
     else:
-        col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(paper_id), pmcid)
-        col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(paper_id), pmcid)
-        sample_size_val, _ = infer_sample_size(section_text)
+        col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(resolved_pmid), pmcid)
+        col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), pmcid)
+        sample_size_val, sample_size_audit = infer_sample_size(section_text)
         col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
-        assoc_val, _ = infer_association_type(section_scoped_text)
+        assoc_val, assoc_audit = infer_association_type(section_scoped_text)
         col_require_rag_to_possible_info["Association Type"] = [assoc_val]
-        model_val, _ = infer_model_type(section_scoped_text)
+        model_val, model_audit = infer_model_type(section_scoped_text)
         col_require_rag_to_possible_info["Model Type"] = [model_val]
+        stage_audit = FieldAudit("Stage", col_require_rag_to_possible_info["Stage"], 0.5, "", "", True)
+        imp_audit = FieldAudit("Imputation", col_require_rag_to_possible_info["Imputation"], 0.5, "", "", True)
+        pop_audit = FieldAudit("Population", col_require_rag_to_possible_info["Population"], 0.5, "", "", True)
+        print(col_require_rag_to_possible_info)
 
     # 4) Extract tables
     table_entries: List[Tuple[str, pd.DataFrame, int]] = []
@@ -2679,7 +2682,8 @@ def run_pipeline(pdf_or_url: Optional[str],
         # - First extract all possible groups => map these groups to valid text col name or just map all of them
         possible_groups = set()
         for r in recs:
-            possible_groups.add(r['label'])
+            if "label" in r:
+                possible_groups.add(r['label'])
         possible_groups = list(possible_groups)
         if len(possible_groups) <= 1:
             for r in recs:
@@ -2687,21 +2691,31 @@ def run_pipeline(pdf_or_url: Optional[str],
                     r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
         else:
             for text_col in col_require_rag_to_possible_info:
-                similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups)
-                possible_groups_to_possible_info = {}
-                if torch.min(torch.max(similarity_score, dim = 0).values) < 0.4:
-                    for i, u in enumerate(possible_groups):
-                        possible_groups_to_possible_info[u] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
+                if len(col_require_rag_to_possible_info[text_col]) == 0:
+                    for r in recs:
+                        r[text_col] = ""
+                elif len(possible_groups) == 0:
+                    for r in recs:
+                        r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
                 else:
-                    # best_inx = torch.argmax(similarity_score, dim = 0)
-                    # unique_value_to_possible_info = {}
-                    # for i, u in enumerate(unique_value):
-                    #     unique_value_to_possible_info[u] = col_to_possible_info[col][best_inx[i]]
-                    for i, u in enumerate(possible_groups):
-                        valid_info = [col_require_rag_to_possible_info[text_col][inx] for inx in range(similarity_score.shape[0]) if similarity_score[inx, i] >= 0.4]
-                        possible_groups_to_possible_info[u] = air.combine_possible_info(valid_info)
-                for r in recs:
-                    r[text_col] = possible_groups_to_possible_info[r["label"]]
+                    similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups)
+                    possible_groups_to_possible_info = {}
+                    if torch.min(torch.max(similarity_score, dim = 0).values) < 0.4:
+                        for i, u in enumerate(possible_groups):
+                            possible_groups_to_possible_info[u] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
+                    else:
+                        # best_inx = torch.argmax(similarity_score, dim = 0)
+                        # unique_value_to_possible_info = {}
+                        # for i, u in enumerate(unique_value):
+                        #     unique_value_to_possible_info[u] = col_to_possible_info[col][best_inx[i]]
+                        for i, u in enumerate(possible_groups):
+                            valid_info = [col_require_rag_to_possible_info[text_col][inx] for inx in range(similarity_score.shape[0]) if similarity_score[inx, i] >= 0.4]
+                            possible_groups_to_possible_info[u] = air.combine_possible_info(valid_info)
+                    for r in recs:
+                        if "label" in r:
+                            r[text_col] = air.combine_possible_info(possible_groups_to_possible_info[r["label"]])
+                        else:
+                            r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
 
 
         # for r in recs:
@@ -2804,12 +2818,12 @@ def run_pipeline(pdf_or_url: Optional[str],
         shell["RecordID"] = f"{paper_id}_R00001"
         shell["PMCID"] = resolved_pmcid
         shell["Pubmed PMID"] = resolved_pmid
-        shell["Stage"] = stage_val
-        shell["Analyses type"] = assoc_val
-        shell["Model type"] = model_val
-        shell["Imputation_simple2"] = imp_val
-        shell["Population"] = pop_val
-        shell["Sample size"] = sample_size_val
+        shell["Stage"] = col_require_rag_to_possible_info["Stage"]
+        shell["Analyses type"] = col_require_rag_to_possible_info["Association Type"]
+        shell["Model type"] = col_require_rag_to_possible_info["Model Type"]
+        shell["Imputation_simple2"] = col_require_rag_to_possible_info["Imputation"]
+        shell["Population"] = col_require_rag_to_possible_info["Population"]
+        shell["Sample size"] = col_require_rag_to_possible_info["Sample Size"]
         # shell["_confidence"] = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
         # shell["_needs_review"] = True
         # shell["_evidence"] = (

@@ -11,7 +11,7 @@ fi
 # start infinity in background
 infinity_emb v2 \
     --model-id NeuML/pubmedbert-base-embeddings \
-    --model-id jinaai/jina-reranker-v1-turbo-en \
+    --model-id BAAI/bge-reranker-base \
     --port "${INFINITY_PORT:-7997}" &
 echo "Infinity started on port ${INFINITY_PORT:-7997}"
 
