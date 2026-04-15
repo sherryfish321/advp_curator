@@ -138,10 +138,13 @@ def summarize_missing_fields(harmonized_paths: List[Path]) -> List[Dict[str, obj
         "BP(Position)",
         "P-value",
         "EffectSize(altvsref)",
-        "Cohort_simplified (no counts)",
+        "Cohort",
         "Sample size",
-        "Population_map",
+        "Population",
         "Analysis group",
+        "Stage",
+        "Phenotype",
+        "Imputation"
     ]
     counts: Dict[str, int] = {field: 0 for field in target_fields}
     for path in harmonized_paths:
@@ -308,10 +311,13 @@ def curated_editable_columns() -> List[str]:
         "BP(Position)",
         "P-value",
         "EffectSize(altvsref)",
-        "Cohort_simplified (no counts)",
+        "Cohort",
         "Sample size",
-        "Population_map",
+        "Population",
         "Analysis group",
+        "Stage",
+        "Phenotype",
+        "Imputation",
         "LocusName",
     ]
 
