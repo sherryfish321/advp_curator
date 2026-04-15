@@ -25,19 +25,30 @@
       "needs_review": true
     },
     {
-      "field": "Analyses type",
-      "value": "Imaging",
-      "confidence": 0.7,
-      "evidence": "dni.loni.usc.edu). The ADNI was launched in 2003 as a public-private partnership, led by Principal Investigator Michael W. Weiner, MD. The primary goal of ADNI has been to test whether serial magnetic resonance imaging (MRI), positron emission tomography (PET), other biological markers, and clinical and neuropsychological assessment can be combined to measure the progression of mild cognitive impairment (MCI) and early Alzheimer’s disease ",
-      "rule": "matched association keywords -> Imaging",
+      "field": "Association Type",
+      "value": [
+        "Alzheimer's disease",
+        "eqtl",
+        "neuropathology"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
       "needs_review": true
     },
     {
-      "field": "Model type",
-      "value": "logistic regression (with covariates)",
-      "confidence": 0.75,
-      "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at last visit or death, sex, and the top five principal components (PCs) computed in PLINK v1.90a ( Chang, et al., 2015 , Purcell, et al., 2007 ). The coding SNPs were evaluated for replicati",
-      "rule": "model family + covariate cues",
+      "field": "Model Type",
+      "value": [
+        "ADSP",
+        "PLINK V1.90A",
+        "ANCOVA",
+        "AGE AT LAST VISIT OR DEATH",
+        "SEX",
+        "TOP FIVE PRINCIPAL COMPONENTS"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
       "needs_review": true
     },
     {
@@ -115,14 +126,14 @@
         {
           "field": "Model type",
           "value": "",
-          "confidence": 0.75,
-          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
-          "rule": "model family + covariate cues",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + TOPMed + UK10K + 1000 Genomes",
+          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -130,7 +141,7 @@
         },
         {
           "field": "Population",
-          "value": "ADGC + ADSP + 1000 Genomes EUR + European + IGAP",
+          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -146,7 +157,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADSP + CHARGE + IGAP + UKBB + NABEC + UKBEC + ADNI",
+          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
           "confidence": 0.8,
           "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10−8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "cohort keyword mapping",
@@ -192,14 +203,14 @@
         {
           "field": "Model type",
           "value": "",
-          "confidence": 0.75,
-          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
-          "rule": "model family + covariate cues",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + TOPMed + UK10K + 1000 Genomes",
+          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -207,7 +218,7 @@
         },
         {
           "field": "Population",
-          "value": "ADGC + ADSP + 1000 Genomes EUR + European + IGAP",
+          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -223,7 +234,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADSP + CHARGE + IGAP + UKBB + NABEC + UKBEC + ADNI",
+          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
           "confidence": 0.8,
           "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "cohort keyword mapping",
@@ -269,14 +280,14 @@
         {
           "field": "Model type",
           "value": "",
-          "confidence": 0.75,
-          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
-          "rule": "model family + covariate cues",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + TOPMed + UK10K + 1000 Genomes",
+          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -284,7 +295,7 @@
         },
         {
           "field": "Population",
-          "value": "ADGC + ADSP + 1000 Genomes EUR + European + IGAP",
+          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -300,7 +311,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADSP + CHARGE + IGAP + UKBB + NABEC + UKBEC + ADNI",
+          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
           "confidence": 0.8,
           "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10−6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "cohort keyword mapping",
@@ -346,14 +357,14 @@
         {
           "field": "Model type",
           "value": "",
-          "confidence": 0.75,
-          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
-          "rule": "model family + covariate cues",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + TOPMed + UK10K + 1000 Genomes",
+          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -361,7 +372,7 @@
         },
         {
           "field": "Population",
-          "value": "ADGC + ADSP + 1000 Genomes EUR + European + IGAP",
+          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -377,7 +388,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADSP + CHARGE + IGAP + UKBB + NABEC + UKBEC + ADNI",
+          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
           "confidence": 0.8,
           "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",
@@ -423,14 +434,14 @@
         {
           "field": "Model type",
           "value": "",
-          "confidence": 0.75,
-          "evidence": "uals of European ancestry (1000 Genomes EUR) ( 1000 Genomes Project Consortium, 2010 ). In the discovery analysis for common SNPs in ADGC, we performed association tests under an additive mode of inheritance (MOI) using logistic regression adjusted for age at ",
-          "rule": "model family + covariate cues",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + TOPMed + UK10K + 1000 Genomes",
+          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -438,7 +449,7 @@
         },
         {
           "field": "Population",
-          "value": "ADGC + ADSP + 1000 Genomes EUR + European + IGAP",
+          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -454,7 +465,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADSP + CHARGE + IGAP + UKBB + NABEC + UKBEC + ADNI",
+          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
           "confidence": 0.8,
           "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",
