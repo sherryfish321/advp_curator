@@ -20,3 +20,4 @@ llama-cpp-python[server]
 optimum==1.16.2
 openai
 pymupdf
+huggingface-hub
