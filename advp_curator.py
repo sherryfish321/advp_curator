@@ -203,7 +203,7 @@ CURATED_COLUMNS = [
     "Sample size", "Cases", "Controls", "Sample information", "Imputation_simple2",
     "Population", "Population_map", "Analysis group", "Phenotype", "Phenotype-derived",
     "For plotting Beta and OR - derived", "Reported gene (gene based test)",
-    "TopSNP", "Interactions", "Chr", "P-value", "BP(Position)",
+    "TopSNP", "Interactions", "Chr", "P-value", "P-value note", "BP(Position)",
     "RA 1(Reported Allele 1)", "RA 2(Reported Allele 2)", "Note on alleles and AF",
     "ReportedAF(MAF)", "AFincases", "AFincontrols", "Effect Size Type (OR or Beta)",
     "EffectSize(altvsref)", "95%ConfidenceInterval",
@@ -409,6 +409,7 @@ def safe_float(x) -> Optional[float]:
             return v
         s = str(x).strip()
         s = s.replace("×", "x").replace("−", "-").replace("–", "-")
+        s = re.sub(r"([+-])\s+(\d)", r"\1\2", s)
         # parse scientific like 4.2 x 10^-5
         sci = re.search(r"([0-9.]+)\s*[x*]\s*10\s*\^?\s*([+-]?\s*\d+)", s, flags=re.I)
         if sci:
@@ -1103,6 +1104,21 @@ def _sanitize_topsnp(value: Any) -> str:
     return _strip_trailing_footnote_suffix(s)
 
 
+def _format_integer_like(value: Any) -> str:
+    s = _normalize_cell_text(value)
+    if not s:
+        return ""
+    try:
+        f = float(s)
+    except Exception:
+        return s
+    if pd.isna(f):
+        return ""
+    if f.is_integer():
+        return str(int(f))
+    return s
+
+
 def _sanitize_locus_name(value: Any) -> str:
     s = _normalize_cell_text(value)
     if not s:
@@ -1567,6 +1583,81 @@ def _extract_records_from_pipe_layout(body: pd.DataFrame, table_idx: int, paper_
     return records
 
 
+def _extract_records_from_igap_exonic_split_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+    if not any(c.startswith("igap snp") for c in norm_cols):
+        return []
+    if not any(c.startswith("exonic snp") for c in norm_cols):
+        return []
+    if len(columns) < 9:
+        return []
+
+    records: List[Dict[str, Any]] = []
+    layouts = [
+        {
+            "section": "IGAP SNP",
+            "snp": columns[0],
+            "gene": columns[1],
+            "groups": [("ADGC", columns[2], columns[3])],
+        },
+        {
+            "section": "Exonic SNP",
+            "snp": columns[4],
+            "gene": columns[1],
+            "groups": [("ADGC", columns[5], columns[6]), ("ADSP", columns[7], columns[8])],
+        },
+    ]
+
+    for _, row in body.iterrows():
+        row_text = " | ".join(_normalize_cell_text(v) for v in row.tolist())
+        if "strong ld" in row_text.lower():
+            continue
+        for layout in layouts:
+            snp_val = _sanitize_topsnp(row.get(layout["snp"]))
+            if _looks_missing(snp_val) or not re.search(r"^rs\d+$", snp_val, flags=re.I):
+                continue
+            gene_val = _sanitize_locus_name(row.get(layout["gene"]))
+            for group_label, or_col, p_col in layout["groups"]:
+                or_raw = _normalize_cell_text(row.get(or_col))
+                p_raw = _normalize_cell_text(row.get(p_col))
+                if _looks_missing(or_raw) and _looks_missing(p_raw):
+                    continue
+                effect_val, ci_val = _extract_effect_and_ci(or_raw, "OR")
+                if effect_val is None:
+                    effect_val = safe_float(or_raw)
+                p_val = safe_float(p_raw)
+
+                rec = {k: "" for k in CURATED_COLUMNS}
+                rec["Name"] = snp_val
+                rec["PaperIDX"] = paper_id
+                rec["PMCID"] = pmcid
+                rec["TableIDX"] = f"T{table_idx:05d}"
+                rec["Table Ref in paper"] = table_ref
+                rec["Table links"] = table_link
+                rec["TopSNP"] = snp_val
+                rec["SNP-based, Gene-based"] = "SNP-based"
+                rec["LocusName"] = gene_val
+                rec["Analysis group"] = group_label
+                rec["P-value"] = p_val if p_val is not None else ""
+                rec["P-value note"] = f"{layout['section']} {group_label} P-value"
+                rec["Effect Size Type (OR or Beta)"] = "OR"
+                rec["EffectSize(altvsref)"] = effect_val if effect_val is not None else ""
+                rec["95%ConfidenceInterval"] = ci_val if ci_val else ""
+                rec["_confidence"] = 0.8
+                rec["_needs_review"] = True
+                rec["_evidence"] = f"IGAP/Exonic split-table row parsed ({layout['section']} | {group_label}): {row_text[:400]}"
+                records.append(rec)
+    return records
+
+
 def _extract_records_from_stratified_survival_table(
     body: pd.DataFrame,
     table_idx: int,
@@ -1851,6 +1942,98 @@ def _extract_records_from_inline_subgroup_or_table(
     return records
 
 
+def _extract_records_from_neuropathology_multi_pvalue_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    norm_cols = [_norm_colname(c) for c in columns]
+    if len(columns) < 20:
+        return []
+    looks_like_flat_neuropath = (
+        norm_cols[:6] == ["chromosome", "snp", "gene", "ea", "ra", "eaf"]
+        and sum(1 for c in norm_cols if c.startswith("p value")) >= 7
+        and sum(1 for c in norm_cols if "β value" in c or "beta value" in c) >= 4
+    )
+    looks_like_grouped_neuropath = (
+        any("univariate models" in c for c in norm_cols)
+        and any("joint models" in c for c in norm_cols)
+    )
+    if not (looks_like_flat_neuropath or looks_like_grouped_neuropath):
+        return []
+
+    base_cols = {
+        "chr": columns[0],
+        "snp": columns[1],
+        "gene": columns[2],
+        "ea": columns[3],
+        "ra": columns[4],
+        "eaf": columns[5],
+    }
+    pvalue_defs = [
+        ("AD status", columns[6], columns[7], "Univariate AD status P-value"),
+        ("NP", columns[8], columns[9], "Univariate NP P-value"),
+        ("NFT", columns[10], columns[11], "Univariate NFT P-value"),
+        ("CAA", columns[12], columns[13], "Univariate CAA P-value"),
+        ("NP + NFT", None, columns[15], "Joint NP + NFT P-value"),
+        ("NP + CAA", None, columns[17], "Joint NP + CAA P-value"),
+        ("NFT + CAA", None, columns[19], "Joint NFT + CAA P-value"),
+    ]
+
+    records: List[Dict[str, Any]] = []
+    for _, row in body.iterrows():
+        snp_val = _sanitize_topsnp(row.get(base_cols["snp"]))
+        if _looks_missing(snp_val) or not re.search(r"^rs\d+$", snp_val, flags=re.I):
+            continue
+        chr_val = _format_integer_like(row.get(base_cols["chr"]))
+        gene_val = _sanitize_locus_name(row.get(base_cols["gene"]))
+        ea_val = _normalize_cell_text(row.get(base_cols["ea"]))
+        ra_val = _normalize_cell_text(row.get(base_cols["ra"]))
+        eaf_val = _normalize_cell_text(row.get(base_cols["eaf"]))
+
+        for phenotype, effect_col, p_col, note in pvalue_defs:
+            p_raw = _normalize_cell_text(row.get(p_col))
+            p_val = safe_float(p_raw)
+            if p_val is None:
+                continue
+            effect_val = ""
+            if effect_col:
+                effect_val, _ = _extract_effect_and_ci(_normalize_cell_text(row.get(effect_col)), "Beta")
+                if effect_val is None:
+                    effect_val = ""
+
+            rec = {k: "" for k in CURATED_COLUMNS}
+            rec["Name"] = snp_val
+            rec["PaperIDX"] = paper_id
+            rec["PMCID"] = pmcid
+            rec["TableIDX"] = f"T{table_idx:05d}"
+            rec["Table Ref in paper"] = table_ref
+            rec["Table links"] = table_link
+            rec["TopSNP"] = snp_val
+            rec["SNP-based, Gene-based"] = "SNP-based"
+            rec["Chr"] = chr_val
+            rec["LocusName"] = gene_val
+            rec["RA 1(Reported Allele 1)"] = ea_val
+            rec["RA 2(Reported Allele 2)"] = ra_val
+            rec["ReportedAF(MAF)"] = eaf_val
+            rec["P-value"] = p_val
+            rec["P-value note"] = note
+            rec["Effect Size Type (OR or Beta)"] = "Beta" if effect_col else "NR"
+            rec["EffectSize(altvsref)"] = effect_val
+            rec["Analysis group"] = phenotype
+            rec["Phenotype"] = phenotype
+            rec["Phenotype-derived"] = "Neuropathology"
+            rec["_confidence"] = 0.82
+            rec["_needs_review"] = True
+            rec["_evidence"] = f"Neuropathology multi-pvalue table parsed ({phenotype})"
+            records.append(rec)
+    return records
+
+
 def _extract_records_from_combination_pvalue_table(
     body: pd.DataFrame,
     table_idx: int,
@@ -2031,7 +2214,8 @@ def _extract_effect_and_ci(effect_text: str, effect_type: str) -> Tuple[Optional
     - OR/HR: '1.26 (0.83-1.92)' -> effect=1.26, ci='(0.83-1.92)'
     - Beta:  '0.164 (0.04)'     -> effect=0.164, ci=''
     """
-    s = _normalize_cell_text(effect_text).replace("−", "-")
+    s = _normalize_cell_text(effect_text).replace("−", "-").replace("–", "-")
+    s = re.sub(r"([+-])\s+(\d)", r"\1\2", s)
     if not s:
         return None, ""
 
@@ -2046,6 +2230,167 @@ def _extract_effect_and_ci(effect_text: str, effect_type: str) -> Tuple[Optional
         if any(sep in inner for sep in ["–", "-", ","]):
             ci = f"({inner})"
     return effect, ci
+
+
+def _parse_pvalue_beta_cell(value: Any) -> Tuple[Optional[float], Optional[float]]:
+    s = _normalize_cell_text(value)
+    if not s:
+        return None, None
+    p_part = s.split("(", 1)[0].strip()
+    p_val = safe_float(p_part)
+    beta_val = None
+    m = re.search(r"\(([^)]+)\)", s)
+    if m:
+        beta_val = safe_float(m.group(1))
+    return p_val, beta_val
+
+
+def _extract_records_from_eqtl_summary_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    eqtl_col = _pick_preferred_column(columns, ["eqtl"])
+    gene_col = _pick_preferred_column(columns, ["gene"])
+    ea_col = _pick_preferred_column(columns, ["ea"])
+    ra_col = _pick_preferred_column(columns, ["ra"])
+    summary_cols = [c for c in columns if "esnp association summary" in _norm_colname(c)]
+    if not eqtl_col or not gene_col or len(summary_cols) < 2:
+        return []
+
+    records: List[Dict[str, Any]] = []
+    for _, row in body.iterrows():
+        snp_val = _sanitize_topsnp(row.get(eqtl_col))
+        if not snp_val or not re.search(r"^rs\d+$", snp_val, flags=re.I):
+            continue
+        gene_val = _sanitize_locus_name(row.get(gene_col))
+        ea_val = _normalize_cell_text(row.get(ea_col)) if ea_col else ""
+        ra_val = _normalize_cell_text(row.get(ra_col)) if ra_col else ""
+
+        for idx, summary_col in enumerate(summary_cols[:2]):
+            p_val, beta_val = _parse_pvalue_beta_cell(row.get(summary_col))
+            if p_val is None and beta_val is None:
+                continue
+            region = "Hippocampus"
+            if idx == 1:
+                region_col = summary_cols[2] if len(summary_cols) > 2 else None
+                region = _normalize_cell_text(row.get(region_col)) if region_col else "Other brain region"
+                region = region or "Other brain region"
+
+            rec = {k: "" for k in CURATED_COLUMNS}
+            rec["Name"] = snp_val
+            rec["PaperIDX"] = paper_id
+            rec["PMCID"] = pmcid
+            rec["TableIDX"] = f"T{table_idx:05d}"
+            rec["Table Ref in paper"] = table_ref
+            rec["Table links"] = table_link
+            rec["Notes"] = "eQTL comparison table; likely supporting/comparison result rather than new ADVP association result"
+            rec["TopSNP"] = snp_val
+            rec["SNP-based, Gene-based"] = "SNP-based"
+            rec["RA 1(Reported Allele 1)"] = ea_val
+            rec["RA 2(Reported Allele 2)"] = ra_val
+            rec["LocusName"] = gene_val
+            rec["P-value"] = p_val if p_val is not None else ""
+            rec["Effect Size Type (OR or Beta)"] = "Beta"
+            rec["EffectSize(altvsref)"] = beta_val if beta_val is not None else ""
+            rec["Analysis group"] = "eQTL"
+            rec["Phenotype"] = region
+            rec["Phenotype-derived"] = "Expression"
+            rec["For plotting Beta and OR - derived"] = "Beta"
+            rec["_confidence"] = 0.75
+            rec["_needs_review"] = True
+            rec["_evidence"] = (
+                f"eQTL summary row parsed; SNP from column '{eqtl_col}', gene from '{gene_col}', "
+                f"region='{region}', source cell='{_normalize_cell_text(row.get(summary_col))}'"
+            )
+            records.append(rec)
+    return records
+
+
+def _extract_records_from_eqtl_ad_pvalue_table(
+    body: pd.DataFrame,
+    table_idx: int,
+    paper_id: str,
+    pmcid: str,
+    table_ref: str,
+    table_link: str,
+) -> List[Dict[str, Any]]:
+    columns = list(body.columns)
+    snp_col = _pick_preferred_column(columns, ["igap snp", "snp"])
+    gene_col = _pick_preferred_column(columns, ["gene"])
+    closest_gene_col = _pick_preferred_column(columns, ["closest gene"])
+    probe_col = _pick_preferred_column(columns, ["probe set id"])
+    eqtl_cols = [c for c in columns if _norm_colname(c).startswith("eqtl association")]
+    eqtl_beta_col = eqtl_cols[0] if len(eqtl_cols) >= 1 else None
+    eqtl_p_col = eqtl_cols[1] if len(eqtl_cols) >= 2 else None
+    ad_p_col = _pick_preferred_column(columns, ["ad association", "p-value c", "p value c"])
+    if not all([snp_col, eqtl_beta_col, eqtl_p_col, ad_p_col]):
+        return []
+
+    records: List[Dict[str, Any]] = []
+    carry_snp = ""
+    carry_closest_gene = ""
+    for _, row in body.iterrows():
+        row_text = " | ".join(_normalize_cell_text(v) for v in row.tolist())
+        snp_val = _sanitize_topsnp(row.get(snp_col))
+        if snp_val and re.search(r"^rs\d+$", snp_val, flags=re.I):
+            carry_snp = snp_val
+        else:
+            snp_val = carry_snp
+        closest_gene = _sanitize_locus_name(row.get(closest_gene_col)) if closest_gene_col else ""
+        if closest_gene:
+            carry_closest_gene = closest_gene
+        else:
+            closest_gene = carry_closest_gene
+        gene_val = _sanitize_locus_name(row.get(gene_col)) if gene_col else ""
+        probe_val = _normalize_cell_text(row.get(probe_col)) if probe_col else ""
+        eqtl_beta = safe_float(row.get(eqtl_beta_col))
+        eqtl_p = safe_float(row.get(eqtl_p_col))
+        ad_p = safe_float(row.get(ad_p_col))
+        if not snp_val or not re.search(r"^rs\d+$", snp_val, flags=re.I):
+            continue
+        if eqtl_p is None and ad_p is None:
+            continue
+
+        base = {k: "" for k in CURATED_COLUMNS}
+        base["Name"] = snp_val
+        base["PaperIDX"] = paper_id
+        base["PMCID"] = pmcid
+        base["TableIDX"] = f"T{table_idx:05d}"
+        base["Table Ref in paper"] = table_ref
+        base["Table links"] = table_link
+        base["TopSNP"] = snp_val
+        base["SNP-based, Gene-based"] = "SNP-based"
+        base["LocusName"] = gene_val or closest_gene
+        base["Reported gene (gene based test)"] = gene_val
+        base["Notes"] = f"Probe set: {probe_val}; closest gene: {closest_gene}".strip("; ")
+        base["_confidence"] = 0.78
+        base["_needs_review"] = True
+        base["_evidence"] = f"Two-p-value eQTL/AD table row parsed: {row_text[:500]}"
+
+        if eqtl_p is not None:
+            rec = dict(base)
+            rec["P-value"] = eqtl_p
+            rec["P-value note"] = "eQTL association P-value"
+            rec["Effect Size Type (OR or Beta)"] = "Beta"
+            rec["EffectSize(altvsref)"] = eqtl_beta if eqtl_beta is not None else ""
+            rec["Analysis group"] = "eQTL association"
+            rec["Phenotype-derived"] = "Expression"
+            rec["For plotting Beta and OR - derived"] = "Beta"
+            records.append(rec)
+        if ad_p is not None:
+            rec = dict(base)
+            rec["P-value"] = ad_p
+            rec["P-value note"] = "AD association P-value"
+            rec["Analysis group"] = "AD association"
+            rec["Phenotype-derived"] = "AD"
+            rec["Effect Size Type (OR or Beta)"] = "NR"
+            records.append(rec)
+    return records
 
 
 def _effect_type_from_colname(colname: str) -> str:
@@ -2172,6 +2517,10 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     if pipe_records:
         return pipe_records
 
+    igap_exonic_records = _extract_records_from_igap_exonic_split_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if igap_exonic_records:
+        return igap_exonic_records
+
     survival_records = _extract_records_from_stratified_survival_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
     if survival_records:
         return survival_records
@@ -2184,6 +2533,10 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     if inline_or_records:
         return inline_or_records
 
+    neuropath_records = _extract_records_from_neuropathology_multi_pvalue_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if neuropath_records:
+        return neuropath_records
+
     combo_records = _extract_records_from_combination_pvalue_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
     if combo_records:
         return combo_records
@@ -2191,6 +2544,14 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
     pjoint_records = _extract_records_from_pjoint_cognitive_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
     if pjoint_records:
         return pjoint_records
+
+    eqtl_ad_pvalue_records = _extract_records_from_eqtl_ad_pvalue_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if eqtl_ad_pvalue_records:
+        return eqtl_ad_pvalue_records
+
+    eqtl_records = _extract_records_from_eqtl_summary_table(body, table_idx, paper_id, pmcid, table_ref, table_link)
+    if eqtl_records:
+        return eqtl_records
 
     columns = list(body.columns)
     table_group_label = _infer_group_label_from_columns(columns)
@@ -2336,6 +2697,11 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         variant_text = _sanitize_topsnp(variant_text)
         locus_name = _sanitize_locus_name(locus_name)
 
+        # Rows with only a group label are visual separators in PMC tables.
+        # Skip before forward-fill so they do not clone the previous SNP/stat row.
+        if not rsids and pval_default is None and effect_default is None and not chr_val and not bp_val and not locus_name:
+            continue
+
         # Forward-fill common merged-cell fields.
         if variant_text:
             carry["variant"] = variant_text
@@ -2478,6 +2844,10 @@ def write_curated_xlsx(records: List[Dict[str, Any]], out_path: str, template_xl
     df = pd.DataFrame(records)
     if "TopSNP" in df.columns:
         df["TopSNP"] = df["TopSNP"].map(_sanitize_topsnp)
+    if "Chr" in df.columns:
+        df["Chr"] = df["Chr"].map(_format_integer_like)
+    if "BP(Position)" in df.columns:
+        df["BP(Position)"] = df["BP(Position)"].map(_format_integer_like)
     if "LocusName" in df.columns:
         df["LocusName"] = df["LocusName"].map(_sanitize_locus_name)
     # Ensure all headers exist
@@ -2490,6 +2860,126 @@ def write_curated_xlsx(records: List[Dict[str, Any]], out_path: str, template_xl
         df.to_excel(writer, index=False, sheet_name="curated")
 
 
+def _is_missing_value(value: Any) -> bool:
+    s = _normalize_cell_text(value)
+    return s == "" or s.upper() == "NR"
+
+
+def _cell_issue(field: str, value: Any) -> Tuple[str, List[str]]:
+    if _is_missing_value(value):
+        required = field in {"TopSNP", "P-value"}
+        return ("issue" if required else "review", ["missing required value" if required else "missing value"])
+
+    s = _normalize_cell_text(value)
+    issues: List[str] = []
+    status = "ok"
+    if field == "TopSNP" and not re.search(r"\brs\d+\b", s, flags=re.I):
+        issues.append("SNP does not look like an rsID")
+        status = "issue"
+    elif field == "P-value":
+        v = safe_float(s)
+        if v is None:
+            issues.append("p-value is not numeric")
+            status = "issue"
+        elif v < 0 or v > 1:
+            issues.append("p-value is outside 0-1")
+            status = "issue"
+    elif field == "EffectSize(altvsref)" and safe_float(s) is None:
+        issues.append("effect size is not numeric")
+        status = "review"
+    elif field == "Chr":
+        chrom = _format_integer_like(s).lower().replace("chr", "").strip()
+        if not re.match(r"^(?:[1-9]|1\d|2[0-2]|x|y|mt|m)$", chrom):
+            issues.append("chromosome format is unusual")
+            status = "review"
+    elif field == "BP(Position)":
+        v = safe_float(s)
+        if v is None or v <= 0:
+            issues.append("position is not a positive number")
+            status = "review"
+    elif field == "RA 1(Reported Allele 1)":
+        alleles = {part.strip().upper() for part in re.split(r"[/;,|]", s) if part.strip()}
+        if alleles and not alleles.issubset({"A", "C", "G", "T", "I", "D"}):
+            issues.append("allele format is unusual")
+            status = "review"
+
+    return status, issues
+
+
+def build_validation_report(records: List[Dict[str, Any]], paper_id: str) -> Dict[str, Any]:
+    key_fields = [
+        "TopSNP",
+        "P-value",
+        "EffectSize(altvsref)",
+        "Chr",
+        "BP(Position)",
+        "RA 1(Reported Allele 1)",
+        "Cohort_simplified (no counts)",
+        "Sample size",
+        "Imputation_simple2",
+        "Population_map",
+        "Analysis group",
+        "Phenotype",
+    ]
+    rows = []
+    counts = {"success": 0, "warning": 0, "failed": 0}
+    for idx, record in enumerate(records):
+        field_reports: Dict[str, Any] = {}
+        row_issues: List[str] = []
+        has_issue = False
+        has_review = bool(record.get("_needs_review"))
+
+        for field in key_fields:
+            status, issues = _cell_issue(field, record.get(field))
+            if status != "ok":
+                field_reports[field] = {
+                    "status": status,
+                    "issues": issues,
+                    "value": _normalize_cell_text(record.get(field)),
+                    "evidence": _normalize_cell_text(record.get("_evidence", ""))[:500],
+                }
+                row_issues.extend([f"{field}: {issue}" for issue in issues])
+            if status == "issue":
+                has_issue = True
+            elif status == "review":
+                has_review = True
+
+        pvalue_note = _normalize_cell_text(record.get("P-value note", ""))
+        if not pvalue_note and "P-value" in record and re.search(r"p[- ]?value\s*\d+", _normalize_cell_text(record.get("_evidence", "")), flags=re.I):
+            field_reports.setdefault("P-value", {
+                "status": "review",
+                "issues": [],
+                "value": _normalize_cell_text(record.get("P-value")),
+                "evidence": _normalize_cell_text(record.get("_evidence", ""))[:500],
+            })
+            field_reports["P-value"]["issues"].append("multiple p-value columns may need a note")
+            row_issues.append("P-value: multiple p-value columns may need a note")
+            has_review = True
+
+        row_status = "failed" if has_issue else ("warning" if has_review else "success")
+        counts[row_status] += 1
+        rows.append({
+            "row_index": idx,
+            "record_id": record.get("RecordID", ""),
+            "row_status": row_status,
+            "row_issues": row_issues,
+            "fields": field_reports,
+        })
+
+    return {
+        "paper_id": paper_id,
+        "schema_version": "self_validation_v1",
+        "summary": counts,
+        "rows": rows,
+    }
+
+
+def write_validation_report(records: List[Dict[str, Any]], validation_json: str, paper_id: str) -> None:
+    report = build_validation_report(records, paper_id)
+    with open(validation_json, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+
+
 # -----------------------------
 # Main pipeline
 # -----------------------------
@@ -2499,7 +2989,8 @@ def run_pipeline(pdf_or_url: Optional[str],
                  paper_id: str = "PAPER",
                  pmcid: str = "NR",
                  template_xlsx: Optional[str] = None,
-                 table_input: Optional[str] = None) -> None:
+                 table_input: Optional[str] = None,
+                 validation_json: Optional[str] = None) -> None:
     paper_id_table_num = None
     m_pid = re.search(r"table[\s_-]?(\d+)$", paper_id or "", flags=re.I)
     if m_pid:
@@ -2764,6 +3255,8 @@ def run_pipeline(pdf_or_url: Optional[str],
 
     # 7) Write outputs
     write_curated_xlsx(records, out_xlsx, template_xlsx=template_xlsx)
+    if validation_json:
+        write_validation_report(records, validation_json, paper_id)
 
     with open(audit_json, "w", encoding="utf-8") as f:
         json.dump(audits, f, indent=2, ensure_ascii=False)
@@ -2781,6 +3274,7 @@ def main():
     parser.add_argument("--table_input", default=None, help="Table source(s): URL/path; comma-separated for multiple")
     parser.add_argument("--out", default="curated_output.xlsx")
     parser.add_argument("--audit", default="audit.json")
+    parser.add_argument("--validation", default=None, help="Optional row/cell validation report JSON for UI review")
     parser.add_argument("--paper_id", default="PAPER")
     parser.add_argument("--pmcid", default="NR")
     parser.add_argument("--template", default=None, help="Optional template xlsx (first row as headers)")
@@ -2834,6 +3328,7 @@ def main():
         pmcid=args.pmcid,
         template_xlsx=args.template,
         table_input=args.table_input,
+        validation_json=args.validation,
     )
 
 

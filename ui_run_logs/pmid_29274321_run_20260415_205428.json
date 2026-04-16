@@ -1,0 +1,67 @@
+{
+  "pmid": 29274321,
+  "pmcid": "",
+  "owner_name": "",
+  "paper_input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/",
+  "table_links": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/table/T1/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/table/T2/"
+  ],
+  "auto_discovered_tables": [
+    {
+      "pmcid": "PMC5938137",
+      "table_index": 1,
+      "table_id": "T1",
+      "caption": "Table 1 Table 1",
+      "score": 11,
+      "reasons": [
+        "gene-like keyword",
+        "p-value-like keyword",
+        "association-statistic keyword",
+        "variant-like keyword",
+        "gene+p-value rule matched",
+        "association-table support"
+      ],
+      "preview": "Table 1 Table 1 0 1 2 3 4 5 6 7 8 9 10 11 Group Traits CHR BP SNP MA MAF BETA SE P Closest Genes ALL Aβ 42 8 20647323 rs55644114 A 0.16 0.41 0.07 2.54×10 −8 GFRA2, LZTS1 CN Aβ 42 12 13870464 rs74442473 G 0.07 −1.02 0.18 2.53×10 −8 GRIN2B CN Aβ 42 17 59687842 rs2378873 T 0.44 −0.53 0.10 2.03×10 −8 BRIP1, NACA2 CN CN t-Tau 12 119390525 rs10775009 T 0.34 0.51 0.09 1.59×10 −9 SRRM4 CN t-Tau 14 1053853",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/table/T1/",
+      "selected": true,
+      "source": "pmc_xml"
+    },
+    {
+      "pmcid": "PMC5938137",
+      "table_index": 2,
+      "table_id": "T2",
+      "caption": "Table 2 Table 2",
+      "score": 8,
+      "reasons": [
+        "gene-like keyword",
+        "p-value-like keyword",
+        "gene+p-value rule matched"
+      ],
+      "preview": "Table 2 Table 2 0 1 2 3 4 5 6 eQTL EA RA Gene eSNP Association Summary eSNP Association Summary eSNP Association Summary eQTL EA RA Gene Hippocampus Other brain region Other brain region eQTL EA RA Gene P-value (β) P-value (β) Region rs10775009 T C SRRM4 0.09 (0.09) 0.16 (0.10) Frontal Cortex rs2819438 A C PLD4 0.47 (0.12) 0.10 (0.42) Anterior cingulate cortex rs2819438 A C AHNAK2 0.15 (0.23) 0.06",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/table/T2/",
+      "selected": true,
+      "source": "pmc_xml"
+    },
+    {
+      "pmcid": "PMC5938137",
+      "table_index": 3,
+      "table_id": "T3",
+      "caption": "Table 3 Table 3",
+      "score": 3,
+      "reasons": [
+        "p-value-like keyword"
+      ],
+      "preview": "Table 3 Table 3 0 1 2 3 4 5 6 7 8 Source Brain region Predictor MTUS1 MTUS1 MTUS1 C14orf79 C14orf79 C14orf79 Source Brain region Predictor β SE P β SE P Eisai Bio Bank (RNA-Seq) HIPP AD Status 0.38 0.16 0.02 0.04 0.14 0.76 Eisai Bio Bank (RNA-Seq) HIPP Braak Stages 0.16 0.04 3.9×10 −4 −0.07 0.03 0.06 Mt. Sinai Hospital (Microarray) CER AD Status 0.00 0.02 0.78 −0.13 0.02 7.5×10 −8 Mt. Sinai Hospit",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5938137/table/T3/",
+      "selected": false,
+      "source": "pmc_xml"
+    }
+  ],
+  "generated_harmonized": [
+    "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_29274321_table1_v1.xlsx",
+    "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_29274321_table2_v1.xlsx"
+  ],
+  "eval_report": "/Users/sherryhuang/advp_curator/eval_reports/pmid_29274321_eval_report_advp_like.xlsx",
+  "created_at": "2026-04-15T20:54:28.241353"
+}

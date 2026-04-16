@@ -1,18 +1,29 @@
-pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
-29274321.0,rs55644114,8,20647323.0,,2.54e-08,0.41,adni,,757.0,group,"GFRA2, LZTS1",,
-29274321.0,rs74442473,12,13870464.0,,2.53e-08,-1.02,adni,,757.0,group,GRIN2B,,
-29274321.0,rs2378873,17,59687842.0,,2.03e-08,-0.53,adni,,757.0,group,"BRIP1, NACA2",,
-29274321.0,rs10775009,12,119390525.0,,1.59e-09,0.51,adni,,757.0,group,SRRM4,,
-29274321.0,rs2819438,14,105385352.0,,6.94e-09,-0.8,adni,,757.0,group,"PLD4, C14orf79",,
-29274321.0,rs4921790,8,17496561.0,,4.58e-09,0.61,adni,,757.0,group,"PDGFRL, MTUS1",,
-29274321.0,rs74834332,1,57739164.0,,4.3e-08,0.79,adni,,757.0,group,DAB1,,
-29274321.0,rs12268753,10,53818149.0,,2.01e-08,0.3,adni,,757.0,group,PRKG1,,
-29274321.0,rs111882035,4,86416554.0,,2.74e-08,-0.93,adni,,757.0,group,ARHGAP24,,
-29274321.0,rs73705514,7,88406552.0,,2.86e-09,-0.84,adni,,757.0,group,ZNF804B,,
-29274321.0,rs118130881,8,31228770.0,,1.72e-08,-0.61,adni,,757.0,group,NRG1,,
-29274321.0,rs79846291,6,136077929.0,,1.76e-08,1.85,adni,,757.0,group,"LINC00271, PDE7B",,
-29274321.0,cor,,,,0.00038,,adni,,757.0,hippocampus,C14orf79,,hippocampus
-29274321.0,cor,,,,0.0039,,adni,,757.0,other brain region,C14orf79,,other brain region
-29274321.0,cerebel,,,,0.00038,,adni,,757.0,hippocampus,C14orf79,,hippocampus
-29274321.0,cerebel,,,,0.006,,adni,,757.0,other brain region,C14orf79,,other brain region
-29274321.0,caud,,,,0.0097,,adni,,757.0,other brain region,MTUS1,,other brain region
+pmid,snp,chr,bp,ra1,pvalue,effect,effect_match,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
+29274321.0,rs55644114,8,20647323.0,,2.54e-08,0.41,1.50682,adni,,757.0,group,"GFRA2, LZTS1",,
+29274321.0,rs74442473,12,13870464.0,,2.53e-08,-1.02,0.360595,adni,,757.0,group,GRIN2B,,
+29274321.0,rs2378873,17,59687842.0,,2.03e-08,-0.53,0.588605,adni,,757.0,group,"BRIP1, NACA2",,
+29274321.0,rs10775009,12,119390525.0,,1.59e-09,0.51,1.66529,adni,,757.0,group,SRRM4,,
+29274321.0,rs2819438,14,105385352.0,,6.94e-09,-0.8,0.449329,adni,,757.0,group,"PLD4, C14orf79",,
+29274321.0,rs4921790,8,17496561.0,,4.58e-09,0.61,1.84043,adni,,757.0,group,"PDGFRL, MTUS1",,
+29274321.0,rs74834332,1,57739164.0,,4.3e-08,0.79,2.2034,adni,,757.0,group,DAB1,,
+29274321.0,rs12268753,10,53818149.0,,2.01e-08,0.3,1.34986,adni,,757.0,group,PRKG1,,
+29274321.0,rs111882035,4,86416554.0,,2.74e-08,-0.93,0.394554,adni,,757.0,group,ARHGAP24,,
+29274321.0,rs73705514,7,88406552.0,,2.86e-09,-0.84,0.431711,adni,,757.0,group,ZNF804B,,
+29274321.0,rs118130881,8,31228770.0,,1.72e-08,-0.61,0.543351,adni,,757.0,group,NRG1,,
+29274321.0,rs79846291,6,136077929.0,,1.76e-08,1.85,6.35982,adni,,757.0,group,"LINC00271, PDE7B",,
+29274321.0,rs10775009,,,T,0.09,0.09,1.09417,adni,,757.0,eqtl,SRRM4,hippocampus,expression
+29274321.0,rs10775009,,,T,0.16,0.1,1.10517,adni,,757.0,eqtl,SRRM4,frontal cortex,expression
+29274321.0,rs2819438,,,A,0.47,0.12,1.1275,adni,,757.0,eqtl,PLD4,hippocampus,expression
+29274321.0,rs2819438,,,A,0.1,0.42,1.52196,adni,,757.0,eqtl,PLD4,anterior cingulate cortex,expression
+29274321.0,rs2819438,,,A,0.15,0.23,1.2586,adni,,757.0,eqtl,AHNAK2,hippocampus,expression
+29274321.0,rs2819438,,,A,0.06,-0.28,0.755784,adni,,757.0,eqtl,AHNAK2,cerebellar hemisphere,expression
+29274321.0,rs2819438,,,A,0.00038,0.44,1.55271,adni,,757.0,eqtl,C14orf79,hippocampus,expression
+29274321.0,rs2819438,,,A,0.0039,0.31,1.36343,adni,,757.0,eqtl,C14orf79,cortex,expression
+29274321.0,rs2819438,,,A,0.00038,0.44,1.55271,adni,,757.0,eqtl,C14orf79,hippocampus,expression
+29274321.0,rs2819438,,,A,0.006,0.44,1.55271,adni,,757.0,eqtl,C14orf79,cerebellum,expression
+29274321.0,rs4921790,,,C,1.0,0.0,1.0,adni,,757.0,eqtl,MTUS1,hippocampus,expression
+29274321.0,rs4921790,,,C,0.09,-0.16,0.852144,adni,,757.0,eqtl,MTUS1,caudate,expression
+29274321.0,rs55653268,,,T,0.8,0.04,1.04081,adni,,757.0,eqtl,MTUS1,hippocampus,expression
+29274321.0,rs55653268,,,T,0.0097,-0.33,0.718924,adni,,757.0,eqtl,MTUS1,caudate,expression
+29274321.0,rs55653268,,,T,0.8,0.04,1.04081,adni,,757.0,eqtl,MTUS1,hippocampus,expression
+29274321.0,rs55653268,,,T,0.02,-0.41,0.66365,adni,,757.0,eqtl,MTUS1,nucleus accumbens,expression

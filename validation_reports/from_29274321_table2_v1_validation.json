@@ -1,0 +1,731 @@
+{
+  "paper_id": "29274321_table2",
+  "schema_version": "self_validation_v1",
+  "summary": {
+    "success": 0,
+    "warning": 16,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "record_id": "29274321_table2_R00001",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        }
+      }
+    },
+    {
+      "row_index": 1,
+      "record_id": "29274321_table2_R00002",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        }
+      }
+    },
+    {
+      "row_index": 2,
+      "record_id": "29274321_table2_R00003",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        }
+      }
+    },
+    {
+      "row_index": 3,
+      "record_id": "29274321_table2_R00004",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. St"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. St"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. St"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. St"
+        }
+      }
+    },
+    {
+      "row_index": 4,
+      "record_id": "29274321_table2_R00005",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Meth"
+        }
+      }
+    },
+    {
+      "row_index": 5,
+      "record_id": "29274321_table2_R00006",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Stati"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Stati"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Stati"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Stati"
+        }
+      }
+    },
+    {
+      "row_index": 6,
+      "record_id": "29274321_table2_R00007",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        }
+      }
+    },
+    {
+      "row_index": 7,
+      "record_id": "29274321_table2_R00008",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        }
+      }
+    },
+    {
+      "row_index": 8,
+      "record_id": "29274321_table2_R00009",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical "
+        }
+      }
+    },
+    {
+      "row_index": 9,
+      "record_id": "29274321_table2_R00010",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical M"
+        }
+      }
+    },
+    {
+      "row_index": 10,
+      "record_id": "29274321_table2_R00011",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Method"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Method"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Method"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Method"
+        }
+      }
+    },
+    {
+      "row_index": 11,
+      "record_id": "29274321_table2_R00012",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods"
+        }
+      }
+    },
+    {
+      "row_index": 12,
+      "record_id": "29274321_table2_R00013",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        }
+      }
+    },
+    {
+      "row_index": 13,
+      "record_id": "29274321_table2_R00014",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Met"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Met"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Met"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Met"
+        }
+      }
+    },
+    {
+      "row_index": 14,
+      "record_id": "29274321_table2_R00015",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Metho"
+        }
+      }
+    },
+    {
+      "row_index": 15,
+      "record_id": "29274321_table2_R00016",
+      "row_status": "warning",
+      "row_issues": [
+        "Chr: missing value",
+        "BP(Position): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value"
+      ],
+      "fields": {
+        "Chr": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistic"
+        },
+        "BP(Position)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistic"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistic"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)' [Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using  [Model evidence] CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistic"
+        }
+      }
+    }
+  ]
+}

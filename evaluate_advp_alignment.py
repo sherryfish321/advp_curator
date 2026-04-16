@@ -102,6 +102,7 @@ def load_gold(advp_tsv: str, pmid: int) -> Optional[pd.DataFrame]:
     out["ra1"] = g["RA 1(Reported Allele 1)"].map(lambda x: to_str(x).upper() if to_str(x) else None)
     out["pvalue"] = g["P-value"].map(norm_pvalue)
     out["effect"] = g["OR_nonref"].map(norm_num)
+    out["effect_match"] = out["effect"]
     out["cohort"] = g["Cohort_simple3"].map(norm_token_set)
     out["population"] = g["Population_map"].map(norm_token_set)
     out["sample_size"] = g["Sample size"].map(norm_num)
@@ -110,6 +111,14 @@ def load_gold(advp_tsv: str, pmid: int) -> Optional[pd.DataFrame]:
     out["phenotype"] = g["Phenotype"].map(norm_token_set) if "Phenotype" in g.columns else None
     out["phenotype_derived"] = g["Phenotype-derived"].map(norm_token_set) if "Phenotype-derived" in g.columns else None
     return out
+
+
+def load_gold_display(advp_tsv: str, pmid: int) -> Optional[pd.DataFrame]:
+    g = pd.read_csv(advp_tsv, sep="\t")
+    g = g[g["Pubmed PMID"] == pmid].copy()
+    if g.empty:
+        return None
+    return g.reset_index(drop=True)
 
 
 def export_pred_table(pred_df: pd.DataFrame, out_dir: str, pmid: int, label: str, scope: str) -> str:
@@ -141,6 +150,14 @@ def load_pred(path: str) -> pd.DataFrame:
         out["ra1"] = None
     out["pvalue"] = d["P-value"].map(norm_pvalue) if "P-value" in d.columns else None
     out["effect"] = d["EffectSize(altvsref)"].map(norm_num) if "EffectSize(altvsref)" in d.columns else None
+    if "Effect Size Type (OR or Beta)" in d.columns:
+        effect_type = d["Effect Size Type (OR or Beta)"].map(lambda x: (to_str(x) or "").lower())
+        out["effect_match"] = [
+            float(f"{math.exp(v):.6g}") if v is not None and "beta" in t else v
+            for v, t in zip(out["effect"].tolist(), effect_type.tolist())
+        ]
+    else:
+        out["effect_match"] = out["effect"]
     if "Cohort_simplified (no counts)" in d.columns:
         out["cohort"] = d["Cohort_simplified (no counts)"].map(norm_token_set)
     elif "Cohort" in d.columns:
@@ -153,7 +170,20 @@ def load_pred(path: str) -> pd.DataFrame:
     out["locus_name"] = d["LocusName"].map(to_str) if "LocusName" in d.columns else None
     out["phenotype"] = d["Phenotype"].map(norm_token_set) if "Phenotype" in d.columns else None
     out["phenotype_derived"] = d["Phenotype-derived"].map(norm_token_set) if "Phenotype-derived" in d.columns else None
+    out["source_file"] = path
     return out
+
+
+def load_pred_display(path: str) -> pd.DataFrame:
+    if path.lower().endswith(".xlsx"):
+        d = pd.read_excel(path)
+    elif path.lower().endswith(".csv"):
+        d = pd.read_csv(path)
+    else:
+        raise ValueError(f"Unsupported file type: {path}")
+    d = d.copy()
+    d["source_file"] = path
+    return d
 
 
 def aggregate_field_metrics(
@@ -190,6 +220,13 @@ def apply_pred_scope(pred_df: pd.DataFrame, scope: str) -> pd.DataFrame:
         # Effect is validated when available, but not required to keep the row.
         keep = pred_df["snp"].notna() & pred_df["pvalue"].notna()
         return pred_df[keep].copy()
+    if scope == "advp_primary":
+        keep = pred_df["snp"].notna() & pred_df["pvalue"].notna()
+        if "analysis_group" in pred_df.columns:
+            keep = keep & ~pred_df["analysis_group"].fillna("").str.contains("eqtl", case=False, regex=False)
+        if "phenotype_derived" in pred_df.columns:
+            keep = keep & ~pred_df["phenotype_derived"].fillna("").str.contains("expression", case=False, regex=False)
+        return pred_df[keep].copy()
     raise ValueError(f"Unsupported scope: {scope}")
 
 
@@ -225,6 +262,10 @@ def evaluate_one(
 
     if key_mode == "pmid_snp_pvalue":
         key_cols = [c for c in ["pmid", "snp", "pvalue"] if c in pred_df.columns and c in gold_df.columns]
+        if "snp" not in key_cols:
+            key_cols.insert(0, "snp")
+    elif key_mode == "pmid_snp_pvalue_effect":
+        key_cols = [c for c in ["pmid", "snp", "pvalue", "effect_match"] if c in pred_df.columns and c in gold_df.columns]
         if "snp" not in key_cols:
             key_cols.insert(0, "snp")
     else:
@@ -323,6 +364,10 @@ def diagnose_unmatched(pred_df: pd.DataFrame, gold_df: Optional[pd.DataFrame], k
     gold_key_counter = Counter(build_keys(gold_rows, key_cols))
 
     records = []
+    preferred_cols = [
+        "source_file", "pmid", "snp", "pvalue", "effect", "effect_match", "chr", "bp", "ra1",
+        "cohort", "population", "sample_size", "analysis_group", "phenotype", "phenotype_derived", "locus_name",
+    ]
     for i, key in enumerate(pred_keys):
         if gold_key_counter[key] > 0:
             gold_key_counter[key] -= 1
@@ -343,19 +388,11 @@ def diagnose_unmatched(pred_df: pd.DataFrame, gold_df: Optional[pd.DataFrame], k
                     mismatches.append(f"{c}_mismatch")
             reason = "|".join(mismatches) if mismatches else "key_mismatch"
 
-        records.append(
-            {
-                "type": "pred_unmatched",
-                "reason": reason,
-                "snp": prow.get("snp"),
-                "pmid": prow.get("pmid"),
-                "chr": prow.get("chr"),
-                "bp": prow.get("bp"),
-                "ra1": prow.get("ra1"),
-                "pvalue": prow.get("pvalue"),
-                "effect": prow.get("effect"),
-            }
-        )
+        rec = {"type": "pred_unmatched", "reason": reason}
+        for c in preferred_cols:
+            if c in pred_rows.columns:
+                rec[c] = prow.get(c)
+        records.append(rec)
 
     # Add gold rows missing from prediction for completeness.
     pred_key_counter = Counter(build_keys(pred_rows, key_cols))
@@ -366,20 +403,94 @@ def diagnose_unmatched(pred_df: pd.DataFrame, gold_df: Optional[pd.DataFrame], k
             continue
         grow = gold_rows.iloc[i]
         reason = "missing_in_prediction"
-        records.append(
+        rec = {"type": "gold_unmatched", "reason": reason}
+        for c in preferred_cols:
+            if c in gold_rows.columns:
+                rec[c] = grow.get(c)
+        records.append(rec)
+    return pd.DataFrame(records)
+
+
+def _display_columns(df: pd.DataFrame, preferred: List[str]) -> pd.DataFrame:
+    cols = [c for c in preferred if c in df.columns]
+    extra = [c for c in df.columns if c not in cols]
+    return df[cols + extra]
+
+
+UNMATCHED_REPORT_COLUMNS = [
+    "type", "reason", "source_file", "pmid", "snp", "pvalue", "effect", "effect_match", "chr", "bp", "ra1",
+    "cohort", "population", "sample_size", "analysis_group", "phenotype", "phenotype_derived", "locus_name",
+]
+
+
+def ensure_unmatched_columns(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    for col in UNMATCHED_REPORT_COLUMNS:
+        if col not in out.columns:
+            out[col] = pd.Series(dtype="object")
+    return out[UNMATCHED_REPORT_COLUMNS + [c for c in out.columns if c not in UNMATCHED_REPORT_COLUMNS]]
+
+
+def _prediction_for_report(pred_df: pd.DataFrame, source_label: str) -> pd.DataFrame:
+    out = pred_df.copy()
+    out["source_file"] = source_label
+    preferred = [
+        "source_file", "pmid", "snp", "pvalue", "effect", "effect_match", "chr", "bp", "ra1",
+        "cohort", "population", "sample_size", "analysis_group", "phenotype", "phenotype_derived", "locus_name",
+    ]
+    return _display_columns(out, preferred)
+
+
+def _gold_for_report(gold_df: pd.DataFrame) -> pd.DataFrame:
+    preferred = [
+        "Pubmed PMID", "Top SNP", "P-value", "OR_nonref", "#dbSNP_hg38_chr", "dbSNP_hg38_position",
+        "RA 1(Reported Allele 1)", "Cohort_simple3", "Population_map", "Sample size",
+        "Analysis group", "Phenotype", "Phenotype-derived", "LocusName",
+    ]
+    return _display_columns(gold_df, preferred)
+
+
+def write_unified_eval_workbook(
+    out_dir: str,
+    pmid: int,
+    scope: str,
+    gold_display: Optional[pd.DataFrame],
+    pred_report: pd.DataFrame,
+    missing_from_prediction: pd.DataFrame,
+    extra_prediction: pd.DataFrame,
+    summary_df: pd.DataFrame,
+    field_accuracy_df: pd.DataFrame,
+) -> str:
+    report_path = os.path.join(out_dir, f"pmid_{pmid}_eval_report_{scope}.xlsx")
+    with pd.ExcelWriter(report_path, engine="openpyxl") as writer:
+        if gold_display is None:
+            pred_report.to_excel(writer, index=False, sheet_name="predicted_all_tables")
+        else:
+            _gold_for_report(gold_display).to_excel(writer, index=False, sheet_name="advp_gold")
+            pred_report.to_excel(writer, index=False, sheet_name="predicted_all_tables")
+            ensure_unmatched_columns(missing_from_prediction).to_excel(writer, index=False, sheet_name="missing_from_prediction")
+            ensure_unmatched_columns(extra_prediction).to_excel(writer, index=False, sheet_name="extra_prediction")
+            summary_df.to_excel(writer, index=False, sheet_name="summary")
+            field_accuracy_df.to_excel(writer, index=False, sheet_name="field_accuracy")
+    return report_path
+
+
+def aggregate_metrics_for_report(report: Optional[Dict]) -> pd.DataFrame:
+    if not report:
+        return pd.DataFrame()
+    rows = []
+    for name, payload in (report.get("aggregate_metrics") or {}).items():
+        metrics = payload.get("metrics") or {}
+        rows.append(
             {
-                "type": "gold_unmatched",
-                "reason": reason,
-                "snp": grow.get("snp"),
-                "pmid": grow.get("pmid"),
-                "chr": grow.get("chr"),
-                "bp": grow.get("bp"),
-                "ra1": grow.get("ra1"),
-                "pvalue": grow.get("pvalue"),
-                "effect": grow.get("effect"),
+                "metric_set": name,
+                "fields": ",".join(str(f) for f in payload.get("fields", [])),
+                "precision": metrics.get("precision"),
+                "recall": metrics.get("recall"),
+                "f1": metrics.get("f1"),
             }
         )
-    return pd.DataFrame(records)
+    return pd.DataFrame(rows)
 
 
 def sanitize_filename(s: str) -> str:
@@ -395,14 +506,14 @@ def main():
     ap.add_argument(
         "--pred_scope",
         default="raw",
-        choices=["raw", "advp_like"],
-        help="raw: compare all predicted rows; advp_like: keep rows more likely to be included in ADVP",
+        choices=["raw", "advp_like", "advp_primary"],
+        help="raw: compare all predicted rows; advp_like: keep SNP+pvalue rows; advp_primary: exclude eQTL/expression supporting rows",
     )
     ap.add_argument(
         "--key_mode",
         default="auto",
-        choices=["auto", "pmid_snp_pvalue"],
-        help="auto: use richer composite key; pmid_snp_pvalue: match only on PMID+SNP+P-value",
+        choices=["auto", "pmid_snp_pvalue", "pmid_snp_pvalue_effect"],
+        help="auto: use richer composite key; pmid_snp_pvalue: match on PMID+SNP+P-value; pmid_snp_pvalue_effect also includes EffectSize",
     )
     ap.add_argument(
         "--ignore_bp",
@@ -414,19 +525,25 @@ def main():
         action="store_true",
         help="Ignore RA1 allele in key matching and field metrics.",
     )
+    ap.add_argument(
+        "--legacy_outputs",
+        action="store_true",
+        help="Also write legacy CSV/JSON files used by older UI/debug workflows.",
+    )
     args = ap.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
     gold = load_gold(args.advp_tsv, args.pmid)
+    gold_display = load_gold_display(args.advp_tsv, args.pmid)
 
     reports = []
     preds = []
-    exported_pred_paths = []
+    pred_report_frames = []
     for p in args.inputs:
         pred = load_pred(p)
         pred = apply_pred_scope(pred, args.pred_scope)
         preds.append(pred)
-        exported_pred_paths.append(export_pred_table(pred, args.out_dir, args.pmid, os.path.basename(p), args.pred_scope))
+        pred_report_frames.append(_prediction_for_report(pred, p))
         reports.append(
             evaluate_one(
                 pred,
@@ -440,7 +557,7 @@ def main():
 
     if len(preds) > 1:
         combined = pd.concat(preds, ignore_index=True)
-        combined_export_path = export_pred_table(combined, args.out_dir, args.pmid, "combined_inputs", args.pred_scope)
+        pred_report = pd.concat(pred_report_frames, ignore_index=True) if pred_report_frames else pd.DataFrame()
         reports.append(
             evaluate_one(
                 combined,
@@ -451,6 +568,9 @@ def main():
                 ignore_ra1=args.ignore_ra1,
             )
         )
+    else:
+        combined = preds[0] if preds else pd.DataFrame()
+        pred_report = pred_report_frames[0] if pred_report_frames else pd.DataFrame()
 
     summary_rows = []
     for r in reports:
@@ -467,41 +587,65 @@ def main():
             }
         )
     summary_df = pd.DataFrame(summary_rows)
-    summary_csv = os.path.join(args.out_dir, f"pmid_{args.pmid}_summary_{args.pred_scope}.csv")
-    summary_df.to_csv(summary_csv, index=False)
 
-    details_json = os.path.join(args.out_dir, f"pmid_{args.pmid}_details_{args.pred_scope}.json")
-    with open(details_json, "w") as f:
-        json.dump(reports, f, indent=2, default=str)
+    combined_rep = next((r for r in reports if r["file"] == "combined_inputs"), None) or (reports[0] if reports else None)
+    if combined_rep:
+        combined_diag = diagnose_unmatched(combined, gold, combined_rep["row_key_cols"])
+    else:
+        combined_diag = pd.DataFrame()
+    if "type" in combined_diag.columns:
+        missing_from_prediction = combined_diag[combined_diag["type"] == "gold_unmatched"].copy()
+        extra_prediction = combined_diag[combined_diag["type"] == "pred_unmatched"].copy()
+    else:
+        missing_from_prediction = pd.DataFrame()
+        extra_prediction = pd.DataFrame()
+    unified_report = write_unified_eval_workbook(
+        args.out_dir,
+        args.pmid,
+        args.pred_scope,
+        gold_display,
+        pred_report,
+        missing_from_prediction,
+        extra_prediction,
+        summary_df,
+        aggregate_metrics_for_report(combined_rep),
+    )
 
-    # Per-file mismatch diagnostics for debugging recall/precision failures.
-    for p, pred in zip(args.inputs, preds):
-        rep = next((r for r in reports if r["file"] == p), None)
-        if not rep:
-            continue
-        diag = diagnose_unmatched(pred, gold, rep["row_key_cols"])
-        diag_path = os.path.join(
-            args.out_dir, f"pmid_{args.pmid}_mismatch_{sanitize_filename(os.path.basename(p))}_{args.pred_scope}.csv"
-        )
-        diag.to_csv(diag_path, index=False)
-        print(f"Saved mismatch details: {diag_path}")
+    if args.legacy_outputs:
+        summary_csv = os.path.join(args.out_dir, f"pmid_{args.pmid}_summary_{args.pred_scope}.csv")
+        summary_df.to_csv(summary_csv, index=False)
 
-    if len(preds) > 1:
-        combined_rep = next((r for r in reports if r["file"] == "combined_inputs"), None)
-        if combined_rep:
-            combined_diag = diagnose_unmatched(combined, gold, combined_rep["row_key_cols"])
-            combined_diag_path = os.path.join(
-                args.out_dir, f"pmid_{args.pmid}_mismatch_combined_inputs_{args.pred_scope}.csv"
+        details_json = os.path.join(args.out_dir, f"pmid_{args.pmid}_details_{args.pred_scope}.json")
+        with open(details_json, "w") as f:
+            json.dump(reports, f, indent=2, default=str)
+
+        for p, pred in zip(args.inputs, preds):
+            export_path = export_pred_table(pred, args.out_dir, args.pmid, os.path.basename(p), args.pred_scope)
+            print(f"Saved predicted ADVP-style table: {export_path}")
+            rep = next((r for r in reports if r["file"] == p), None)
+            if not rep:
+                continue
+            diag = diagnose_unmatched(pred, gold, rep["row_key_cols"])
+            diag_path = os.path.join(
+                args.out_dir, f"pmid_{args.pmid}_mismatch_{sanitize_filename(os.path.basename(p))}_{args.pred_scope}.csv"
             )
-            combined_diag.to_csv(combined_diag_path, index=False)
-            print(f"Saved mismatch details: {combined_diag_path}")
+            diag.to_csv(diag_path, index=False)
+            print(f"Saved mismatch details: {diag_path}")
 
-    print(f"Saved summary: {summary_csv}")
-    print(f"Saved details: {details_json}")
-    for export_path in exported_pred_paths:
-        print(f"Saved predicted ADVP-style table: {export_path}")
-    if len(preds) > 1:
-        print(f"Saved predicted ADVP-style table: {combined_export_path}")
+        if len(preds) > 1:
+            combined_export_path = export_pred_table(combined, args.out_dir, args.pmid, "combined_inputs", args.pred_scope)
+            print(f"Saved predicted ADVP-style table: {combined_export_path}")
+            combined_rep = next((r for r in reports if r["file"] == "combined_inputs"), None)
+            if combined_rep:
+                combined_diag_path = os.path.join(
+                    args.out_dir, f"pmid_{args.pmid}_mismatch_combined_inputs_{args.pred_scope}.csv"
+                )
+                combined_diag.to_csv(combined_diag_path, index=False)
+                print(f"Saved mismatch details: {combined_diag_path}")
+
+        print(f"Saved summary: {summary_csv}")
+        print(f"Saved details: {details_json}")
+    print(f"Saved unified eval workbook: {unified_report}")
     if gold is None:
         print(f"PMID {args.pmid} not found in ADVP gold data. Skipped precision/recall/F1 scoring.")
     print(summary_df.to_string(index=False))

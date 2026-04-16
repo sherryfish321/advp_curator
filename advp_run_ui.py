@@ -276,8 +276,51 @@ def load_run_context_for_sheet(path: Path) -> Dict[str, object]:
         generated = data.get("generated_harmonized", [])
         if str(path) in generated:
             latest_match = data
+            latest_match["_run_log_path"] = str(log_path)
             break
     return latest_match
+
+
+def result_from_run_context(context: Dict[str, object]) -> Dict[str, object]:
+    generated_harmonized = [Path(p) for p in context.get("generated_harmonized", [])]
+    eval_report = Path(str(context.get("eval_report", "")))
+    report_summary = read_eval_report_summary(eval_report)
+    predicted_issue_summary = summarize_eval_report_sheet(eval_report, "extra_prediction")
+    missing_prediction_summary = summarize_eval_report_sheet(eval_report, "missing_from_prediction")
+    failed_rows = sum(int(r.get("count", 0) or 0) for r in predicted_issue_summary)
+    pred_total = count_harmonized_rows(generated_harmonized)
+    return {
+        "pmid": context.get("pmid", ""),
+        "pmcid": context.get("pmcid", ""),
+        "owner_name": context.get("owner_name", ""),
+        "generated_tables": context.get("generated_tables", []),
+        "generated_harmonized": context.get("generated_harmonized", []),
+        "eval_report": str(eval_report),
+        "run_log": context.get("_run_log_path", ""),
+        "success_rows": max(0, pred_total - failed_rows),
+        "failed_rows": failed_rows,
+        "table_count": len(generated_harmonized),
+        "auto_discovered_tables": context.get("auto_discovered_tables", []),
+        "predicted_issue_summary": predicted_issue_summary,
+        "missing_prediction_summary": missing_prediction_summary,
+        "missing_summary": summarize_missing_fields(generated_harmonized),
+        "aggregate_metrics": report_summary["aggregate_metrics"],
+        "row_match_metrics": report_summary["row_match_metrics"],
+    }
+
+
+def render_run_result_page(result: Dict[str, object]) -> str:
+    dl = "/download?" + urlencode({"path": result["eval_report"]})
+    first_edit = ""
+    if result["generated_harmonized"]:
+        first_edit = "/edit?" + urlencode({"path": result["generated_harmonized"][0]})
+    return (
+        "<h2>Run Result</h2>"
+        f"<p class=\"muted\">PMID {result['pmid']} · PMCID {html.escape(str(result.get('pmcid') or 'NR'))} · {result['table_count']} tables processed"
+        + (f" · Owner {html.escape(str(result['owner_name']))}" if result["owner_name"] else "")
+        + "</p>"
+        + render_tabbed_sections(result, dl, first_edit)
+    )
 
 
 def annotation_store_path(path: Path) -> Path:
@@ -311,15 +354,50 @@ def curated_editable_columns() -> List[str]:
         "EffectSize(altvsref)",
         "Cohort_simplified (no counts)",
         "Sample size",
+        "Imputation_simple2",
         "Population_map",
         "Analysis group",
+        "Phenotype",
         "LocusName",
+        "Comment",
     ]
+
+
+def format_editor_value(col: str, value: object) -> str:
+    if pd.isna(value):
+        return ""
+    if col in {"P-value", "EffectSize(altvsref)"}:
+        try:
+            return f"{float(value):.6g}"
+        except Exception:
+            return str(value)
+    return str(value)
+
+
+def editor_missing_needs_review(col: str, value: object) -> bool:
+    if col not in {"TopSNP", "P-value", "Population_map", "Analysis group", "Phenotype"}:
+        return False
+    if pd.isna(value):
+        return True
+    return str(value).strip().lower() in {"", "nr", "nan", "none"}
+
+
+def row_review_status(row_dict: Dict[str, object], cols: List[str]) -> str:
+    statuses = [str(row_dict.get(f"{col}__status", "")).strip() for col in cols]
+    if "issue" in statuses:
+        return "issue"
+    if "review" in statuses:
+        return "review"
+    if "resolved" in statuses:
+        return "checked"
+    return ""
 
 
 def load_curated_rows(path: Path, limit: int = None) -> Dict[str, object]:
     df = pd.read_excel(path)
     annotations = load_annotations(path)
+    if "Comment" not in df.columns:
+        df["Comment"] = ""
     cols = [c for c in curated_editable_columns() if c in df.columns]
     rows = []
     view = df if limit is None else df.head(limit)
@@ -327,21 +405,34 @@ def load_curated_rows(path: Path, limit: int = None) -> Dict[str, object]:
         row_dict = {"_row_index": int(idx)}
         for col in cols:
             val = row.get(col)
-            row_dict[col] = "" if pd.isna(val) else str(val)
+            row_dict[col] = format_editor_value(col, val)
             row_ann = annotations.get(str(idx), {}).get(col, {})
-            row_dict[f"{col}__status"] = row_ann.get("status", "")
-            row_dict[f"{col}__comment"] = row_ann.get("comment", "")
+            default_status = "review" if editor_missing_needs_review(col, val) else ""
+            default_comment = "missing value" if default_status else ""
+            row_dict[f"{col}__status"] = row_ann.get("status", default_status)
+            row_dict[f"{col}__comment"] = row_ann.get("comment", default_comment)
+        row_dict["_row_status"] = row_review_status(row_dict, cols)
         rows.append(row_dict)
-    return {"columns": cols, "rows": rows, "total_rows": int(len(df))}
+    return {
+        "columns": cols,
+        "rows": rows,
+        "total_rows": int(len(df)),
+    }
 
 
 def save_curated_edits(path: Path, form_data: Dict[str, List[str]]) -> Dict[str, object]:
     df = pd.read_excel(path)
     annotations = load_annotations(path)
+    if "Comment" not in df.columns:
+        df["Comment"] = ""
     row_indexes = form_data.get("row_index", [])
     updated = 0
     annotated = 0
     editable = [c for c in curated_editable_columns() if c in df.columns]
+    # Excel columns often come back as int64/float64. The editor must accept
+    # free-text fixes, notes, and scientific notation without pandas dtype errors.
+    for col in editable:
+        df[col] = df[col].astype("object")
     for pos, row_idx_raw in enumerate(row_indexes):
         if not row_idx_raw.strip():
             continue
@@ -355,16 +446,14 @@ def save_curated_edits(path: Path, form_data: Dict[str, List[str]]) -> Dict[str,
                 continue
             new_val = values[pos]
             old_val = df.at[row_idx, col]
-            old_norm = "" if pd.isna(old_val) else str(old_val)
+            old_norm = format_editor_value(col, old_val)
             if old_norm != new_val:
                 df.at[row_idx, col] = new_val if new_val != "" else None
                 changed = True
             status_values = form_data.get(f"status__{col}", [])
-            comment_values = form_data.get(f"comment__{col}", [])
             status = status_values[pos].strip() if pos < len(status_values) else ""
-            comment = comment_values[pos].strip() if pos < len(comment_values) else ""
-            if status or comment:
-                annotations.setdefault(str(row_idx), {})[col] = {"status": status, "comment": comment}
+            if status:
+                annotations.setdefault(str(row_idx), {})[col] = {"status": status, "comment": ""}
                 annotated += 1
             elif str(row_idx) in annotations and col in annotations[str(row_idx)]:
                 del annotations[str(row_idx)][col]
@@ -442,8 +531,90 @@ def read_row_match_metrics(summary_csv: Path) -> Dict[str, object]:
     }
 
 
+def read_eval_report_summary(eval_report: Path) -> Dict[str, object]:
+    if not eval_report.exists():
+        return {"summary_rows": [], "row_match_metrics": {}, "aggregate_metrics": {}, "pred_total": 0}
+    try:
+        sheets = pd.ExcelFile(eval_report).sheet_names
+    except Exception:
+        return {"summary_rows": [], "row_match_metrics": {}, "aggregate_metrics": {}, "pred_total": 0}
+    if "summary" not in sheets:
+        pred_total = 0
+        if "predicted_all_tables" in sheets:
+            try:
+                pred_total = int(len(pd.read_excel(eval_report, sheet_name="predicted_all_tables")))
+            except Exception:
+                pred_total = 0
+        return {"summary_rows": [], "row_match_metrics": {}, "aggregate_metrics": {}, "pred_total": pred_total}
+
+    summary = pd.read_excel(eval_report, sheet_name="summary")
+    rows = summary.to_dict("records")
+    combined = next((r for r in rows if str(r.get("file", "")) == "combined_inputs"), None)
+    target = combined or (rows[0] if rows else None)
+    pred_total = 0
+    if target:
+        try:
+            pred_total = int(float(target.get("n_pred_rows", 0) or 0))
+        except Exception:
+            pred_total = 0
+    row_match_metrics = {}
+    if target and target.get("status") != "pmid_not_in_advp":
+        row_match_metrics = {
+            "fields": str(target.get("key_cols", "")).split(","),
+            "metrics": {
+                "precision": target.get("row_precision"),
+                "recall": target.get("row_recall"),
+                "f1": target.get("row_f1"),
+            },
+        }
+    aggregate_metrics: Dict[str, object] = {}
+    if "field_accuracy" in sheets:
+        try:
+            field_df = pd.read_excel(eval_report, sheet_name="field_accuracy")
+            for _, r in field_df.iterrows():
+                metric_set = str(r.get("metric_set", "")).strip()
+                if not metric_set:
+                    continue
+                fields = [f for f in str(r.get("fields", "")).split(",") if f]
+                aggregate_metrics[metric_set] = {
+                    "fields": fields,
+                    "metrics": {
+                        "precision": r.get("precision"),
+                        "recall": r.get("recall"),
+                        "f1": r.get("f1"),
+                    },
+                }
+        except Exception:
+            aggregate_metrics = {}
+    return {
+        "summary_rows": rows,
+        "row_match_metrics": row_match_metrics,
+        "aggregate_metrics": aggregate_metrics,
+        "pred_total": pred_total,
+    }
+
+
+def summarize_eval_report_sheet(eval_report: Path, sheet_name: str) -> List[Dict[str, object]]:
+    if not eval_report.exists():
+        return []
+    try:
+        sheets = pd.ExcelFile(eval_report).sheet_names
+        if sheet_name not in sheets:
+            return []
+        df = pd.read_excel(eval_report, sheet_name=sheet_name)
+    except Exception:
+        return []
+    if df.empty:
+        return []
+    if "reason" in df.columns:
+        counts = df["reason"].fillna("unmatched").astype(str).value_counts()
+        return [{"reason": str(reason), "count": int(count)} for reason, count in counts.items()]
+    return [{"reason": "rows", "count": int(len(df))}]
+
+
 def run_pipeline(
     pmid: int,
+    pmcid: str,
     paper_input: str,
     table_links: List[str],
     owner_name: str,
@@ -503,6 +674,8 @@ def run_pipeline(
             str(audit_json),
             "--paper_id",
             tag,
+            "--pmcid",
+            pmcid or "NR",
         ])
 
         generated_tables.append(table_xlsx)
@@ -533,48 +706,41 @@ def run_pipeline(
 
     run_cmd(eval_cmd)
 
-    summary_csv = eval_dir / f"pmid_{pmid}_summary_{pred_scope}.csv"
-    details_json = eval_dir / f"pmid_{pmid}_details_{pred_scope}.json"
-    mismatch_paths = collect_mismatch_paths(eval_dir, pmid, pred_scope, generated_harmonized)
-    issue_paths = collect_issue_paths(eval_dir, pmid, pred_scope, generated_harmonized)
-    fix_file = build_fix_file(mismatch_paths, eval_dir, pmid)
-    predicted_issue_summary = summarize_mismatch_reasons(issue_paths, "pred_unmatched")
-    missing_prediction_summary = summarize_mismatch_reasons(issue_paths, "gold_unmatched")
+    eval_report = eval_dir / f"pmid_{pmid}_eval_report_{pred_scope}.xlsx"
+    report_summary = read_eval_report_summary(eval_report)
+    predicted_issue_summary = summarize_eval_report_sheet(eval_report, "extra_prediction")
+    missing_prediction_summary = summarize_eval_report_sheet(eval_report, "missing_from_prediction")
     missing_summary = summarize_missing_fields(generated_harmonized)
-    aggregate_metrics = read_details_aggregate_metrics(details_json)
-    row_match_metrics = read_row_match_metrics(summary_csv)
-
-    mismatch_counts = summarize_counts(mismatch_paths)
-    summary_counts = read_summary_metrics(summary_csv, generated_harmonized)
-    pred_total = summary_counts.get("actual_total") or summary_counts.get("pred_total", 0)
-    success_rows = max(0, pred_total - mismatch_counts["failed_rows"])
+    aggregate_metrics = report_summary["aggregate_metrics"]
+    row_match_metrics = report_summary["row_match_metrics"]
+    pred_total = count_harmonized_rows(generated_harmonized)
+    failed_rows = sum(int(r.get("count", 0) or 0) for r in predicted_issue_summary)
+    success_rows = max(0, pred_total - failed_rows)
     run_log = append_run_log(
         run_log_dir,
         {
             "pmid": pmid,
+            "pmcid": pmcid,
             "owner_name": owner_name,
             "paper_input": paper_input,
             "table_links": table_links,
             "auto_discovered_tables": auto_discovered_tables or [],
             "generated_harmonized": [str(p) for p in generated_harmonized],
-            "summary_csv": str(summary_csv),
-            "details_json": str(details_json),
-            "fix_file": str(fix_file),
+            "eval_report": str(eval_report),
             "created_at": dt.datetime.now().isoformat(),
         },
     )
 
     return {
         "pmid": pmid,
+        "pmcid": pmcid,
         "owner_name": owner_name,
         "generated_tables": [str(p) for p in generated_tables],
         "generated_harmonized": [str(p) for p in generated_harmonized],
-        "summary_csv": str(summary_csv),
-        "details_json": str(details_json),
-        "fix_file": str(fix_file),
+        "eval_report": str(eval_report),
         "run_log": str(run_log),
         "success_rows": success_rows,
-        "failed_rows": mismatch_counts["failed_rows"],
+        "failed_rows": failed_rows,
         "table_count": len(generated_harmonized),
         "auto_discovered_tables": auto_discovered_tables or [],
         "predicted_issue_summary": predicted_issue_summary,
@@ -646,16 +812,38 @@ def render_edit_table(file_path: str) -> str:
     table_links = run_context.get("table_links", []) if isinstance(run_context.get("table_links", []), list) else []
     table_link_map = build_table_link_map(table_links)
     current_table_link = table_link_map.get(table_num, "")
+    back_href = "/"
+    if run_context.get("_run_log_path"):
+        back_href = "/result?" + urlencode({"run_log": str(run_context["_run_log_path"])})
     data = load_curated_rows(path)
     header = "".join(f"<th>{html.escape(col)}</th>" for col in data["columns"])
     rows_html = []
     for row in data["rows"]:
-        cells = [f"<td><input type='hidden' name='row_index' value='{row['_row_index']}' />{row['_row_index']}</td>"]
+        row_status = html.escape(str(row.get("_row_status", "")))
+        row_issues = html.escape(str(row.get("_row_issues", "")))
+        row_label = {
+            "checked": "Checked",
+            "issue": "Issue",
+            "review": "Needs Review",
+        }.get(row_status, "Not Checked")
+        row_badge = f"<span class='row-badge row-{row_status}'>{row_label}</span>"
+        cells = [
+            f"<td><input type='hidden' name='row_index' value='{row['_row_index']}' />{row['_row_index']}</td>",
+            f"<td>{row_badge}<div class='row-issues'>{row_issues}</div></td>",
+        ]
         for col in data["columns"]:
             val = html.escape(row[col])
             status = row.get(f"{col}__status", "")
-            comment = html.escape(row.get(f"{col}__comment", ""))
             status_class = f"mark-{status}" if status else ""
+            if col == "Comment":
+                cells.append(
+                    f"<td class='edit-cell'>"
+                    "<div class='cell-stack'>"
+                    f"<input name='field__{html.escape(col)}' value='{val}' placeholder='Comment' />"
+                    "</div>"
+                    "</td>"
+                )
+                continue
             cells.append(
                 f"<td class='edit-cell {status_class}'>"
                 "<div class='cell-stack'>"
@@ -666,7 +854,6 @@ def render_edit_table(file_path: str) -> str:
                 f"<option value='issue' {'selected' if status == 'issue' else ''}>Issue</option>"
                 f"<option value='resolved' {'selected' if status == 'resolved' else ''}>Resolved</option>"
                 "</select>"
-                f"<input name='comment__{html.escape(col)}' value='{comment}' placeholder='Comment' class='comment-input' />"
                 "</div>"
                 "</td>"
             )
@@ -713,14 +900,14 @@ def render_edit_table(file_path: str) -> str:
         + "</div></div>"
         "<form method='post' action='/save-edits'>"
         f"<input type='hidden' name='path' value='{html.escape(str(path))}' />"
-        "<div class='table-wrap'><table class='editor-table'><thead><tr><th>Row</th>"
+        "<div class='table-wrap'><table class='editor-table'><thead><tr><th>Row</th><th>Status</th>"
         + header
         + "</tr></thead><tbody>"
         + "".join(rows_html)
         + "</tbody></table></div>"
         "<div class='actions'>"
         "<button type='submit'>Save Changes</button>"
-        f"<a class='btn-link' href='/'>Back</a>"
+        f"<a class='btn-link' href='{html.escape(back_href)}'>Back</a>"
         "</div></form>"
     )
 
@@ -741,7 +928,7 @@ def render_tabbed_sections(result: Dict[str, object], download_link: str, edit_l
         f"<div class='stat bad'><span class='k'>Failed Rows</span><span class='v'>{result['failed_rows']}</span></div>"
         "</div>"
         "<div class='actions'>"
-        f"<a class='btn-link primary' href='{download_link}'>Download {html.escape(Path(str(result['fix_file'])).name)}</a>"
+        f"<a class='btn-link primary' href='{download_link}'>Download Eval Report</a>"
         + (f"<a class='btn-link' href='{edit_link}'>Edit Curated Sheet</a>" if edit_link else "")
         + "<a class='btn-link' href='/'>Run Another</a>"
         "</div>"
@@ -772,9 +959,14 @@ def render_tabbed_sections(result: Dict[str, object], download_link: str, edit_l
         + "</div></section>"
         "<section class='tab-panel' data-panel='files'>"
         "<div class='subcard'>"
-        f"<p><strong>Summary CSV</strong><br><code>{html.escape(str(result['summary_csv']))}</code></p>"
-        f"<p><strong>Details JSON</strong><br><code>{html.escape(str(result['details_json']))}</code></p>"
-        f"<p><strong>Fix File</strong><br><code>{html.escape(str(result['fix_file']))}</code></p>"
+        "<h3>Main Report</h3>"
+        f"<p><strong>Unified Eval Workbook</strong><br><code>{html.escape(str(result['eval_report']))}</code></p>"
+        "<div class='actions'>"
+        f"<a class='btn-link primary' href='{download_link}'>Download Eval Report</a>"
+        "</div>"
+        "</div>"
+        "<div class='subcard'>"
+        "<h3>Run Metadata</h3>"
         f"<p><strong>Run Log</strong><br><code>{html.escape(str(result['run_log']))}</code></p>"
         "</div></section>"
         "</div>"
@@ -1122,6 +1314,28 @@ def html_page(body: str) -> bytes:
       border-radius: 12px;
       padding: 10px;
     }}
+    .row-badge {{
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .25px;
+      background: #eef3f8;
+      color: #4c6178;
+      white-space: nowrap;
+    }}
+    .row-checked {{ background: #e3f6e9; color: #25603b; }}
+    .row-review {{ background: #fff6d8; color: #805f14; }}
+    .row-issue {{ background: #ffe4e4; color: #8f2c2c; }}
+    .row-issues {{
+      margin-top: 7px;
+      max-width: 260px;
+      color: #657386;
+      font-size: 12px;
+      line-height: 1.35;
+    }}
     .ref-grid {{ display: grid; gap: 12px; margin-top: 12px; }}
     .ref-row {{
       text-decoration: none;
@@ -1274,18 +1488,20 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
 <details class="toggle-box" open>
 <summary>What This Run Will Generate</summary>
 <ul class="check-list">
-  <li class="check-item"><span class="check-icon">1</span>Curated ADVP sheet(s)</li>
-  <li class="check-item"><span class="check-icon">2</span>Row match accuracy and field accuracy summaries</li>
-  <li class="check-item"><span class="check-icon">3</span>Mismatch report, fix-ready CSV, and missing-field summary</li>
+  <li class="check-item"><span class="check-icon">+</span>Curated ADVP sheet(s)</li>
+  <li class="check-item"><span class="check-icon">+</span>Unified eval workbook</li>
+  <li class="check-item"><span class="check-icon">+</span>Row match accuracy, field accuracy, and missing-field summary</li>
 </ul>
 </details>
 <form method="post" action="/run" enctype="multipart/form-data">
 <label>Owner</label>
 <input name="owner_name" value="" placeholder="Your name" />
 <label>PMID</label>
-<input name="pmid" value="30448613" required />
+<input name="pmid" value="" placeholder="PMID" required />
+<label>PMCID</label>
+<input name="pmcid" value="" placeholder="PMCID" />
 <label>Paper URL</label>
-<input name="paper_input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/" placeholder="PMC article page or PDF link" />
+<input name="paper_input" value="" placeholder="PMC article page or PDF link" />
 <label>Or upload paper PDF</label>
 <input type="file" name="paper_upload" accept=".pdf,application/pdf" />
 <label>Source type</label>
@@ -1293,9 +1509,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
   <option value="pmc_table_link" selected>pmc_table_link</option>
 </select>
 <label>Table links (one per line)</label>
-<textarea name="table_links" rows="6">https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T1/
-https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T2/
-https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
+<textarea name="table_links" rows="6" placeholder="https://pmc.ncbi.nlm.nih.gov/articles/PMC.../table/T1/"></textarea>
 <label class="option-toggle">
   <input type="checkbox" name="auto_discover_tables" value="1" />
   <span class="option-card">
@@ -1328,6 +1542,27 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
             self.wfile.write(html_page(render_edit_table(str(p))))
+            return
+
+        if parsed.path == "/result":
+            q = parse_qs(parsed.query)
+            run_log = q.get("run_log", [""])[0]
+            p = Path(run_log).resolve()
+            root = Path(os.getcwd()).resolve()
+            log_root = root / "ui_run_logs"
+            if not str(p).startswith(str(log_root.resolve())) or not p.exists() or not p.is_file():
+                self.send_response(404)
+                self.end_headers()
+                self.wfile.write(b"Run result not found")
+                return
+            with p.open("r", encoding="utf-8") as f:
+                context = json.load(f)
+            context["_run_log_path"] = str(p)
+            result = result_from_run_context(context)
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(html_page(render_run_result_page(result)))
             return
 
         if parsed.path == "/download":
@@ -1372,6 +1607,10 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 if not str(path).startswith(str(root)) or not path.exists() or not path.is_file():
                     raise ValueError("Invalid curated sheet path")
                 save_result = save_curated_edits(path, data)
+                run_context = load_run_context_for_sheet(path)
+                back_href = "/"
+                if run_context.get("_run_log_path"):
+                    back_href = "/result?" + urlencode({"run_log": str(run_context["_run_log_path"])})
                 body = (
                     "<h2>Curated Sheet Saved</h2>"
                     f"<p class='muted'>{save_result['updated_rows']} row(s) updated in <code>{html.escape(str(path))}</code>.</p>"
@@ -1379,7 +1618,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                     f"Annotations file: <code>{html.escape(save_result['annotation_path'])}</code></p>"
                     "<div class='actions'>"
                     f"<a class='btn-link primary' href='/edit?{urlencode({'path': str(path)})}'>Continue Editing</a>"
-                    "<a class='btn-link' href='/'>Back</a>"
+                    f"<a class='btn-link' href='{html.escape(back_href)}'>Back</a>"
                     "</div>"
                 )
                 self.send_response(200)
@@ -1389,6 +1628,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 return
 
             pmid = int(data.get("pmid", [""])[0])
+            pmcid = data.get("pmcid", [""])[0].strip()
             owner_name = data.get("owner_name", [""])[0].strip()
             paper_input = data.get("paper_input", [""])[0].strip()
             paper_upload = data.get("paper_upload", [""])[0].strip() if data.get("paper_upload") else ""
@@ -1406,6 +1646,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
 
             result = run_pipeline(
                 pmid=pmid,
+                pmcid=pmcid,
                 paper_input=paper_input,
                 table_links=links,
                 owner_name=owner_name,
@@ -1419,21 +1660,10 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/</textarea>
                 auto_discovered_tables=discovered,
             )
 
-            dl = "/download?" + urlencode({"path": result["fix_file"]})
-            first_edit = ""
-            if result["generated_harmonized"]:
-                first_edit = "/edit?" + urlencode({"path": result["generated_harmonized"][0]})
-            lines = [
-                "<h2>Run Result</h2>",
-                f"<p class=\"muted\">PMID {result['pmid']} · {result['table_count']} tables processed"
-                + (f" · Owner {html.escape(result['owner_name'])}" if result["owner_name"] else "")
-                + "</p>",
-                render_tabbed_sections(result, dl, first_edit),
-            ]
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
-            self.wfile.write(html_page("\n".join(lines)))
+            self.wfile.write(html_page(render_run_result_page(result)))
         except Exception as e:
             self.send_response(500)
             self.send_header("Content-Type", "text/html; charset=utf-8")
@@ -1452,6 +1682,7 @@ def cli_mode(args: argparse.Namespace) -> None:
     links, discovered = maybe_auto_discover_links(args.paper_input, links, args.auto_discover_tables)
     result = run_pipeline(
         pmid=args.pmid,
+        pmcid=args.pmcid,
         paper_input=args.paper_input,
         table_links=links,
         owner_name=args.owner_name,
@@ -1465,11 +1696,11 @@ def cli_mode(args: argparse.Namespace) -> None:
         auto_discovered_tables=discovered,
     )
     print(f"PMID: {result['pmid']}")
+    print(f"PMCID: {result['pmcid'] or 'NR'}")
     print(f"Tables processed: {result['table_count']}")
     print(f"Success rows: {result['success_rows']}")
     print(f"Failed rows: {result['failed_rows']}")
-    print(f"Summary CSV: {result['summary_csv']}")
-    print(f"Fix file: {result['fix_file']}")
+    print(f"Eval report: {result['eval_report']}")
 
 
 def web_mode(args: argparse.Namespace) -> None:
@@ -1485,6 +1716,7 @@ def build_parser() -> argparse.ArgumentParser:
     run = sub.add_parser("run", help="Run pipeline from CLI")
     run.add_argument("--owner_name", default="", help="Person responsible for this run")
     run.add_argument("--pmid", type=int, required=True)
+    run.add_argument("--pmcid", default="", help="PMCID for the paper, e.g. PMC6331247")
     run.add_argument("--paper_input", required=True, help="Paper PDF path or URL")
     run.add_argument("--table_links", default="", help="Comma or newline-separated links")
     run.add_argument("--auto_discover_tables", action="store_true", help="Auto-discover relevant PMC tables when links are omitted")

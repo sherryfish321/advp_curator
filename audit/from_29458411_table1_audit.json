@@ -1,0 +1,1144 @@
+{
+  "paper": {
+    "paper_id": "29458411_table1",
+    "pmcid": "",
+    "pmid": "29458411",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5819208/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/29458411_table1.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 29458411"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and SE) of the three neuropathologic traits for 6.5 million imputed SNPs after omitting SNPs from studies if the minor allele frequency was ≤ 1%, imputation quality ( R 2 ) was ≤ 0.4, or dosage var",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "nto, Toronto, Ontario, Canada; 94 Department of Neurology, University of Texas Southwestern, Dallas, Texas; 95 Department of Psychiatry, Mount Sinai School of Medicine, New York, New York; 96 Department of Radiology and Imaging Sciences, Indiana University, Indianapolis, Indiana; 97 Department of Psychiatry, University of Southern California, Los Angeles, California; 98 Department of Pathology, University of Washington, Seattle, Washington; 99",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the first three principal components of ancestry as covariates to account for population substructure [ 6 ]. NP and NFT measures were analyzed in well-established ordinal rankings (NPs: none,",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "1000G",
+      "confidence": 0.85,
+      "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, population substructure analysis, and statistical methods for association analyses of individual traits were reported previously [ 6 , 7 ]. Sample demography of the 3598 subjects with a",
+      "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+      "needs_review": false
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological data for the entire sample were reviewed and harmonized by one neuropathologist for consistency across studies [ 6 ]. Although Beecham et al. [ 6 ] also evaluated Lewy body disease, hippocamp",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "18500",
+      "confidence": 0.7,
+      "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP genotypes with gene-level expression (i.e., expression quantitative trait loci [eQTLs]) was evaluated using v",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29458411_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.7999999999999995e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.42,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.699999999999999e-07,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.3,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.5e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.25,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.14,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2e-08,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.4999999999999998e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.1000000000000002e-05,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.03,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.69,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.03,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.43,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhe",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.3e-05,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.79,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.1e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.16,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewh",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00013000000000000002,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.2999999999999997e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported e",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.1000000000000001e-08,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)\n[Stage evidence] FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

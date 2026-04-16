@@ -1,0 +1,551 @@
+{
+  "paper_id": "29274321_table1",
+  "schema_version": "self_validation_v1",
+  "summary": {
+    "success": 0,
+    "warning": 12,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "record_id": "29274321_table1_R00001",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: ALL | Aβ 42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10 −8 | GFRA2, LZTS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true,"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: ALL | Aβ 42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10 −8 | GFRA2, LZTS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true,"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: ALL | Aβ 42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10 −8 | GFRA2, LZTS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true,"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: ALL | Aβ 42 | 8.0 | 20647323.0 | rs55644114 | A | 0.16 | 0.41 | 0.07 | 2.54×10 −8 | GFRA2, LZTS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true,"
+        }
+      }
+    },
+    {
+      "row_index": 1,
+      "record_id": "29274321_table1_R00002",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10 −8 | GRIN2B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"mat"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | Aβ 42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10 −8 | GRIN2B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"mat"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10 −8 | GRIN2B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"mat"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 12.0 | 13870464.0 | rs74442473 | G | 0.07 | −1.02 | 0.18 | 2.53×10 −8 | GRIN2B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"mat"
+        }
+      }
+    },
+    {
+      "row_index": 2,
+      "record_id": "29274321_table1_R00003",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10 −8 | BRIP1, NACA2 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, "
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | Aβ 42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10 −8 | BRIP1, NACA2 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, "
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10 −8 | BRIP1, NACA2 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, "
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | Aβ 42 | 17.0 | 59687842.0 | rs2378873 | T | 0.44 | −0.53 | 0.1 | 2.03×10 −8 | BRIP1, NACA2 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, "
+        }
+      }
+    },
+    {
+      "row_index": 3,
+      "record_id": "29274321_table1_R00004",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10 −9 | SRRM4 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"matc"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10 −9 | SRRM4 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"matc"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10 −9 | SRRM4 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"matc"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 12.0 | 119390525.0 | rs10775009 | T | 0.34 | 0.51 | 0.09 | 1.59×10 −9 | SRRM4 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"matc"
+        }
+      }
+    },
+    {
+      "row_index": 4,
+      "record_id": "29274321_table1_R00005",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | − 0.80 | 0.14 | 6.94×10 −9 | PLD4, C14orf79 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": t"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | − 0.80 | 0.14 | 6.94×10 −9 | PLD4, C14orf79 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": t"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | − 0.80 | 0.14 | 6.94×10 −9 | PLD4, C14orf79 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": t"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | t-Tau | 14.0 | 105385352.0 | rs2819438 | A | 0.13 | − 0.80 | 0.14 | 6.94×10 −9 | PLD4, C14orf79 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": t"
+        }
+      }
+    },
+    {
+      "row_index": 5,
+      "record_id": "29274321_table1_R00006",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10 −9 | PDGFRL, MTUS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10 −9 | PDGFRL, MTUS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10 −9 | PDGFRL, MTUS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | HPV | 8.0 | 17496561.0 | rs4921790 | C | 0.12 | 0.61 | 0.1 | 4.58×10 −9 | PDGFRL, MTUS1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        }
+      }
+    },
+    {
+      "row_index": 6,
+      "record_id": "29274321_table1_R00007",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10 −8 | DAB1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hi"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10 −8 | DAB1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hi"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10 −8 | DAB1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hi"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 1.0 | 57739164.0 | rs74834332 | A | 0.03 | 0.79 | 0.14 | 4.30×10 −8 | DAB1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hi"
+        }
+      }
+    },
+    {
+      "row_index": 7,
+      "record_id": "29274321_table1_R00008",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10 −8 | PRKG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10 −8 | PRKG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10 −8 | PRKG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: CN | LMdT | 10.0 | 53818149.0 | rs12268753 | C | 0.21 | 0.30 | 0.05 | 2.01×10 −8 | PRKG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_"
+        }
+      }
+    },
+    {
+      "row_index": 8,
+      "record_id": "29274321_table1_R00009",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10 −8 | ARHGAP24 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"m"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10 −8 | ARHGAP24 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"m"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10 −8 | ARHGAP24 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"m"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 4.0 | 86416554.0 | rs111882035 | G | 0.02 | −0.93 | 0.17 | 2.74×10 −8 | ARHGAP24 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"m"
+        }
+      }
+    },
+    {
+      "row_index": 9,
+      "record_id": "29274321_table1_R00010",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | − 0.84 | 0.14 | 2.86×10 −9 | ZNF804B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | − 0.84 | 0.14 | 2.86×10 −9 | ZNF804B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | − 0.84 | 0.14 | 2.86×10 −9 | ZNF804B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMdT | 7.0 | 88406552.0 | rs73705514 | C | 0.02 | − 0.84 | 0.14 | 2.86×10 −9 | ZNF804B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"ma"
+        }
+      }
+    },
+    {
+      "row_index": 10,
+      "record_id": "29274321_table1_R00011",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10 −8 | NRG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10 −8 | NRG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10 −8 | NRG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: MCI | LMiT | 8.0 | 31228770.0 | rs118130881 | G | 0.04 | −0.61 | 0.11 | 1.72×10 −8 | NRG1 [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match"
+        }
+      }
+    },
+    {
+      "row_index": 11,
+      "record_id": "29274321_table1_R00012",
+      "row_status": "warning",
+      "row_issues": [
+        "RA 1(Reported Allele 1): missing value",
+        "Imputation_simple2: missing value",
+        "Population_map: missing value",
+        "Phenotype: missing value"
+      ],
+      "fields": {
+        "RA 1(Reported Allele 1)": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10 −8 | LINC00271, PDE7B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": tru"
+        },
+        "Imputation_simple2": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "NR",
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10 −8 | LINC00271, PDE7B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": tru"
+        },
+        "Population_map": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10 −8 | LINC00271, PDE7B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": tru"
+        },
+        "Phenotype": {
+          "status": "review",
+          "issues": [
+            "missing value"
+          ],
+          "value": "",
+          "evidence": "Row text: AD | HPV | 6.0 | 136077929.0 | rs79846291 | T | 0.02 | 1.85 | 0.31 | 1.76×10 −8 | LINC00271, PDE7B [column_mapping] {\"Group\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1818, \"needs_review\": true, \"match_hint\": \"Group\"}, \"Traits\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1846, \"needs_review\": true, \"match_hint\": \"Traits\"}, \"CHR\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2, \"needs_review\": true, \"match_hint\": \"CHR\"}, \"BP\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": tru"
+        }
+      }
+    }
+  ]
+}
