@@ -1,0 +1,3173 @@
+{
+  "paper": {
+    "paper_id": "37002253_table3",
+    "pmcid": "PMC10066300",
+    "pmid": "37002253",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10066300/",
+    "table_input": "/Users/justpqa/advp_curator/table_from_link/37002253_table3.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 37002253"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": [
+        "discovery",
+        "replication",
+        "meta-analysis",
+        "Meta-analysis"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Association Type",
+      "value": [
+        "Age at onset (AAO)",
+        "PRS",
+        "Ad",
+        "Apoe",
+        "Imaging"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Model Type",
+      "value": [
+        "logistic regression (with covariates)"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation",
+      "value": [
+        "1000G",
+        "TOPMed",
+        "UK10K",
+        "HRC",
+        "minimac4"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": [
+        "EUR",
+        "AA",
+        "EAS",
+        "hispanic",
+        "middle-east",
+        "african american",
+        "European ancestry"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "13266",
+      "confidence": 0.7,
+      "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811), one American Hispanic/Latin cohort (n = 1097), one African-American cohort (n = 114), and four cohorts of m",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "37002253_table3_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "101798",
+          "confidence": 0.9,
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000357,
+          "confidence": 0.7,
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "1684",
+          "confidence": 0.9,
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0391,
+          "confidence": 0.7,
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "67574",
+          "confidence": 0.9,
+          "evidence": "Row text: Alistipes | ADc12 | 0.1676 | 0.008 | 1.04E−04 | 2581.83 | 665.28 | 67574 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000104,
+          "confidence": 0.7,
+          "evidence": "Row text: Alistipes | ADc12 | 0.1676 | 0.008 | 1.04E−04 | 2581.83 | 665.28 | 67574 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Alistipes | ADc12 | 0.1676 | 0.008 | 1.04E−04 | 2581.83 | 665.28 | 67574 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Alistipes | ADc12 | 0.1676 | 0.008 | 1.04E−04 | 2581.83 | 665.28 | 67574 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "99785",
+          "confidence": 0.9,
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.103,
+          "confidence": 0.7,
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2834",
+          "confidence": 0.9,
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000118,
+          "confidence": 0.7,
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "96076",
+          "confidence": 0.9,
+          "evidence": "Row text: Anaerostipes | GenADA | 0.2989 | 0.0054 | 1.18E−02 | 4134.46 | 1641.01 | 96076 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0118,
+          "confidence": 0.7,
+          "evidence": "Row text: Anaerostipes | GenADA | 0.2989 | 0.0054 | 1.18E−02 | 4134.46 | 1641.01 | 96076 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Anaerostipes | GenADA | 0.2989 | 0.0054 | 1.18E−02 | 4134.46 | 1641.01 | 96076 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Anaerostipes | GenADA | 0.2989 | 0.0054 | 1.18E−02 | 4134.46 | 1641.01 | 96076 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "71984",
+          "confidence": 0.9,
+          "evidence": "Row text: Bacteroides* | ADc12 | 0.1792 | 0.0114 | 3.32E−06 | 3930.96 | 845.35 | 71984 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.32e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: Bacteroides* | ADc12 | 0.1792 | 0.0114 | 3.32E−06 | 3930.96 | 845.35 | 71984 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Bacteroides* | ADc12 | 0.1792 | 0.0114 | 3.32E−06 | 3930.96 | 845.35 | 71984 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Bacteroides* | ADc12 | 0.1792 | 0.0114 | 3.32E−06 | 3930.96 | 845.35 | 71984 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "922",
+          "confidence": 0.9,
+          "evidence": "Row text: Bacteroides* | GenADA | 0.0009 | 0.0037 | 3.68E−02 | 221.55 | 106.1 | 922 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0368,
+          "confidence": 0.7,
+          "evidence": "Row text: Bacteroides* | GenADA | 0.0009 | 0.0037 | 3.68E−02 | 221.55 | 106.1 | 922 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Bacteroides* | GenADA | 0.0009 | 0.0037 | 3.68E−02 | 221.55 | 106.1 | 922 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Bacteroides* | GenADA | 0.0009 | 0.0037 | 3.68E−02 | 221.55 | 106.1 | 922 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "177",
+          "confidence": 0.9,
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.48e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "12431",
+          "confidence": 0.9,
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.128,
+          "confidence": 0.7,
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "71434",
+          "confidence": 0.9,
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.54e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "25728",
+          "confidence": 0.9,
+          "evidence": "Row text: Catenibacterium | GenADA | 0.0831 | 0.008 | 2.11E−03 | 1068.34 | 347.56 | 25728 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00211,
+          "confidence": 0.7,
+          "evidence": "Row text: Catenibacterium | GenADA | 0.0831 | 0.008 | 2.11E−03 | 1068.34 | 347.56 | 25728 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Catenibacterium | GenADA | 0.0831 | 0.008 | 2.11E−03 | 1068.34 | 347.56 | 25728 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Catenibacterium | GenADA | 0.0831 | 0.008 | 2.11E−03 | 1068.34 | 347.56 | 25728 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "230",
+          "confidence": 0.9,
+          "evidence": "Row text: Collinsella | ADc12 | 0.0002 | 0.0073 | 1.78E−04 | 125.63 | 33.51 | 230 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000178,
+          "confidence": 0.7,
+          "evidence": "Row text: Collinsella | ADc12 | 0.0002 | 0.0073 | 1.78E−04 | 125.63 | 33.51 | 230 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Collinsella | ADc12 | 0.0002 | 0.0073 | 1.78E−04 | 125.63 | 33.51 | 230 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Collinsella | ADc12 | 0.0002 | 0.0073 | 1.78E−04 | 125.63 | 33.51 | 230 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "335",
+          "confidence": 0.9,
+          "evidence": "Row text: Collinsella | GenADA | 0.0003 | 0.0143 | 4.36E−05 | 229.15 | 56.06 | 335 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.36e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Collinsella | GenADA | 0.0003 | 0.0143 | 4.36E−05 | 229.15 | 56.06 | 335 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Collinsella | GenADA | 0.0003 | 0.0143 | 4.36E−05 | 229.15 | 56.06 | 335 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Collinsella | GenADA | 0.0003 | 0.0143 | 4.36E−05 | 229.15 | 56.06 | 335 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "42727",
+          "confidence": 0.9,
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.64e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "22002",
+          "confidence": 0.9,
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00528,
+          "confidence": 0.7,
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "48130",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.19e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00018",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "7483",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium coprostanoligenes | GenADA | 0.0101 | 0.0038 | 3.36E−02 | 707.65 | 333.01 | 7483 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0336,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium coprostanoligenes | GenADA | 0.0101 | 0.0038 | 3.36E−02 | 707.65 | 333.01 | 7483 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium coprostanoligenes | GenADA | 0.0101 | 0.0038 | 3.36E−02 | 707.65 | 333.01 | 7483 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium coprostanoligenes | GenADA | 0.0101 | 0.0038 | 3.36E−02 | 707.65 | 333.01 | 7483 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00019",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "19567",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0003,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00020",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "663",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00117,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00021",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "95579",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000252,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00022",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "42817",
+          "confidence": 0.9,
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0882,
+          "confidence": 0.7,
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00023",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "16821",
+          "confidence": 0.9,
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.57e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00024",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "7135",
+          "confidence": 0.9,
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.033,
+          "confidence": 0.7,
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00025",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "70292",
+          "confidence": 0.9,
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.01e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00026",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2152",
+          "confidence": 0.9,
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0922,
+          "confidence": 0.7,
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00027",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2997",
+          "confidence": 0.9,
+          "evidence": "Row text: Lachnospira* | ADc12 | 0.0034 | 0.0067 | 3.30E−04 | 530.79 | 147.83 | 2997 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00033,
+          "confidence": 0.7,
+          "evidence": "Row text: Lachnospira* | ADc12 | 0.0034 | 0.0067 | 3.30E−04 | 530.79 | 147.83 | 2997 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Lachnospira* | ADc12 | 0.0034 | 0.0067 | 3.30E−04 | 530.79 | 147.83 | 2997 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Lachnospira* | ADc12 | 0.0034 | 0.0067 | 3.30E−04 | 530.79 | 147.83 | 2997 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00028",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "439",
+          "confidence": 0.9,
+          "evidence": "Row text: Lachnospira* | GenADA | 0.0004 | 0.0021 | 1.11E−01 | 113.71 | 71.44 | 439 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.111,
+          "confidence": 0.7,
+          "evidence": "Row text: Lachnospira* | GenADA | 0.0004 | 0.0021 | 1.11E−01 | 113.71 | 71.44 | 439 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Lachnospira* | GenADA | 0.0004 | 0.0021 | 1.11E−01 | 113.71 | 71.44 | 439 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Lachnospira* | GenADA | 0.0004 | 0.0021 | 1.11E−01 | 113.71 | 71.44 | 439 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00029",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "35344",
+          "confidence": 0.9,
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000108,
+          "confidence": 0.7,
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00030",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "3224",
+          "confidence": 0.9,
+          "evidence": "Row text: LachnospiraceaeUCG008 | GenADA | 0.0041 | 0.0017 | 1.57E−01 | 197.29 | 139.4 | 3224 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.157,
+          "confidence": 0.7,
+          "evidence": "Row text: LachnospiraceaeUCG008 | GenADA | 0.0041 | 0.0017 | 1.57E−01 | 197.29 | 139.4 | 3224 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: LachnospiraceaeUCG008 | GenADA | 0.0041 | 0.0017 | 1.57E−01 | 197.29 | 139.4 | 3224 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: LachnospiraceaeUCG008 | GenADA | 0.0041 | 0.0017 | 1.57E−01 | 197.29 | 139.4 | 3224 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00031",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "8305",
+          "confidence": 0.9,
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000308,
+          "confidence": 0.7,
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00032",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "3884",
+          "confidence": 0.9,
+          "evidence": "Row text: Oscillibacter | GenADA | 0.0051 | 0.0027 | 7.55E−02 | 302.62 | 170.24 | 3884 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0755,
+          "confidence": 0.7,
+          "evidence": "Row text: Oscillibacter | GenADA | 0.0051 | 0.0027 | 7.55E−02 | 302.62 | 170.24 | 3884 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Oscillibacter | GenADA | 0.0051 | 0.0027 | 7.55E−02 | 302.62 | 170.24 | 3884 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Oscillibacter | GenADA | 0.0051 | 0.0027 | 7.55E−02 | 302.62 | 170.24 | 3884 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00033",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "6609",
+          "confidence": 0.9,
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000157,
+          "confidence": 0.7,
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00034",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "819",
+          "confidence": 0.9,
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0547,
+          "confidence": 0.7,
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00035",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "78446",
+          "confidence": 0.9,
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.35e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00036",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "3135",
+          "confidence": 0.9,
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0764,
+          "confidence": 0.7,
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00037",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "124985",
+          "confidence": 0.9,
+          "evidence": "Row text: Sutterella | ADc12 | 0.4928 | 0.0071 | 2.53E−04 | 3594.16 | 982.2 | 124985 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.000253,
+          "confidence": 0.7,
+          "evidence": "Row text: Sutterella | ADc12 | 0.4928 | 0.0071 | 2.53E−04 | 3594.16 | 982.2 | 124985 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Sutterella | ADc12 | 0.4928 | 0.0071 | 2.53E−04 | 3594.16 | 982.2 | 124985 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Sutterella | ADc12 | 0.4928 | 0.0071 | 2.53E−04 | 3594.16 | 982.2 | 124985 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00038",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "156",
+          "confidence": 0.9,
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.308,
+          "confidence": 0.7,
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00039",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "5406",
+          "confidence": 0.9,
+          "evidence": "Row text: Veillonella | ADc12 | 0.007 | 0.0081 | 8.83E−05 | 539.94 | 137.72 | 5406 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.83e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: Veillonella | ADc12 | 0.007 | 0.0081 | 8.83E−05 | 539.94 | 137.72 | 5406 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Veillonella | ADc12 | 0.007 | 0.0081 | 8.83E−05 | 539.94 | 137.72 | 5406 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Veillonella | ADc12 | 0.007 | 0.0081 | 8.83E−05 | 539.94 | 137.72 | 5406 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table3_R00040",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "1843",
+          "confidence": 0.9,
+          "evidence": "Row text: Veillonella | GenADA | 0.0021 | 0.0085 | 1.56E−03 | 369.43 | 116.78 | 1843 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00156,
+          "confidence": 0.7,
+          "evidence": "Row text: Veillonella | GenADA | 0.0021 | 0.0085 | 1.56E−03 | 369.43 | 116.78 | 1843 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: Veillonella | GenADA | 0.0021 | 0.0085 | 1.56E−03 | 369.43 | 116.78 | 1843 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: Veillonella | GenADA | 0.0021 | 0.0085 | 1.56E−03 | 369.43 | 116.78 | 1843 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    }
+  ]
+}

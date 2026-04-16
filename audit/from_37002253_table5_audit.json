@@ -1,0 +1,1405 @@
+{
+  "paper": {
+    "paper_id": "37002253_table5",
+    "pmcid": "PMC10066300",
+    "pmid": "37002253",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10066300/",
+    "table_input": "/Users/justpqa/advp_curator/table_from_link/37002253_table5.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 37002253"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": [
+        "discovery",
+        "replication",
+        "meta-analysis",
+        "Meta-analysis"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Association Type",
+      "value": [
+        "Age at onset (AAO)",
+        "PRS",
+        "Ad",
+        "Apoe",
+        "Imaging"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Model Type",
+      "value": [
+        "meta-analysis",
+        "logistic regression",
+        "bonferroni correction",
+        "logistic regression (with covariates)"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation",
+      "value": [
+        "1000G",
+        "TOPMed",
+        "UK10K",
+        "HRC",
+        "minimac4"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": [
+        "EUR",
+        "AA",
+        "EAS",
+        "hispanic",
+        "middle-east",
+        "african american",
+        "European ancestry"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "13266",
+      "confidence": 0.7,
+      "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811), one American Hispanic/Latin cohort (n = 1097), one African-American cohort (n = 114), and four cohorts of m",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "37002253_table5_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.004,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.044,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.025,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.044,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Dorea | 0.030 | 0.015 | 2.127 | 0.0334 | 17494 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Microb",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0334,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Dorea | 0.030 | 0.015 | 2.127 | 0.0334 | 17494 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Microb",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.03,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Dorea | 0.030 | 0.015 | 2.127 | 0.0334 | 17494 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Microb",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Dorea | 0.030 | 0.015 | 2.127 | 0.0334 | 17494 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Microb",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Eubacterium coprostanoligenes | 0.033 | 0.015 | 2.120 | 0.034 | 17261 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Ef",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.034,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Eubacterium coprostanoligenes | 0.033 | 0.015 | 2.120 | 0.034 | 17261 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Ef",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.033,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Eubacterium coprostanoligenes | 0.033 | 0.015 | 2.120 | 0.034 | 17261 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Ef",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Eubacterium coprostanoligenes | 0.033 | 0.015 | 2.120 | 0.034 | 17261 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Ef",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0287,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.035,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Olsenella | 0.064 | 0.033 | 1.993 | 0.0462 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mic",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0462,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Olsenella | 0.064 | 0.033 | 1.993 | 0.0462 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mic",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.064,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Olsenella | 0.064 | 0.033 | 1.993 | 0.0462 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mic",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Olsenella | 0.064 | 0.033 | 1.993 | 0.0462 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mic",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Parasutterella | 0.040 | 0.019 | 2.216 | 0.0267 | 11291 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0267,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Parasutterella | 0.040 | 0.019 | 2.216 | 0.0267 | 11291 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.04,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Parasutterella | 0.040 | 0.019 | 2.216 | 0.0267 | 11291 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Parasutterella | 0.040 | 0.019 | 2.216 | 0.0267 | 11291 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Senegalimassilia | 0.050 | 0.024 | 2.207 | 0.0273 | 6888 | 21\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0273,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Senegalimassilia | 0.050 | 0.024 | 2.207 | 0.0273 | 6888 | 21\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.05,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Senegalimassilia | 0.050 | 0.024 | 2.207 | 0.0273 | 6888 | 21\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Senegalimassilia | 0.050 | 0.024 | 2.207 | 0.0273 | 6888 | 21\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs429358",
+          "confidence": 0.9,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Veillonella | 0.044 | 0.021 | 2.032 | 0.0421 | 9194 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0421,
+          "confidence": 0.7,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Veillonella | 0.044 | 0.021 | 2.032 | 0.0421 | 9194 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.044,
+          "confidence": 0.65,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Veillonella | 0.044 | 0.021 | 2.032 | 0.0421 | 9194 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Veillonella | 0.044 | 0.021 | 2.032 | 0.0421 | 9194 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Butyricicoccus | 0.048 | 0.021 | 2.468 | 0.0136 | 15637 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0136,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Butyricicoccus | 0.048 | 0.021 | 2.468 | 0.0136 | 15637 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.048,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Butyricicoccus | 0.048 | 0.021 | 2.468 | 0.0136 | 15637 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Butyricicoccus | 0.048 | 0.021 | 2.468 | 0.0136 | 15637 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, ",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Collinsella | 0.052 | 0.023 | 2.214 | 0.0268 | 12811 | 19\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0268,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Collinsella | 0.052 | 0.023 | 2.214 | 0.0268 | 12811 | 19\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.052,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Collinsella | 0.052 | 0.023 | 2.214 | 0.0268 | 12811 | 19\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Collinsella | 0.052 | 0.023 | 2.214 | 0.0268 | 12811 | 19\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Coprococcus3 | 0.050 | 0.022 | 2.344 | 0.0191 | 14323 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0191,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Coprococcus3 | 0.050 | 0.022 | 2.344 | 0.0191 | 14323 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.05,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Coprococcus3 | 0.050 | 0.022 | 2.344 | 0.0191 | 14323 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Coprococcus3 | 0.050 | 0.022 | 2.344 | 0.0191 | 14323 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Eubacterium hallii | 0.053 | 0.021 | 2.453 | 0.0142 | 14846 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0142,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Eubacterium hallii | 0.053 | 0.021 | 2.453 | 0.0142 | 14846 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.053,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Eubacterium hallii | 0.053 | 0.021 | 2.453 | 0.0142 | 14846 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Eubacterium hallii | 0.053 | 0.021 | 2.453 | 0.0142 | 14846 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0113,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.071,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.019,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.103,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Ruminococcaceae UCG004 | 0.080 | 0.028 | 2.901 | 0.0037 | 9049 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Alle",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0037,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Ruminococcaceae UCG004 | 0.080 | 0.028 | 2.901 | 0.0037 | 9049 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Alle",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.08,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Ruminococcaceae UCG004 | 0.080 | 0.028 | 2.901 | 0.0037 | 9049 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Alle",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Ruminococcaceae UCG004 | 0.080 | 0.028 | 2.901 | 0.0037 | 9049 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Alle",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "37002253_table5_R00017",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs7412",
+          "confidence": 0.9,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Senegalimassilia | 0.082 | 0.032 | 2.584 | 0.0098 | 6508 | 18\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"},",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0098,
+          "confidence": 0.7,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Senegalimassilia | 0.082 | 0.032 | 2.584 | 0.0098 | 6508 | 18\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"},",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.082,
+          "confidence": 0.65,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Senegalimassilia | 0.082 | 0.032 | 2.584 | 0.0098 | 6508 | 18\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"},",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "",
+          "confidence": 0.25,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Senegalimassilia | 0.082 | 0.032 | 2.584 | 0.0098 | 6508 | 18\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"},",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    }
+  ]
+}

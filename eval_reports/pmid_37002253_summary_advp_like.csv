@@ -1,0 +1,4 @@
+file,status,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
+/Users/justpqa/advp_curator/harmonized_tables_advp/from_37002253_table3_v1.xlsx,not_in_advp,,40,0,,,
+/Users/justpqa/advp_curator/harmonized_tables_advp/from_37002253_table5_v1.xlsx,not_in_advp,,17,0,,,
+combined_inputs,not_in_advp,,57,0,,,

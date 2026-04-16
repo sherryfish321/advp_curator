@@ -15,6 +15,9 @@
     {
       "field": "Stage",
       "value": [
+        "discovery",
+        "replication",
+        "meta-analysis",
         "Meta-analysis"
       ],
       "confidence": 0.5,
@@ -25,7 +28,6 @@
     {
       "field": "Association Type",
       "value": [
-        "eqtl",
         "Imaging"
       ],
       "confidence": 0.5,
@@ -36,8 +38,10 @@
     {
       "field": "Model Type",
       "value": [
+        "meta analysis",
         "logistic regression",
-        "ancova",
+        "covariates",
+        "p value bonferroni correction",
         "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
@@ -48,10 +52,11 @@
     {
       "field": "Imputation",
       "value": [
-        "1000 Genomes EUR",
-        "ADGC",
-        "ADSP",
-        "Charge Consortium",
+        "1000G",
+        "HRC",
+        "TOPMed",
+        "UK10K",
+        "IGAP",
         "HRC;1000G"
       ],
       "confidence": 0.5,
@@ -62,10 +67,9 @@
     {
       "field": "Population",
       "value": [
-        "European",
-        "1000 Genomes EUR",
-        "ADGC",
-        "ADSP",
+        "EUR",
+        "adgc",
+        "adsp",
         "European ancestry"
       ],
       "confidence": 0.5,
@@ -112,7 +116,7 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
+          "value": "Meta-analysis + replication + meta-analysis + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -128,7 +132,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
+          "value": "HRC + IGAP + TOPMed + 1000G + HRC;1000G + UK10K",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -136,7 +140,7 @@
         },
         {
           "field": "Population",
-          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
+          "value": "adsp + adgc + European ancestry + EUR",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -152,7 +156,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
+          "value": "ADGC + CHARGE + ADSP + ADNI + UKBEC + IGAP + NABEC + UKBB",
           "confidence": 0.8,
           "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10 −8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "cohort keyword mapping",
@@ -189,7 +193,7 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
+          "value": "Meta-analysis + replication + meta-analysis + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -205,7 +209,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
+          "value": "HRC + IGAP + TOPMed + 1000G + HRC;1000G + UK10K",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -213,7 +217,7 @@
         },
         {
           "field": "Population",
-          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
+          "value": "adsp + adgc + European ancestry + EUR",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -229,7 +233,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
+          "value": "ADGC + CHARGE + ADSP + ADNI + UKBEC + IGAP + NABEC + UKBB",
           "confidence": 0.8,
           "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "cohort keyword mapping",
@@ -266,7 +270,7 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
+          "value": "Meta-analysis + replication + meta-analysis + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -282,7 +286,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
+          "value": "HRC + IGAP + TOPMed + 1000G + HRC;1000G + UK10K",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -290,7 +294,7 @@
         },
         {
           "field": "Population",
-          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
+          "value": "adsp + adgc + European ancestry + EUR",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -306,7 +310,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
+          "value": "ADGC + CHARGE + ADSP + ADNI + UKBEC + IGAP + NABEC + UKBB",
           "confidence": 0.8,
           "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10 −6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "cohort keyword mapping",
@@ -343,7 +347,7 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
+          "value": "Meta-analysis + replication + meta-analysis + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -359,7 +363,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
+          "value": "HRC + IGAP + TOPMed + 1000G + HRC;1000G + UK10K",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -367,7 +371,7 @@
         },
         {
           "field": "Population",
-          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
+          "value": "adsp + adgc + European ancestry + EUR",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -383,7 +387,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
+          "value": "ADGC + CHARGE + ADSP + ADNI + UKBEC + IGAP + NABEC + UKBB",
           "confidence": 0.8,
           "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",
@@ -420,7 +424,7 @@
         },
         {
           "field": "Stage",
-          "value": "Meta-analysis",
+          "value": "Meta-analysis + replication + meta-analysis + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -436,7 +440,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
+          "value": "HRC + IGAP + TOPMed + 1000G + HRC;1000G + UK10K",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -444,7 +448,7 @@
         },
         {
           "field": "Population",
-          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
+          "value": "adsp + adgc + European ancestry + EUR",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -460,7 +464,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
+          "value": "ADGC + CHARGE + ADSP + ADNI + UKBEC + IGAP + NABEC + UKBB",
           "confidence": 0.8,
           "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",

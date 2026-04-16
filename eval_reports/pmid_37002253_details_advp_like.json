@@ -1,0 +1,50 @@
+[
+  {
+    "file": "/Users/justpqa/advp_curator/harmonized_tables_advp/from_37002253_table3_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 40,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "/Users/justpqa/advp_curator/harmonized_tables_advp/from_37002253_table5_v1.xlsx",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 17,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  },
+  {
+    "file": "combined_inputs",
+    "status": "not_in_advp",
+    "row_key_cols": [],
+    "n_pred_rows": 57,
+    "n_gold_rows": 0,
+    "row_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "field_metrics": {},
+    "aggregate_metrics": {},
+    "unmatched_pred_examples": [],
+    "unmatched_gold_examples": []
+  }
+]

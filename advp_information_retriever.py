@@ -259,7 +259,7 @@ class ADVPInformationRetriever:
         # NOTE: config for search and generate, add it as params later
         self.top_k = 20
         self.top_k_rerank = 5
-        self.max_new_tokens = 128
+        self.max_new_tokens = 64
         self.similarity_score_threshold = 0.0
         self.temperature = 0
         self.top_p = 1

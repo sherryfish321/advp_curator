@@ -19,7 +19,7 @@ echo "Infinity started on port ${INFINITY_PORT:-7997}"
 # start llama-cpp in foreground
 echo "Starting llama-cpp on port ${LLAMA_PORT:-8001}..."
 python -m llama_cpp.server \
-    --model "$SCRIPT_DIR/qwen2.5-7b-instruct-q4/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf" \
+    --model "$SCRIPT_DIR/qwen2.5-3b-instruct-q8/qwen2.5-3b-instruct-q8_0.gguf" \
     --n_gpu_layers 0 \
     --n_ctx 8192 \
     --port "${LLAMA_PORT:-8001}"
