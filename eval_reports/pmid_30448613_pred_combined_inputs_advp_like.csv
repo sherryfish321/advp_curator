@@ -1,74 +1,27 @@
 pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
-30448613.0,rs6656401,,,,8.49e-07,1.17,,,,adgc,CR1,alzheimer's disease + ad,
-30448613.0,rs4844600,,,,4.22e-07,1.17,,,,adgc,CR1,alzheimer's disease + ad,
-30448613.0,rs2296160,,,,4.24e-08,1.18,,,,adgc,,alzheimer's disease + ad,
-30448613.0,rs2296160,,,,0.00856,1.11,,,,adsp,,alzheimer's disease + ad,
-30448613.0,rs9271192,,,,0.000266,1.11,,,,adgc,HLA-DRB5,alzheimer's disease + ad,
-30448613.0,rs9270303,,,,0.00025,1.15,,,,adsp,HLA-DRB5,alzheimer's disease + ad,
-30448613.0,rs1476679,,,,0.00141,0.92,,,,adgc,ZCWPW1,alzheimer's disease + ad,
-30448613.0,rs2405442,,,,0.00212,0.92,,,,adgc,ZCWPW1,alzheimer's disease + ad,
-30448613.0,rs2405442,,,,0.00109,0.89,,,,adsp,ZCWPW1,alzheimer's disease + ad,
-30448613.0,rs1859788,,,,0.00562,0.93,,,,adgc,,alzheimer's disease + ad,
-30448613.0,rs1859788,,,,0.00112,0.89,,,,adsp,,alzheimer's disease + ad,
-30448613.0,rs9331896,,,,0.00102,0.92,,,,adgc,CLU,alzheimer's disease + ad,
-30448613.0,rs7982,,,,0.000364,0.91,,,,adgc,CLU,alzheimer's disease + ad,
-30448613.0,rs7982,,,,0.00162,0.9,,,,adsp,CLU,alzheimer's disease + ad,
-30448613.0,rs10838725,,,,0.054,1.05,,,,adgc,CELF1,alzheimer's disease + ad,
-30448613.0,rs2293576,,,,0.24,1.03,,,,adgc,CELF1,alzheimer's disease + ad,
-30448613.0,rs2293576,,,,0.04,1.07,,,,adsp,CELF1,alzheimer's disease + ad,
-30448613.0,rs983392,,,,7.22e-09,0.86,,,,adgc,MS4A6A,alzheimer's disease + ad,
-30448613.0,rs12453,,,,1.34e-09,0.86,,,,adgc,MS4A6A,alzheimer's disease + ad,
-30448613.0,rs12453,,,,0.00036,0.89,,,,adsp,MS4A6A,alzheimer's disease + ad,
-30448613.0,rs4147929,,,,0.00139,1.12,,,,adgc,ABCA7,alzheimer's disease + ad,
-30448613.0,rs3752246,,,,0.0027,1.11,,,,adgc,ABCA7,alzheimer's disease + ad,
-30448613.0,rs3752246,,,,9.89e-05,1.18,,,,adsp,ABCA7,alzheimer's disease + ad,
-30448613.0,rs3865444,,,,0.000449,0.91,,,,adgc,CD33,alzheimer's disease + ad,
-30448613.0,rs12459419,,,,0.000402,0.91,,,,adgc,CD33,alzheimer's disease + ad,
-30448613.0,rs12459419,,,,0.09,0.94,,,,adsp,CD33,alzheimer's disease + ad,
-30448613.0,rs6733839,,,,1.51e-07,0.071,,,,eqtl association,BIN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs6733839,,,,0.28,,,,,ad association,BIN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs6733839,,,,2.05e-06,0.084,,,,eqtl association,BIN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs6733839,,,,0.56,,,,,ad association,BIN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs111418223,,,,1.83e-11,0.12,,,,eqtl association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs111418223,,,,0.91,,,,,ad association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs111418223,,,,6.96e-09,0.114,,,,eqtl association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs111418223,,,,0.68,,,,,ad association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs111418223,,,,1.71e-08,0.119,,,,eqtl association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs111418223,,,,0.94,,,,,ad association,AGPAT1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,1.53e-17,0.177,,,,eqtl association,GATS,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.53,,,,,ad association,GATS,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,3.53e-09,-0.129,,,,eqtl association,TRIM4,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.95,,,,,ad association,TRIM4,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,4.15e-09,-0.115,,,,eqtl association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.85,,,,,ad association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,1.58e-08,-0.107,,,,eqtl association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.78,,,,,ad association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,3.77e-08,-0.128,,,,eqtl association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.89,,,,,ad association,PILRB,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,2.3e-07,0.147,,,,eqtl association,ZKSCAN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.15,,,,,ad association,ZKSCAN1,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs1476679,,,,6.07e-05,0.086,,,,eqtl association,PVRIG,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs1476679,,,,0.82,,,,,ad association,PVRIG,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs11771145,,,,3.68e-06,0.109,,,,eqtl association,LOC154761,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs11771145,,,,0.4,,,,,ad association,LOC154761,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs28834970,,,,6.86e-18,0.114,,,,eqtl association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs28834970,,,,0.4,,,,,ad association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs28834970,,,,1.18e-17,0.086,,,,eqtl association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs28834970,,,,0.91,,,,,ad association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs28834970,,,,7.33e-12,0.094,,,,eqtl association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs28834970,,,,0.47,,,,,ad association,PTK2B,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs28834970,,,,2.31e-06,-0.07,,,,eqtl association,TRIM35,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs28834970,,,,0.45,,,,,ad association,TRIM35,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs10838725,,,,1.07e-07,0.14,,,,eqtl association,MYBPC3,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs10838725,,,,8.13e-05,,,,,ad association,MYBPC3,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs983392,,,,2.34e-12,-0.082,,,,eqtl association,MS4A6A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs983392,,,,0.00497,,,,,ad association,MS4A6A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs983392,,,,1.15e-06,-0.15,,,,eqtl association,MS4A4A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs983392,,,,0.85,,,,,ad association,MS4A4A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs983392,,,,1.59e-06,-0.179,,,,eqtl association,MS4A4A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',eqtl association
-30448613.0,rs983392,,,,0.68,,,,,ad association,MS4A4A,m + + + z + h + d + i + s + d +   + e + a + l + a + r + ',ad association
-30448613.0,rs8093731,,,,1.36e-08,0.77,,,,,DLGAP1,ad + alzheimer's disease,
-30448613.0,rs8093731,,,,1.11e-05,0.706,,,,,NETO1,ad + alzheimer's disease,
-30448613.0,rs4147929,,,,3.94e-06,0.259,,,,,EID2B,ad + alzheimer's disease,
-30448613.0,rs10948363,,,,1.64e-05,0.343,,,,,AK9,ad + alzheimer's disease,
-30448613.0,rs3865444,,,,1.96e-05,-0.255,,,,,IER2,ad + alzheimer's disease,
+30448613.0,rs6733839,,,,0.28,0.071,,,,,BIN1,ad + alzheimer's disease,
+30448613.0,rs6733839,,,,0.56,0.084,,,,,BIN1,ad + alzheimer's disease,
+30448613.0,rs111418223,,,,0.91,0.12,,,,,AGPAT1,ad + alzheimer's disease,
+30448613.0,rs111418223,,,,0.68,0.114,,,,,AGPAT1,ad + alzheimer's disease,
+30448613.0,rs111418223,,,,0.94,0.119,,,,,AGPAT1,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.53,0.177,,,,,GATS,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.95,-0.129,,,,,TRIM4,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.85,-0.115,,,,,PILRB,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.78,-0.107,,,,,PILRB,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.89,-0.128,,,,,PILRB,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.15,0.147,,,,,ZKSCAN1,ad + alzheimer's disease,
+30448613.0,rs1476679,,,,0.82,0.086,,,,,PVRIG,ad + alzheimer's disease,
+30448613.0,rs11771145,,,,0.4,0.109,,,,,LOC154761,ad + alzheimer's disease,
+30448613.0,rs28834970,,,,0.4,0.114,,,,,PTK2B,ad + alzheimer's disease,
+30448613.0,rs28834970,,,,0.91,0.086,,,,,PTK2B,ad + alzheimer's disease,
+30448613.0,rs28834970,,,,0.47,0.094,,,,,PTK2B,ad + alzheimer's disease,
+30448613.0,rs28834970,,,,0.45,-0.07,,,,,TRIM35,ad + alzheimer's disease,
+30448613.0,rs10838725,,,,8.13e-05,0.14,,,,,MYBPC3,ad + alzheimer's disease,
+30448613.0,rs983392,,,,0.00497,-0.082,,,,,MS4A6A,ad + alzheimer's disease,
+30448613.0,rs983392,,,,0.85,-0.15,,,,,MS4A4A,ad + alzheimer's disease,
+30448613.0,rs983392,,,,0.68,-0.179,,,,,MS4A4A,ad + alzheimer's disease,
+30448613.0,rs8093731,,,,1.36e-08,0.77,,,,,DLGAP1,adsp + alzheimer's disease + adgc,
+30448613.0,rs8093731,,,,1.11e-05,0.706,,,,,NETO1,adsp + alzheimer's disease + adgc,
+30448613.0,rs4147929,,,,3.94e-06,0.259,,,,,EID2B,adsp + alzheimer's disease + adgc,
+30448613.0,rs10948363,,,,1.64e-05,0.343,,,,,AK9,adsp + alzheimer's disease + adgc,
+30448613.0,rs3865444,,,,1.96e-05,-0.255,,,,,IER2,adsp + alzheimer's disease + adgc,

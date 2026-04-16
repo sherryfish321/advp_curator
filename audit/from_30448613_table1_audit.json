@@ -29,7 +29,8 @@
       "value": [
         "Alzheimer's disease",
         "eqtl",
-        "neuropathology"
+        "neuropathology",
+        "Imaging"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -44,7 +45,8 @@
         "ANCOVA",
         "AGE AT LAST VISIT OR DEATH",
         "SEX",
-        "TOP FIVE PRINCIPAL COMPONENTS"
+        "TOP FIVE PRINCIPAL COMPONENTS",
+        "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -57,7 +59,8 @@
         "1000 Genomes",
         "Haplotype Reference Consortium",
         "TOPMed",
-        "UK10K"
+        "UK10K",
+        "HRC;1000G"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -71,7 +74,8 @@
         "1000 Genomes EUR",
         "ADGC",
         "ADSP",
-        "IGAP"
+        "IGAP",
+        "European ancestry"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -93,31 +97,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CR1",
+          "value": "rs4844600",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 8.489999999999999e-07,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.17,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -133,7 +137,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -141,7 +145,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -157,9 +161,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -170,31 +174,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CR1",
+          "value": "rs6656401",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 4.2199999999999994e-07,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.17,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -210,7 +214,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -218,7 +222,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -234,9 +238,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -247,31 +251,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs2296160",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 4.24e-08,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.18,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -287,7 +291,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -295,7 +299,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -311,9 +315,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -324,31 +328,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs9270303",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00856,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.11,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -364,7 +368,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -372,7 +376,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -388,9 +392,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -401,31 +405,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "HLA-DRB5",
+          "value": "rs9271192",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.000266,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.11,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -441,7 +445,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -449,7 +453,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -465,9 +469,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -478,31 +482,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "HLA-DRB5",
+          "value": "rs1476679",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00025,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.15,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -518,7 +522,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -526,7 +530,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -542,9 +546,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -555,31 +559,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs2405442",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00141,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.92,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -595,7 +599,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -603,7 +607,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -619,9 +623,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -632,31 +636,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs1859788",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.0021200000000000004,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.92,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -672,7 +676,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -680,7 +684,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -696,9 +700,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text:  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -709,31 +713,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs7982",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00109,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.89,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -749,7 +753,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -757,7 +761,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -773,9 +777,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -786,31 +790,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs9331896",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00562,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.93,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -826,7 +830,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -834,7 +838,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -850,9 +854,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refere",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -863,31 +867,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs10838725",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.0011200000000000001,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.89,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -903,7 +907,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -911,7 +915,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -927,9 +931,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -940,31 +944,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs2293576",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00102,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.92,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -980,7 +984,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -988,7 +992,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1004,9 +1008,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"reference_col\": ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1017,31 +1021,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs12453",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.000364,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.91,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1057,7 +1061,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1065,7 +1069,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1081,9 +1085,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1094,31 +1098,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs983392",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.0016200000000000001,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.9,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1134,7 +1138,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1142,7 +1146,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1158,9 +1162,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"ref",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1171,31 +1175,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs3752246",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.054,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.05,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1211,7 +1215,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1219,7 +1223,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1235,9 +1239,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1248,31 +1252,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs4147929",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.24,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.03,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1288,7 +1292,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1296,7 +1300,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1312,9 +1316,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "Row text: rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"r",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1325,31 +1329,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs12459419",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.04,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 1.07,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1365,7 +1369,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1373,7 +1377,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1389,9 +1393,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1402,31 +1406,31 @@
       "fields": [
         {
           "field": "Name",
-          "value": "MS4A6A",
+          "value": "rs3865444",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 7.22e-09,
+          "value": "",
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.86,
+          "value": "",
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
+          "value": "Discovery + IGAP + Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1442,7 +1446,7 @@
         },
         {
           "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
+          "value": "TOPMed + 1000 Genomes + UK10K + HRC;1000G + Haplotype Reference Consortium",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1450,7 +1454,7 @@
         },
         {
           "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
+          "value": "1000 Genomes EUR + ADGC + European ancestry + European + IGAP + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1466,625 +1470,9 @@
         },
         {
           "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
+          "value": "CHARGE + UKBEC + ADGC + NABEC + IGAP + ADSP + UKBB + ADNI",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00019",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "MS4A6A",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 1.3400000000000001e-09,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.86,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00020",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "MS4A6A",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.00036,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.89,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00021",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "ABCA7",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.00139,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 1.12,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00022",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "ABCA7",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.0027,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 1.11,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00023",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "ABCA7",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 9.890000000000002e-05,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 1.18,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00024",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "CD33",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.000449,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.91,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00025",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "CD33",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.00040199999999999996,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.91,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
-          "rule": "cohort keyword mapping",
-          "needs_review": false
-        }
-      ]
-    },
-    {
-      "RecordID": "30448613_table1_R00026",
-      "fields": [
-        {
-          "field": "Name",
-          "value": "CD33",
-          "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row rsID extraction",
-          "needs_review": false
-        },
-        {
-          "field": "P-value",
-          "value": 0.09,
-          "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row p-value parsing",
-          "needs_review": false
-        },
-        {
-          "field": "EffectSize(altvsref)",
-          "value": 0.94,
-          "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
-          "rule": "table row effect parsing",
-          "needs_review": false
-        },
-        {
-          "field": "Stage",
-          "value": "IGAP + Discovery + Meta-analysis",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Model type",
-          "value": "",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Imputation",
-          "value": "Haplotype Reference Consortium + UK10K + TOPMed + 1000 Genomes",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Population",
-          "value": "IGAP + ADSP + European + 1000 Genomes EUR + ADGC",
-          "confidence": 0.5,
-          "evidence": "",
-          "rule": "",
-          "needs_review": true
-        },
-        {
-          "field": "Sample size",
-          "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
-          "needs_review": true
-        },
-        {
-          "field": "Cohort",
-          "value": "IGAP + NABEC + ADSP + ADNI + UKBEC + CHARGE + UKBB + ADGC",
-          "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "Row text: rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090\n[column_mapping] {\"IGAP SNP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP SNP\"}, \"IGAP SNP.1 Closest gene\": {\"refer",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

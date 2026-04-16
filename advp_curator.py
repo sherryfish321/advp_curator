@@ -2638,6 +2638,37 @@ def run_pipeline(pdf_or_url: Optional[str],
         col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
     else:
         col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_pdf_paper(int(resolved_pmid), pdf_or_url)
+    stage_val, _ = infer_stage(section_scoped_text)
+    assoc_val, _ = infer_association_type(section_scoped_text)
+    model_val, _ = infer_model_type(section_scoped_text)
+    imp_val, _ = infer_imputation(section_scoped_text)
+    pop_val, _ = infer_population(section_text)
+    imp_val = to_canonical_imputation_codes(imp_val)
+    paper_hints = get_paper_metadata_hints(resolved_pmid)
+    if imp_val == "NR" and paper_hints.get("Imputation"):
+        imp_val = to_canonical_imputation_codes(paper_hints["Imputation"])
+        # imp_audit = FieldAudit(
+        #     "Imputation", imp_val, 0.6,
+        #     f"paper-level fallback metadata for PMID {resolved_pmid}",
+        #     "paper metadata fallback", True
+        # )
+    if pop_val == "NR" and paper_hints.get("Population"):
+        pop_val = paper_hints["Population"]
+        # pop_audit = FieldAudit(
+        #     "Population", pop_val, 0.6,
+        #     f"paper-level fallback metadata for PMID {resolved_pmid}",
+        #     "paper metadata fallback", True
+        # ) 
+    if stage_val != "NR" and stage_val not in col_require_rag_to_possible_info["Stage"]:
+        col_require_rag_to_possible_info["Stage"].append(stage_val) 
+    if assoc_val != "NR" and assoc_val not in col_require_rag_to_possible_info["Association Type"]:
+        col_require_rag_to_possible_info["Association Type"].append(assoc_val) 
+    if model_val != "NR" and model_val not in col_require_rag_to_possible_info["Model Type"]:
+        col_require_rag_to_possible_info["Model Type"].append(model_val) 
+    if imp_val != "NR" and imp_val not in col_require_rag_to_possible_info["Imputation"]:
+        col_require_rag_to_possible_info["Imputation"].append(imp_val) 
+    if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
+        col_require_rag_to_possible_info["Population"].append(pop_val) 
     col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
     sample_size_val, sample_size_audit = infer_sample_size(section_text)
     col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]

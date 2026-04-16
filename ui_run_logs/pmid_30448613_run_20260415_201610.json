@@ -1,0 +1,20 @@
+{
+  "pmid": 30448613,
+  "owner_name": "",
+  "paper_input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/",
+  "table_links": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T1/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T2/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331247/table/T3/"
+  ],
+  "auto_discovered_tables": [],
+  "generated_harmonized": [
+    "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table1_v1.xlsx",
+    "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table2_v1.xlsx",
+    "/Users/justpqa/advp_curator/harmonized_tables_advp/from_30448613_table3_v1.xlsx"
+  ],
+  "summary_csv": "/Users/justpqa/advp_curator/eval_reports/pmid_30448613_summary_advp_like.csv",
+  "details_json": "/Users/justpqa/advp_curator/eval_reports/pmid_30448613_details_advp_like.json",
+  "fix_file": "/Users/justpqa/advp_curator/eval_reports/pmid_30448613_fix_ready_20260415_201610.csv",
+  "created_at": "2026-04-15T20:16:10.856874"
+}

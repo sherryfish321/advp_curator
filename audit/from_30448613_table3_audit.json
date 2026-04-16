@@ -15,9 +15,7 @@
     {
       "field": "Stage",
       "value": [
-        "Meta-analysis",
-        "Discovery",
-        "IGAP"
+        "Meta-analysis"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -27,9 +25,8 @@
     {
       "field": "Association Type",
       "value": [
-        "Alzheimer's disease",
         "eqtl",
-        "neuropathology"
+        "Imaging"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -39,12 +36,9 @@
     {
       "field": "Model Type",
       "value": [
-        "ADSP",
-        "PLINK V1.90A",
-        "ANCOVA",
-        "AGE AT LAST VISIT OR DEATH",
-        "SEX",
-        "TOP FIVE PRINCIPAL COMPONENTS"
+        "logistic regression",
+        "ancova",
+        "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -54,10 +48,11 @@
     {
       "field": "Imputation",
       "value": [
-        "1000 Genomes",
-        "Haplotype Reference Consortium",
-        "TOPMed",
-        "UK10K"
+        "1000 Genomes EUR",
+        "ADGC",
+        "ADSP",
+        "Charge Consortium",
+        "HRC;1000G"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -71,7 +66,7 @@
         "1000 Genomes EUR",
         "ADGC",
         "ADSP",
-        "IGAP"
+        "European ancestry"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -95,7 +90,7 @@
           "field": "Name",
           "value": "rs8093731",
           "confidence": 0.9,
-          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10−8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
+          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10 −8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -103,7 +98,7 @@
           "field": "P-value",
           "value": 1.3600000000000001e-08,
           "confidence": 0.7,
-          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10−8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
+          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10 −8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -111,13 +106,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.77,
           "confidence": 0.65,
-          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10−8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
+          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10 −8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "Discovery + IGAP + Meta-analysis",
+          "value": "Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -133,7 +128,7 @@
         },
         {
           "field": "Imputation",
-          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
+          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -141,7 +136,7 @@
         },
         {
           "field": "Population",
-          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
+          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -157,9 +152,9 @@
         },
         {
           "field": "Cohort",
-          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
+          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
           "confidence": 0.8,
-          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10−8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
+          "evidence": "Row text: rs8093731 | DSG2 | ILMN_23 80779 | DLGAP1 | FCTX | 0.770 | 1.36×10 −8\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -172,7 +167,7 @@
           "field": "Name",
           "value": "rs8093731",
           "confidence": 0.9,
-          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
+          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -180,7 +175,7 @@
           "field": "P-value",
           "value": 1.1100000000000002e-05,
           "confidence": 0.7,
-          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
+          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -188,13 +183,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.706,
           "confidence": 0.65,
-          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
+          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "Discovery + IGAP + Meta-analysis",
+          "value": "Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -210,7 +205,7 @@
         },
         {
           "field": "Imputation",
-          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
+          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -218,7 +213,7 @@
         },
         {
           "field": "Population",
-          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
+          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -234,9 +229,9 @@
         },
         {
           "field": "Cohort",
-          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
+          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
           "confidence": 0.8,
-          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
+          "evidence": "Row text:  |  | ILMN_1783168 | NETO1 | FCTX | 0.706 | 1.11×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"needs_rev",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -249,7 +244,7 @@
           "field": "Name",
           "value": "rs4147929",
           "confidence": 0.9,
-          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10−6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
+          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10 −6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -257,7 +252,7 @@
           "field": "P-value",
           "value": 3.9399999999999995e-06,
           "confidence": 0.7,
-          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10−6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
+          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10 −6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -265,13 +260,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.259,
           "confidence": 0.65,
-          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10−6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
+          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10 −6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "Discovery + IGAP + Meta-analysis",
+          "value": "Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -287,7 +282,7 @@
         },
         {
           "field": "Imputation",
-          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
+          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -295,7 +290,7 @@
         },
         {
           "field": "Population",
-          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
+          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -311,9 +306,9 @@
         },
         {
           "field": "Cohort",
-          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
+          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
           "confidence": 0.8,
-          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10−6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
+          "evidence": "Row text: rs4147929 | ABCA7 | t3862068 | EID2B | FCTX | 0.259 | 3.94×10 −6\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -326,7 +321,7 @@
           "field": "Name",
           "value": "rs10948363",
           "confidence": 0.9,
-          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -334,7 +329,7 @@
           "field": "P-value",
           "value": 1.64e-05,
           "confidence": 0.7,
-          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -342,13 +337,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.343,
           "confidence": 0.65,
-          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "Discovery + IGAP + Meta-analysis",
+          "value": "Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -364,7 +359,7 @@
         },
         {
           "field": "Imputation",
-          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
+          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -372,7 +367,7 @@
         },
         {
           "field": "Population",
-          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
+          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -388,9 +383,9 @@
         },
         {
           "field": "Cohort",
-          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
+          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
           "confidence": 0.8,
-          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs10948363 | CD2AP | t2969159 | AK9 | FCTX | 0.343 | 1.64×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -403,7 +398,7 @@
           "field": "Name",
           "value": "rs3865444",
           "confidence": 0.9,
-          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -411,7 +406,7 @@
           "field": "P-value",
           "value": 1.9600000000000002e-05,
           "confidence": 0.7,
-          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -419,13 +414,13 @@
           "field": "EffectSize(altvsref)",
           "value": -0.255,
           "confidence": 0.65,
-          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "Discovery + IGAP + Meta-analysis",
+          "value": "Meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -441,7 +436,7 @@
         },
         {
           "field": "Imputation",
-          "value": "TOPMed + Haplotype Reference Consortium + UK10K + 1000 Genomes",
+          "value": "1000 Genomes EUR + ADGC + Charge Consortium + HRC;1000G + ADSP",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -449,7 +444,7 @@
         },
         {
           "field": "Population",
-          "value": "ADSP + 1000 Genomes EUR + European + IGAP + ADGC",
+          "value": "European ancestry + 1000 Genomes EUR + ADGC + ADSP + European",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -465,9 +460,9 @@
         },
         {
           "field": "Cohort",
-          "value": "UKBEC + CHARGE + ADSP + IGAP + UKBB + ADGC + NABEC + ADNI",
+          "value": "ADNI + IGAP + ADGC + UKBEC + NABEC + CHARGE + UKBB + ADSP",
           "confidence": 0.8,
-          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10−5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest  gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
+          "evidence": "Row text: rs3865444 | CD33 | t3822216 | IER2 | TCTX | -0.255 | 1.96×10 −5\n[column_mapping] {\"IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3333, \"",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

@@ -256,67 +256,10 @@ class ADVPInformationRetriever:
         # load the device
         self.device = device if device is not None else "cpu"
         
-        # load the embeddings
-        # self.embeddings_model_tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name)
-        # self.embeddings_model = AutoModel.from_pretrained(
-        #     embeddings_model_name,
-        #     device_map = self.device,
-        # )
-
-        # load the reranker
-        # self.reranker_model = CrossEncoder(
-        #     model_name_or_path=reranker_model_name, 
-        #     device = self.device,
-        #     trust_remote_code = True
-        # ) 
-
-        # load the llm
-        # bnb_config = BitsAndBytesConfig(
-        #     # load_in_8bit=True
-        #     load_in_4bit=True,
-        #     bnb_4bit_compute_dtype=torch.bfloat16, 
-        #     bnb_4bit_use_double_quant=True,
-        #     bnb_4bit_quant_type="nf4",
-        # )
-        # if use_hf and llm_model_name is not None:
-        #     self.use_hf = True
-        #     login(os.environ.get("HF_TOKEN", ""))
-        #     self.tokenizer = AutoTokenizer.from_pretrained(llm_model_name)
-        #     self.model = AutoModelForCausalLM.from_pretrained(
-        #         llm_model_name,
-        #         # quantization_config = bnb_config,
-        #         device_map = self.device,
-        #         # torch_dtype=torch.bfloat16,
-        #     )
-        #     self.model.eval()
-        #     allowed_chars = list("01")
-        #     allowed_token_ids = set()
-        #     for token, token_id in self.tokenizer.get_vocab().items():
-        #         if all(c in allowed_chars for c in token):
-        #             allowed_token_ids.add(token_id)
-        #     # self.allowed_tokens_processor = AllowedTokensProcessor(allowed_token_ids)
-        # elif not use_hf and llm_gguf_path is not None:
-        #     self.use_hf = False
-        #     self.llm = Llama(
-        #         model_path=llm_gguf_path,
-        #         n_ctx=16384,
-        #         n_gpu_layers=-1,
-        #         verbose=False,
-        #     )
-        #     allowed_token_ids = set()
-        #     for token_id in range(self.llm.n_vocab()):
-        #         token_bytes = self.llm.detokenize([token_id])
-        #         token_str = token_bytes.decode("utf-8", errors="replace")
-        #         if all(c in "01" for c in token_str) and len(token_str) > 0:
-        #             allowed_token_ids.add(token_id)
-        #     # self.allowed_tokens_processor = AllowedTokensProcessorLlamaCpp(allowed_token_ids)
-        # else:
-        #     raise Exception("Missing either llm_model_name (if use_hf=True) or llm_gguf_path (if use_hf=False)")
-
         # NOTE: config for search and generate, add it as params later
         self.top_k = 20
         self.top_k_rerank = 5
-        self.max_new_tokens = 1024
+        self.max_new_tokens = 128
         self.similarity_score_threshold = 0.0
         self.temperature = 0
         self.top_p = 1
@@ -370,51 +313,6 @@ Output:"""
     #     return prompt
     
 
-#     def make_messages_with_choice(self, query: str, documents: List[str], choice: str) -> List[Dict]:
-#         document_str = "\n\n".join([f"EXCERPT {i + 1}:\n{d}" for i, d in enumerate(documents)])
-
-#         messages = [
-#             {
-#                 "role": "system",
-#                 "content": "You are a strict biomedical evidence verifier. Only use the provided excerpts. Never guess. Output only 0 or 1."
-#             },
-#             {
-#                 "role": "user",
-#                 "content": f"""Goal: decide whether the evidence excerpts clearly and explicitly support the candidate answer for the given field.
-
-# Field:
-# {query}
-
-# Candidate answer:
-# {choice}
-
-# Evidence text:
-# {document_str}
-
-# Rules:
-# - Output 1 if the excerpts clearly and explicitly support the candidate answer.
-# - Output 0 if the excerpts do not support it, or if the evidence is ambiguous.
-# - Output only a single digit: 0 or 1. Nothing else.
-
-# Example:
-# Field: Type of association analysis
-# Candidate answer: gene-based
-# Evidence: We performed a gene-based test aggregating rare variants per gene.
-# Output: 1
-
-# Output: """
-#             }
-#         ]
-#         return messages
-
-    # def make_prompt_lst_with_choices(self, query: str, documents: List[str], choices: List[str]) -> List[str]:
-    #     prompt_lst = []
-    #     for choice in choices:
-    #         messages = self.make_messages_with_choice(query, documents, choice)
-    #         prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    #         prompt_lst.append(prompt)
-    #     return prompt_lst
-    
     def extract_lst_from_llm_output(self, text: str) -> List[str]:
         text = text.replace("```", "").strip()
         matches = re.findall(r"\[.*?\]", text, re.DOTALL)
@@ -425,22 +323,6 @@ Output:"""
             return ast.literal_eval(list_str)
         except Exception:
             return []
-        
-    # def extract_lst_from_llm_output_choices(self, text: str) -> List[int]:
-    #     # Remove code fences and trim
-    #     text = text.replace("```", "").strip()
-
-    #     # Extract the last bracketed list
-    #     matches = re.findall(r"\[[^\]]*\]", text)
-    #     if not matches:
-    #         return []
-
-    #     list_str = matches[-1]
-
-    #     # Extract all integers inside the brackets
-    #     numbers = re.findall(r"\d+", list_str)
-
-    #     return [int(n) for n in numbers]
 
     def extract_possible_info_from_paper(self, pmid: int, pmcid: str) -> Dict[str, List]:
         """
@@ -563,87 +445,6 @@ Output:"""
             res[ref_col] = self.extract_lst_from_llm_output(response)
     
         return res
-    
-    # def extract_possible_info_from_paper_with_choices(self, pmid: int, pmcid: str) -> Dict[str, List]:
-    #     """
-    #     Given a paper, extract all possible answer for each category.
-    #     - If no choices: falls back to the same free-form extraction as extract_possible_info_from_paper.
-    #     - If choices exist: for each choice, asks the LLM to return 1 (valid) or 0 (invalid) using the
-    #       logits processor, then collects all choices the LLM marked as valid.
-    #     """
-    #     res = {}
-
-    #     for ref_col, ref_col_context, ref_col_choices in zip(self.referencing_col_lst, self.referencing_col_context_lst, self.referencing_col_choices_lst):
-    #         query = ref_col_context
-    #         documents = self.vector_store.similarity_search_with_relevance_scores(
-    #             query=query,
-    #             k=self.top_k,
-    #             filter={"$and": [{"PMID": str(pmid)}, {"PMCID": pmcid}]},
-    #         )
-    #         documents = [d.page_content for d, score in documents if score >= self.similarity_score_threshold]
-    #         if len(documents) == 0:
-    #             res[ref_col] = []
-    #             continue
-
-    #         # rerank
-    #         scores = self.reranker_model.predict([(query, d) for d in documents])
-    #         documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
-    #         documents = documents[:self.top_k_rerank]
-
-    #         if len(ref_col_choices) > 0:
-    #             # For each choice, verify if it is supported by the documents (1 = valid, 0 = invalid)
-    #             if self.use_hf:
-    #                 prompt_lst = self.make_prompt_lst_with_choices(query, documents, ref_col_choices)
-    #                 inputs = self.tokenizer(prompt_lst, padding=True, padding_side="left", truncation=True, return_tensors="pt").to(self.device)
-    #                 input_len = inputs["input_ids"].shape[-1]
-    #                 outputs = self.model.generate(
-    #                     **inputs,
-    #                     max_new_tokens=1,
-    #                     do_sample=False,
-    #                     temperature=self.temperature,
-    #                     top_p=self.top_p,
-    #                     logits_processor=[self.allowed_tokens_processor],
-    #                 )
-    #                 decoded_outputs = self.tokenizer.batch_decode(outputs[:, input_len:], skip_special_tokens=True)
-    #             else:
-    #                 decoded_outputs = []
-    #                 for choice in ref_col_choices:
-    #                     messages = self.make_messages_with_choice(query, documents, choice)
-    #                     output = self.llm.create_chat_completion(
-    #                         messages=messages,
-    #                         max_tokens=1,
-    #                         temperature=self.temperature,
-    #                         top_p=self.top_p,
-    #                         logits_processor=LogitsProcessorList([self.allowed_tokens_processor]),
-    #                     )
-    #                     decoded_outputs.append(output["choices"][0]["message"]["content"])
-    #             res[ref_col] = [choice.split(":")[0] for i, choice in enumerate(ref_col_choices) if decoded_outputs[i].strip() == '1']
-    #         else:
-    #             # No choices: same flow as extract_possible_info_from_paper
-    #             if self.use_hf:
-    #                 prompt = self.make_prompt(query, documents)
-    #                 inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-    #                 outputs = self.model.generate(
-    #                     **inputs,
-    #                     max_new_tokens=self.max_new_tokens,
-    #                     do_sample=False,
-    #                     temperature=self.temperature,
-    #                     top_p=self.top_p,
-    #                 )
-    #                 response = self.tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-    #             else:
-    #                 messages = self.make_messages(query, documents)
-    #                 response = self.llm.create_chat_completion(
-    #                     messages=messages,
-    #                     max_tokens=self.max_new_tokens,
-    #                     temperature=self.temperature,
-    #                     top_p=self.top_p,
-    #                 )
-    #                 response = response["choices"][0]["message"]["content"]
-    #             res[ref_col] = self.extract_lst_from_llm_output(response)
-
-    #     return res
-
 
 class ADVPInformationRetrieverKeyword:
     def __init__(self, info_type: str, keyword_dict: Dict[str, List]):
