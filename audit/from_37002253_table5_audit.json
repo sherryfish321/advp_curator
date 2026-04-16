@@ -42,9 +42,6 @@
     {
       "field": "Model Type",
       "value": [
-        "meta-analysis",
-        "logistic regression",
-        "bonferroni correction",
         "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
@@ -99,7 +96,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -107,7 +104,7 @@
           "field": "P-value",
           "value": 0.004,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -115,13 +112,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.044,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -137,7 +134,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -145,7 +142,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -163,7 +160,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -176,7 +173,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -184,7 +181,7 @@
           "field": "P-value",
           "value": 0.025,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -192,13 +189,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.044,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -214,7 +211,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -222,7 +219,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -240,7 +237,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -275,7 +272,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -291,7 +288,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -299,7 +296,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -352,7 +349,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -368,7 +365,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -376,7 +373,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -407,7 +404,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -415,7 +412,7 @@
           "field": "P-value",
           "value": 0.0287,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -423,13 +420,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.035,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -445,7 +442,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -453,7 +450,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -471,7 +468,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -506,7 +503,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -522,7 +519,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -530,7 +527,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -583,7 +580,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -599,7 +596,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -607,7 +604,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -660,7 +657,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -676,7 +673,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -684,7 +681,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -737,7 +734,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -753,7 +750,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -761,7 +758,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -814,7 +811,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -830,7 +827,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -838,7 +835,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -891,7 +888,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -907,7 +904,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -915,7 +912,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -968,7 +965,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -984,7 +981,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -992,7 +989,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1045,7 +1042,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1061,7 +1058,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1069,7 +1066,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1100,7 +1097,7 @@
           "field": "Name",
           "value": "rs7412",
           "confidence": 0.9,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1108,7 +1105,7 @@
           "field": "P-value",
           "value": 0.0113,
           "confidence": 0.7,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1116,13 +1113,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.071,
           "confidence": 0.65,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1138,7 +1135,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1146,7 +1143,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1164,7 +1161,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1177,7 +1174,7 @@
           "field": "Name",
           "value": "rs7412",
           "confidence": 0.9,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1185,7 +1182,7 @@
           "field": "P-value",
           "value": 0.019,
           "confidence": 0.7,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1193,13 +1190,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.103,
           "confidence": 0.65,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1215,7 +1212,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1223,7 +1220,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1241,7 +1238,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1276,7 +1273,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1292,7 +1289,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1300,7 +1297,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1353,7 +1350,7 @@
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + Meta-analysis + discovery",
+          "value": "discovery + meta-analysis + Meta-analysis + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1369,7 +1366,7 @@
         },
         {
           "field": "Imputation",
-          "value": "HRC + minimac4 + TOPMed + UK10K + 1000G",
+          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1377,7 +1374,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + AA + middle-east + african american + European ancestry + hispanic + EAS",
+          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",

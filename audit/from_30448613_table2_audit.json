@@ -15,10 +15,9 @@
     {
       "field": "Stage",
       "value": [
-        "discovery",
         "replication",
         "meta-analysis",
-        "Meta-analysis"
+        "discovery"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -28,7 +27,7 @@
     {
       "field": "Association Type",
       "value": [
-        "Imaging"
+        "imaging"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -38,11 +37,11 @@
     {
       "field": "Model Type",
       "value": [
-        "meta analysis",
+        "logistic regression (with covariates)",
         "logistic regression",
-        "covariates",
+        "meta analysis",
         "p value bonferroni correction",
-        "logistic regression (with covariates)"
+        "covariates"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -52,12 +51,12 @@
     {
       "field": "Imputation",
       "value": [
-        "1000G",
-        "HRC",
-        "TOPMed",
-        "UK10K",
-        "IGAP",
-        "HRC;1000G"
+        "igap",
+        "uk10k",
+        "hrc;1000g",
+        "hrc",
+        "topmed",
+        "1000g"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -67,10 +66,10 @@
     {
       "field": "Population",
       "value": [
-        "EUR",
         "adgc",
+        "eur",
         "adsp",
-        "European ancestry"
+        "european ancestry"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -78,11 +77,13 @@
       "needs_review": true
     },
     {
-      "field": "Sample size",
-      "value": "74046",
-      "confidence": 0.7,
-      "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations between the AD phenotype and genetics, finding 21 SNPs as significant by meta-analyzing genetic and phenotype data from",
-      "rule": "section-aware sample size extraction",
+      "field": "Sample Size",
+      "value": [
+        "74046"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
       "needs_review": true
     }
   ],
@@ -116,7 +117,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -132,7 +133,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -140,7 +141,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -149,14 +150,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
           "rule": "cohort keyword mapping",
@@ -193,7 +194,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -209,7 +210,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -217,7 +218,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -226,14 +227,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\":",
           "rule": "cohort keyword mapping",
@@ -270,7 +271,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -286,7 +287,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -294,7 +295,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -303,14 +304,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
@@ -347,7 +348,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -363,7 +364,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -371,7 +372,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -380,14 +381,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
@@ -424,7 +425,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -440,7 +441,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -448,7 +449,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -457,14 +458,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
           "rule": "cohort keyword mapping",
@@ -501,7 +502,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -517,7 +518,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -525,7 +526,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -534,14 +535,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referenc",
           "rule": "cohort keyword mapping",
@@ -578,7 +579,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -594,7 +595,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -602,7 +603,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -611,14 +612,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -655,7 +656,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -671,7 +672,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -679,7 +680,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -688,14 +689,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -732,7 +733,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -748,7 +749,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -756,7 +757,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -765,14 +766,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -809,7 +810,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -825,7 +826,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -833,7 +834,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -842,14 +843,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -886,7 +887,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -902,7 +903,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -910,7 +911,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -919,14 +920,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
           "rule": "cohort keyword mapping",
@@ -963,7 +964,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -979,7 +980,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -987,7 +988,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -996,14 +997,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\"",
           "rule": "cohort keyword mapping",
@@ -1040,7 +1041,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1056,7 +1057,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1064,7 +1065,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1073,14 +1074,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1117,7 +1118,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1133,7 +1134,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1141,7 +1142,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1150,14 +1151,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1194,7 +1195,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1210,7 +1211,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1218,7 +1219,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1227,14 +1228,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1271,7 +1272,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1287,7 +1288,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1295,7 +1296,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1304,14 +1305,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1348,7 +1349,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1364,7 +1365,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1372,7 +1373,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1381,14 +1382,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1425,7 +1426,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1441,7 +1442,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1449,7 +1450,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1458,14 +1459,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1502,7 +1503,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1518,7 +1519,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1526,7 +1527,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1535,14 +1536,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1579,7 +1580,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1595,7 +1596,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1603,7 +1604,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1612,14 +1613,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -1656,7 +1657,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1672,7 +1673,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1680,7 +1681,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1689,14 +1690,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -1733,7 +1734,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1749,7 +1750,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1757,7 +1758,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1766,14 +1767,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -1810,7 +1811,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1826,7 +1827,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1834,7 +1835,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1843,14 +1844,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -1887,7 +1888,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1903,7 +1904,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1911,7 +1912,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1920,14 +1921,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -1964,7 +1965,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1980,7 +1981,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1988,7 +1989,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1997,14 +1998,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
@@ -2041,7 +2042,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2057,7 +2058,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2065,7 +2066,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2074,14 +2075,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
@@ -2118,7 +2119,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2134,7 +2135,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2142,7 +2143,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2151,14 +2152,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
           "rule": "cohort keyword mapping",
@@ -2195,7 +2196,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2211,7 +2212,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2219,7 +2220,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2228,14 +2229,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col",
           "rule": "cohort keyword mapping",
@@ -2272,7 +2273,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2288,7 +2289,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2296,7 +2297,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2305,14 +2306,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -2349,7 +2350,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2365,7 +2366,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2373,7 +2374,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2382,14 +2383,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -2426,7 +2427,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2442,7 +2443,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2450,7 +2451,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2459,14 +2460,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -2503,7 +2504,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2519,7 +2520,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2527,7 +2528,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2536,14 +2537,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
@@ -2580,7 +2581,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2596,7 +2597,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2604,7 +2605,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2613,14 +2614,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -2657,7 +2658,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2673,7 +2674,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2681,7 +2682,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2690,14 +2691,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
@@ -2734,7 +2735,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2750,7 +2751,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2758,7 +2759,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2767,14 +2768,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
@@ -2811,7 +2812,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2827,7 +2828,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2835,7 +2836,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2844,14 +2845,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_",
           "rule": "cohort keyword mapping",
@@ -2888,7 +2889,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2904,7 +2905,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2912,7 +2913,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2921,14 +2922,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
           "rule": "cohort keyword mapping",
@@ -2965,7 +2966,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2981,7 +2982,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2989,7 +2990,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2998,14 +2999,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"referen",
           "rule": "cohort keyword mapping",
@@ -3042,7 +3043,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3058,7 +3059,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3066,7 +3067,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3075,14 +3076,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
@@ -3119,7 +3120,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3135,7 +3136,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3143,7 +3144,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3152,14 +3153,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
@@ -3196,7 +3197,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3212,7 +3213,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3220,7 +3221,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3229,14 +3230,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
@@ -3273,7 +3274,7 @@
         },
         {
           "field": "Stage",
-          "value": "n + v + - + p + m + d + s + a + e +   + o + l + + + M + y + i + t + c + r",
+          "value": "e + a + l + + + o + - +   + p + r + t + c + s + y + i + d + m + v + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3289,7 +3290,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1 + R + T + P + ; + d + A + e +   + + + C + M + H + 0 + I + K + G + O + U",
+          "value": "o + e + + + c + k + h + m + 1 + u + a +   + 0 + g + i + d + p + r + t + ;",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3297,7 +3298,7 @@
         },
         {
           "field": "Population",
-          "value": "n + g +   + E + y + d + o + p + u + R + t + + + c + s + a + r + e + U",
+          "value": "e + o + a + + + p +   + r + t + c + g + u + s + y + d + n",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3306,14 +3307,14 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ith the largest number of AD and non-AD individuals was the International Genomics of Alzheimer’s Project (IGAP), which capitalized on a large, multicenter study design to include 74,046 individuals ( Lambert, et al., 2013 ). This study extended associations b",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "N +   + D + E + I + K + R + G + S + + + P + C + B + A + U + H",
+          "value": "+ + P + N +   + G + C + D + S + E + B + A + I + K + U + H + R",
           "confidence": 0.8,
           "evidence": "Row text:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68\n[column_mapping] {\"IGAP SNP | IGAP SNP\": {\"reference_col\": \"Cohort\", \"score\": 0.4, \"needs_review\": false, \"match_hint\": \"IGAP SNP\"}, \"Closest gene | Closest gene\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",

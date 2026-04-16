@@ -216,7 +216,12 @@ CURATED_COLUMNS = [
     "Table Ref in paper", "Table links", "LocusName"
 ]
 
-
+# -----------------------------
+# Cache file for LLM call
+# -----------------------------
+AIR_CACHE_FILE = "advp_information_retriever_cache.json"
+with open(AIR_CACHE_FILE, "r", encoding="utf-8") as f:
+    AIR_CACHE = json.load(f)
 # -----------------------------
 # Audit structure
 # -----------------------------
@@ -2634,53 +2639,68 @@ def run_pipeline(pdf_or_url: Optional[str],
     #     assoc_audit = FieldAudit("Association Type", col_require_rag_to_possible_info["Association Type"], 0.5, "", "", True)
     #     model_audit = FieldAudit("Model Type", col_require_rag_to_possible_info["Model Type"], 0.5, "", "", True)
     
-    if use_pmcid:
-        col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+    # NOTE: check if already in cache
+    if str(resolved_pmid) in AIR_CACHE:
+        col_require_rag_to_possible_info = AIR_CACHE[str(resolved_pmid)]
     else:
-        col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_pdf_paper(int(resolved_pmid), pdf_or_url)
-    stage_val, _ = infer_stage(section_scoped_text)
-    assoc_val, _ = infer_association_type(section_scoped_text)
-    model_val, _ = infer_model_type(section_scoped_text)
-    imp_val, _ = infer_imputation(section_scoped_text)
-    pop_val, _ = infer_population(section_text)
-    imp_val = to_canonical_imputation_codes(imp_val)
-    paper_hints = get_paper_metadata_hints(resolved_pmid)
-    if imp_val == "NR" and paper_hints.get("Imputation"):
-        imp_val = to_canonical_imputation_codes(paper_hints["Imputation"])
-        # imp_audit = FieldAudit(
-        #     "Imputation", imp_val, 0.6,
-        #     f"paper-level fallback metadata for PMID {resolved_pmid}",
-        #     "paper metadata fallback", True
-        # )
-    if pop_val == "NR" and paper_hints.get("Population"):
-        pop_val = paper_hints["Population"]
-        # pop_audit = FieldAudit(
-        #     "Population", pop_val, 0.6,
-        #     f"paper-level fallback metadata for PMID {resolved_pmid}",
-        #     "paper metadata fallback", True
-        # ) 
-    if stage_val != "NR" and stage_val not in col_require_rag_to_possible_info["Stage"]:
-        col_require_rag_to_possible_info["Stage"].append(stage_val) 
-    if assoc_val != "NR" and assoc_val not in col_require_rag_to_possible_info["Association Type"]:
-        col_require_rag_to_possible_info["Association Type"].append(assoc_val) 
-    if model_val != "NR" and model_val not in col_require_rag_to_possible_info["Model Type"]:
-        col_require_rag_to_possible_info["Model Type"].append(model_val) 
-    if imp_val != "NR" and imp_val not in col_require_rag_to_possible_info["Imputation"]:
-        col_require_rag_to_possible_info["Imputation"].append(imp_val) 
-    if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
-        col_require_rag_to_possible_info["Population"].append(pop_val) 
-    col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
-    sample_size_val, sample_size_audit = infer_sample_size(section_text)
-    col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
-    # assoc_val, assoc_audit = infer_association_type(section_scoped_text)
-    # col_require_rag_to_possible_info["Association Type"] = [assoc_val]
-    # model_val, model_audit = infer_model_type(section_scoped_text)
-    # col_require_rag_to_possible_info["Model Type"] = [model_val]
+        if use_pmcid:
+            col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+        else:
+            col_require_rag_to_possible_info = gwas_information_retriever.extract_possible_info_from_pdf_paper(int(resolved_pmid), pdf_or_url)
+        stage_val, _ = infer_stage(section_scoped_text)
+        assoc_val, _ = infer_association_type(section_scoped_text)
+        model_val, _ = infer_model_type(section_scoped_text)
+        imp_val, _ = infer_imputation(section_scoped_text)
+        pop_val, _ = infer_population(section_text)
+        imp_val = to_canonical_imputation_codes(imp_val)
+        paper_hints = get_paper_metadata_hints(resolved_pmid)
+        if imp_val == "NR" and paper_hints.get("Imputation"):
+            imp_val = to_canonical_imputation_codes(paper_hints["Imputation"])
+            # imp_audit = FieldAudit(
+            #     "Imputation", imp_val, 0.6,
+            #     f"paper-level fallback metadata for PMID {resolved_pmid}",
+            #     "paper metadata fallback", True
+            # )
+        if pop_val == "NR" and paper_hints.get("Population"):
+            pop_val = paper_hints["Population"]
+            # pop_audit = FieldAudit(
+            #     "Population", pop_val, 0.6,
+            #     f"paper-level fallback metadata for PMID {resolved_pmid}",
+            #     "paper metadata fallback", True
+            # ) 
+        if stage_val != "NR" and stage_val not in col_require_rag_to_possible_info["Stage"]:
+            col_require_rag_to_possible_info["Stage"].append(stage_val) 
+            col_require_rag_to_possible_info["Stage"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Stage"]]))
+        if assoc_val != "NR" and assoc_val not in col_require_rag_to_possible_info["Association Type"]:
+            col_require_rag_to_possible_info["Association Type"].append(assoc_val) 
+            col_require_rag_to_possible_info["Association Type"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Association Type"]]))
+        if model_val != "NR" and model_val not in col_require_rag_to_possible_info["Model Type"]:
+            col_require_rag_to_possible_info["Model Type"].append(model_val) 
+            col_require_rag_to_possible_info["Model Type"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Model Type"]]))
+        if imp_val != "NR" and imp_val not in col_require_rag_to_possible_info["Imputation"]:
+            col_require_rag_to_possible_info["Imputation"].append(imp_val) 
+            col_require_rag_to_possible_info["Imputation"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Imputation"]]))
+        if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
+            col_require_rag_to_possible_info["Population"].append(pop_val) 
+            col_require_rag_to_possible_info["Population"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Population"]]))
+        col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+        sample_size_val, _ = infer_sample_size(section_text)
+        col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
+        # assoc_val, assoc_audit = infer_association_type(section_scoped_text)
+        # col_require_rag_to_possible_info["Association Type"] = [assoc_val]
+        # model_val, model_audit = infer_model_type(section_scoped_text)
+        # col_require_rag_to_possible_info["Model Type"] = [model_val]
+        AIR_CACHE[str(resolved_pmid)] = col_require_rag_to_possible_info
+        with open(AIR_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(AIR_CACHE, f, indent=2)
+    
+    # NOTE: need to update more details info on audit
     stage_audit = FieldAudit("Stage", col_require_rag_to_possible_info["Stage"], 0.5, "", "", True)
     imp_audit = FieldAudit("Imputation", col_require_rag_to_possible_info["Imputation"], 0.5, "", "", True)
     pop_audit = FieldAudit("Population", col_require_rag_to_possible_info["Population"], 0.5, "", "", True)
     assoc_audit = FieldAudit("Association Type", col_require_rag_to_possible_info["Association Type"], 0.5, "", "", True)
     model_audit = FieldAudit("Model Type", col_require_rag_to_possible_info["Model Type"], 0.5, "", "", True)
+    sample_size_audit = FieldAudit("Sample Size", col_require_rag_to_possible_info["Sample Size"], 0.5, "", "", True)
 
     # 4) Extract tables
     table_entries: List[Tuple[str, pd.DataFrame, int]] = []

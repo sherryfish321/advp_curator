@@ -1,0 +1,56 @@
+{
+  "30448613": {
+    "Population": [
+      "adgc",
+      "eur",
+      "adsp",
+      "european ancestry"
+    ],
+    "Stage": [
+      "replication",
+      "meta-analysis",
+      "discovery"
+    ],
+    "Imputation": [
+      "igap",
+      "uk10k",
+      "hrc;1000g",
+      "hrc",
+      "topmed",
+      "1000g"
+    ],
+    "Study type": [
+      "Whole Exome Sequencing (WES)",
+      "Genotyping",
+      "International Genomics of Alzheimers Project (IGAP)"
+    ],
+    "Phenotype": [
+      "alzheimers disease",
+      "abca7",
+      "ms4a6a"
+    ],
+    "Model Type": [
+      "logistic regression (with covariates)",
+      "logistic regression",
+      "meta analysis",
+      "p value bonferroni correction",
+      "covariates"
+    ],
+    "Association Type": [
+      "imaging"
+    ],
+    "Cohort": [
+      "ADGC",
+      "ADNI",
+      "ADSP",
+      "IGAP",
+      "CHARGE",
+      "UKBB",
+      "UKBEC",
+      "NABEC"
+    ],
+    "Sample Size": [
+      "74046"
+    ]
+  }
+}

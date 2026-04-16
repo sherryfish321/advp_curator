@@ -96,7 +96,7 @@
           "field": "Name",
           "value": "101798",
           "confidence": 0.9,
-          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -104,7 +104,7 @@
           "field": "P-value",
           "value": 0.000357,
           "confidence": 0.7,
-          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -112,13 +112,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -134,7 +134,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -142,7 +142,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -160,7 +160,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Adlercreutzia* | ADc12 | 0.3705 | 0.0068 | 3.57E−04 | − 1870.66 | 524.0 | 101798 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -173,7 +173,7 @@
           "field": "Name",
           "value": "1684",
           "confidence": 0.9,
-          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -181,7 +181,7 @@
           "field": "P-value",
           "value": 0.0391,
           "confidence": 0.7,
-          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -189,13 +189,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -211,7 +211,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -219,7 +219,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -237,7 +237,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
+          "evidence": "Row text: Adlercreutzia* | GenADA | 0.002 | 0.0036 | 3.91E−02 | − 224.26 | 108.71 | 1684 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -272,7 +272,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -288,7 +288,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -296,7 +296,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -327,7 +327,7 @@
           "field": "Name",
           "value": "99785",
           "confidence": 0.9,
-          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -335,7 +335,7 @@
           "field": "P-value",
           "value": 0.103,
           "confidence": 0.7,
-          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -343,13 +343,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -365,7 +365,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -373,7 +373,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -391,7 +391,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Alistipes | GenADA | 0.3246 | 0.0023 | 1.03E−01 | − 2953.44 | 1810.61 | 99785 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -404,7 +404,7 @@
           "field": "Name",
           "value": "2834",
           "confidence": 0.9,
-          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -412,7 +412,7 @@
           "field": "P-value",
           "value": 0.000118,
           "confidence": 0.7,
-          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -420,13 +420,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -442,7 +442,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -450,7 +450,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -468,7 +468,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Anaerostipes | ADc12 | 0.0032 | 0.0078 | 1.18E−04 | − 469.15 | 121.86 | 2834 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -503,7 +503,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -519,7 +519,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -527,7 +527,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -580,7 +580,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -596,7 +596,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -604,7 +604,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -657,7 +657,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -673,7 +673,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -681,7 +681,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -712,7 +712,7 @@
           "field": "Name",
           "value": "177",
           "confidence": 0.9,
-          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -720,7 +720,7 @@
           "field": "P-value",
           "value": 3.48e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -728,13 +728,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -750,7 +750,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -758,7 +758,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -776,7 +776,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
+          "evidence": "Row text: Candidatus Soleaferrea* | ADc12 | 0.0002 | 0.009 | 3.48E−05 | − 71.29 | 17.22 | 177 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPE",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -789,7 +789,7 @@
           "field": "Name",
           "value": "12431",
           "confidence": 0.9,
-          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -797,7 +797,7 @@
           "field": "P-value",
           "value": 0.128,
           "confidence": 0.7,
-          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -805,13 +805,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -827,7 +827,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -835,7 +835,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -853,7 +853,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
+          "evidence": "Row text: Candidatus Soleaferrea* | GenADA | 0.0199 | 0.002 | 1.28E−01 | − 404.97 | 265.96 | 12431 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UN",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -866,7 +866,7 @@
           "field": "Name",
           "value": "71434",
           "confidence": 0.9,
-          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -874,7 +874,7 @@
           "field": "P-value",
           "value": 8.54e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -882,13 +882,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -904,7 +904,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -912,7 +912,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -930,7 +930,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Catenibacterium | ADc12 | 0.3839 | 0.0082 | 8.54E−05 | − 1276.68 | 324.95 | 71434 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -965,7 +965,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -981,7 +981,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -989,7 +989,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1042,7 +1042,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1058,7 +1058,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1066,7 +1066,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1119,7 +1119,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1135,7 +1135,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1143,7 +1143,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1174,7 +1174,7 @@
           "field": "Name",
           "value": "42727",
           "confidence": 0.9,
-          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1182,7 +1182,7 @@
           "field": "P-value",
           "value": 9.64e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1190,13 +1190,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1212,7 +1212,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1220,7 +1220,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1238,7 +1238,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Eisenbergiella* | ADc12 | 0.1049 | 0.0082 | 9.64E−05 | − 858.39 | 220.13 | 42727 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1251,7 +1251,7 @@
           "field": "Name",
           "value": "22002",
           "confidence": 0.9,
-          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1259,7 +1259,7 @@
           "field": "P-value",
           "value": 0.00528,
           "confidence": 0.7,
-          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1267,13 +1267,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1289,7 +1289,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1297,7 +1297,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1315,7 +1315,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "Row text: Eisenbergiella* | GenADA | 0.0439 | 0.0066 | 5.28E−03 | − 1131.73 | 405.7 | 22002 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\"",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1328,7 +1328,7 @@
           "field": "Name",
           "value": "48130",
           "confidence": 0.9,
-          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1336,7 +1336,7 @@
           "field": "P-value",
           "value": 7.19e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1344,13 +1344,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1366,7 +1366,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1374,7 +1374,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1392,7 +1392,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
+          "evidence": "Row text: Eubacterium coprostanoligenes | ADc12 | 0.102 | 0.0086 | 7.19E−05 | − 1085.22 | 273.37 | 48130 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1427,7 +1427,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1443,7 +1443,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1451,7 +1451,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1482,7 +1482,7 @@
           "field": "Name",
           "value": "19567",
           "confidence": 0.9,
-          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1490,7 +1490,7 @@
           "field": "P-value",
           "value": 0.0003,
           "confidence": 0.7,
-          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1498,13 +1498,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1520,7 +1520,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1528,7 +1528,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1546,7 +1546,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
+          "evidence": "Row text: Eubacterium fissicatena | ADc12 | 0.0404 | 0.007 | 3.00E−04 | − 418.31 | 115.71 | 19567 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNM",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1559,7 +1559,7 @@
           "field": "Name",
           "value": "663",
           "confidence": 0.9,
-          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1567,7 +1567,7 @@
           "field": "P-value",
           "value": 0.00117,
           "confidence": 0.7,
-          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1575,13 +1575,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1597,7 +1597,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1605,7 +1605,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1623,7 +1623,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
+          "evidence": "Row text: Eubacterium fissicatena | GenADA | 0.0008 | 0.009 | 1.17E−03 | − 142.85 | 44.01 | 663 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAP",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1636,7 +1636,7 @@
           "field": "Name",
           "value": "95579",
           "confidence": 0.9,
-          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1644,7 +1644,7 @@
           "field": "P-value",
           "value": 0.000252,
           "confidence": 0.7,
-          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1652,13 +1652,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1674,7 +1674,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1682,7 +1682,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1700,7 +1700,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | ADc12 | 0.4353 | 0.0072 | 2.52E−04 | − 1240.65 | 338.95 | 95579 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1713,7 +1713,7 @@
           "field": "Name",
           "value": "42817",
           "confidence": 0.9,
-          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1721,7 +1721,7 @@
           "field": "P-value",
           "value": 0.0882,
           "confidence": 0.7,
-          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1729,13 +1729,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1751,7 +1751,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1759,7 +1759,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1777,7 +1777,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: Eubacterium nodatum* | GenADA | 0.1259 | 0.0025 | 8.82E−02 | − 805.51 | 472.45 | 42817 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1790,7 +1790,7 @@
           "field": "Name",
           "value": "16821",
           "confidence": 0.9,
-          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1798,7 +1798,7 @@
           "field": "P-value",
           "value": 5.57e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1806,13 +1806,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1828,7 +1828,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1836,7 +1836,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1854,7 +1854,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Gordonibacter* | ADc12 | 0.033 | 0.0089 | 5.57E−05 | − 254.45 | 63.13 | 16821 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1867,7 +1867,7 @@
           "field": "Name",
           "value": "7135",
           "confidence": 0.9,
-          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1875,7 +1875,7 @@
           "field": "P-value",
           "value": 0.033,
           "confidence": 0.7,
-          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1883,13 +1883,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1905,7 +1905,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1913,7 +1913,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1931,7 +1931,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "Row text: Gordonibacter* | GenADA | 0.0116 | 0.0039 | 3.30E−02 | − 351.65 | 164.98 | 7135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", ",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -1944,7 +1944,7 @@
           "field": "Name",
           "value": "70292",
           "confidence": 0.9,
-          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1952,7 +1952,7 @@
           "field": "P-value",
           "value": 1.01e-07,
           "confidence": 0.7,
-          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1960,13 +1960,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1982,7 +1982,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1990,7 +1990,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2008,7 +2008,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "Row text: Intestinibacter* | ADc12 | 0.1903 | 0.0154 | 1.01E−07 | − 3014.37 | 566.17 | 70292 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2021,7 +2021,7 @@
           "field": "Name",
           "value": "2152",
           "confidence": 0.9,
-          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2029,7 +2029,7 @@
           "field": "P-value",
           "value": 0.0922,
           "confidence": 0.7,
-          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2037,13 +2037,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2059,7 +2059,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2067,7 +2067,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2085,7 +2085,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
+          "evidence": "Row text: Intestinibacter* | GenADA | 0.0024 | 0.0024 | 9.22E−02 | − 246.05 | 146.1 | 2152 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\",",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2120,7 +2120,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2136,7 +2136,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2144,7 +2144,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2197,7 +2197,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2213,7 +2213,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2221,7 +2221,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2252,7 +2252,7 @@
           "field": "Name",
           "value": "35344",
           "confidence": 0.9,
-          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2260,7 +2260,7 @@
           "field": "P-value",
           "value": 0.000108,
           "confidence": 0.7,
-          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2268,13 +2268,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2290,7 +2290,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2298,7 +2298,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2316,7 +2316,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
+          "evidence": "Row text: LachnospiraceaeUCG008 | ADc12 | 0.0784 | 0.0081 | 1.08E−04 | − 776.50 | 200.53 | 35344 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMA",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2351,7 +2351,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2367,7 +2367,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2375,7 +2375,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2406,7 +2406,7 @@
           "field": "Name",
           "value": "8305",
           "confidence": 0.9,
-          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2414,7 +2414,7 @@
           "field": "P-value",
           "value": 0.000308,
           "confidence": 0.7,
-          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2422,13 +2422,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2444,7 +2444,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2452,7 +2452,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2470,7 +2470,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
+          "evidence": "Row text: Oscillibacter | ADc12 | 0.0124 | 0.0068 | 3.08E−04 | − 630.36 | 174.67 | 8305 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"s",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2505,7 +2505,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2521,7 +2521,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2529,7 +2529,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2560,7 +2560,7 @@
           "field": "Name",
           "value": "6609",
           "confidence": 0.9,
-          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2568,7 +2568,7 @@
           "field": "P-value",
           "value": 0.000157,
           "confidence": 0.7,
-          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2576,13 +2576,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2598,7 +2598,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2606,7 +2606,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2624,7 +2624,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "Row text: Prevotella9* | ADc12 | 0.0084 | 0.0075 | 1.57E−04 | − 556.34 | 147.21 | 6609 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sc",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2637,7 +2637,7 @@
           "field": "Name",
           "value": "819",
           "confidence": 0.9,
-          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2645,7 +2645,7 @@
           "field": "P-value",
           "value": 0.0547,
           "confidence": 0.7,
-          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2653,13 +2653,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2675,7 +2675,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2683,7 +2683,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2701,7 +2701,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Prevotella9* | GenADA | 0.0008 | 0.0031 | 5.47E−02 | − 147.32 | 76.68 | 819 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2714,7 +2714,7 @@
           "field": "Name",
           "value": "78446",
           "confidence": 0.9,
-          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2722,7 +2722,7 @@
           "field": "P-value",
           "value": 1.35e-05,
           "confidence": 0.7,
-          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2730,13 +2730,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2752,7 +2752,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2760,7 +2760,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2778,7 +2778,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
+          "evidence": "Row text: Roseburia* | ADc12 | 0.2061 | 0.01 | 1.35E−05 | − 3564.78 | 819.18 | 78446 | 2571\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"scor",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2791,7 +2791,7 @@
           "field": "Name",
           "value": "3135",
           "confidence": 0.9,
-          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2799,7 +2799,7 @@
           "field": "P-value",
           "value": 0.0764,
           "confidence": 0.7,
-          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2807,13 +2807,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2829,7 +2829,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2837,7 +2837,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2855,7 +2855,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
+          "evidence": "Row text: Roseburia* | GenADA | 0.0037 | 0.0027 | 7.64E−02 | − 366.88 | 207.02 | 3135 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"sco",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -2890,7 +2890,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2906,7 +2906,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2914,7 +2914,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2945,7 +2945,7 @@
           "field": "Name",
           "value": "156",
           "confidence": 0.9,
-          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2953,7 +2953,7 @@
           "field": "P-value",
           "value": 0.308,
           "confidence": 0.7,
-          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2961,13 +2961,13 @@
           "field": "EffectSize(altvsref)",
           "value": "",
           "confidence": 0.65,
-          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2983,7 +2983,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2991,7 +2991,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3009,7 +3009,7 @@
           "field": "Cohort",
           "value": "",
           "confidence": 0.25,
-          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
+          "evidence": "Row text: Sutterella | GenADA | 0.0002 | 0.0009 | 3.08E−01 | − 34.75 | 34.1 | 156 | 1577\n[column_mapping] {\"Genera\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1667, \"needs_review\": true, \"match_hint\": \"Genera\"}, \"Samples\": {\"reference_col\": \"UNMAPPED\", \"score\":",
           "rule": "cohort keyword mapping",
           "needs_review": true
         }
@@ -3044,7 +3044,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3060,7 +3060,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3068,7 +3068,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3121,7 +3121,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + Meta-analysis + replication + meta-analysis",
+          "value": "Meta-analysis + meta-analysis + discovery + replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3137,7 +3137,7 @@
         },
         {
           "field": "Imputation",
-          "value": "1000G + UK10K + HRC + minimac4 + TOPMed",
+          "value": "TOPMed + HRC + UK10K + minimac4 + 1000G",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3145,7 +3145,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + European ancestry + african american + EAS + AA + hispanic + middle-east",
+          "value": "European ancestry + hispanic + middle-east + EUR + AA + EAS + african american",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
