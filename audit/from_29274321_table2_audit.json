@@ -69,23 +69,23 @@
           "field": "Name",
           "value": "rs10775009",
           "confidence": 0.9,
-          "evidence": "Row text: rs10775009 | T | C | SRRM4 | 0.09 (0.09) | 0.16 (0.10) | Frontal Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": "",
+          "value": 0.09,
           "confidence": 0.7,
-          "evidence": "Row text: rs10775009 | T | C | SRRM4 | 0.09 (0.09) | 0.16 (0.10) | Frontal Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.16,
+          "value": 0.09,
           "confidence": 0.65,
-          "evidence": "Row text: rs10775009 | T | C | SRRM4 | 0.09 (0.09) | 0.16 (0.10) | Frontal Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -133,7 +133,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs10775009 | T | C | SRRM4 | 0.09 (0.09) | 0.16 (0.10) | Frontal Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.09 (0.09)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -144,17 +144,17 @@
       "fields": [
         {
           "field": "Name",
-          "value": "rs2819438",
+          "value": "rs10775009",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | PLD4 | 0.47 (0.12) | 0.10 (0.42) | Anterior cingulate cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UN",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": "",
+          "value": 0.16,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | PLD4 | 0.47 (0.12) | 0.10 (0.42) | Anterior cingulate cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UN",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -162,7 +162,7 @@
           "field": "EffectSize(altvsref)",
           "value": 0.1,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | PLD4 | 0.47 (0.12) | 0.10 (0.42) | Anterior cingulate cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UN",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -210,7 +210,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | PLD4 | 0.47 (0.12) | 0.10 (0.42) | Anterior cingulate cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UN",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Frontal Cortex', source cell='0.16 (0.10)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -223,23 +223,23 @@
           "field": "Name",
           "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | AHNAK2 | 0.15 (0.23) | 0.06 (−0.28) | Cerebellar Hemisphere\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNM",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": "",
+          "value": 0.47,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | AHNAK2 | 0.15 (0.23) | 0.06 (−0.28) | Cerebellar Hemisphere\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNM",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.06,
+          "value": 0.12,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | AHNAK2 | 0.15 (0.23) | 0.06 (−0.28) | Cerebellar Hemisphere\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNM",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -287,7 +287,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | AHNAK2 | 0.15 (0.23) | 0.06 (−0.28) | Cerebellar Hemisphere\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNM",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.47 (0.12)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -300,23 +300,23 @@
           "field": "Name",
           "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00038,
+          "value": 0.1,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": "",
+          "value": 0.42,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -364,7 +364,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Anterior cingulate cortex', source cell='0.10 (0.42)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The ",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -377,23 +377,23 @@
           "field": "Name",
           "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.0039,
+          "value": 0.15,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": "",
+          "value": 0.23,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -441,7 +441,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 3.9×10−3 (0.31) | Cortex\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\"",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.15 (0.23)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datas",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -454,23 +454,23 @@
           "field": "Name",
           "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.00038,
+          "value": 0.06,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": "",
+          "value": -0.28,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -518,7 +518,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellar Hemisphere', source cell='0.06 (−0.28)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -531,23 +531,23 @@
           "field": "Name",
           "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.006,
+          "value": 0.00038,
           "confidence": 0.7,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": "",
+          "value": 0.44,
           "confidence": 0.65,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -595,7 +595,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs2819438 | A | C | C14orf79 | 3.8×10−4 (0.44) | 6.0×10−3 (0.44) | Cerebellum\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAP",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -606,25 +606,25 @@
       "fields": [
         {
           "field": "Name",
-          "value": "rs4921790",
+          "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs4921790 | C | A | MTUS1 | 1.0 (0.0) | 0.09 (−0.16) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"score\": ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": "",
+          "value": 0.0039,
           "confidence": 0.7,
-          "evidence": "Row text: rs4921790 | C | A | MTUS1 | 1.0 (0.0) | 0.09 (−0.16) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"score\": ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.09,
+          "value": 0.31,
           "confidence": 0.65,
-          "evidence": "Row text: rs4921790 | C | A | MTUS1 | 1.0 (0.0) | 0.09 (−0.16) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"score\": ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -672,7 +672,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs4921790 | C | A | MTUS1 | 1.0 (0.0) | 0.09 (−0.16) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"score\": ",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cortex', source cell='3.9×10−3 (0.31)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -683,25 +683,25 @@
       "fields": [
         {
           "field": "Name",
-          "value": "rs55653268",
+          "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 9.7×10−3 (−0.33) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": 0.0097,
+          "value": 0.00038,
           "confidence": 0.7,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 9.7×10−3 (−0.33) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": "",
+          "value": 0.44,
           "confidence": 0.65,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 9.7×10−3 (−0.33) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -749,7 +749,7 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 9.7×10−3 (−0.33) | Caudate\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED\", \"sc",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='3.8×10−4 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI d",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -760,25 +760,25 @@
       "fields": [
         {
           "field": "Name",
-          "value": "rs55653268",
+          "value": "rs2819438",
           "confidence": 0.9,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 0.02 (−0.41) | Nucleus accumbens\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
         {
           "field": "P-value",
-          "value": "",
+          "value": 0.006,
           "confidence": 0.7,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 0.02 (−0.41) | Nucleus accumbens\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.02,
+          "value": 0.44,
           "confidence": 0.65,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 0.02 (−0.41) | Nucleus accumbens\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
           "rule": "table row effect parsing",
           "needs_review": false
         },
@@ -826,7 +826,469 @@
           "field": "Cohort",
           "value": "ADNI",
           "confidence": 0.8,
-          "evidence": "Row text: rs55653268 | T | G | MTUS1 | 0.8 (0.04) | 0.02 (−0.41) | Nucleus accumbens\n[column_mapping] {\"eQTL | eQTL | eQTL\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.1224, \"needs_review\": true, \"match_hint\": \"eQTL\"}, \"EA | EA | EA\": {\"reference_col\": \"UNMAPPED",
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Cerebellum', source cell='6.0×10−3 (0.44)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI da",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4921790",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI dataset",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.0,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI dataset",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.0,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI dataset",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='1.0 (0.0)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI dataset",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4921790",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.09,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.16,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='0.09 (−0.16)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datasets",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs55653268",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.8,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.04,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs55653268",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI data",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0097,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI data",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.33,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI data",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Caudate', source cell='9.7×10−3 (−0.33)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI data",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs55653268",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.8,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.04,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Hippocampus', source cell='0.8 (0.04)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADNI datase",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29274321_table2_R00016",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs55653268",
+          "confidence": 0.9,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADN",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.02,
+          "confidence": 0.7,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADN",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.41,
+          "confidence": 0.65,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADN",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "rincipal components (PC) of population substructure using the R software package. The two ADNI datasets were analyzed independently for the CN and MCI subjects and the results from the two ADNI datasets were combined by meta-analysis using inverse variance wei",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "linear regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": "CN, 252 MCI, and 27 AD dementia subjects with genotype data. 2.4. Statistical Methods 2.4.1. Genome-wide association tests Prior to the association tests, each of the six endophenotypes was adjusted for covariates using linear regression. Age and sex were used",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "NR",
+          "confidence": 0.3,
+          "evidence": "e all measured at baseline were analyzed in this study. Details about collection of CSF biomarkers, brain MRI scan data, and neuropsychological tests are reported elsewhere [ 12 - 15 ]. 2.3. Genotyping, Quality Control, Imputation, and Population Substructure ",
+          "rule": "no imputation keywords found",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": " association of AD with two rare coding AKAP9 missense mutations in exons 31 (rs144662445) and 46 (rs149979685) in African Americans [ 43 ], and our study is the first to report association with this gene for AD risk in European ancestry individuals. Rs1494547",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "757",
+          "confidence": 0.7,
+          "evidence": "pants were downloaded from a public-access database ( http://www.loni.usc.edu ). A total of 1,189 subjects before QC were available with GWA data from two different chips (ADNI-1, n=757 and ADNI-GO/2, n=432). We stratified subjects by stage (CN, MCI, and AD de",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADNI",
+          "confidence": 0.8,
+          "evidence": "eQTL summary row parsed; SNP from column 'eQTL | eQTL | eQTL', gene from 'Gene | Gene | Gene', region='Nucleus accumbens', source cell='0.02 (−0.41)'\n[Stage evidence] rincipal components (PC) of population substructure using the R software package. The two ADN",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

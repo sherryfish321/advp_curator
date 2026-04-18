@@ -1,0 +1,374 @@
+{
+  "paper": {
+    "paper_id": "29458411_table3",
+    "pmcid": "",
+    "pmid": "29458411",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5819208/",
+    "table_input": "/Users/sherryhuang/advp_curator/table_from_link/29458411_table3.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 29458411"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": "Meta-analysis",
+      "confidence": 0.8,
+      "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and SE) of the three neuropathologic traits for 6.5 million imputed SNPs after omitting SNPs from studies if the minor allele frequency was ≤ 1%, imputation quality ( R 2 ) was ≤ 0.4, or dosage var",
+      "rule": "found meta-analysis cues",
+      "needs_review": false
+    },
+    {
+      "field": "Analyses type",
+      "value": "Imaging",
+      "confidence": 0.7,
+      "evidence": "nto, Toronto, Ontario, Canada; 94 Department of Neurology, University of Texas Southwestern, Dallas, Texas; 95 Department of Psychiatry, Mount Sinai School of Medicine, New York, New York; 96 Department of Radiology and Imaging Sciences, Indiana University, Indianapolis, Indiana; 97 Department of Psychiatry, University of Southern California, Los Angeles, California; 98 Department of Pathology, University of Washington, Seattle, Washington; 99",
+      "rule": "matched association keywords -> Imaging",
+      "needs_review": true
+    },
+    {
+      "field": "Model type",
+      "value": "logistic regression (with covariates)",
+      "confidence": 0.75,
+      "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the first three principal components of ancestry as covariates to account for population substructure [ 6 ]. NP and NFT measures were analyzed in well-established ordinal rankings (NPs: none,",
+      "rule": "model family + covariate cues",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation_simple2",
+      "value": "1000G",
+      "confidence": 0.85,
+      "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, population substructure analysis, and statistical methods for association analyses of individual traits were reported previously [ 6 , 7 ]. Sample demography of the 3598 subjects with a",
+      "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+      "needs_review": false
+    },
+    {
+      "field": "Population",
+      "value": "European ancestry",
+      "confidence": 0.75,
+      "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological data for the entire sample were reviewed and harmonized by one neuropathologist for consistency across studies [ 6 ]. Although Beecham et al. [ 6 ] also evaluated Lewy body disease, hippocamp",
+      "rule": "section-aware population keyword",
+      "needs_review": true
+    },
+    {
+      "field": "Sample size",
+      "value": "18500",
+      "confidence": 0.7,
+      "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP genotypes with gene-level expression (i.e., expression quantitative trait loci [eQTLs]) was evaluated using v",
+      "rule": "section-aware sample size extraction",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29458411_table3_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "",
+          "confidence": 0.9,
+          "evidence": "Row text: ECRG4 a | 0.06 (0.20) | 0.77 | 0.19 (0.24) | 0.43 | −0.18 (0.05) | 1.6 × 10 −3 | −0.12 (0.06) | 0.04 | −0.12 (0.04) | 2.7 × 10 −3\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.0027,
+          "confidence": 0.7,
+          "evidence": "Row text: ECRG4 a | 0.06 (0.20) | 0.77 | 0.19 (0.24) | 0.43 | −0.18 (0.05) | 1.6 × 10 −3 | −0.12 (0.06) | 0.04 | −0.12 (0.04) | 2.7 × 10 −3\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.12,
+          "confidence": 0.65,
+          "evidence": "Row text: ECRG4 a | 0.06 (0.20) | 0.77 | 0.19 (0.24) | 0.43 | −0.18 (0.05) | 1.6 × 10 −3 | −0.12 (0.06) | 0.04 | −0.12 (0.04) | 2.7 × 10 −3\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Row text: ECRG4 a | 0.06 (0.20) | 0.77 | 0.19 (0.24) | 0.43 | −0.18 (0.05) | 1.6 × 10 −3 | −0.12 (0.06) | 0.04 | −0.12 (0.04) | 2.7 × 10 −3\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table3_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "",
+          "confidence": 0.9,
+          "evidence": "Row text: HDAC9 | −0.24 (0.12) | 0.04 | −0.31 (0.08) | 1.5 × 10 −4 | −0.01 (0.02) | 0.77 | −0.09 (0.03) | 7.9 × 10 −3 | −0.06 (0.02) | 5.6 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00056,
+          "confidence": 0.7,
+          "evidence": "Row text: HDAC9 | −0.24 (0.12) | 0.04 | −0.31 (0.08) | 1.5 × 10 −4 | −0.01 (0.02) | 0.77 | −0.09 (0.03) | 7.9 × 10 −3 | −0.06 (0.02) | 5.6 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.06,
+          "confidence": 0.65,
+          "evidence": "Row text: HDAC9 | −0.24 (0.12) | 0.04 | −0.31 (0.08) | 1.5 × 10 −4 | −0.01 (0.02) | 0.77 | −0.09 (0.03) | 7.9 × 10 −3 | −0.06 (0.02) | 5.6 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Row text: HDAC9 | −0.24 (0.12) | 0.04 | −0.31 (0.08) | 1.5 × 10 −4 | −0.01 (0.02) | 0.77 | −0.09 (0.03) | 7.9 × 10 −3 | −0.06 (0.02) | 5.6 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table3_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "",
+          "confidence": 0.9,
+          "evidence": "Row text: TRAPPC12 | −0.05 (0.06) | 0.35 | −0.13 (0.05) | 0.01 | −0.09 (0.03) | 1.1 × 10 −3 | −0.03 (0.02) | 0.09 | −0.08 (0.02) | 3.2 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00032,
+          "confidence": 0.7,
+          "evidence": "Row text: TRAPPC12 | −0.05 (0.06) | 0.35 | −0.13 (0.05) | 0.01 | −0.09 (0.03) | 1.1 × 10 −3 | −0.03 (0.02) | 0.09 | −0.08 (0.02) | 3.2 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.08,
+          "confidence": 0.65,
+          "evidence": "Row text: TRAPPC12 | −0.05 (0.06) | 0.35 | −0.13 (0.05) | 0.01 | −0.09 (0.03) | 1.1 × 10 −3 | −0.03 (0.02) | 0.09 | −0.08 (0.02) | 3.2 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Row text: TRAPPC12 | −0.05 (0.06) | 0.35 | −0.13 (0.05) | 0.01 | −0.09 (0.03) | 1.1 × 10 −3 | −0.03 (0.02) | 0.09 | −0.08 (0.02) | 3.2 × 10 −4\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table3_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "",
+          "confidence": 0.9,
+          "evidence": "Row text: ADI1 | −0.10 (0.08) | 0.19 | −0.07 (0.08) | 0.36 | −0.10 (0.03) | 4.9 × 10 −4 | −0.03 (0.03) | 0.31 | −0.01 (0.03) | 0.64\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": \"Unnamed",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.64,
+          "confidence": 0.7,
+          "evidence": "Row text: ADI1 | −0.10 (0.08) | 0.19 | −0.07 (0.08) | 0.36 | −0.10 (0.03) | 4.9 × 10 −4 | −0.03 (0.03) | 0.31 | −0.01 (0.03) | 0.64\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": \"Unnamed",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.01,
+          "confidence": 0.65,
+          "evidence": "Row text: ADI1 | −0.10 (0.08) | 0.19 | −0.07 (0.08) | 0.36 | −0.10 (0.03) | 4.9 × 10 −4 | −0.03 (0.03) | 0.31 | −0.01 (0.03) | 0.64\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": \"Unnamed",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "Meta-analysis",
+          "confidence": 0.8,
+          "evidence": "FT: none, transentorhinal, limbic, and isocortical by Braak and Braak staging [ 9 ]), and CAA was analyzed as a binary trait (present or absent). Full details of these analyses are reported elsewhere [ 6 ]. We used GWAS meta-analysis summary statistics (β and ",
+          "rule": "found meta-analysis cues",
+          "needs_review": false
+        },
+        {
+          "field": "Model type",
+          "value": "logistic regression (with covariates)",
+          "confidence": 0.75,
+          "evidence": " for each neuropathologic trait with genotypes imputed using the 1000 Genomes Project reference panel (GRCh37 at December 2010) for a genome-wide set of single-nucleotide polymorphisms (SNPs) were obtained using ordinal logistic regression models including the",
+          "rule": "model family + covariate cues",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation_simple2",
+          "value": "1000G",
+          "confidence": 0.85,
+          "evidence": "ropic associations, and results from pleiotropy analysis will be similar to those from univariate models (i.e., single phenotype) if the traits are highly correlated. Details of subject recruitment, genotyping, genotype imputation, quality control procedures, ",
+          "rule": "panel keyword detection (TOPMed/HRC/1000G)",
+          "needs_review": false
+        },
+        {
+          "field": "Population",
+          "value": "European ancestry",
+          "confidence": 0.75,
+          "evidence": "on, and data processing We obtained summary statistics from univariate GWAS of NP, NFT, and CAA [ 6 ]. These results were derived from meta-analyses of 12 studies including 3598 subjects (3135 AD cases, 463 controls) of European ancestry. Neuropathological dat",
+          "rule": "section-aware population keyword",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "18500",
+          "confidence": 0.7,
+          "evidence": "ch 2012). The GWS level for the gene-based tests was set at 2.7 × 10 −6 , which was calculated as the nominal significance level 0.05 divided by the total number of genes tested ( n = 18,500). Expression quantitative trait locus analysis The association of SNP",
+          "rule": "section-aware sample size extraction",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ADGC;EADI;PENN",
+          "confidence": 0.8,
+          "evidence": "Row text: ADI1 | −0.10 (0.08) | 0.19 | −0.07 (0.08) | 0.36 | −0.10 (0.03) | 4.9 × 10 −4 | −0.03 (0.03) | 0.31 | −0.01 (0.03) | 0.64\n[column_mapping] {\"Unnamed: 0 Gene\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3478, \"needs_review\": true, \"match_hint\": \"Unnamed",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

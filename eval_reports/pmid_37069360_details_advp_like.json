@@ -1,6 +1,6 @@
 [
   {
-    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_37069360_table1_v1.xlsx",
+    "file": "harmonized_tables_advp/from_37069360_table1_v1.xlsx",
     "status": "not_in_advp",
     "row_key_cols": [],
     "n_pred_rows": 26,
@@ -16,7 +16,7 @@
     "unmatched_gold_examples": []
   },
   {
-    "file": "/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_37069360_table2_v1.xlsx",
+    "file": "harmonized_tables_advp/from_37069360_table2_v1.xlsx",
     "status": "not_in_advp",
     "row_key_cols": [],
     "n_pred_rows": 77,

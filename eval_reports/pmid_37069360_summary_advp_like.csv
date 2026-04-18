@@ -1,4 +1,4 @@
 file,status,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_37069360_table1_v1.xlsx,not_in_advp,,26,0,,,
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_37069360_table2_v1.xlsx,not_in_advp,,77,0,,,
+harmonized_tables_advp/from_37069360_table1_v1.xlsx,not_in_advp,,26,0,,,
+harmonized_tables_advp/from_37069360_table2_v1.xlsx,not_in_advp,,77,0,,,
 combined_inputs,not_in_advp,,103,0,,,
