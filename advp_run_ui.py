@@ -378,12 +378,22 @@ def format_editor_value(col: str, value: object) -> str:
 
 
 def editor_missing_needs_review(col: str, value: object) -> bool:
-    if col not in {"TopSNP", "P-value", "Population_map", "Analysis group", "Phenotype"}:
+    if col not in {"TopSNP", "P-value", "Population", "Analysis group", "Phenotype"}:
         return False
     if pd.isna(value):
         return True
     return str(value).strip().lower() in {"", "nr", "nan", "none"}
 
+def editor_weird_term_needs_review(col: str, value: object) -> bool:
+    if col not in ["Population", "Cohort", "Stage", "Imputation", "Study type", "Phenotype"]:
+        return False
+    with open("term_mapping_dict.json", "r") as f:
+        term_mapping_dict = json.load(f)
+    value = str(value)
+    for possible_value in value.split("+"):
+        if possible_value not in term_mapping_dict[col]:
+            return True
+    return False
 
 def row_review_status(row_dict: Dict[str, object], cols: List[str]) -> str:
     statuses = [str(row_dict.get(f"{col}__status", "")).strip() for col in cols]
@@ -410,8 +420,10 @@ def load_curated_rows(path: Path, limit: int = None) -> Dict[str, object]:
             val = row.get(col)
             row_dict[col] = format_editor_value(col, val)
             row_ann = annotations.get(str(idx), {}).get(col, {})
-            default_status = "review" if editor_missing_needs_review(col, val) else ""
-            default_comment = "missing value" if default_status else ""
+            default_status_missing = "review" if editor_missing_needs_review(col, val) else ""
+            default_status_weird_term = "review" if editor_weird_term_needs_review(col, val) else ""
+            default_status = "review" if default_status_missing == "review" or default_status_weird_term == "review" else ""
+            default_comment = "missing value" if default_status_missing else ("weird term" if default_status_weird_term else "")
             row_dict[f"{col}__status"] = row_ann.get("status", default_status)
             row_dict[f"{col}__comment"] = row_ann.get("comment", default_comment)
         row_dict["_row_status"] = row_review_status(row_dict, cols)

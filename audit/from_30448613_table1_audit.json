@@ -117,7 +117,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -133,7 +133,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -141,7 +141,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -157,7 +157,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -194,7 +194,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -210,7 +210,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -218,7 +218,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -234,7 +234,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -271,7 +271,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -287,7 +287,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -295,7 +295,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -311,7 +311,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -348,7 +348,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -364,7 +364,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -372,7 +372,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -388,7 +388,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -425,7 +425,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -441,7 +441,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -449,7 +449,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -465,7 +465,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -502,7 +502,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -518,7 +518,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -526,7 +526,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -542,7 +542,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -579,7 +579,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -595,7 +595,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -603,7 +603,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -619,7 +619,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -656,7 +656,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -672,7 +672,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -680,7 +680,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -696,7 +696,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -733,7 +733,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -749,7 +749,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -757,7 +757,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -773,7 +773,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -810,7 +810,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -826,7 +826,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -834,7 +834,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -850,7 +850,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -887,7 +887,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -903,7 +903,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -911,7 +911,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -927,7 +927,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -964,7 +964,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -980,7 +980,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -988,7 +988,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1004,7 +1004,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1041,7 +1041,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1057,7 +1057,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1065,7 +1065,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1081,7 +1081,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1118,7 +1118,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1134,7 +1134,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1142,7 +1142,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1158,7 +1158,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -1195,7 +1195,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1211,7 +1211,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1219,7 +1219,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1235,7 +1235,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1272,7 +1272,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1288,7 +1288,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1296,7 +1296,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1312,7 +1312,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1349,7 +1349,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1365,7 +1365,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1373,7 +1373,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1389,7 +1389,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -1426,7 +1426,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1442,7 +1442,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1450,7 +1450,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1466,7 +1466,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1503,7 +1503,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1519,7 +1519,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1527,7 +1527,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1543,7 +1543,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1580,7 +1580,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1596,7 +1596,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1604,7 +1604,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1620,7 +1620,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -1657,7 +1657,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1673,7 +1673,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1681,7 +1681,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1697,7 +1697,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1734,7 +1734,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1750,7 +1750,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1758,7 +1758,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1774,7 +1774,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1811,7 +1811,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1827,7 +1827,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1835,7 +1835,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1851,7 +1851,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
@@ -1888,7 +1888,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1904,7 +1904,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1912,7 +1912,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1928,7 +1928,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -1965,7 +1965,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1981,7 +1981,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1989,7 +1989,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2005,7 +2005,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
           "rule": "cohort keyword mapping",
@@ -2042,7 +2042,7 @@
         },
         {
           "field": "Stage",
-          "value": "replication + meta-analysis + discovery",
+          "value": "meta-analysis + replication + discovery",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2058,7 +2058,7 @@
         },
         {
           "field": "Imputation",
-          "value": "topmed + igap + hrc + hrc;1000g + 1000g + uk10k",
+          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2066,7 +2066,7 @@
         },
         {
           "field": "Population",
-          "value": "adsp + adgc + european ancestry + eur",
+          "value": "european ancestry + adsp + adgc + eur",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2082,7 +2082,7 @@
         },
         {
           "field": "Cohort",
-          "value": "ADGC + ADNI + NABEC + CHARGE + IGAP + UKBB + UKBEC + ADSP",
+          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
           "confidence": 0.8,
           "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
           "rule": "cohort keyword mapping",
