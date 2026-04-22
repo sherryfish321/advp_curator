@@ -1,56 +1,95 @@
 {
-  "30448613": {
+  "18813964": {
     "Population": [
-      "adgc",
+      "aa",
       "eur",
-      "adsp",
-      "european ancestry"
+      "european ancestry",
+      "eas"
     ],
     "Stage": [
-      "replication",
-      "meta-analysis",
-      "discovery"
+      "meta-analysis"
     ],
     "Imputation": [
-      "igap",
-      "uk10k",
-      "hrc;1000g",
-      "hrc",
-      "topmed",
-      "1000g"
+      "topmed"
     ],
     "Study type": [
-      "Whole Exome Sequencing (WES)",
-      "Genotyping",
-      "International Genomics of Alzheimers Project (IGAP)"
+      "wes",
+      "array genotyping"
     ],
     "Phenotype": [
+      "amyloid beta a levels",
       "alzheimers disease",
-      "abca7",
-      "ms4a6a"
+      "cerebrospinal fluid amyloid beta"
     ],
     "Model Type": [
       "logistic regression (with covariates)",
-      "logistic regression",
-      "meta analysis",
-      "p value bonferroni correction",
-      "covariates"
+      "cdr",
+      "meta",
+      "apoe 4",
+      "ancova",
+      "alzgene"
     ],
     "Association Type": [
+      "endophenotype",
+      "imaging",
+      "eqtl"
+    ],
+    "Cohort": [
+      "alzgene",
+      "csf"
+    ],
+    "Sample Size": [
+      "4704"
+    ]
+  },
+  "19105203": {
+    "Population": [
+      "aa",
+      "european ancestry",
+      "eur"
+    ],
+    "Stage": [
+      "combined",
+      "meta-analysis"
+    ],
+    "Imputation": [
+      "haplotype reference consortium (hrc)"
+    ],
+    "Study type": [
+      "genotyping",
+      "wes"
+    ],
+    "Phenotype": [
+      "late-onset alzheimers disease",
+      "alzheimers disease"
+    ],
+    "Model Type": [
+      "odds ratios",
+      "bonferroni correction",
+      "meta",
+      "fishers exact test",
+      "logistic regression",
+      "logistic regression (with covariates)"
+    ],
+    "Association Type": [
+      "aao",
+      "a2m",
+      "apoe",
+      "ctna3lrrtm3",
+      "ctnna3",
+      "age of onset",
       "imaging"
     ],
     "Cohort": [
-      "ADGC",
-      "ADNI",
-      "ADSP",
-      "IGAP",
-      "CHARGE",
-      "UKBB",
-      "UKBEC",
-      "NABEC"
+      "indiana university medical center",
+      "cap",
+      "vanderbilt university medical center",
+      "nimh",
+      "iu",
+      "bryan adrc"
     ],
     "Sample Size": [
-      "74046"
+      "4704"
     ]
   }
 }

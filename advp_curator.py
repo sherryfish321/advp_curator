@@ -3174,7 +3174,8 @@ def run_pipeline(pdf_or_url: Optional[str],
         if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
             col_require_rag_to_possible_info["Population"].append(pop_val) 
             col_require_rag_to_possible_info["Population"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Population"]]))
-        col_require_rag_to_possible_info["Cohort"] = gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+        # col_require_rag_to_possible_info["Cohort"] = col_require_rag_to_possible_info["Cohort"] + gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+        # col_require_rag_to_possible_info["Cohort"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Cohort"]]))
         sample_size_val, _ = infer_sample_size(section_text)
         col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
         # assoc_val, assoc_audit = infer_association_type(section_scoped_text)
@@ -3293,7 +3294,7 @@ def run_pipeline(pdf_or_url: Optional[str],
                             possible_groups_to_possible_info[u] = air.combine_possible_info(valid_info)
                     for r in recs:
                         if "label" in r:
-                            r[text_col] = air.combine_possible_info(possible_groups_to_possible_info[r["label"]])
+                            r[text_col] = possible_groups_to_possible_info[r["label"]]
                         else:
                             r[text_col] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
 

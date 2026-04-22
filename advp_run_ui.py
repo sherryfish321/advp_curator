@@ -390,7 +390,7 @@ def editor_weird_term_needs_review(col: str, value: object) -> bool:
     with open("term_mapping_dict.json", "r") as f:
         term_mapping_dict = json.load(f)
     value = str(value)
-    for possible_value in value.split("+"):
+    for possible_value in value.split(" + "):
         if possible_value not in term_mapping_dict[col]:
             return True
     return False

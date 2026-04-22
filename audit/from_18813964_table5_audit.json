@@ -1,0 +1,1166 @@
+{
+  "paper": {
+    "paper_id": "18813964_table5",
+    "pmcid": "PMC2726757",
+    "pmid": "18813964",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2821734/",
+    "table_input": "/Users/justpqa/advp_curator/table_from_link/18813964_table5.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 18813964"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": [
+        "meta-analysis"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Association Type",
+      "value": [
+        "endophenotype",
+        "imaging",
+        "eqtl"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Model Type",
+      "value": [
+        "logistic regression (with covariates)",
+        "cdr",
+        "meta",
+        "apoe 4",
+        "ancova",
+        "alzgene"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation",
+      "value": [
+        "topmed"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": [
+        "aa",
+        "eur",
+        "european ancestry",
+        "eas"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Sample Size",
+      "value": [
+        "4704"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "18813964_table5_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4291",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4295",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4291 – rs4295 | AG | 0.495 | 0.383 | 0.672\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4311",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4329",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4646994",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4311 – rs4329 – rs4646994 1 | TGI | 0.460 | 0.045 | 0.290\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4329",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4343",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4646994",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4329 – rs4646994 1 – rs4343 | GIA | 0.450 | 0.013 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4343",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4353",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4646994",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4646994 1 – rs4343 – rs4353 | IAG | 0.450 | 0.004 | 0.004\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPE",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4343",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4353",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "18813964_table5_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs4978",
+          "confidence": 0.9,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": "",
+          "confidence": 0.7,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "meta-analysis",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "aa + eur + european ancestry + eas",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "alzgene + csf",
+          "confidence": 0.8,
+          "evidence": "Row text: ACE | rs4343 – rs4353 – rs4978 | AGC | 0.450 | 0.003 | 0.020\n[column_mapping] {\"a. Family data\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2917, \"needs_review\": true, \"match_hint\": \"a. Family data\"}, \"a. Family data.1\": {\"reference_col\": \"UNMAPPED\", \"",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

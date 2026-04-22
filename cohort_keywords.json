@@ -46,7 +46,9 @@
         "NIA LOAD",
         "National Institute on Aging Late-Onset Alzheimer's Disease",
         "Late-Onset Alzheimer's Disease Family Study",
-        "LOAD Family Study"
+        "LOAD Family Study",
+        "NIALOAD", 
+        "NIA/LOAD"
     ],
     "LOADFS": [
         "LOADFS",
@@ -300,5 +302,8 @@
         "Korean Genome and Epidemiology Study",
         "KoGES",
         "Korean cohort"
+    ],
+    "MiBioGen": [
+        "MiBioGen"
     ]
 }

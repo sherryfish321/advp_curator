@@ -15,10 +15,9 @@
     {
       "field": "Stage",
       "value": [
-        "discovery",
         "replication",
-        "meta-analysis",
-        "Meta-analysis"
+        "discovery",
+        "meta-analysis"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -28,11 +27,10 @@
     {
       "field": "Association Type",
       "value": [
-        "Age at onset (AAO)",
-        "PRS",
-        "Ad",
-        "Apoe",
-        "Imaging"
+        "ad diagnosis",
+        "imaging",
+        "age",
+        "age at onset (aao)"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -42,6 +40,8 @@
     {
       "field": "Model Type",
       "value": [
+        "logistic regression",
+        "meta-analysis",
         "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
@@ -52,11 +52,8 @@
     {
       "field": "Imputation",
       "value": [
-        "1000G",
-        "TOPMed",
-        "UK10K",
-        "HRC",
-        "minimac4"
+        "michigan imputation server minimac4",
+        "1000 genome phase 3v5"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -66,13 +63,11 @@
     {
       "field": "Population",
       "value": [
-        "EUR",
-        "AA",
-        "EAS",
+        "eur",
+        "european ancestry",
         "hispanic",
-        "middle-east",
-        "african american",
-        "European ancestry"
+        "eas",
+        "aa"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -80,11 +75,13 @@
       "needs_review": true
     },
     {
-      "field": "Sample size",
-      "value": "13266",
-      "confidence": 0.7,
-      "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811), one American Hispanic/Latin cohort (n = 1097), one African-American cohort (n = 114), and four cohorts of m",
-      "rule": "section-aware sample size extraction",
+      "field": "Sample Size",
+      "value": [
+        "13266"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
       "needs_review": true
     }
   ],
@@ -96,7 +93,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -104,21 +101,21 @@
           "field": "P-value",
           "value": 0.004,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.044,
+          "value": -0.044,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -134,7 +131,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -142,7 +139,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -151,18 +148,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Bacteroides | − 0.044 | 0.015 | − 2.881 | 0.004 | 18173 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -173,7 +170,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -181,21 +178,21 @@
           "field": "P-value",
           "value": 0.025,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.044,
+          "value": -0.044,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -211,7 +208,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -219,7 +216,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -228,18 +225,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Butyricimonas | − 0.044 | 0.02 | − 2.241 | 0.025 | 10657 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -272,7 +269,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -288,7 +285,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -296,7 +293,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -305,18 +302,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Dorea | 0.030 | 0.015 | 2.127 | 0.0334 | 17494 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Microb",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -349,7 +346,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -365,7 +362,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -373,7 +370,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -382,18 +379,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Eubacterium coprostanoligenes | 0.033 | 0.015 | 2.120 | 0.034 | 17261 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Ef",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -404,7 +401,7 @@
           "field": "Name",
           "value": "rs429358",
           "confidence": 0.9,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -412,21 +409,21 @@
           "field": "P-value",
           "value": 0.0287,
           "confidence": 0.7,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.035,
+          "value": -0.035,
           "confidence": 0.65,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -442,7 +439,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -450,7 +447,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -459,18 +456,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
-          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
+          "evidence": "Row text: rs429358 (19:45411941:C) | Faecalibacterium | − 0.035 | 0.015 | − 2.188 | 0.0287 | 17960 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect All",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -503,7 +500,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -519,7 +516,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -527,7 +524,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -536,18 +533,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Olsenella | 0.064 | 0.033 | 1.993 | 0.0462 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mic",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -580,7 +577,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -596,7 +593,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -604,7 +601,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -613,18 +610,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Parasutterella | 0.040 | 0.019 | 2.216 | 0.0267 | 11291 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -657,7 +654,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -673,7 +670,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -681,7 +678,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -690,18 +687,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Senegalimassilia | 0.050 | 0.024 | 2.207 | 0.0273 | 6888 | 21\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -734,7 +731,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -750,7 +747,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -758,7 +755,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -767,18 +764,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs429358 (19:45411941:C) | Veillonella | 0.044 | 0.021 | 2.032 | 0.0421 | 9194 | 23\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -811,7 +808,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -827,7 +824,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -835,7 +832,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -844,18 +841,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Butyricicoccus | 0.048 | 0.021 | 2.468 | 0.0136 | 15637 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, ",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -888,7 +885,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -904,7 +901,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -912,7 +909,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -921,18 +918,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Collinsella | 0.052 | 0.023 | 2.214 | 0.0268 | 12811 | 19\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -965,7 +962,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -981,7 +978,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -989,7 +986,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -998,18 +995,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Coprococcus3 | 0.050 | 0.022 | 2.344 | 0.0191 | 14323 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"M",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -1042,7 +1039,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1058,7 +1055,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1066,7 +1063,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1075,18 +1072,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Eubacterium hallii | 0.053 | 0.021 | 2.453 | 0.0142 | 14846 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -1097,7 +1094,7 @@
           "field": "Name",
           "value": "rs7412",
           "confidence": 0.9,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1105,21 +1102,21 @@
           "field": "P-value",
           "value": 0.0113,
           "confidence": 0.7,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.071,
+          "value": -0.071,
           "confidence": 0.65,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1135,7 +1132,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1143,7 +1140,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1152,18 +1149,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Lachnospiraceae UCG001 | − 0.071 | 0.027 | − 2.534 | 0.0113 | 9357 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect ",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -1174,7 +1171,7 @@
           "field": "Name",
           "value": "rs7412",
           "confidence": 0.9,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1182,21 +1179,21 @@
           "field": "P-value",
           "value": 0.019,
           "confidence": 0.7,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
         {
           "field": "EffectSize(altvsref)",
-          "value": 0.103,
+          "value": -0.103,
           "confidence": 0.65,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1212,7 +1209,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1220,7 +1217,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1229,18 +1226,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
-          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
+          "evidence": "Row text: rs7412 (19:45412079:T) | Olsenella | − 0.103 | 0.043 | − 2.346 | 0.019 | 3721 | 13\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"}, \"Mi",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -1273,7 +1270,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1289,7 +1286,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1297,7 +1294,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1306,18 +1303,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Ruminococcaceae UCG004 | 0.080 | 0.028 | 2.901 | 0.0037 | 9049 | 20\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Alle",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     },
@@ -1350,7 +1347,7 @@
         },
         {
           "field": "Stage",
-          "value": "discovery + meta-analysis + Meta-analysis + replication",
+          "value": "replication + discovery + meta-analysis",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1366,7 +1363,7 @@
         },
         {
           "field": "Imputation",
-          "value": "UK10K + TOPMed + 1000G + HRC + minimac4",
+          "value": "michigan imputation server minimac4 + 1000 genome phase 3v5",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1374,7 +1371,7 @@
         },
         {
           "field": "Population",
-          "value": "EUR + middle-east + EAS + AA + hispanic + European ancestry + african american",
+          "value": "eur + european ancestry + hispanic + eas + aa",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1383,18 +1380,18 @@
         {
           "field": "Sample size",
           "value": "",
-          "confidence": 0.7,
-          "evidence": "ropean (1577) dbGaP phs000219.v1.p1 799 cases/778 controls Information for the data used in this study. The Multi-ethnic cohorts of the MiBioGen study include 16 European cohorts (n = 13266), one Middle Eastern cohort (n = 481), one East Asian cohort (n = 811)",
-          "rule": "section-aware sample size extraction",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
           "needs_review": true
         },
         {
           "field": "Cohort",
-          "value": "",
-          "confidence": 0.25,
+          "value": "igap + adgc + niaload + adni + charge + genada + mibiogen + eadi + uk biobank",
+          "confidence": 0.8,
           "evidence": "Row text: rs7412 (19:45412079:T) | Senegalimassilia | 0.082 | 0.032 | 2.584 | 0.0098 | 6508 | 18\n[column_mapping] {\"rsID (CHR:BP:Effect Allele)\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.3137, \"needs_review\": true, \"match_hint\": \"rsID (CHR:BP:Effect Allele)\"},",
           "rule": "cohort keyword mapping",
-          "needs_review": true
+          "needs_review": false
         }
       ]
     }
