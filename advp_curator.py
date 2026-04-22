@@ -3174,8 +3174,8 @@ def run_pipeline(pdf_or_url: Optional[str],
         if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
             col_require_rag_to_possible_info["Population"].append(pop_val) 
             col_require_rag_to_possible_info["Population"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Population"]]))
-        # col_require_rag_to_possible_info["Cohort"] = col_require_rag_to_possible_info["Cohort"] + gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
-        # col_require_rag_to_possible_info["Cohort"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Cohort"]]))
+        col_require_rag_to_possible_info["Cohort"] = col_require_rag_to_possible_info["Cohort"] + gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
+        col_require_rag_to_possible_info["Cohort"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Cohort"]]))
         sample_size_val, _ = infer_sample_size(section_text)
         col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
         # assoc_val, assoc_audit = infer_association_type(section_scoped_text)
