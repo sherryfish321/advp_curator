@@ -561,7 +561,7 @@ def discover_relevant_pmc_tables(article_url: str, min_score: int = 5) -> List[D
         m = re.search(r"/articles/(PMC\d+)/?", article_url, flags=re.I)
         pmcid = m.group(1).upper() if m else None
     if not pmcid:
-        raise ValueError("Article URL must be a PMC article URL like https://pmc.ncbi.nlm.nih.gov/articles/PMCxxxx/")
+        raise ValueError("Auto-discovery currently works only with PMC article URLs. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.")
     try:
         return _discover_relevant_pmc_tables_from_xml(pmcid, min_score=min_score)
     except Exception as xml_error:
@@ -602,7 +602,10 @@ def _is_special_table_page_id(table_id: Optional[str]) -> bool:
     if not table_id:
         return False
     tid = table_id.strip()
-    return bool(re.match(r"^.+-T\d+$", tid, flags=re.I))
+    return bool(
+        re.match(r"^.+-T\d+$", tid, flags=re.I)
+        or re.match(r"^[A-Za-z].*t\d+$", tid, flags=re.I)
+    )
 
 
 def _try_extract_from_article_html(pmcid: str, table_id: Optional[str]) -> Optional[List[pd.DataFrame]]:

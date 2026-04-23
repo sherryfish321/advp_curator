@@ -1,2 +1,0 @@
-file,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_30979435_table1_v1.xlsx,"pmid,snp,chr,pvalue",44,20,0.45454545454545453,1.0,0.625

@@ -1,5 +1,0 @@
-pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
-35490390.0,rs146729640,,,,0.1308,3.0,amish and nia-load,,4872.0,all,SHISA6,,age at onset of cognitive impairment (ci)
-35490390.0,rs146729640,,,,0.0178,1.5,amish and nia-load,,2293.0,all,SHISA6,,age at onset of cognitive impairment (ci)
-35490390.0,rs146729640,,,,0.1219,1.76,amish and nia-load,,2293.0,all,SHISA6,,age at onset of cognitive impairment (ci)
-35490390.0,rs146729640,,,,0.0831,3.99,amish and nia-load,,2579.0,all,SHISA6,,age at onset of cognitive impairment (ci)
