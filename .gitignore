@@ -5,6 +5,8 @@ eval_reports/
 audit/
 table_from_link/
 harmonized_tables_advp/
+harmonized_tables_v1/
+harmonized_test_table/
 ui_annotations/
 ui_run_logs/
 uploaded_papers/
