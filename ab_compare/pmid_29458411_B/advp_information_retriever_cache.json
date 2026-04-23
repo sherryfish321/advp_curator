@@ -1,0 +1,108 @@
+{
+  "18813964": {
+    "Population": [
+      "aa",
+      "eur",
+      "european ancestry",
+      "eas"
+    ],
+    "Stage": [
+      "meta-analysis"
+    ],
+    "Imputation": [
+      "topmed"
+    ],
+    "Study type": [
+      "wes",
+      "array genotyping"
+    ],
+    "Phenotype": [
+      "amyloid beta a levels",
+      "alzheimers disease",
+      "cerebrospinal fluid amyloid beta"
+    ],
+    "Model Type": [
+      "logistic regression (with covariates)",
+      "cdr",
+      "meta",
+      "apoe 4",
+      "ancova",
+      "alzgene"
+    ],
+    "Association Type": [
+      "endophenotype",
+      "imaging",
+      "eqtl"
+    ],
+    "Cohort": [
+      "alzgene",
+      "csf"
+    ],
+    "Sample Size": [
+      "4704"
+    ]
+  },
+  "19105203": {
+    "Population": [
+      "aa",
+      "european ancestry",
+      "eur"
+    ],
+    "Stage": [
+      "combined",
+      "meta-analysis"
+    ],
+    "Imputation": [
+      "haplotype reference consortium (hrc)"
+    ],
+    "Study type": [
+      "genotyping",
+      "wes"
+    ],
+    "Phenotype": [
+      "late-onset alzheimers disease",
+      "alzheimers disease"
+    ],
+    "Model Type": [
+      "odds ratios",
+      "bonferroni correction",
+      "meta",
+      "fishers exact test",
+      "logistic regression",
+      "logistic regression (with covariates)"
+    ],
+    "Association Type": [
+      "aao",
+      "a2m",
+      "apoe",
+      "ctna3lrrtm3",
+      "ctnna3",
+      "age of onset",
+      "imaging"
+    ],
+    "Cohort": [
+      "indiana university medical center",
+      "cap",
+      "vanderbilt university medical center",
+      "nimh",
+      "iu",
+      "bryan adrc"
+    ],
+    "Sample Size": [
+      "4704"
+    ]
+  },
+  "29458411": {
+    "Stage": [],
+    "Association Type": [],
+    "Model Type": [],
+    "Imputation": [],
+    "Population": [],
+    "Study Type": [],
+    "Phenotype": [],
+    "Cohort": [],
+    "Sample Size": [
+      "NR"
+    ]
+  }
+}

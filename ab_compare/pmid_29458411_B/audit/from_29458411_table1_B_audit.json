@@ -1,0 +1,1146 @@
+{
+  "paper": {
+    "paper_id": "29458411_table1",
+    "pmcid": "PMC5938137",
+    "pmid": "29458411",
+    "pdf": "",
+    "pdf_source": "",
+    "table_input": "input/29458411_table1.xlsx",
+    "full_text_source": "none",
+    "id_evidence": "PMID inferred from source filename -> 29458411"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": [],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Association Type",
+      "value": [],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Model Type",
+      "value": [],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation",
+      "value": [],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": [],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Sample Size",
+      "value": [
+        "NR"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "29458411_table1_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.7999999999999995e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.42,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.699999999999999e-07,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.3,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.5e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.25,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": -0.14,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2e-08,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.4999999999999998e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs34487851",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.1000000000000002e-05,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.03,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.69,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (AD status)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.03,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.43,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.3e-05,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 0.79,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 9.1e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": 1.16,
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 0.00013000000000000002,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + NFT)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.2999999999999997e-06,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NP + CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    },
+    {
+      "RecordID": "29458411_table1_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "rs79524815",
+          "confidence": 0.9,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.1000000000000001e-08,
+          "confidence": 0.7,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "NR",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "NR",
+          "confidence": 0.25,
+          "evidence": "Neuropathology multi-pvalue table parsed (NFT + CAA)",
+          "rule": "cohort keyword mapping",
+          "needs_review": true
+        }
+      ]
+    }
+  ]
+}
