@@ -1,0 +1,1241 @@
+{
+  "paper": {
+    "paper_id": "41823034_table2",
+    "pmcid": "PMC13093526",
+    "pmid": "41823034",
+    "pdf": "",
+    "pdf_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13093526/",
+    "table_input": "/Users/justpqa/advp_curator/table_from_link/41823034_table2.xlsx",
+    "full_text_source": "pmc_xml",
+    "id_evidence": "PMID inferred from source filename -> 41823034"
+  },
+  "paper_source_errors": [],
+  "table_source_errors": [],
+  "global_field_audit": [
+    {
+      "field": "Stage",
+      "value": [
+        "replication/validation"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Association Type",
+      "value": [
+        "pleiotropy",
+        "genetic correlation",
+        "imaging"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Model Type",
+      "value": [
+        "linear regression (with covariates)",
+        "logistic regression",
+        "meta"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Imputation",
+      "value": [
+        "1000g",
+        "1000 genomes phase 3",
+        "topmed"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Population",
+      "value": [
+        "european ancestry",
+        "eur",
+        "aa"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    },
+    {
+      "field": "Sample Size",
+      "value": [
+        "487511"
+      ],
+      "confidence": 0.5,
+      "evidence": "",
+      "rule": "",
+      "needs_review": true
+    }
+  ],
+  "record_field_audit": [
+    {
+      "RecordID": "41823034_table2_R00001",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "6.14E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr2:234.9–235.6 Mb | ARL4C | 1 | 1 | 8.03E–05 | 6.99E–05 | 6.14E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.14e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr2:234.9–235.6 Mb | ARL4C | 1 | 1 | 8.03E–05 | 6.99E–05 | 6.14E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr2:234.9–235.6 Mb | ARL4C | 1 | 1 | 8.03E–05 | 6.99E–05 | 6.14E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr2:234.9–235.6 Mb | ARL4C | 1 | 1 | 8.03E–05 | 6.99E–05 | 6.14E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00002",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "4.66E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr6:18.7–19.4 Mb | ID4 | 0.97 | 0.95 | 0.0004 | 2.83E–05 | 4.66E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.66e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr6:18.7–19.4 Mb | ID4 | 0.97 | 0.95 | 0.0004 | 2.83E–05 | 4.66E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr6:18.7–19.4 Mb | ID4 | 0.97 | 0.95 | 0.0004 | 2.83E–05 | 4.66E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr6:18.7–19.4 Mb | ID4 | 0.97 | 0.95 | 0.0004 | 2.83E–05 | 4.66E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00003",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "1.11E–12",
+          "confidence": 0.9,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.8 | 0.64 | 0.0007 | 3.92E–07 | 1.11E–12\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.11e-12,
+          "confidence": 0.7,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.8 | 0.64 | 0.0007 | 3.92E–07 | 1.11E–12\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.8 | 0.64 | 0.0007 | 3.92E–07 | 1.11E–12\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.8 | 0.64 | 0.0007 | 3.92E–07 | 1.11E–12\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00004",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2.61E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr16:5.7–6.4 Mb | RBFOX1 | 0.66 | 0.43 | 0.0009 | 3.28E–05 | 2.61E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.61e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr16:5.7–6.4 Mb | RBFOX1 | 0.66 | 0.43 | 0.0009 | 3.28E–05 | 2.61E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr16:5.7–6.4 Mb | RBFOX1 | 0.66 | 0.43 | 0.0009 | 3.28E–05 | 2.61E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr16:5.7–6.4 Mb | RBFOX1 | 0.66 | 0.43 | 0.0009 | 3.28E–05 | 2.61E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00005",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "8.30E–5",
+          "confidence": 0.9,
+          "evidence": "Row text: chr3:116.4–117.2 Mb | SLC12A8 | −1 | 1 | 0.0005 | 1.29E–05 | 8.30E–5\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 8.3e-05,
+          "confidence": 0.7,
+          "evidence": "Row text: chr3:116.4–117.2 Mb | SLC12A8 | −1 | 1 | 0.0005 | 1.29E–05 | 8.30E–5\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr3:116.4–117.2 Mb | SLC12A8 | −1 | 1 | 0.0005 | 1.29E–05 | 8.30E–5\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr3:116.4–117.2 Mb | SLC12A8 | −1 | 1 | 0.0005 | 1.29E–05 | 8.30E–5\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00006",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2.58E–11",
+          "confidence": 0.9,
+          "evidence": "Row text: chr17:43.4–44.8 Mb | MAPT/KANSL1 | 0.73 | 0.53 | 1.14E–05 | 1.37E–10 | 2.58E–11\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Ge",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.58e-11,
+          "confidence": 0.7,
+          "evidence": "Row text: chr17:43.4–44.8 Mb | MAPT/KANSL1 | 0.73 | 0.53 | 1.14E–05 | 1.37E–10 | 2.58E–11\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Ge",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr17:43.4–44.8 Mb | MAPT/KANSL1 | 0.73 | 0.53 | 1.14E–05 | 1.37E–10 | 2.58E–11\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Ge",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr17:43.4–44.8 Mb | MAPT/KANSL1 | 0.73 | 0.53 | 1.14E–05 | 1.37E–10 | 2.58E–11\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Ge",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00007",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "1.24E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr17:60.4–62.1 Mb | ACE | 0.79 | 0.63 | 8.45E–06 | 3.47E–16 | 1.24E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.24e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr17:60.4–62.1 Mb | ACE | 0.79 | 0.63 | 8.45E–06 | 3.47E–16 | 1.24E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr17:60.4–62.1 Mb | ACE | 0.79 | 0.63 | 8.45E–06 | 3.47E–16 | 1.24E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr17:60.4–62.1 Mb | ACE | 0.79 | 0.63 | 8.45E–06 | 3.47E–16 | 1.24E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00008",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "3.62E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.72 | 0.52 | 3.35E–08 | 6.60E–07 | 3.62E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.62e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.72 | 0.52 | 3.35E–08 | 6.60E–07 | 3.62E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.72 | 0.52 | 3.35E–08 | 6.60E–07 | 3.62E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.72 | 0.52 | 3.35E–08 | 6.60E–07 | 3.62E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00009",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "5.45E–07",
+          "confidence": 0.9,
+          "evidence": "Row text: chr20:62.1–62.9 Mb | LIME1/STMN3 | 0.74 | 0.54 | 0.0007 | 2.49E–06 | 5.45E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Geno",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 5.45e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: chr20:62.1–62.9 Mb | LIME1/STMN3 | 0.74 | 0.54 | 0.0007 | 2.49E–06 | 5.45E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Geno",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr20:62.1–62.9 Mb | LIME1/STMN3 | 0.74 | 0.54 | 0.0007 | 2.49E–06 | 5.45E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Geno",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr20:62.1–62.9 Mb | LIME1/STMN3 | 0.74 | 0.54 | 0.0007 | 2.49E–06 | 5.45E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Geno",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00010",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "6.63E–19",
+          "confidence": 0.9,
+          "evidence": "Row text: chr3:36.8–38.7 Mb | TRANK1 | 0.64 | 0.41 | 2.81E–05 | 6.21E–07 | 6.63E–19\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 6.63e-19,
+          "confidence": 0.7,
+          "evidence": "Row text: chr3:36.8–38.7 Mb | TRANK1 | 0.64 | 0.41 | 2.81E–05 | 6.21E–07 | 6.63E–19\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr3:36.8–38.7 Mb | TRANK1 | 0.64 | 0.41 | 2.81E–05 | 6.21E–07 | 6.63E–19\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr3:36.8–38.7 Mb | TRANK1 | 0.64 | 0.41 | 2.81E–05 | 6.21E–07 | 6.63E–19\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00011",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "3.09E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr18:59.4–60.7 Mb | ZCCH2 | −1.0 | 1.0 | 0.0001 | 6.60E–07 | 3.09E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 3.09e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr18:59.4–60.7 Mb | ZCCH2 | −1.0 | 1.0 | 0.0001 | 6.60E–07 | 3.09E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr18:59.4–60.7 Mb | ZCCH2 | −1.0 | 1.0 | 0.0001 | 6.60E–07 | 3.09E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr18:59.4–60.7 Mb | ZCCH2 | −1.0 | 1.0 | 0.0001 | 6.60E–07 | 3.09E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic reg",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00012",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "4.29E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.52 | 0.27 | 0.0004 | 1.04E–06 | 4.29E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 4.29e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.52 | 0.27 | 0.0004 | 1.04E–06 | 4.29E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.52 | 0.27 | 0.0004 | 1.04E–06 | 4.29E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr20:49.2–50.6 Mb | KCNG1 | 0.52 | 0.27 | 0.0004 | 1.04E–06 | 4.29E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic re",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00013",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "7.79E–06",
+          "confidence": 0.9,
+          "evidence": "Row text: chr3:55.6–56.9 Mb | ERC2 | 0.51 | 0.26 | 0.005 | 2.72E–06 | 7.79E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 7.79e-06,
+          "confidence": 0.7,
+          "evidence": "Row text: chr3:55.6–56.9 Mb | ERC2 | 0.51 | 0.26 | 0.005 | 2.72E–06 | 7.79E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr3:55.6–56.9 Mb | ERC2 | 0.51 | 0.26 | 0.005 | 2.72E–06 | 7.79E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr3:55.6–56.9 Mb | ERC2 | 0.51 | 0.26 | 0.005 | 2.72E–06 | 7.79E–06\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00014",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "1.81E−08",
+          "confidence": 0.9,
+          "evidence": "Row text: chr6:31.3–31.4 Mb | MSH5 | 0.74 | 0.55 | 0.001 | 1.34E−06 | 1.81E−08\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 1.81e-08,
+          "confidence": 0.7,
+          "evidence": "Row text: chr6:31.3–31.4 Mb | MSH5 | 0.74 | 0.55 | 0.001 | 1.34E−06 | 1.81E−08\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr6:31.3–31.4 Mb | MSH5 | 0.74 | 0.55 | 0.001 | 1.34E−06 | 1.81E−08\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr6:31.3–31.4 Mb | MSH5 | 0.74 | 0.55 | 0.001 | 1.34E−06 | 1.81E−08\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic regio",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    },
+    {
+      "RecordID": "41823034_table2_R00015",
+      "fields": [
+        {
+          "field": "Name",
+          "value": "2.55E–07",
+          "confidence": 0.9,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.77 | 0.59 | 0.003 | 3.92E–07 | 2.55E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row rsID extraction",
+          "needs_review": false
+        },
+        {
+          "field": "P-value",
+          "value": 2.55e-07,
+          "confidence": 0.7,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.77 | 0.59 | 0.003 | 3.92E–07 | 2.55E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row p-value parsing",
+          "needs_review": false
+        },
+        {
+          "field": "EffectSize(altvsref)",
+          "value": "",
+          "confidence": 0.65,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.77 | 0.59 | 0.003 | 3.92E–07 | 2.55E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "table row effect parsing",
+          "needs_review": false
+        },
+        {
+          "field": "Stage",
+          "value": "replication/validation",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Model type",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Imputation",
+          "value": "1000g + 1000 genomes phase 3 + topmed",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Population",
+          "value": "european ancestry + aa + eur",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Sample size",
+          "value": "",
+          "confidence": 0.5,
+          "evidence": "",
+          "rule": "",
+          "needs_review": true
+        },
+        {
+          "field": "Cohort",
+          "value": "ukbb + ros/map + dbgap + phs001672.v1.p1 + adsp",
+          "confidence": 0.8,
+          "evidence": "Row text: chr7:11.8–12.6 Mb | TMEM106B | −0.77 | 0.59 | 0.003 | 3.92E–07 | 2.55E–07\n[column_mapping] {\"Genomic region (hg37) AD versus depression covariance analyses\": {\"reference_col\": \"UNMAPPED\", \"score\": 0.2655, \"needs_review\": true, \"match_hint\": \"Genomic ",
+          "rule": "cohort keyword mapping",
+          "needs_review": false
+        }
+      ]
+    }
+  ]
+}

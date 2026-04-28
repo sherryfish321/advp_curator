@@ -91,5 +91,50 @@
     "Sample Size": [
       "4704"
     ]
+  },
+  "41823034": {
+    "Population": [
+      "european ancestry",
+      "eur",
+      "aa"
+    ],
+    "Stage": [
+      "replication/validation"
+    ],
+    "Imputation": [
+      "1000g",
+      "1000 genomes phase 3",
+      "topmed"
+    ],
+    "Study type": [
+      "whole exome sequencing (wes)",
+      "whole genome sequencing (wgs)"
+    ],
+    "Phenotype": [
+      "schizophrenia",
+      "depression",
+      "bipolar disorder",
+      "alzheimers disease"
+    ],
+    "Model Type": [
+      "linear regression (with covariates)",
+      "logistic regression",
+      "meta"
+    ],
+    "Association Type": [
+      "pleiotropy",
+      "genetic correlation",
+      "imaging"
+    ],
+    "Cohort": [
+      "ukbb",
+      "ros/map",
+      "dbgap",
+      "phs001672.v1.p1",
+      "adsp"
+    ],
+    "Sample Size": [
+      "487511"
+    ]
   }
 }
