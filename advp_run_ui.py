@@ -7,11 +7,14 @@ import html
 import json
 import os
 import re
+import ssl
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import Dict, List
 from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.error import URLError
+from urllib.request import Request, urlopen
 
 import pandas as pd
 
@@ -45,6 +48,95 @@ def parse_links(raw: str) -> List[str]:
 
 def parse_bool(raw: str) -> bool:
     return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def normalize_pmcid(value: str) -> str:
+    value = value.strip()
+    if not value:
+        return ""
+    if re.fullmatch(r"PMC\d+", value, flags=re.I):
+        return value.upper()
+    if re.fullmatch(r"\d+", value):
+        return f"PMC{value}"
+    return value
+
+
+def pmc_article_url_from_pmcid(pmcid: str) -> str:
+    normalized = normalize_pmcid(pmcid)
+    if not re.fullmatch(r"PMC\d+", normalized, flags=re.I):
+        return ""
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{normalized}/"
+
+
+def fetch_pubmed_title(pmid: str = "", pmcid: str = "") -> Dict[str, str]:
+    pmid = pmid.strip()
+    pmcid = normalize_pmcid(pmcid)
+    if not pmid and not pmcid:
+        raise ValueError("Provide PMID or PMCID")
+
+    def _json(url: str) -> Dict[str, object]:
+        req = Request(url, headers={"User-Agent": "advp-curator/1.0"})
+        try:
+            with urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except URLError as exc:
+            reason = getattr(exc, "reason", None)
+            if isinstance(reason, ssl.SSLCertVerificationError):
+                insecure_ctx = ssl._create_unverified_context()
+                with urlopen(req, timeout=15, context=insecure_ctx) as resp:
+                    return json.loads(resp.read().decode("utf-8"))
+            raise
+
+    def _resolve_pmcid_to_pmid(target_pmcid: str) -> Dict[str, str]:
+        idconv = _json(
+            "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=advp_curator&format=json&ids="
+            + urlencode({"ids": target_pmcid}).split("=", 1)[1]
+        )
+        records = idconv.get("records", []) if isinstance(idconv, dict) else []
+        if not records or not isinstance(records, list):
+            raise ValueError(f"Could not resolve PMID from PMCID {target_pmcid}")
+        first = records[0] if isinstance(records[0], dict) else {}
+        resolved_pmid = str(first.get("pmid", "")).strip()
+        resolved_pmcid = str(first.get("pmcid", target_pmcid)).strip() or target_pmcid
+        if not resolved_pmid:
+            raise ValueError(f"Could not resolve PMID from PMCID {resolved_pmcid}")
+        return {"pmid": resolved_pmid, "pmcid": resolved_pmcid}
+
+    def _fetch_title_for_pmid(target_pmid: str) -> str:
+        summary = _json(
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id="
+            + urlencode({"id": target_pmid}).split("=", 1)[1]
+        )
+        result = summary.get("result", {}) if isinstance(summary, dict) else {}
+        item = result.get(target_pmid, {}) if isinstance(result, dict) else {}
+        title = str(item.get("title", "")).strip()
+        if not title:
+            raise ValueError(f"Could not fetch title for PMID {target_pmid}")
+        return title
+
+    resolved_pmid = pmid
+    resolved_pmcid = pmcid
+    pmid_title = _fetch_title_for_pmid(pmid) if pmid else ""
+    pmcid_title = ""
+
+    if pmcid:
+        resolved = _resolve_pmcid_to_pmid(pmcid)
+        resolved_pmcid = resolved["pmcid"]
+        pmcid_pmid = resolved["pmid"]
+        pmcid_title = _fetch_title_for_pmid(pmcid_pmid)
+        if pmid and pmcid_pmid != pmid:
+            raise ValueError(
+                f"PMID and PMCID do not match: PMID {pmid} vs PMCID {resolved_pmcid} -> PMID {pmcid_pmid}"
+            )
+        if pmid and pmid_title != pmcid_title:
+            raise ValueError(
+                "PMID and PMCID titles do not match: "
+                f'PMID "{pmid_title}" vs PMCID "{pmcid_title}"'
+            )
+        resolved_pmid = pmcid_pmid
+
+    title = pmid_title or pmcid_title
+    return {"pmid": resolved_pmid, "pmcid": resolved_pmcid, "title": title}
 
 
 def maybe_auto_discover_links(paper_input: str, links: List[str], auto_discover: bool) -> tuple[List[str], List[Dict[str, object]]]:
@@ -368,6 +460,7 @@ def tracker_entry_from_result(result: Dict[str, object], paper_input: str, table
         "eval_report": str(result.get("eval_report", "")),
         "edit_path": str(first_edit),
         "table_count": int(result.get("table_count", 0)),
+        "paper_title": str(existing.get("paper_title", "")),
     }
 
 
@@ -388,14 +481,22 @@ def render_new_document_form(prefill: Dict[str, str] | None = None) -> str:
   <a class="btn-link" href="/">Back To Dashboard</a>
 </div>
 <form method="post" action="/run" enctype="multipart/form-data">
+<input type="hidden" id="paper-title-hidden" name="paper_title" value="{html.escape(prefill.get('paper_title', ''))}" />
 <label>Owner</label>
 <input name="owner_name" value="{html.escape(prefill.get('owner_name', ''))}" placeholder="Your name" />
 <label>PMID</label>
-<input name="pmid" value="{html.escape(prefill.get('pmid', ''))}" placeholder="PMID" required />
+<div class="lookup-row">
+  <input id="pmid-input" name="pmid" value="{html.escape(prefill.get('pmid', ''))}" placeholder="PMID" required />
+  <button type="button" class="lookup-btn" onclick="lookupPaperTitle()">Lookup Title</button>
+</div>
 <label>PMCID</label>
-<input name="pmcid" value="{html.escape(prefill.get('pmcid', ''))}" placeholder="PMCID" />
+<input id="pmcid-input" name="pmcid" value="{html.escape(prefill.get('pmcid', ''))}" placeholder="PMCID" />
+<div id="paper-title-preview" class="title-preview {'has-title' if prefill.get('paper_title') else ''}">
+  <span class="title-preview-label">Paper Title</span>
+  <span id="paper-title-text">{html.escape(prefill.get('paper_title', 'Not looked up yet'))}</span>
+</div>
 <label>Paper URL</label>
-<input name="paper_input" value="{html.escape(prefill.get('paper_input', ''))}" placeholder="PMC article page or PDF link" />
+<input id="paper-input" name="paper_input" value="{html.escape(prefill.get('paper_input', ''))}" placeholder="PMC article page or PDF link" />
 <label>Or upload paper PDF</label>
 <input type="file" name="paper_upload" accept=".pdf,application/pdf" />
 <label>Source type</label>
@@ -443,6 +544,7 @@ def render_tracker_dashboard(root: Path) -> str:
         return (
             "<div class='doc-card'>"
             f"<a class='doc-link' href='{html.escape(link)}'><strong>PMID {pmid}</strong><span class='muted'>PMCID {pmcid}</span></a>"
+            f"<div class='doc-title'>{html.escape(str(entry.get('paper_title', '')))}</div>"
             f"<div class='doc-meta'>Owner: {owner}</div>"
             f"<div class='doc-meta'>Priority: <span class='pill pill-{priority.lower()}'>{priority}</span></div>"
             f"<div class='doc-meta'>Updated: {updated or 'Not yet run'}</div>"
@@ -458,6 +560,7 @@ def render_tracker_dashboard(root: Path) -> str:
             f"<input type='hidden' name='eval_report' value='{html.escape(str(entry.get('eval_report', '')))}' />"
             f"<input type='hidden' name='edit_path' value='{html.escape(str(entry.get('edit_path', '')))}' />"
             f"<input type='hidden' name='table_count' value='{html.escape(str(entry.get('table_count', '0')))}' />"
+            f"<input type='hidden' name='paper_title' value='{html.escape(str(entry.get('paper_title', '')))}' />"
             f"<label>Priority</label><select name='priority'><option value='high' {'selected' if priority.lower() == 'high' else ''}>High</option><option value='medium' {'selected' if priority.lower() == 'medium' else ''}>Medium</option><option value='low' {'selected' if priority.lower() == 'low' else ''}>Low</option></select>"
             f"<label>Status</label><select name='status'><option value='new' {'selected' if entry.get('status') == 'new' else ''}>New Document</option><option value='in_progress' {'selected' if entry.get('status') == 'in_progress' else ''}>In Progress</option><option value='complete' {'selected' if entry.get('status') == 'complete' else ''}>Complete</option></select>"
             f"<label>Message</label><textarea name='message' rows='3' placeholder='What needs improvement or what should be prioritized?'>{message}</textarea>"
@@ -1671,6 +1774,52 @@ def html_page(body: str) -> bytes:
   <div class=\"card\">{body}</div>
 </main>
 <script>
+async function lookupPaperTitle() {{
+  const pmidEl = document.getElementById("pmid-input");
+  const pmcidEl = document.getElementById("pmcid-input");
+  const paperInputEl = document.getElementById("paper-input");
+  const titleBox = document.getElementById("paper-title-preview");
+  const titleText = document.getElementById("paper-title-text");
+  const hidden = document.getElementById("paper-title-hidden");
+  if (!pmidEl || !pmcidEl || !titleBox || !titleText || !hidden) return;
+  const pmid = pmidEl.value.trim();
+  const pmcid = pmcidEl.value.trim();
+  if (!pmid && !pmcid) {{
+    titleText.textContent = "Enter PMID or PMCID first";
+    titleBox.classList.remove("has-title");
+    hidden.value = "";
+    return;
+  }}
+  titleText.textContent = "Looking up title...";
+  titleBox.classList.add("has-title");
+  try {{
+    const resp = await fetch(`/lookup-title?pmid=${{encodeURIComponent(pmid)}}&pmcid=${{encodeURIComponent(pmcid)}}`);
+    const data = await resp.json();
+    if (!resp.ok || !data.ok) throw new Error(data.error || "Lookup failed");
+    if (data.pmid && !pmidEl.value.trim()) pmidEl.value = data.pmid;
+    if (data.pmcid && !pmcidEl.value.trim()) pmcidEl.value = data.pmcid;
+    if (paperInputEl && !paperInputEl.value.trim() && data.pmcid) {{
+      paperInputEl.value = `https://pmc.ncbi.nlm.nih.gov/articles/${{data.pmcid}}/`;
+    }}
+    titleText.textContent = data.title || "Title not found";
+    hidden.value = data.title || "";
+    titleBox.classList.toggle("has-title", !!data.title);
+  }} catch (err) {{
+    titleText.textContent = err.message || "Lookup failed";
+    hidden.value = "";
+    titleBox.classList.remove("has-title");
+  }}
+}}
+
+for (const id of ["pmid-input", "pmcid-input"]) {{
+  document.addEventListener("keydown", function (event) {{
+    if (event.target && event.target.id === id && event.key === "Enter") {{
+      event.preventDefault();
+      lookupPaperTitle();
+    }}
+  }});
+}}
+
 document.addEventListener("click", function (event) {{
   const btn = event.target.closest(".tab-btn");
   if (!btn) return;
@@ -1699,6 +1848,22 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
             self.wfile.write(html_page(render_tracker_dashboard(Path(os.getcwd()).resolve())))
             return
 
+        if parsed.path == "/lookup-title":
+            q = parse_qs(parsed.query)
+            pmid = q.get("pmid", [""])[0].strip()
+            pmcid = q.get("pmcid", [""])[0].strip()
+            try:
+                payload = fetch_pubmed_title(pmid=pmid, pmcid=pmcid)
+                body = json.dumps({"ok": True, **payload}).encode("utf-8")
+                self.send_response(200)
+            except Exception as e:
+                body = json.dumps({"ok": False, "error": str(e)}).encode("utf-8")
+                self.send_response(400)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(body)
+            return
+
         if parsed.path == "/new":
             q = parse_qs(parsed.query)
             pmid = q.get("pmid", [""])[0]
@@ -1712,6 +1877,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                             "owner_name": str(entry.get("owner_name", "")),
                             "paper_input": str(entry.get("paper_input", "")),
                             "table_links": "\n".join(entry.get("table_links", []) or []),
+                            "paper_title": str(entry.get("paper_title", "")),
                         }
                         break
             self.send_response(200)
@@ -1800,8 +1966,9 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                     "pmid": pmid,
                     "pmcid": data.get("pmcid", [""])[0].strip(),
                     "owner_name": data.get("owner_name", [""])[0].strip(),
-                    "paper_input": data.get("paper_input", [""])[0].strip(),
+                    "paper_input": data.get("paper_input", [""])[0].strip() or pmc_article_url_from_pmcid(data.get("pmcid", [""])[0].strip()),
                     "table_links": parse_links(data.get("table_links", [""])[0]),
+                    "paper_title": data.get("paper_title", [""])[0].strip(),
                     "status": "new",
                     "priority": "medium",
                     "message": str(next((e.get("message", "") for e in load_tracker(root) if str(e.get("pmid", "")) == pmid), "")),
@@ -1817,11 +1984,12 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                     "pmid": data.get("pmid", [""])[0].strip(),
                     "pmcid": data.get("pmcid", [""])[0].strip(),
                     "owner_name": data.get("owner_name", [""])[0].strip(),
-                    "paper_input": data.get("paper_input", [""])[0].strip(),
+                    "paper_input": data.get("paper_input", [""])[0].strip() or pmc_article_url_from_pmcid(data.get("pmcid", [""])[0].strip()),
                     "run_log": data.get("run_log", [""])[0].strip(),
                     "eval_report": data.get("eval_report", [""])[0].strip(),
                     "edit_path": data.get("edit_path", [""])[0].strip(),
                     "table_count": int((data.get("table_count", ["0"])[0] or "0").strip() or "0"),
+                    "paper_title": data.get("paper_title", [""])[0].strip(),
                     "status": data.get("status", ["new"])[0].strip(),
                     "priority": data.get("priority", ["medium"])[0].strip(),
                     "message": data.get("message", [""])[0].strip(),
@@ -1863,7 +2031,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
             owner_name = data.get("owner_name", [""])[0].strip()
             paper_input = data.get("paper_input", [""])[0].strip()
             paper_upload = data.get("paper_upload", [""])[0].strip() if data.get("paper_upload") else ""
-            paper_input = paper_upload or paper_input
+            paper_input = paper_upload or paper_input or pmc_article_url_from_pmcid(pmcid)
             source_type = data.get("source_type", ["pmc_table_link"])[0].strip()
             links_raw = data.get("table_links", [""])[0]
             auto_discover_tables = parse_bool(data.get("auto_discover_tables", [""])[0]) if data.get("auto_discover_tables") else False
@@ -1876,6 +2044,8 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                 if auto_discover_tables and (not is_http_url(paper_input) or not re.search(r"/articles/PMC\d+/?", paper_input, flags=re.I)):
                     raise ValueError("Auto-discovery currently works only with PMC article URLs. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.")
                 raise ValueError("No table links provided. If no PMC is available, use manual table upload / table_input instead.")
+
+            paper_title = data.get("paper_title", [""])[0].strip()
 
             result = run_pipeline(
                 pmid=pmid,
@@ -1892,7 +2062,9 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                 base_dir=os.getcwd(),
                 auto_discovered_tables=discovered,
             )
-            upsert_tracker_entry(Path(os.getcwd()).resolve(), tracker_entry_from_result(result, paper_input, links))
+            tracker_payload = tracker_entry_from_result(result, paper_input, links)
+            tracker_payload["paper_title"] = paper_title
+            upsert_tracker_entry(Path(os.getcwd()).resolve(), tracker_payload)
 
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
