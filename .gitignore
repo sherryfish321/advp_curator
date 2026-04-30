@@ -11,6 +11,11 @@ ui_annotations/
 ui_run_logs/
 uploaded_papers/
 validation_reports/
+docs/*.docx
+docs/images/pro_*.png
+docs/generate_*.py
+docs/advp_technical_summary.md
+
 
 project_tracker.json
 

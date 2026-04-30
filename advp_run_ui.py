@@ -425,6 +425,30 @@ def save_tracker(root: Path, entries: List[Dict[str, object]]) -> Path:
     return path
 
 
+def apply_bulk_tracker_action(root: Path, pmids: List[str], action: str, target_status: str = "") -> int:
+    selected = {str(p).strip() for p in pmids if str(p).strip()}
+    if not selected:
+        return 0
+    entries = load_tracker(root)
+    updated = 0
+    kept: List[Dict[str, object]] = []
+    for entry in entries:
+        pmid = str(entry.get("pmid", "")).strip()
+        if pmid not in selected:
+            kept.append(entry)
+            continue
+        if action == "delete":
+            updated += 1
+            continue
+        if action == "move" and target_status in {"new", "in_progress", "complete"}:
+            entry["status"] = target_status
+            entry["updated_at"] = dt.datetime.now().isoformat(timespec="seconds")
+            updated += 1
+        kept.append(entry)
+    save_tracker(root, kept)
+    return updated
+
+
 def upsert_tracker_entry(root: Path, payload: Dict[str, object]) -> Dict[str, object]:
     entries = load_tracker(root)
     pmid = str(payload.get("pmid", "")).strip()
@@ -537,19 +561,21 @@ def render_tracker_dashboard(root: Path) -> str:
         owner = html.escape(str(entry.get("owner_name", "")) or "Unassigned")
         priority = html.escape(str(entry.get("priority", "medium")))
         message = html.escape(str(entry.get("message", "")))
+        paper_title = html.escape(str(entry.get("paper_title", "")))
         updated = html.escape(str(entry.get("updated_at", ""))).replace("T", " ")
         link = "/new?" + urlencode({"pmid": str(entry.get("pmid", ""))}) if entry.get("status") == "new" else "/result?" + urlencode({"run_log": str(entry.get("run_log", ""))})
         if entry.get("status") == "in_progress" and entry.get("edit_path"):
             link = "/edit?" + urlencode({"path": str(entry.get("edit_path", ""))})
         return (
             "<div class='doc-card'>"
+            f"<label class='doc-select-badge'><input type='checkbox' name='selected_pmid' value='{pmid}' form='bulk-tracker-form' /><span></span></label>"
             f"<a class='doc-link' href='{html.escape(link)}'><strong>PMID {pmid}</strong><span class='muted'>PMCID {pmcid}</span></a>"
-            f"<div class='doc-title'>{html.escape(str(entry.get('paper_title', '')))}</div>"
             f"<div class='doc-meta'>Owner: {owner}</div>"
             f"<div class='doc-meta'>Priority: <span class='pill pill-{priority.lower()}'>{priority}</span></div>"
             f"<div class='doc-meta'>Updated: {updated or 'Not yet run'}</div>"
             "<details class='doc-expand'>"
             "<summary>Edit Card</summary>"
+            f"<div class='doc-detail'><strong>Title:</strong> {paper_title or 'Not looked up yet.'}</div>"
             f"<div class='doc-message'>{message or 'No message yet.'}</div>"
             "<form method='post' action='/update-tracker' class='tracker-form'>"
             f"<input type='hidden' name='pmid' value='{pmid}' />"
@@ -577,7 +603,20 @@ def render_tracker_dashboard(root: Path) -> str:
     return (
         "<h2>Document Dashboard</h2>"
         "<p class='muted'>Track each paper locally by workflow stage. This dashboard does not require a deployed server and will persist in a local tracker file.</p>"
-        "<div class='actions'><a class='btn-link primary' href='/new'>New Document</a></div>"
+        "<div class='actions'><button type='button' class='btn-link' id='select-mode-toggle'>Select</button></div>"
+        "<form method='post' action='/bulk-tracker-action' class='bulk-bar' id='bulk-tracker-form' hidden>"
+        "<select name='action' id='bulk-action-select'>"
+        "<option value='move'>Move</option>"
+        "<option value='delete'>Delete Selected</option>"
+        "</select>"
+        "<select name='target_status' id='bulk-target-status'>"
+        "<option value='new'>New</option>"
+        "<option value='in_progress'>In Progress</option>"
+        "<option value='complete'>Complete</option>"
+        "</select>"
+        "<button type='submit'>Apply</button>"
+        "<button type='button' class='btn-link' id='select-mode-cancel'>Cancel</button>"
+        "</form>"
         "<div class='doc-board'>"
         + column("New Document", "new", "".join(card(e) for e in buckets.get("new", [])))
         + column("In Progress", "in_progress", "".join(card(e) for e in buckets.get("in_progress", [])))
@@ -1161,6 +1200,8 @@ def render_edit_table(file_path: str) -> str:
             ref_actions.append(f"<a class='btn-link' href='{html.escape(paper_input)}' target='_blank' rel='noopener noreferrer'>Open Paper File</a>")
         else:
             ref_actions.append(f"<a class='btn-link' href='/download?{urlencode({'path': paper_input})}'>Open Paper File</a>")
+    if back_href != "/":
+        ref_actions.append(f"<a class='btn-link' href='{html.escape(back_href)}'>Back To Run Result</a>")
     table_reference_rows = []
     for idx, table_path in enumerate(related_tables, start=1):
         related_table_num = infer_table_number_from_sheet_path(table_path)
@@ -1200,9 +1241,9 @@ def render_edit_table(file_path: str) -> str:
         + "</tr></thead><tbody>"
         + "".join(rows_html)
         + "</tbody></table></div>"
-        "<div class='actions'>"
-        "<button type='submit'>Save Changes</button>"
-        f"<a class='btn-link' href='{html.escape(back_href)}'>Back</a>"
+        "<div class='actions edit-actions'>"
+        "<button type='submit' class='edit-action-btn'>Save Changes</button>"
+        f"<a class='btn-link edit-action-btn' href='{html.escape(back_href)}'>Back</a>"
         "</div></form>"
     )
 
@@ -1395,13 +1436,112 @@ def html_page(body: str) -> bytes:
     .bad {{ background: var(--bad-bg); border-color: #f1d0d0; }}
     .bad .v {{ color: var(--bad-ink); }}
     .actions {{ margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }}
+    .edit-actions {{
+      align-items: stretch;
+    }}
+    .edit-action-btn {{
+      width: 180px !important;
+      height: 56px !important;
+      min-height: 56px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 22px !important;
+      margin-top: 0 !important;
+      line-height: 1 !important;
+      box-sizing: border-box !important;
+    }}
     .doc-board {{ display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }}
     .doc-column {{ background: #f7fafc; border: 1px solid var(--line); border-radius: 14px; padding: 16px; min-height: 340px; }}
     .doc-column h3 {{ margin: 0 0 12px; font-size: 22px; }}
-    .doc-card {{ background: #fff; border: 1px solid #dbe4ee; border-radius: 14px; padding: 14px; box-shadow: 0 6px 16px rgba(24,45,77,.06); margin-bottom: 14px; }}
+    .doc-card {{ position: relative; background: #fff; border: 1px solid #dbe4ee; border-radius: 14px; padding: 14px; box-shadow: 0 6px 16px rgba(24,45,77,.06); margin-bottom: 14px; }}
+    .bulk-bar {{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      padding: 10px 12px;
+      border: 1px solid #d8e2ed;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fcfdff 0%, #f7fbff 100%);
+    }}
+    .bulk-bar select {{ width: auto; min-width: 120px; border-radius: 999px; padding: 10px 14px; }}
+    .bulk-bar button {{ margin-top: 0; }}
+    body.select-mode .doc-card {{
+      box-shadow: 0 8px 18px rgba(49, 83, 130, .10);
+    }}
+    .doc-select-badge {{
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      cursor: pointer;
+    }}
+    body.select-mode .doc-select-badge {{
+      display: inline-flex;
+    }}
+    .doc-select-badge input {{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }}
+    .doc-select-badge span {{
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 2px solid #9eb3c8;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(35, 61, 92, .10);
+      transition: all .14s ease;
+    }}
+    .doc-select-badge input:checked + span {{
+      border-color: #2f5f95;
+      background: linear-gradient(180deg, #4d79b0 0%, #2f5f95 100%);
+      box-shadow: 0 4px 12px rgba(47, 95, 149, .22);
+    }}
+    .doc-select-badge input:checked + span::after {{
+      content: "";
+      display: block;
+      width: 6px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin: 3px 0 0 7px;
+    }}
+    body.select-mode .doc-link {{
+      padding-right: 30px;
+    }}
+    #select-mode-toggle.active {{
+      background: linear-gradient(90deg, #2f4d68, #496788);
+      border-color: #2f4d68;
+      color: #fff;
+    }}
+    #select-mode-cancel {{
+      min-height: 40px;
+      padding: 0 14px;
+    }}
+    .bulk-bar[hidden] {{
+      display: none !important;
+    }}
+    .bulk-bar button,
+    .bulk-bar .btn-link {{
+      min-height: 40px;
+      padding: 0 14px;
+    }}
+    .doc-select input {{
+      margin: 0;
+    }}
     .doc-link {{ display: flex; flex-direction: column; gap: 3px; text-decoration: none; color: var(--ink); margin-bottom: 10px; }}
     .doc-link strong {{ font-size: 18px; }}
     .doc-meta {{ font-size: 13px; color: var(--muted); margin-top: 4px; }}
+    .doc-detail {{ margin-top: 10px; color: #344b63; font-size: 13px; line-height: 1.45; }}
     .doc-message {{ margin-top: 10px; padding: 10px; border-radius: 10px; background: #f7fafc; border: 1px solid #e2e8f0; color: #415164; font-size: 13px; }}
     .doc-expand {{ margin-top: 12px; border-top: 1px solid #e3ebf4; padding-top: 10px; }}
     .doc-expand summary {{ cursor: pointer; font-weight: 700; color: #35516d; list-style: none; }}
@@ -1821,6 +1961,38 @@ for (const id of ["pmid-input", "pmcid-input"]) {{
 }}
 
 document.addEventListener("click", function (event) {{
+  const selectToggle = event.target.closest("#select-mode-toggle");
+  if (selectToggle) {{
+    event.preventDefault();
+    document.body.classList.toggle("select-mode");
+    selectToggle.classList.toggle("active", document.body.classList.contains("select-mode"));
+    const bulkBar = document.getElementById("bulk-tracker-form");
+    if (bulkBar) bulkBar.hidden = !document.body.classList.contains("select-mode");
+    if (!document.body.classList.contains("select-mode")) {{
+      document.querySelectorAll("input[name='selected_pmid']").forEach((node) => {{
+        node.checked = false;
+      }});
+    }}
+    return;
+  }}
+  const cancelSelect = event.target.closest("#select-mode-cancel");
+  if (cancelSelect) {{
+    event.preventDefault();
+    document.body.classList.remove("select-mode");
+    const toggle = document.getElementById("select-mode-toggle");
+    const bulkBar = document.getElementById("bulk-tracker-form");
+    if (toggle) toggle.classList.remove("active");
+    if (bulkBar) bulkBar.hidden = true;
+    document.querySelectorAll("input[name='selected_pmid']").forEach((node) => {{
+      node.checked = false;
+    }});
+    return;
+  }}
+  const cardLink = event.target.closest(".doc-link");
+  if (cardLink && document.body.classList.contains("select-mode")) {{
+    event.preventDefault();
+    return;
+  }}
   const btn = event.target.closest(".tab-btn");
   if (!btn) return;
   const shell = btn.closest(".tab-shell");
@@ -1831,6 +2003,14 @@ document.addEventListener("click", function (event) {{
   btn.classList.add("active");
   const panel = shell.querySelector(`.tab-panel[data-panel="${{tabName}}"]`);
   if (panel) panel.classList.add("active");
+}});
+
+document.addEventListener("change", function (event) {{
+  const select = event.target.closest("#bulk-action-select");
+  if (!select) return;
+  const target = document.getElementById("bulk-target-status");
+  if (!target) return;
+  target.style.display = select.value === "move" ? "" : "none";
 }});
 </script>
 </body>
@@ -1951,7 +2131,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_POST(self):
-        if self.path not in ("/run", "/save-edits", "/save-draft", "/update-tracker"):
+        if self.path not in ("/run", "/save-edits", "/save-draft", "/update-tracker", "/bulk-tracker-action"):
             self.send_response(404)
             self.end_headers()
             return
@@ -1995,6 +2175,17 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                     "message": data.get("message", [""])[0].strip(),
                 }
                 upsert_tracker_entry(root, payload)
+                self.send_response(302)
+                self.send_header("Location", "/")
+                self.end_headers()
+                return
+
+            if self.path == "/bulk-tracker-action":
+                root = Path(os.getcwd()).resolve()
+                action = data.get("action", ["move"])[0].strip()
+                target_status = data.get("target_status", ["new"])[0].strip()
+                selected_pmids = data.get("selected_pmid", [])
+                apply_bulk_tracker_action(root, selected_pmids, action, target_status)
                 self.send_response(302)
                 self.send_header("Location", "/")
                 self.end_headers()
