@@ -14,8 +14,6 @@ import torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel, PreTrainedModel, PreTrainedTokenizer
 from sentence_transformers import CrossEncoder
 from llama_cpp import Llama, LogitsProcessorList
-from langchain_chroma import Chroma
-from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -24,8 +22,26 @@ from huggingface_hub import login
 from dotenv import load_dotenv
 load_dotenv()
 
-INFINITY_URL = "http://localhost:7997"
-LLAMA_CLIENT = OpenAI(base_url="http://localhost:8001/v1", api_key="none")
+# NOTE: define config
+# Chroma DB params
+CHROMA_DB_PATH = os.environ.get("CHROMA_DB_PATH", "")
+CHROMA_DB_COLLECTION_NAME = os.environ.get("CHROMA_DB_COLLECTION_NAME", "")
+CHUNK_SIZE = os.environ.get('CHUNK_SIZE', "")
+CHUNK_OVERLAP = os.environ.get("CHUNK_OVERLAP", "")
+
+# Retrieval params
+INFINITY_URL = f"http://localhost:{os.environ.get('INFINITY_URL_PORT', 0)}"
+EMBEDDINGS_MODEL = os.environ.get("EMBEDDINGS_MODEL", "")
+RERANK_MODEL = os.environ.get("RERANK_MODEL", "")
+TOP_K = os.environ.get("TOP_K", 20)
+TOP_K_RERANK = os.environ.get("TOP_K_RERANK", 5)
+SIMILARITY_SCORE_THRESHOLD = os.environ.get('SIMILARITY_SCORE_THRESHOLD', 0)
+
+# Generation params
+LLAMA_CLIENT = OpenAI(base_url=f"http://localhost:{os.environ.get('LLAMA_URL_PORT', 0)}/v1", api_key="none")
+MAX_NEW_TOKEN = os.environ.get("MAX_NEW_TOKEN", 128)
+TEMPERATURE = os.environ.get("TEMPERATURE", 0)
+TOP_P = os.environ.get("TOP_P", 1)
 
 class InfinityEmbeddings(Embeddings):
     def __init__(self, model: str, url: str = INFINITY_URL):
@@ -54,8 +70,10 @@ def clean_text(text: str) -> str:
     text = re.sub(r'http\S+|www\S+', '', text)
     # Remove tabs and newlines
     text = text.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
-    # Remove special characters and punctuation (keep basic ones if needed)
-    text = re.sub(r'[^a-z0-9\s\.\,\-]', '', text)
+    # Normalise unicode minus/dash variants to ASCII hyphen before stripping
+    text = text.replace('−', '-').replace('–', '-').replace('—', '-')
+    # Remove special characters; keep punctuation needed for numeric/scientific values
+    text = re.sub(r'[^a-z0-9\s\.\,\-\+\%\(\)\<\>\=\:]', '', text)
     # Replace multiple spaces with single space
     text = re.sub(r'\s+', ' ', text).strip()
     return text
@@ -66,8 +84,8 @@ def clean_document(document: Document) -> Document:
     return cleaned_document
 
 def ingest_doc_from_pmc(pmid: int, pmcid: str,
-                        chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
+                        chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
+                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, print_progress: bool = False):
     documents = []
     metadata = []
     try:
@@ -127,8 +145,8 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
         print()
 
 def ingest_doc_from_pdf(pmid: int, filename: str,
-                        chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                        chunk_size: int = 500, chunk_overlap: int = 50, print_progress: bool = False):
+                        chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
+                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, print_progress: bool = False):
     documents = []
     metadata = []
     try:
@@ -184,7 +202,7 @@ def make_embeddings(sentences: str | List[str]) -> torch.Tensor:
         sentences = [sentences]
     resp = requests.post(f"{INFINITY_URL}/embeddings", json={
         "input": sentences,
-        "model": "NeuML/pubmedbert-base-embeddings"
+        "model": EMBEDDINGS_MODEL,
     })
     vecs = [item["embedding"] for item in sorted(resp.json()["data"], key=lambda x: x["index"])]
     return F.normalize(torch.tensor(vecs), p=2, dim=1)
@@ -197,7 +215,7 @@ def rerank(query: str, documents: List[str]) -> List[float]:
     resp = requests.post(f"{INFINITY_URL}/rerank", json={
         "query": query,
         "documents": documents,
-        "model": "BAAI/bge-reranker-base"
+        "model": RERANK_MODEL
     })
     results = resp.json()["results"]
     scores = [0.0] * len(documents)
@@ -214,31 +232,12 @@ def combine_possible_info_multilist(multilst: List[List[str]]):
         final_lst.extend(lst)
     return " + ".join([x for x in list(set(final_lst)) if len(x) > 0])
 
-# class AllowedTokensProcessor(LogitsProcessor):
-#     def __init__(self, allowed_token_ids):
-#         self.allowed_token_ids = allowed_token_ids
 
-#     def __call__(self, input_ids, scores):
-#         mask = torch.full_like(scores, float("-inf"))
-#         mask[:, list(self.allowed_token_ids)] = 0
-#         return scores + mask
-
-# class AllowedTokensProcessorLlamaCpp:
-#     def __init__(self, allowed_token_ids):
-#         self.allowed_token_ids = allowed_token_ids
-
-#     def __call__(self, input_ids, scores):
-#         import numpy as np
-#         mask = np.full_like(scores, float("-inf"))
-#         for token_id in self.allowed_token_ids:
-#             mask[token_id] = 0
-#         return scores + mask
-    
 class ADVPInformationRetriever:
-    def __init__(self, referencing_col_df: pd.DataFrame, chroma_db_path: str = "./chroma_db", chroma_db_collection_name: str = "advp2", 
-                 # embeddings_model_name: str = "NeuML/pubmedbert-base-embeddings", reranker_model_name: str = "jinaai/jina-reranker-v1-turbo-en",
-                 # llm_model_name: Optional[str] = "Qwen/Qwen2.5-1.5B-Instruct", llm_gguf_path: Optional[str] = "./qwen2.5-7b-instruct-q4/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
-                 # use_hf: bool = True, 
+    def __init__(self, referencing_col_df: pd.DataFrame, 
+                 chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
+                 top_k: int = TOP_K, top_k_rerank: int = TOP_K_RERANK, similarity_score_threshold: float = SIMILARITY_SCORE_THRESHOLD,
+                 temperature: float = TEMPERATURE, top_p: float = TOP_P, max_new_tokens: int = MAX_NEW_TOKEN,
                  device: Optional[str] = None):
         # load ref col df
         self.referencing_col_lst = referencing_col_df["column"].to_list()
@@ -275,12 +274,12 @@ class ADVPInformationRetriever:
         self.device = device if device is not None else "cpu"
         
         # NOTE: config for search and generate, add it as params later
-        self.top_k = 20
-        self.top_k_rerank = 5
-        self.max_new_tokens = 128
-        self.similarity_score_threshold = 0.0
-        self.temperature = 0
-        self.top_p = 1
+        self.top_k = top_k
+        self.top_k_rerank = top_k_rerank
+        self.max_new_tokens = max_new_tokens
+        self.similarity_score_threshold = similarity_score_threshold
+        self.temperature = temperature
+        self.top_p = top_p
     
     def make_messages(self, query: str, documents: List[str], examples: str = "", use_examples_in_llm: bool = True) -> List[Dict]:
         document_str = "\n\n".join([f"EXCERPT {i + 1}:\n{d}" for i, d in enumerate(documents)])
