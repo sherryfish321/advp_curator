@@ -7,11 +7,14 @@ import html
 import json
 import os
 import re
+import ssl
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import Dict, List, Optional
 from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.error import URLError
+from urllib.request import Request, urlopen
 
 import pandas as pd
 
@@ -46,10 +49,103 @@ def parse_bool(raw: str) -> bool:
     return raw.strip().lower() in {"1", "true", "yes", "on"}
 
 
+def normalize_pmcid(value: str) -> str:
+    value = value.strip()
+    if not value:
+        return ""
+    if re.fullmatch(r"PMC\d+", value, flags=re.I):
+        return value.upper()
+    if re.fullmatch(r"\d+", value):
+        return f"PMC{value}"
+    return value
+
+
+def pmc_article_url_from_pmcid(pmcid: str) -> str:
+    normalized = normalize_pmcid(pmcid)
+    if not re.fullmatch(r"PMC\d+", normalized, flags=re.I):
+        return ""
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{normalized}/"
+
+
+def fetch_pubmed_title(pmid: str = "", pmcid: str = "") -> Dict[str, str]:
+    pmid = pmid.strip()
+    pmcid = normalize_pmcid(pmcid)
+    if not pmid and not pmcid:
+        raise ValueError("Provide PMID or PMCID")
+
+    def _json(url: str) -> Dict[str, object]:
+        req = Request(url, headers={"User-Agent": "advp-curator/1.0"})
+        try:
+            with urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except URLError as exc:
+            reason = getattr(exc, "reason", None)
+            if isinstance(reason, ssl.SSLCertVerificationError):
+                insecure_ctx = ssl._create_unverified_context()
+                with urlopen(req, timeout=15, context=insecure_ctx) as resp:
+                    return json.loads(resp.read().decode("utf-8"))
+            raise
+
+    def _resolve_pmcid_to_pmid(target_pmcid: str) -> Dict[str, str]:
+        idconv = _json(
+            "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=advp_curator&format=json&ids="
+            + urlencode({"ids": target_pmcid}).split("=", 1)[1]
+        )
+        records = idconv.get("records", []) if isinstance(idconv, dict) else []
+        if not records or not isinstance(records, list):
+            raise ValueError(f"Could not resolve PMID from PMCID {target_pmcid}")
+        first = records[0] if isinstance(records[0], dict) else {}
+        resolved_pmid = str(first.get("pmid", "")).strip()
+        resolved_pmcid = str(first.get("pmcid", target_pmcid)).strip() or target_pmcid
+        if not resolved_pmid:
+            raise ValueError(f"Could not resolve PMID from PMCID {resolved_pmcid}")
+        return {"pmid": resolved_pmid, "pmcid": resolved_pmcid}
+
+    def _fetch_title_for_pmid(target_pmid: str) -> str:
+        summary = _json(
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id="
+            + urlencode({"id": target_pmid}).split("=", 1)[1]
+        )
+        result = summary.get("result", {}) if isinstance(summary, dict) else {}
+        item = result.get(target_pmid, {}) if isinstance(result, dict) else {}
+        title = str(item.get("title", "")).strip()
+        if not title:
+            raise ValueError(f"Could not fetch title for PMID {target_pmid}")
+        return title
+
+    resolved_pmid = pmid
+    resolved_pmcid = pmcid
+    pmid_title = _fetch_title_for_pmid(pmid) if pmid else ""
+    pmcid_title = ""
+
+    if pmcid:
+        resolved = _resolve_pmcid_to_pmid(pmcid)
+        resolved_pmcid = resolved["pmcid"]
+        pmcid_pmid = resolved["pmid"]
+        pmcid_title = _fetch_title_for_pmid(pmcid_pmid)
+        if pmid and pmcid_pmid != pmid:
+            raise ValueError(
+                f"PMID and PMCID do not match: PMID {pmid} vs PMCID {resolved_pmcid} -> PMID {pmcid_pmid}"
+            )
+        if pmid and pmid_title != pmcid_title:
+            raise ValueError(
+                "PMID and PMCID titles do not match: "
+                f'PMID "{pmid_title}" vs PMCID "{pmcid_title}"'
+            )
+        resolved_pmid = pmcid_pmid
+
+    title = pmid_title or pmcid_title
+    return {"pmid": resolved_pmid, "pmcid": resolved_pmcid, "title": title}
+
+
 def maybe_auto_discover_links(paper_input: str, links: List[str], auto_discover: bool) -> tuple[List[str], List[Dict[str, object]]]:
     if links:
         return links, []
     if not auto_discover:
+        return links, []
+    if not is_http_url(paper_input):
+        return links, []
+    if not re.search(r"/articles/PMC\d+/?", paper_input, flags=re.I):
         return links, []
     discovered = discover_relevant_pmc_tables(paper_input)
     selected = [item["link"] for item in discovered if item.get("selected")]
@@ -311,6 +407,226 @@ def result_from_run_context(context: Dict[str, object]) -> Dict[str, object]:
     }
 
 
+def tracker_store_path(root: Path) -> Path:
+    return root / "project_tracker.json"
+
+
+def load_tracker(root: Path) -> List[Dict[str, object]]:
+    path = tracker_store_path(root)
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data if isinstance(data, list) else []
+
+
+def save_tracker(root: Path, entries: List[Dict[str, object]]) -> Path:
+    path = tracker_store_path(root)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2, ensure_ascii=False)
+    return path
+
+
+def apply_bulk_tracker_action(root: Path, pmids: List[str], action: str, target_status: str = "") -> int:
+    selected = {str(p).strip() for p in pmids if str(p).strip()}
+    if not selected:
+        return 0
+    entries = load_tracker(root)
+    updated = 0
+    kept: List[Dict[str, object]] = []
+    for entry in entries:
+        pmid = str(entry.get("pmid", "")).strip()
+        if pmid not in selected:
+            kept.append(entry)
+            continue
+        if action == "delete":
+            updated += 1
+            continue
+        if action == "move" and target_status in {"new", "in_progress", "complete"}:
+            entry["status"] = target_status
+            entry["updated_at"] = dt.datetime.now().isoformat(timespec="seconds")
+            updated += 1
+        kept.append(entry)
+    save_tracker(root, kept)
+    return updated
+
+
+def upsert_tracker_entry(root: Path, payload: Dict[str, object]) -> Dict[str, object]:
+    entries = load_tracker(root)
+    pmid = str(payload.get("pmid", "")).strip()
+    target = None
+    for entry in entries:
+        if str(entry.get("pmid", "")).strip() == pmid:
+            target = entry
+            break
+    if target is None:
+        target = {}
+        entries.append(target)
+    target.update(payload)
+    target["updated_at"] = dt.datetime.now().isoformat(timespec="seconds")
+    save_tracker(root, entries)
+    return target
+
+
+def tracker_entry_from_result(result: Dict[str, object], paper_input: str, table_links: List[str]) -> Dict[str, object]:
+    root = Path(os.getcwd()).resolve()
+    existing = next((e for e in load_tracker(root) if str(e.get("pmid", "")) == str(result.get("pmid", ""))), {})
+    generated = result.get("generated_harmonized", []) or []
+    first_edit = generated[0] if generated else ""
+    return {
+        "pmid": str(result.get("pmid", "")),
+        "pmcid": str(result.get("pmcid", "")),
+        "owner_name": str(result.get("owner_name", "")),
+        "paper_input": paper_input,
+        "table_links": table_links,
+        "status": "in_progress",
+        "priority": str(existing.get("priority", "medium")),
+        "message": str(existing.get("message", "")),
+        "run_log": str(result.get("run_log", "")),
+        "eval_report": str(result.get("eval_report", "")),
+        "edit_path": str(first_edit),
+        "table_count": int(result.get("table_count", 0)),
+        "paper_title": str(existing.get("paper_title", "")),
+    }
+
+
+def render_new_document_form(prefill: Dict[str, str] | None = None) -> str:
+    prefill = prefill or {}
+    return f"""
+<h2>Study Curation Runner</h2>
+<p class="muted">Paste table links, select source type, then run end-to-end conversion and ADVP alignment.</p>
+<details class="toggle-box" open>
+<summary>What This Run Will Generate</summary>
+<ul class="check-list">
+  <li class="check-item"><span class="check-icon">+</span>Curated ADVP sheet(s)</li>
+  <li class="check-item"><span class="check-icon">+</span>Unified eval workbook</li>
+  <li class="check-item"><span class="check-icon">+</span>Row match accuracy, field accuracy, and missing-field summary</li>
+</ul>
+</details>
+<div class="actions">
+  <a class="btn-link" href="/">Back To Dashboard</a>
+</div>
+<form method="post" action="/run" enctype="multipart/form-data">
+<input type="hidden" id="paper-title-hidden" name="paper_title" value="{html.escape(prefill.get('paper_title', ''))}" />
+<label>Owner</label>
+<input name="owner_name" value="{html.escape(prefill.get('owner_name', ''))}" placeholder="Your name" />
+<label>PMID</label>
+<div class="lookup-row">
+  <input id="pmid-input" name="pmid" value="{html.escape(prefill.get('pmid', ''))}" placeholder="PMID" required />
+  <button type="button" class="lookup-btn" onclick="lookupPaperTitle()">Lookup Title</button>
+</div>
+<label>PMCID</label>
+<input id="pmcid-input" name="pmcid" value="{html.escape(prefill.get('pmcid', ''))}" placeholder="PMCID" />
+<div id="paper-title-preview" class="title-preview {'has-title' if prefill.get('paper_title') else ''}">
+  <span class="title-preview-label">Paper Title</span>
+  <span id="paper-title-text">{html.escape(prefill.get('paper_title', 'Not looked up yet'))}</span>
+</div>
+<label>Paper URL</label>
+<input id="paper-input" name="paper_input" value="{html.escape(prefill.get('paper_input', ''))}" placeholder="PMC article page or PDF link" />
+<label>Or upload paper PDF</label>
+<input type="file" name="paper_upload" accept=".pdf,application/pdf" />
+<label>Source type</label>
+<select name="source_type">
+  <option value="pmc_table_link" selected>pmc_table_link</option>
+</select>
+<label>Table links (one per line)</label>
+<textarea name="table_links" rows="6" placeholder="https://pmc.ncbi.nlm.nih.gov/articles/PMC.../table/T1/">{html.escape(prefill.get('table_links', ''))}</textarea>
+<label class="option-toggle">
+  <input type="checkbox" name="auto_discover_tables" value="1" />
+  <span class="option-card">
+    <span class="option-indicator"></span>
+    <span class="option-copy">
+      <span class="option-title">Auto-discover PMC tables when links are empty</span>
+      <span class="option-help">Auto-discovery currently works only with PMC article URLs. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.</span>
+    </span>
+  </span>
+</label>
+<label>ADVP TSV path (relative to project root)</label>
+<input name="advp_tsv" value="advp.variant.records.hg38.tsv" required />
+<div class="actions">
+  <button type="submit">Run</button>
+  <button type="submit" formaction="/save-draft">Save As New Document</button>
+</div>
+</form>
+"""
+
+
+def render_tracker_dashboard(root: Path) -> str:
+    entries = load_tracker(root)
+    buckets = {"new": [], "in_progress": [], "complete": []}
+    for entry in entries:
+        buckets.setdefault(str(entry.get("status", "new")), []).append(entry)
+
+    def card(entry: Dict[str, object]) -> str:
+        pmid = html.escape(str(entry.get("pmid", "")))
+        pmcid = html.escape(str(entry.get("pmcid", "")) or "NR")
+        owner = html.escape(str(entry.get("owner_name", "")) or "Unassigned")
+        priority = html.escape(str(entry.get("priority", "medium")))
+        message = html.escape(str(entry.get("message", "")))
+        paper_title = html.escape(str(entry.get("paper_title", "")))
+        updated = html.escape(str(entry.get("updated_at", ""))).replace("T", " ")
+        link = "/new?" + urlencode({"pmid": str(entry.get("pmid", ""))}) if entry.get("status") == "new" else "/result?" + urlencode({"run_log": str(entry.get("run_log", ""))})
+        if entry.get("status") == "in_progress" and entry.get("edit_path"):
+            link = "/edit?" + urlencode({"path": str(entry.get("edit_path", ""))})
+        return (
+            "<div class='doc-card'>"
+            f"<label class='doc-select-badge'><input type='checkbox' name='selected_pmid' value='{pmid}' form='bulk-tracker-form' /><span></span></label>"
+            f"<a class='doc-link' href='{html.escape(link)}'><strong>PMID {pmid}</strong><span class='muted'>PMCID {pmcid}</span></a>"
+            f"<div class='doc-meta'>Owner: {owner}</div>"
+            f"<div class='doc-meta'>Priority: <span class='pill pill-{priority.lower()}'>{priority}</span></div>"
+            f"<div class='doc-meta'>Updated: {updated or 'Not yet run'}</div>"
+            "<details class='doc-expand'>"
+            "<summary>Edit Card</summary>"
+            f"<div class='doc-detail'><strong>Title:</strong> {paper_title or 'Not looked up yet.'}</div>"
+            f"<div class='doc-message'>{message or 'No message yet.'}</div>"
+            "<form method='post' action='/update-tracker' class='tracker-form'>"
+            f"<input type='hidden' name='pmid' value='{pmid}' />"
+            f"<input type='hidden' name='pmcid' value='{pmcid if pmcid != 'NR' else ''}' />"
+            f"<input type='hidden' name='owner_name' value='{owner if owner != 'Unassigned' else ''}' />"
+            f"<input type='hidden' name='paper_input' value='{html.escape(str(entry.get('paper_input', '')))}' />"
+            f"<input type='hidden' name='run_log' value='{html.escape(str(entry.get('run_log', '')))}' />"
+            f"<input type='hidden' name='eval_report' value='{html.escape(str(entry.get('eval_report', '')))}' />"
+            f"<input type='hidden' name='edit_path' value='{html.escape(str(entry.get('edit_path', '')))}' />"
+            f"<input type='hidden' name='table_count' value='{html.escape(str(entry.get('table_count', '0')))}' />"
+            f"<input type='hidden' name='paper_title' value='{html.escape(str(entry.get('paper_title', '')))}' />"
+            f"<label>Priority</label><select name='priority'><option value='high' {'selected' if priority.lower() == 'high' else ''}>High</option><option value='medium' {'selected' if priority.lower() == 'medium' else ''}>Medium</option><option value='low' {'selected' if priority.lower() == 'low' else ''}>Low</option></select>"
+            f"<label>Status</label><select name='status'><option value='new' {'selected' if entry.get('status') == 'new' else ''}>New Document</option><option value='in_progress' {'selected' if entry.get('status') == 'in_progress' else ''}>In Progress</option><option value='complete' {'selected' if entry.get('status') == 'complete' else ''}>Complete</option></select>"
+            f"<label>Message</label><textarea name='message' rows='3' placeholder='What needs improvement or what should be prioritized?'>{message}</textarea>"
+            "<button type='submit'>Save Card</button>"
+            "</form></details></div>"
+        )
+
+    def column(title: str, key: str, cards: str) -> str:
+        new_action = "<a class='doc-add' href='/new'><span>+</span><strong>Add New Document</strong></a>" if key == "new" else ""
+        empty_state = "<p class='muted'>No documents yet.</p>"
+        content = cards or empty_state
+        return f"<section class='doc-column'><h3>{title}</h3>{new_action}{content}</section>"
+
+    return (
+        "<h2>Document Dashboard</h2>"
+        "<p class='muted'>Track each paper locally by workflow stage. This dashboard does not require a deployed server and will persist in a local tracker file.</p>"
+        "<div class='actions'><button type='button' class='btn-link' id='select-mode-toggle'>Select</button></div>"
+        "<form method='post' action='/bulk-tracker-action' class='bulk-bar' id='bulk-tracker-form' hidden>"
+        "<select name='action' id='bulk-action-select'>"
+        "<option value='move'>Move</option>"
+        "<option value='delete'>Delete Selected</option>"
+        "</select>"
+        "<select name='target_status' id='bulk-target-status'>"
+        "<option value='new'>New</option>"
+        "<option value='in_progress'>In Progress</option>"
+        "<option value='complete'>Complete</option>"
+        "</select>"
+        "<button type='submit'>Apply</button>"
+        "<button type='button' class='btn-link' id='select-mode-cancel'>Cancel</button>"
+        "</form>"
+        "<div class='doc-board'>"
+        + column("New Document", "new", "".join(card(e) for e in buckets.get("new", [])))
+        + column("In Progress", "in_progress", "".join(card(e) for e in buckets.get("in_progress", [])))
+        + column("Complete", "complete", "".join(card(e) for e in buckets.get("complete", [])))
+        + "</div>"
+    )
+
+
 def render_run_result_page(result: Dict[str, object]) -> str:
     dl = "/download?" + urlencode({"path": result["eval_report"]})
     first_edit = ""
@@ -331,18 +647,36 @@ def annotation_store_path(path: Path) -> Path:
     return ann_dir / f"{path.stem}.json"
 
 
+def annotation_source_meta(path: Path) -> Dict[str, object]:
+    stat = path.stat()
+    return {
+        "source_name": path.name,
+        "source_size": int(stat.st_size),
+        "source_mtime_ns": int(stat.st_mtime_ns),
+    }
+
+
 def load_annotations(path: Path) -> Dict[str, Dict[str, Dict[str, str]]]:
     ann_path = annotation_store_path(path)
     if not ann_path.exists():
         return {}
     with ann_path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+        payload = json.load(f)
+    if isinstance(payload, dict) and "rows" in payload:
+        meta = payload.get("_meta", {})
+        current = annotation_source_meta(path)
+        if meta.get("source_size") != current["source_size"] or meta.get("source_mtime_ns") != current["source_mtime_ns"]:
+            return {}
+        rows = payload.get("rows", {})
+        return rows if isinstance(rows, dict) else {}
+    return payload if isinstance(payload, dict) else {}
 
 
 def save_annotations(path: Path, annotations: Dict[str, Dict[str, Dict[str, str]]]) -> Path:
     ann_path = annotation_store_path(path)
+    payload = {"_meta": annotation_source_meta(path), "rows": annotations}
     with ann_path.open("w", encoding="utf-8") as f:
-        json.dump(annotations, f, indent=2, ensure_ascii=False)
+        json.dump(payload, f, indent=2, ensure_ascii=False)
     return ann_path
 
 
@@ -884,6 +1218,8 @@ def render_edit_table(file_path: str) -> str:
             ref_actions.append(f"<a class='btn-link' href='{html.escape(paper_input)}' target='_blank' rel='noopener noreferrer'>Open Paper File</a>")
         else:
             ref_actions.append(f"<a class='btn-link' href='/download?{urlencode({'path': paper_input})}'>Open Paper File</a>")
+    if back_href != "/":
+        ref_actions.append(f"<a class='btn-link' href='{html.escape(back_href)}'>Back To Run Result</a>")
     table_reference_rows = []
     for idx, table_path in enumerate(related_tables, start=1):
         related_table_num = infer_table_number_from_sheet_path(table_path)
@@ -923,9 +1259,9 @@ def render_edit_table(file_path: str) -> str:
         + "</tr></thead><tbody>"
         + "".join(rows_html)
         + "</tbody></table></div>"
-        "<div class='actions'>"
-        "<button type='submit'>Save Changes</button>"
-        f"<a class='btn-link' href='{html.escape(back_href)}'>Back</a>"
+        "<div class='actions edit-actions'>"
+        "<button type='submit' class='edit-action-btn'>Save Changes</button>"
+        f"<a class='btn-link edit-action-btn' href='{html.escape(back_href)}'>Back</a>"
         "</div></form>"
     )
 
@@ -1118,6 +1454,126 @@ def html_page(body: str) -> bytes:
     .bad {{ background: var(--bad-bg); border-color: #f1d0d0; }}
     .bad .v {{ color: var(--bad-ink); }}
     .actions {{ margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }}
+    .edit-actions {{
+      align-items: stretch;
+    }}
+    .edit-action-btn {{
+      width: 180px !important;
+      height: 56px !important;
+      min-height: 56px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 22px !important;
+      margin-top: 0 !important;
+      line-height: 1 !important;
+      box-sizing: border-box !important;
+    }}
+    .doc-board {{ display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }}
+    .doc-column {{ background: #f7fafc; border: 1px solid var(--line); border-radius: 14px; padding: 16px; min-height: 340px; }}
+    .doc-column h3 {{ margin: 0 0 12px; font-size: 22px; }}
+    .doc-card {{ position: relative; background: #fff; border: 1px solid #dbe4ee; border-radius: 14px; padding: 14px; box-shadow: 0 6px 16px rgba(24,45,77,.06); margin-bottom: 14px; }}
+    .bulk-bar {{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      padding: 10px 12px;
+      border: 1px solid #d8e2ed;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fcfdff 0%, #f7fbff 100%);
+    }}
+    .bulk-bar select {{ width: auto; min-width: 120px; border-radius: 999px; padding: 10px 14px; }}
+    .bulk-bar button {{ margin-top: 0; }}
+    body.select-mode .doc-card {{
+      box-shadow: 0 8px 18px rgba(49, 83, 130, .10);
+    }}
+    .doc-select-badge {{
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      cursor: pointer;
+    }}
+    body.select-mode .doc-select-badge {{
+      display: inline-flex;
+    }}
+    .doc-select-badge input {{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }}
+    .doc-select-badge span {{
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 2px solid #9eb3c8;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(35, 61, 92, .10);
+      transition: all .14s ease;
+    }}
+    .doc-select-badge input:checked + span {{
+      border-color: #2f5f95;
+      background: linear-gradient(180deg, #4d79b0 0%, #2f5f95 100%);
+      box-shadow: 0 4px 12px rgba(47, 95, 149, .22);
+    }}
+    .doc-select-badge input:checked + span::after {{
+      content: "";
+      display: block;
+      width: 6px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin: 3px 0 0 7px;
+    }}
+    body.select-mode .doc-link {{
+      padding-right: 30px;
+    }}
+    #select-mode-toggle.active {{
+      background: linear-gradient(90deg, #2f4d68, #496788);
+      border-color: #2f4d68;
+      color: #fff;
+    }}
+    #select-mode-cancel {{
+      min-height: 40px;
+      padding: 0 14px;
+    }}
+    .bulk-bar[hidden] {{
+      display: none !important;
+    }}
+    .bulk-bar button,
+    .bulk-bar .btn-link {{
+      min-height: 40px;
+      padding: 0 14px;
+    }}
+    .doc-select input {{
+      margin: 0;
+    }}
+    .doc-link {{ display: flex; flex-direction: column; gap: 3px; text-decoration: none; color: var(--ink); margin-bottom: 10px; }}
+    .doc-link strong {{ font-size: 18px; }}
+    .doc-meta {{ font-size: 13px; color: var(--muted); margin-top: 4px; }}
+    .doc-detail {{ margin-top: 10px; color: #344b63; font-size: 13px; line-height: 1.45; }}
+    .doc-message {{ margin-top: 10px; padding: 10px; border-radius: 10px; background: #f7fafc; border: 1px solid #e2e8f0; color: #415164; font-size: 13px; }}
+    .doc-expand {{ margin-top: 12px; border-top: 1px solid #e3ebf4; padding-top: 10px; }}
+    .doc-expand summary {{ cursor: pointer; font-weight: 700; color: #35516d; list-style: none; }}
+    .doc-expand summary::-webkit-details-marker {{ display: none; }}
+    .doc-expand summary::after {{ content: "Open"; float: right; color: #6c7f93; font-weight: 600; }}
+    .doc-expand[open] summary::after {{ content: "Hide"; }}
+    .doc-add {{ display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 92px; border: 2px dashed #c6d3e1; border-radius: 14px; text-decoration: none; color: #35516d; background: linear-gradient(180deg,#fff 0%,#f7fbff 100%); margin-bottom: 14px; }}
+    .doc-add span {{ font-size: 28px; line-height: 1; }}
+    .tracker-form {{ margin-top: 12px; display: grid; gap: 8px; }}
+    .tracker-form label {{ margin: 0; font-size: 11px; }}
+    .pill {{ display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; }}
+    .pill-high {{ background: #ffe4e4; color: #922c2c; }}
+    .pill-medium {{ background: #fff4d6; color: #825f17; }}
+    .pill-low {{ background: #e6f6eb; color: #26623a; }}
     .tab-shell {{ margin-top: 18px; }}
     .tab-bar {{
       display: flex;
@@ -1458,6 +1914,7 @@ def html_page(body: str) -> bytes:
       .stats {{ grid-template-columns: 1fr; }}
       .panel-grid {{ grid-template-columns: 1fr; }}
       .metric-row {{ grid-template-columns: 1fr; }}
+      .doc-board {{ grid-template-columns: 1fr; }}
       .card {{ padding: 18px; }}
       .topbar-inner {{ padding: 10px 14px; }}
       h2 {{ font-size: 21px; }}
@@ -1475,7 +1932,85 @@ def html_page(body: str) -> bytes:
   <div class=\"card\">{body}</div>
 </main>
 <script>
+async function lookupPaperTitle() {{
+  const pmidEl = document.getElementById("pmid-input");
+  const pmcidEl = document.getElementById("pmcid-input");
+  const paperInputEl = document.getElementById("paper-input");
+  const titleBox = document.getElementById("paper-title-preview");
+  const titleText = document.getElementById("paper-title-text");
+  const hidden = document.getElementById("paper-title-hidden");
+  if (!pmidEl || !pmcidEl || !titleBox || !titleText || !hidden) return;
+  const pmid = pmidEl.value.trim();
+  const pmcid = pmcidEl.value.trim();
+  if (!pmid && !pmcid) {{
+    titleText.textContent = "Enter PMID or PMCID first";
+    titleBox.classList.remove("has-title");
+    hidden.value = "";
+    return;
+  }}
+  titleText.textContent = "Looking up title...";
+  titleBox.classList.add("has-title");
+  try {{
+    const resp = await fetch(`/lookup-title?pmid=${{encodeURIComponent(pmid)}}&pmcid=${{encodeURIComponent(pmcid)}}`);
+    const data = await resp.json();
+    if (!resp.ok || !data.ok) throw new Error(data.error || "Lookup failed");
+    if (data.pmid && !pmidEl.value.trim()) pmidEl.value = data.pmid;
+    if (data.pmcid && !pmcidEl.value.trim()) pmcidEl.value = data.pmcid;
+    if (paperInputEl && !paperInputEl.value.trim() && data.pmcid) {{
+      paperInputEl.value = `https://pmc.ncbi.nlm.nih.gov/articles/${{data.pmcid}}/`;
+    }}
+    titleText.textContent = data.title || "Title not found";
+    hidden.value = data.title || "";
+    titleBox.classList.toggle("has-title", !!data.title);
+  }} catch (err) {{
+    titleText.textContent = err.message || "Lookup failed";
+    hidden.value = "";
+    titleBox.classList.remove("has-title");
+  }}
+}}
+
+for (const id of ["pmid-input", "pmcid-input"]) {{
+  document.addEventListener("keydown", function (event) {{
+    if (event.target && event.target.id === id && event.key === "Enter") {{
+      event.preventDefault();
+      lookupPaperTitle();
+    }}
+  }});
+}}
+
 document.addEventListener("click", function (event) {{
+  const selectToggle = event.target.closest("#select-mode-toggle");
+  if (selectToggle) {{
+    event.preventDefault();
+    document.body.classList.toggle("select-mode");
+    selectToggle.classList.toggle("active", document.body.classList.contains("select-mode"));
+    const bulkBar = document.getElementById("bulk-tracker-form");
+    if (bulkBar) bulkBar.hidden = !document.body.classList.contains("select-mode");
+    if (!document.body.classList.contains("select-mode")) {{
+      document.querySelectorAll("input[name='selected_pmid']").forEach((node) => {{
+        node.checked = false;
+      }});
+    }}
+    return;
+  }}
+  const cancelSelect = event.target.closest("#select-mode-cancel");
+  if (cancelSelect) {{
+    event.preventDefault();
+    document.body.classList.remove("select-mode");
+    const toggle = document.getElementById("select-mode-toggle");
+    const bulkBar = document.getElementById("bulk-tracker-form");
+    if (toggle) toggle.classList.remove("active");
+    if (bulkBar) bulkBar.hidden = true;
+    document.querySelectorAll("input[name='selected_pmid']").forEach((node) => {{
+      node.checked = false;
+    }});
+    return;
+  }}
+  const cardLink = event.target.closest(".doc-link");
+  if (cardLink && document.body.classList.contains("select-mode")) {{
+    event.preventDefault();
+    return;
+  }}
   const btn = event.target.closest(".tab-btn");
   if (!btn) return;
   const shell = btn.closest(".tab-shell");
@@ -1486,6 +2021,14 @@ document.addEventListener("click", function (event) {{
   btn.classList.add("active");
   const panel = shell.querySelector(`.tab-panel[data-panel="${{tabName}}"]`);
   if (panel) panel.classList.add("active");
+}});
+
+document.addEventListener("change", function (event) {{
+  const select = event.target.closest("#bulk-action-select");
+  if (!select) return;
+  const target = document.getElementById("bulk-target-status");
+  if (!target) return;
+  target.style.display = select.value === "move" ? "" : "none";
 }});
 </script>
 </body>
@@ -1500,50 +2043,45 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
-            form = """
-<h2>Study Curation Runner</h2>
-<p class="muted">Paste table links, select source type, then run end-to-end conversion and ADVP alignment.</p>
-<details class="toggle-box" open>
-<summary>What This Run Will Generate</summary>
-<ul class="check-list">
-  <li class="check-item"><span class="check-icon">+</span>Curated ADVP sheet(s)</li>
-  <li class="check-item"><span class="check-icon">+</span>Unified eval workbook</li>
-  <li class="check-item"><span class="check-icon">+</span>Row match accuracy, field accuracy, and missing-field summary</li>
-</ul>
-</details>
-<form method="post" action="/run" enctype="multipart/form-data">
-<label>Owner</label>
-<input name="owner_name" value="" placeholder="Your name" />
-<label>PMID</label>
-<input name="pmid" value="" placeholder="PMID" required />
-<label>PMCID</label>
-<input name="pmcid" value="" placeholder="PMCID" />
-<label>Paper URL</label>
-<input name="paper_input" value="" placeholder="PMC article page or PDF link" />
-<label>Or upload paper PDF</label>
-<input type="file" name="paper_upload" accept=".pdf,application/pdf" />
-<label>Source type</label>
-<select name="source_type">
-  <option value="pmc_table_link" selected>pmc_table_link</option>
-</select>
-<label>Table links (one per line)</label>
-<textarea name="table_links" rows="6" placeholder="https://pmc.ncbi.nlm.nih.gov/articles/PMC.../table/T1/"></textarea>
-<label class="option-toggle">
-  <input type="checkbox" name="auto_discover_tables" value="1" />
-  <span class="option-card">
-    <span class="option-indicator"></span>
-    <span class="option-copy">
-      <span class="option-title">Auto-discover PMC tables when links are empty</span>
-      <span class="option-help">Find candidate tables directly from the article page and select tables with genetics and association signals.</span>
-    </span>
-  </span>
-</label>
-<label>ADVP TSV path (relative to project root)</label>
-<input name="advp_tsv" value="advp.variant.records.hg38.tsv" required />
-<button type="submit">Run</button>
-</form>
-"""
-            self.wfile.write(html_page(form))
+            self.wfile.write(html_page(render_tracker_dashboard(Path(os.getcwd()).resolve())))
+            return
+
+        if parsed.path == "/lookup-title":
+            q = parse_qs(parsed.query)
+            pmid = q.get("pmid", [""])[0].strip()
+            pmcid = q.get("pmcid", [""])[0].strip()
+            try:
+                payload = fetch_pubmed_title(pmid=pmid, pmcid=pmcid)
+                body = json.dumps({"ok": True, **payload}).encode("utf-8")
+                self.send_response(200)
+            except Exception as e:
+                body = json.dumps({"ok": False, "error": str(e)}).encode("utf-8")
+                self.send_response(400)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(body)
+            return
+
+        if parsed.path == "/new":
+            q = parse_qs(parsed.query)
+            pmid = q.get("pmid", [""])[0]
+            prefill = {}
+            if pmid:
+                for entry in load_tracker(Path(os.getcwd()).resolve()):
+                    if str(entry.get("pmid", "")) == pmid:
+                        prefill = {
+                            "pmid": str(entry.get("pmid", "")),
+                            "pmcid": str(entry.get("pmcid", "")),
+                            "owner_name": str(entry.get("owner_name", "")),
+                            "paper_input": str(entry.get("paper_input", "")),
+                            "table_links": "\n".join(entry.get("table_links", []) or []),
+                            "paper_title": str(entry.get("paper_title", "")),
+                        }
+                        break
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(html_page(render_new_document_form(prefill)))
             return
 
         if parsed.path == "/edit":
@@ -1611,7 +2149,7 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_POST(self):
-        if self.path not in ("/run", "/save-edits"):
+        if self.path not in ("/run", "/save-edits", "/save-draft", "/update-tracker", "/bulk-tracker-action"):
             self.send_response(404)
             self.end_headers()
             return
@@ -1619,6 +2157,58 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
         data = parse_request_data(self)
 
         try:
+            if self.path == "/save-draft":
+                root = Path(os.getcwd()).resolve()
+                pmid = data.get("pmid", [""])[0].strip()
+                entry = upsert_tracker_entry(root, {
+                    "pmid": pmid,
+                    "pmcid": data.get("pmcid", [""])[0].strip(),
+                    "owner_name": data.get("owner_name", [""])[0].strip(),
+                    "paper_input": data.get("paper_input", [""])[0].strip() or pmc_article_url_from_pmcid(data.get("pmcid", [""])[0].strip()),
+                    "table_links": parse_links(data.get("table_links", [""])[0]),
+                    "paper_title": data.get("paper_title", [""])[0].strip(),
+                    "status": "new",
+                    "priority": "medium",
+                    "message": str(next((e.get("message", "") for e in load_tracker(root) if str(e.get("pmid", "")) == pmid), "")),
+                })
+                self.send_response(302)
+                self.send_header("Location", "/")
+                self.end_headers()
+                return
+
+            if self.path == "/update-tracker":
+                root = Path(os.getcwd()).resolve()
+                payload = {
+                    "pmid": data.get("pmid", [""])[0].strip(),
+                    "pmcid": data.get("pmcid", [""])[0].strip(),
+                    "owner_name": data.get("owner_name", [""])[0].strip(),
+                    "paper_input": data.get("paper_input", [""])[0].strip() or pmc_article_url_from_pmcid(data.get("pmcid", [""])[0].strip()),
+                    "run_log": data.get("run_log", [""])[0].strip(),
+                    "eval_report": data.get("eval_report", [""])[0].strip(),
+                    "edit_path": data.get("edit_path", [""])[0].strip(),
+                    "table_count": int((data.get("table_count", ["0"])[0] or "0").strip() or "0"),
+                    "paper_title": data.get("paper_title", [""])[0].strip(),
+                    "status": data.get("status", ["new"])[0].strip(),
+                    "priority": data.get("priority", ["medium"])[0].strip(),
+                    "message": data.get("message", [""])[0].strip(),
+                }
+                upsert_tracker_entry(root, payload)
+                self.send_response(302)
+                self.send_header("Location", "/")
+                self.end_headers()
+                return
+
+            if self.path == "/bulk-tracker-action":
+                root = Path(os.getcwd()).resolve()
+                action = data.get("action", ["move"])[0].strip()
+                target_status = data.get("target_status", ["new"])[0].strip()
+                selected_pmids = data.get("selected_pmid", [])
+                apply_bulk_tracker_action(root, selected_pmids, action, target_status)
+                self.send_response(302)
+                self.send_header("Location", "/")
+                self.end_headers()
+                return
+
             if self.path == "/save-edits":
                 path = Path(data.get("path", [""])[0]).resolve()
                 root = Path(os.getcwd()).resolve()
@@ -1650,17 +2240,21 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
             owner_name = data.get("owner_name", [""])[0].strip()
             paper_input = data.get("paper_input", [""])[0].strip()
             paper_upload = data.get("paper_upload", [""])[0].strip() if data.get("paper_upload") else ""
-            paper_input = paper_upload or paper_input
+            paper_input = paper_upload or paper_input or pmc_article_url_from_pmcid(pmcid)
             source_type = data.get("source_type", ["pmc_table_link"])[0].strip()
             links_raw = data.get("table_links", [""])[0]
             auto_discover_tables = parse_bool(data.get("auto_discover_tables", [""])[0]) if data.get("auto_discover_tables") else False
             advp_tsv = data.get("advp_tsv", ["advp.variant.records.hg38.tsv"])[0].strip()
             links = parse_links(links_raw)
             if not paper_input:
-                raise ValueError("Provide a paper URL or upload a PDF file")
+                raise ValueError("Provide a PMC article URL or upload a PDF file. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.")
             links, discovered = maybe_auto_discover_links(paper_input, links, auto_discover_tables)
             if not links:
-                raise ValueError("No table links provided")
+                if auto_discover_tables and (not is_http_url(paper_input) or not re.search(r"/articles/PMC\d+/?", paper_input, flags=re.I)):
+                    raise ValueError("Auto-discovery currently works only with PMC article URLs. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.")
+                raise ValueError("No table links provided. If no PMC is available, use manual table upload / table_input instead.")
+
+            paper_title = data.get("paper_title", [""])[0].strip()
 
             result = run_pipeline(
                 pmid=pmid,
@@ -1677,6 +2271,9 @@ class AdvpUIHandler(BaseHTTPRequestHandler):
                 base_dir=os.getcwd(),
                 auto_discovered_tables=discovered,
             )
+            tracker_payload = tracker_entry_from_result(result, paper_input, links)
+            tracker_payload["paper_title"] = paper_title
+            upsert_tracker_entry(Path(os.getcwd()).resolve(), tracker_payload)
 
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")

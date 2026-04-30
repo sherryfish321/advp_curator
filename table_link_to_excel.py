@@ -561,7 +561,7 @@ def discover_relevant_pmc_tables(article_url: str, min_score: int = 5) -> List[D
         m = re.search(r"/articles/(PMC\d+)/?", article_url, flags=re.I)
         pmcid = m.group(1).upper() if m else None
     if not pmcid:
-        raise ValueError("Article URL must be a PMC article URL like https://pmc.ncbi.nlm.nih.gov/articles/PMCxxxx/")
+        raise ValueError("Auto-discovery currently works only with PMC article URLs. For PDF-only papers, paste table links manually or use manual table upload / table_input instead.")
     try:
         return _discover_relevant_pmc_tables_from_xml(pmcid, min_score=min_score)
     except Exception as xml_error:
@@ -602,7 +602,10 @@ def _is_special_table_page_id(table_id: Optional[str]) -> bool:
     if not table_id:
         return False
     tid = table_id.strip()
-    return bool(re.match(r"^.+-T\d+$", tid, flags=re.I))
+    return bool(
+        re.match(r"^.+-T\d+$", tid, flags=re.I)
+        or re.match(r"^[A-Za-z].*t\d+$", tid, flags=re.I)
+    )
 
 
 def _try_extract_from_article_html(pmcid: str, table_id: Optional[str]) -> Optional[List[pd.DataFrame]]:
@@ -610,6 +613,7 @@ def _try_extract_from_article_html(pmcid: str, table_id: Optional[str]) -> Optio
     article_html = fetch_html(article_url)
     soup = BeautifulSoup(article_html, "lxml")
     wanted_num = _extract_table_number_from_id(table_id or "") if table_id else None
+    wanted_id = (table_id or "").strip().lower()
 
     if table_id:
         try:
@@ -634,6 +638,23 @@ def _try_extract_from_article_html(pmcid: str, table_id: Optional[str]) -> Optio
                 df = table_to_dataframe(candidate)
                 if not df.empty:
                     return [df]
+
+    if wanted_id:
+        href_re = re.compile(rf"(?:/table/{re.escape(wanted_id)}/?|table_id={re.escape(wanted_id)})", flags=re.I)
+        for link in soup.find_all("a", href=href_re):
+            containers = [link]
+            parent = link.parent
+            hop = 0
+            while parent is not None and hop < 5:
+                containers.append(parent)
+                parent = parent.parent
+                hop += 1
+            for node in containers:
+                candidate = node.find_next("table")
+                if candidate is not None:
+                    df = table_to_dataframe(candidate)
+                    if not df.empty:
+                        return [df]
 
     html_dfs = _extract_tables_from_html_text(article_html)
     if wanted_num is not None and 1 <= wanted_num <= len(html_dfs):

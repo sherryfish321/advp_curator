@@ -1,2 +1,0 @@
-file,status,key_cols,n_pred_rows,n_gold_rows,row_precision,row_recall,row_f1
-/Users/sherryhuang/advp_curator/harmonized_tables_advp/from_29777097_table1_v1.xlsx,evaluated,"pmid,snp,chr,pvalue",3,3,1.0,1.0,1.0

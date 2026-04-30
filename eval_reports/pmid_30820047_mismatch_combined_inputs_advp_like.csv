@@ -1,3 +1,0 @@
-type,reason,snp,pmid,chr,bp,ra1,pvalue,effect
-pred_unmatched,key_mismatch,rs7920721,30820047.0,10,11720308.0,G,2.3e-09,1.08
-pred_unmatched,key_mismatch,rs138190086,30820047.0,17,61538148.0,A,7.5e-09,1.32

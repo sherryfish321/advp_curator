@@ -1,4 +1,0 @@
-pmid,snp,chr,bp,ra1,pvalue,effect,cohort,population,sample_size,analysis_group,locus_name,phenotype,phenotype_derived
-35490390.0,rs146729640,17,11183894.0,,0.0217,1.06,amish,,362.0,,SHISA6,,
-35490390.0,rs146729640,17,11183894.0,,0.095,0.95,amish,,362.0,,SHISA6,,
-35490390.0,rs146729640,17,11183894.0,,0.0658,0.96,amish,,362.0,,SHISA6,,

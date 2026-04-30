@@ -1324,6 +1324,10 @@ def _pick_pvalue_column(columns: List[str]) -> Optional[str]:
     if generic:
         return generic[-1]
 
+    neg_log_candidates = [c for c in columns if _is_neg_log_p_column(c)]
+    if neg_log_candidates:
+        return neg_log_candidates[-1]
+
     # Relaxed fallback for columns like "P Joint", "P G", "P GxAge".
     relaxed = []
     for c in columns:
@@ -1335,6 +1339,28 @@ def _pick_pvalue_column(columns: List[str]) -> Optional[str]:
     if relaxed:
         return relaxed[-1]
     return None
+
+
+def _is_neg_log_p_column(colname: str) -> bool:
+    n = _norm_colname(colname)
+    compact = re.sub(r"\s+", "", n)
+    return bool(
+        (
+            ("log10" in compact or "log_{10}" in compact or "log(10)" in compact or "-log" in compact)
+            and re.search(r"\bp\b", n)
+        )
+        or "−log10(p)" in str(colname).lower()
+        or "-log10(p)" in compact
+    )
+
+
+def _parse_pvalue_cell(value: Any, colname: Optional[str] = None) -> Optional[float]:
+    p_val = safe_float(value)
+    if p_val is None:
+        return None
+    if colname and _is_neg_log_p_column(colname):
+        return 10 ** (-p_val)
+    return p_val
 
 
 def _infer_group_label_from_columns(columns: List[str]) -> str:
@@ -2668,7 +2694,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
         interaction_val = _normalize_cell_text(row.get(interaction_col)) if interaction_col else ""
 
         # keep rows with actionable stats even when rsID is absent
-        pval_default = safe_float(row.get(p_col)) if p_col else None
+        pval_default = _parse_pvalue_cell(row.get(p_col), p_col) if p_col else None
         effect_default = safe_float(row.get(effect_col)) if effect_col else None
         ci_default = _normalize_cell_text(row.get(ci_col)) if ci_col else ""
         if effect_col:
@@ -2767,7 +2793,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
             for sub_label, metric_cols in subgroup_defs.items():
                 sub_snp_text = _normalize_cell_text(row.get(metric_cols["snp"])) if metric_cols.get("snp") else ""
                 sub_rsids = sorted(set([r.lower() for r in RSID_RE.findall(sub_snp_text)])) if sub_snp_text else []
-                sp = safe_float(row.get(metric_cols["p"])) if metric_cols.get("p") else None
+                sp = _parse_pvalue_cell(row.get(metric_cols["p"]), metric_cols["p"]) if metric_cols.get("p") else None
                 subgroup_effect_type = _effect_type_from_colname(metric_cols["effect"]) if metric_cols.get("effect") else effect_type
                 se = safe_float(row.get(metric_cols["effect"])) if metric_cols.get("effect") else None
                 sci = _normalize_cell_text(row.get(metric_cols["ci"])) if metric_cols.get("ci") else ""
@@ -2790,6 +2816,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                     "sub_snp_text": _sanitize_topsnp(sub_snp_text),
                     "sub_rsids": sub_rsids,
                     "p": sp,
+                    "p_note": "Converted from -log10(p)" if metric_cols.get("p") and _is_neg_log_p_column(metric_cols["p"]) and sp is not None else "",
                     "effect": se,
                     "ci": sci,
                     "effect_type": subgroup_effect_type,
@@ -2798,6 +2825,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
             subgroup_records = [{
                 "label": "",
                 "p": pval_default,
+                "p_note": "Converted from -log10(p)" if p_col and _is_neg_log_p_column(p_col) and pval_default is not None else "",
                 "effect": effect_default,
                 "ci": ci_default,
                 "effect_type": effect_type,
@@ -2819,6 +2847,7 @@ def extract_records_from_table(df: pd.DataFrame, table_idx: int, paper_id: str, 
                 rec["Interactions"] = interaction_val
                 rec["Chr"] = chr_val
                 rec["P-value"] = sub["p"] if sub["p"] is not None else ""
+                rec["P-value note"] = sub.get("p_note", "")
                 rec["BP(Position)"] = bp_val
                 rec["RA 1(Reported Allele 1)"] = ra1_minor
                 rec["RA 2(Reported Allele 2)"] = ra2_major
