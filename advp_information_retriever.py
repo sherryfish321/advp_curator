@@ -26,22 +26,22 @@ load_dotenv()
 # Chroma DB params
 CHROMA_DB_PATH = os.environ.get("CHROMA_DB_PATH", "")
 CHROMA_DB_COLLECTION_NAME = os.environ.get("CHROMA_DB_COLLECTION_NAME", "")
-CHUNK_SIZE = os.environ.get('CHUNK_SIZE', "")
-CHUNK_OVERLAP = os.environ.get("CHUNK_OVERLAP", "")
+CHUNK_SIZE = int(os.environ.get('CHUNK_SIZE', ""))
+CHUNK_OVERLAP = int(os.environ.get("CHUNK_OVERLAP", ""))
 
 # Retrieval params
 INFINITY_URL = f"http://localhost:{os.environ.get('INFINITY_URL_PORT', 0)}"
 EMBEDDINGS_MODEL = os.environ.get("EMBEDDINGS_MODEL", "")
 RERANK_MODEL = os.environ.get("RERANK_MODEL", "")
-TOP_K = os.environ.get("TOP_K", 20)
-TOP_K_RERANK = os.environ.get("TOP_K_RERANK", 5)
-SIMILARITY_SCORE_THRESHOLD = os.environ.get('SIMILARITY_SCORE_THRESHOLD', 0)
+TOP_K = int(os.environ.get("TOP_K", 20))
+TOP_K_RERANK = int(os.environ.get("TOP_K_RERANK", 5))
+SIMILARITY_SCORE_THRESHOLD = float(os.environ.get('SIMILARITY_SCORE_THRESHOLD', 0))
 
 # Generation params
 LLAMA_CLIENT = OpenAI(base_url=f"http://localhost:{os.environ.get('LLAMA_URL_PORT', 0)}/v1", api_key="none")
-MAX_NEW_TOKEN = os.environ.get("MAX_NEW_TOKEN", 128)
-TEMPERATURE = os.environ.get("TEMPERATURE", 0)
-TOP_P = os.environ.get("TOP_P", 1)
+MAX_NEW_TOKEN = int(os.environ.get("MAX_NEW_TOKEN", 128))
+TEMPERATURE = float(os.environ.get("TEMPERATURE", 0))
+TOP_P = float(os.environ.get("TOP_P", 1))
 
 class InfinityEmbeddings(Embeddings):
     def __init__(self, model: str, url: str = INFINITY_URL):
@@ -395,19 +395,20 @@ Respond with a single JSON object only, no prose, no markdown fence:
             documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
             documents = documents[:self.top_k_rerank]
 
-            if ref_col == "Cohort":
-                print(ref_col_use_examples_in_llm)
-                print("\n\n".join(documents))
-
-            messages = self.make_messages(query, documents, examples=ref_col_examples, use_examples_in_llm=ref_col_use_examples_in_llm)
-            response = LLAMA_CLIENT.chat.completions.create(
-                model="local",
-                messages=messages, max_tokens=self.max_new_tokens,
-                temperature=self.temperature, top_p=self.top_p,
-                response_format={"type": "json_object"},
-            )
-            response = response.choices[0].message.content
-            res[ref_col] = self.extract_lst_from_llm_output(response)
+            for doc in documents:
+                messages = self.make_messages(query, [doc], examples=ref_col_examples, use_examples_in_llm=ref_col_use_examples_in_llm)
+                response = LLAMA_CLIENT.chat.completions.create(
+                    model="local",
+                    messages=messages, max_tokens=self.max_new_tokens,
+                    temperature=self.temperature, top_p=self.top_p,
+                    response_format={"type": "json_object"},
+                )
+                response = response["choices"][0]["message"]["content"]
+                if ref_col not in res:
+                    res[ref_col] = []
+                new_info = self.extract_lst_from_llm_output(response)
+                new_info = list(map(lambda x: x.lower(), new_info))
+                res[ref_col] = list(set(res[ref_col] + new_info))
 
         return res
 

@@ -136,5 +136,62 @@
     "Sample Size": [
       "487511"
     ]
+  },
+  "30448613": {
+    "Population": [
+      "aa",
+      "eur",
+      "european ancestry"
+    ],
+    "Stage": [
+      "meta-analysis"
+    ],
+    "Imputation": [
+      "hrc;1000g",
+      "1000 genome phase 3 v5",
+      "eagle v2.3"
+    ],
+    "Study type": [
+      "adsp",
+      "wes",
+      "adgc"
+    ],
+    "Phenotype": [
+      "alzheimers disease",
+      "presenilin 2",
+      "cd33",
+      "amyloid beta peptide"
+    ],
+    "Model Type": [
+      "logistic regression (with covariates)",
+      "fixed effect",
+      "logistic regression",
+      "meta",
+      "inverse-variance weighted"
+    ],
+    "Association Type": [
+      "disease risk",
+      "eqtl",
+      "survival",
+      "cognitive",
+      "age at onset (aao)",
+      "cross phenotype",
+      "imaging",
+      "neuropathology",
+      "endophenotype"
+    ],
+    "Cohort": [
+      "charge",
+      "igap",
+      "nabec",
+      "adgc",
+      "adni",
+      "adsp",
+      "ukbb",
+      "ukbec"
+    ],
+    "Sample Size": [
+      "74046"
+    ]
   }
 }
