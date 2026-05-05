@@ -1,0 +1,4 @@
+column,choice
+Population,"Caucasian,Multi-ethnic,African Americanm,Caribbean Hispanic,Asian"
+Phenotype,"AD (includes LOAD),Fluid biomarker,Cognitive,Imaging,Neuropathology,Other,Expression,ADRD,Non-ADRD"
+Stage,"Discovery,Replication,Validation,Joint-analysis,Meta-analysis,Stage 1,Stage 2,Stage 3"

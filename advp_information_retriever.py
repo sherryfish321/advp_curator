@@ -39,9 +39,12 @@ SIMILARITY_SCORE_THRESHOLD = float(os.environ.get('SIMILARITY_SCORE_THRESHOLD', 
 
 # Generation params
 LLAMA_CLIENT = OpenAI(base_url=f"http://localhost:{os.environ.get('LLAMA_URL_PORT', 0)}/v1", api_key="none")
-MAX_NEW_TOKEN = int(os.environ.get("MAX_NEW_TOKEN", 128))
+MAX_NEW_TOKEN = int(os.environ.get("MAX_NEW_TOKEN", 32))
 TEMPERATURE = float(os.environ.get("TEMPERATURE", 0))
 TOP_P = float(os.environ.get("TOP_P", 1))
+
+# params for getting choice
+DETAIL_CHOICE_SIMILARITY_SCORE_THRESHOLD = float(os.environ.get("DETAIL_CHOICE_SIMILARITY_SCORE_THRESHOLD", 0.6))
 
 class InfinityEmbeddings(Embeddings):
     def __init__(self, model: str, url: str = INFINITY_URL):
@@ -234,10 +237,11 @@ def combine_possible_info_multilist(multilst: List[List[str]]):
 
 
 class ADVPInformationRetriever:
-    def __init__(self, referencing_col_df: pd.DataFrame, 
+    def __init__(self, referencing_col_df: pd.DataFrame, referencing_col_with_choice_df: Optional[pd.DataFrame] = None,
                  chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
                  top_k: int = TOP_K, top_k_rerank: int = TOP_K_RERANK, similarity_score_threshold: float = SIMILARITY_SCORE_THRESHOLD,
                  temperature: float = TEMPERATURE, top_p: float = TOP_P, max_new_tokens: int = MAX_NEW_TOKEN,
+                 detail_choice_similarity_score_threshold: float = DETAIL_CHOICE_SIMILARITY_SCORE_THRESHOLD,
                  device: Optional[str] = None):
         # load ref col df
         self.referencing_col_lst = referencing_col_df["column"].to_list()
@@ -262,6 +266,10 @@ class ADVPInformationRetriever:
             for ctx, ex in zip(self.referencing_col_context_lst, self.referencing_col_examples_lst)
         ]
 
+        # col with choice
+        self.referencing_col_with_choice_lst = referencing_col_with_choice_df["column"].to_list()
+        self.referencing_col_choice_with_choice_lst = referencing_col_with_choice_df["choice"].apply(lambda x: x.split(",")).to_list()
+
         # load vector store
         self.vector_store = Chroma(
             persist_directory=chroma_db_path,
@@ -280,6 +288,7 @@ class ADVPInformationRetriever:
         self.similarity_score_threshold = similarity_score_threshold
         self.temperature = temperature
         self.top_p = top_p
+        self.detail_choice_similarity_score_threshold = detail_choice_similarity_score_threshold
     
     def make_messages(self, query: str, documents: List[str], examples: str = "", use_examples_in_llm: bool = True) -> List[Dict]:
         document_str = "\n\n".join([f"EXCERPT {i + 1}:\n{d}" for i, d in enumerate(documents)])
@@ -403,12 +412,25 @@ Respond with a single JSON object only, no prose, no markdown fence:
                     temperature=self.temperature, top_p=self.top_p,
                     response_format={"type": "json_object"},
                 )
-                response = response["choices"][0]["message"]["content"]
+                response = response.choices[0].message.content
                 if ref_col not in res:
                     res[ref_col] = []
                 new_info = self.extract_lst_from_llm_output(response)
                 new_info = list(map(lambda x: x.lower(), new_info))
                 res[ref_col] = list(set(res[ref_col] + new_info))
+        
+        for ref_col, ref_col_choice in zip(
+            self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
+        ):
+            if ref_col in res:
+                detail_choice_similarity = calculate_similarity_scores(res[ref_col], ref_col_choice)
+                # get the max of each col
+                max_by_choice = detail_choice_similarity.max(axis = 0).values
+                valid_choice = []
+                for i in range(len(ref_col_choice)):
+                    if max_by_choice[i] > self.detail_choice_similarity_score_threshold:
+                        valid_choice.append(ref_col_choice[i])
+                res[f"{ref_col} category"] = deepcopy(valid_choice)
 
         return res
 
@@ -454,6 +476,19 @@ Respond with a single JSON object only, no prose, no markdown fence:
             )
             response = response.choices[0].message.content
             res[ref_col] = self.extract_lst_from_llm_output(response)
+
+        for ref_col, ref_col_choice in zip(
+            self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
+        ):
+            if ref_col in res:
+                detail_choice_similarity = calculate_similarity_scores(res[ref_col], ref_col_choice)
+                # get the max of each col
+                max_by_choice = detail_choice_similarity.max(axis = 0).values
+                valid_choice = []
+                for i in range(len(ref_col_choice)):
+                    if max_by_choice[i] > self.detail_choice_similarity_score_threshold:
+                        valid_choice.append(ref_col_choice[i])
+                res[f"{ref_col} category"] = deepcopy(valid_choice)
 
         return res
 

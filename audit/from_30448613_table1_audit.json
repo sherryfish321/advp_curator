@@ -15,9 +15,11 @@
     {
       "field": "Stage",
       "value": [
-        "replication",
         "meta-analysis",
-        "discovery"
+        "replication",
+        "meta",
+        "discovery",
+        "combined"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -27,7 +29,12 @@
     {
       "field": "Association Type",
       "value": [
-        "imaging"
+        "age at onset",
+        "common snps",
+        "eqtl",
+        "rare variants",
+        "imaging",
+        "survival"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -37,11 +44,14 @@
     {
       "field": "Model Type",
       "value": [
+        "meta-analysis",
+        "meta",
+        "adsp",
+        "sex",
+        "1000 genomes eur",
         "logistic regression (with covariates)",
-        "logistic regression",
-        "meta analysis",
-        "p value bonferroni correction",
-        "covariates"
+        "adgc",
+        "inverse-variance weighted"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -51,12 +61,11 @@
     {
       "field": "Imputation",
       "value": [
-        "igap",
-        "uk10k",
+        "adsp",
         "hrc;1000g",
-        "hrc",
-        "topmed",
-        "1000g"
+        "rs9271192",
+        "1000 genomes eur",
+        "igap snps"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -66,10 +75,11 @@
     {
       "field": "Population",
       "value": [
-        "adgc",
-        "eur",
-        "adsp",
-        "european ancestry"
+        "european ancestry",
+        "ancestry",
+        "race",
+        "ethnic",
+        "adgc"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -93,9 +103,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CR1",
+          "value": "rs6656401",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -103,7 +113,7 @@
           "field": "P-value",
           "value": 8.489999999999999e-07,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -111,13 +121,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.17,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -133,7 +143,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -141,7 +151,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -157,9 +167,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -170,9 +180,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CR1",
+          "value": "rs4844600",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -180,7 +190,7 @@
           "field": "P-value",
           "value": 4.2199999999999994e-07,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -188,13 +198,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.17,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -210,7 +220,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -218,7 +228,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -234,9 +244,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs6656401 | CR1 | 1.17 | 8.49 ×10 −7 | rs4844600 | 1.17 | 4.22×10 −7 | - | -",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -247,9 +257,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs2296160",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -257,7 +267,7 @@
           "field": "P-value",
           "value": 4.24e-08,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -265,13 +275,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.18,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -287,7 +297,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -295,7 +305,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -311,9 +321,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -324,9 +334,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs2296160",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -334,7 +344,7 @@
           "field": "P-value",
           "value": 0.00856,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -342,13 +352,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -364,7 +374,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -372,7 +382,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -388,9 +398,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs2296160 | 1.18 | 4.24×10 −8 | 1.11 | 8.56×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -401,9 +411,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "HLA-DRB5",
+          "value": "rs9271192",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -411,7 +421,7 @@
           "field": "P-value",
           "value": 0.000266,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -419,13 +429,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -441,7 +451,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -449,7 +459,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -465,9 +475,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -478,9 +488,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "HLA-DRB5",
+          "value": "rs9270303",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -488,7 +498,7 @@
           "field": "P-value",
           "value": 0.00025,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -496,13 +506,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.15,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -518,7 +528,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -526,7 +536,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -542,9 +552,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9271192 | HLA-DRB5 | 1.11 | 2.66×10 −4 | rs9270303 | - | - | 1.15 | 2.50×10 −4",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -555,9 +565,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs1476679",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -565,7 +575,7 @@
           "field": "P-value",
           "value": 0.00141,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -573,13 +583,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -595,7 +605,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -603,7 +613,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -619,9 +629,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -632,9 +642,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs2405442",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -642,7 +652,7 @@
           "field": "P-value",
           "value": 0.0021200000000000004,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -650,13 +660,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -672,7 +682,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -680,7 +690,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -696,9 +706,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -709,9 +719,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ZCWPW1",
+          "value": "rs2405442",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -719,7 +729,7 @@
           "field": "P-value",
           "value": 0.00109,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -727,13 +737,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -749,7 +759,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -757,7 +767,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -773,9 +783,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs1476679 | ZCWPW1 | 0.92 | 1.41×10 −3 | rs2405442 | 0.92 | 2.12×10 −3 | 0.89 | 1.09×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -786,9 +796,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs1859788",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -796,7 +806,7 @@
           "field": "P-value",
           "value": 0.00562,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -804,13 +814,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.93,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -826,7 +836,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -834,7 +844,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -850,9 +860,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -863,9 +873,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "",
+          "value": "rs1859788",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -873,7 +883,7 @@
           "field": "P-value",
           "value": 0.0011200000000000001,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -881,13 +891,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -903,7 +913,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -911,7 +921,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -927,9 +937,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP):  |  |  |  | rs1859788 | 0.93 | 5.62×10 −3 | 0.89 | 1.12×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -940,9 +950,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs9331896",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -950,7 +960,7 @@
           "field": "P-value",
           "value": 0.00102,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -958,13 +968,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.92,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -980,7 +990,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -988,7 +998,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1004,9 +1014,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1017,9 +1027,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs7982",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1027,7 +1037,7 @@
           "field": "P-value",
           "value": 0.000364,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1035,13 +1045,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1057,7 +1067,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1065,7 +1075,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1081,9 +1091,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1094,9 +1104,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CLU",
+          "value": "rs7982",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1104,7 +1114,7 @@
           "field": "P-value",
           "value": 0.0016200000000000001,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1112,13 +1122,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.9,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1134,7 +1144,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1142,7 +1152,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1158,9 +1168,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs9331896 | CLU | 0.92 | 1.02×10 −3 | rs7982 | 0.91 | 3.64×10 −4 | 0.90 | 1.62×10 −3",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1171,9 +1181,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs10838725",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1181,7 +1191,7 @@
           "field": "P-value",
           "value": 0.054,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1189,13 +1199,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.05,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1211,7 +1221,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1219,7 +1229,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1235,9 +1245,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1248,9 +1258,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs2293576",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1258,7 +1268,7 @@
           "field": "P-value",
           "value": 0.24,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1266,13 +1276,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.03,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1288,7 +1298,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1296,7 +1306,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1312,9 +1322,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1325,9 +1335,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CELF1",
+          "value": "rs2293576",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1335,7 +1345,7 @@
           "field": "P-value",
           "value": 0.04,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1343,13 +1353,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.07,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1365,7 +1375,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1373,7 +1383,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1389,9 +1399,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs10838725 | CELF1 | 1.05 | 0.054 | rs2293576 | 1.03 | 0.24 | 1.07 | 0.040",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1402,9 +1412,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "MS4A6A",
+          "value": "rs983392",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1412,7 +1422,7 @@
           "field": "P-value",
           "value": 7.22e-09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1420,13 +1430,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.86,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1442,7 +1452,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1450,7 +1460,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1466,9 +1476,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1479,9 +1489,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "MS4A6A",
+          "value": "rs12453",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1489,7 +1499,7 @@
           "field": "P-value",
           "value": 1.3400000000000001e-09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1497,13 +1507,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.86,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1519,7 +1529,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1527,7 +1537,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1543,9 +1553,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1556,9 +1566,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "MS4A6A",
+          "value": "rs12453",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1566,7 +1576,7 @@
           "field": "P-value",
           "value": 0.00036,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1574,13 +1584,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.89,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1596,7 +1606,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1604,7 +1614,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1620,9 +1630,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs983392 | MS4A6A | 0.86 | 7.22×10 −9 | rs12453 | 0.86 | 1.34×10 −9 | 0.89 | 3.60×10 −4",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1633,9 +1643,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ABCA7",
+          "value": "rs4147929",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1643,7 +1653,7 @@
           "field": "P-value",
           "value": 0.00139,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1651,13 +1661,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.12,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1673,7 +1683,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1681,7 +1691,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1697,9 +1707,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1710,9 +1720,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ABCA7",
+          "value": "rs3752246",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1720,7 +1730,7 @@
           "field": "P-value",
           "value": 0.0027,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1728,13 +1738,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.11,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1750,7 +1760,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1758,7 +1768,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1774,9 +1784,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1787,9 +1797,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "ABCA7",
+          "value": "rs3752246",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1797,7 +1807,7 @@
           "field": "P-value",
           "value": 9.890000000000002e-05,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1805,13 +1815,13 @@
           "field": "EffectSize(altvsref)",
           "value": 1.18,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1827,7 +1837,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1835,7 +1845,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1851,9 +1861,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs4147929 | ABCA7 | 1.12 | 1.39×10 −3 | rs3752246 | 1.11 | 2.70×10 −3 | 1.18 | 9.89×10 −5",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1864,9 +1874,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CD33",
+          "value": "rs3865444",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1874,7 +1884,7 @@
           "field": "P-value",
           "value": 0.000449,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1882,13 +1892,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1904,7 +1914,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1912,7 +1922,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1928,9 +1938,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (IGAP SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (IGAP SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -1941,9 +1951,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CD33",
+          "value": "rs12459419",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -1951,7 +1961,7 @@
           "field": "P-value",
           "value": 0.00040199999999999996,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -1959,13 +1969,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.91,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1981,7 +1991,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1989,7 +1999,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2005,9 +2015,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADGC a)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADGC): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }
@@ -2018,9 +2028,9 @@
       "fields": [
         {
           "field": "Name",
-          "value": "CD33",
+          "value": "rs12459419",
           "confidence": 0.9,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row rsID extraction",
           "needs_review": false
         },
@@ -2028,7 +2038,7 @@
           "field": "P-value",
           "value": 0.09,
           "confidence": 0.7,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row p-value parsing",
           "needs_review": false
         },
@@ -2036,13 +2046,13 @@
           "field": "EffectSize(altvsref)",
           "value": 0.94,
           "confidence": 0.65,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "table row effect parsing",
           "needs_review": false
         },
         {
           "field": "Stage",
-          "value": "meta-analysis + replication + discovery",
+          "value": "meta-analysis + discovery + replication + meta + combined",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2058,7 +2068,7 @@
         },
         {
           "field": "Imputation",
-          "value": "hrc + hrc;1000g + topmed + igap + uk10k + 1000g",
+          "value": "rs9271192 + igap snps + 1000 genomes eur + adsp + hrc;1000g",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2066,7 +2076,7 @@
         },
         {
           "field": "Population",
-          "value": "european ancestry + adsp + adgc + eur",
+          "value": "ethnic + adgc + race + european ancestry + ancestry",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2082,9 +2092,9 @@
         },
         {
           "field": "Cohort",
-          "value": "CHARGE + ADSP + ADGC + UKBEC + IGAP + UKBB + ADNI + NABEC",
+          "value": "adgc + discovery + 1000 genomes eur + adsp + study + international genomics of alzheimers project (igap)",
           "confidence": 0.8,
-          "evidence": "Pipe-layout row parsed (Exonic SNP | ADSP b)",
+          "evidence": "IGAP/Exonic split-table row parsed (Exonic SNP | ADSP): rs3865444 | CD33 | 0.91 | 4.49 ×10 −4 | rs12459419 | 0.91 | 4.02×10 −4 | 0.94 | 0.090",
           "rule": "cohort keyword mapping",
           "needs_review": false
         }

@@ -240,7 +240,9 @@ def summarize_missing_fields(harmonized_paths: List[Path]) -> List[Dict[str, obj
         "Analysis group",
         "Stage",
         "Phenotype",
-        "Imputation"
+        "Imputation",
+        "Population category",
+        "Stage category",
     ]
     counts: Dict[str, int] = {field: 0 for field in target_fields}
     for path in harmonized_paths:
@@ -691,8 +693,10 @@ def curated_editable_columns() -> List[str]:
         "Cohort",
         "Sample size",
         "Population",
+        "Population category",
         "Analysis group",
         "Stage",
+        "Stage category",
         "Phenotype",
         "Imputation",
         "LocusName",

@@ -213,7 +213,7 @@ CURATED_COLUMNS = [
     "EffectSize(altvsref)", "95%ConfidenceInterval",
     "Confirmed affected genes, causal variants, evidence",
     "Genome build (hg18/hg37/hg38)", "Pubmed PMID", "PMCID",
-    "Table Ref in paper", "Table links", "LocusName"
+    "Table Ref in paper", "Table links", "LocusName", "Population category", "Stage category", "Phenotype category"
 ]
 
 # -----------------------------
@@ -3030,8 +3030,7 @@ def run_pipeline(pdf_or_url: Optional[str],
                  template_xlsx: Optional[str] = None,
                  table_input: Optional[str] = None,
                  validation_json: Optional[str] = None,
-                 gwas_information_retriever: Optional[air.ADVPInformationRetriever] = None,
-                 gwas_information_retriever_keyword: Optional[air.ADVPInformationRetrieverKeyword] = None) -> None:
+                 gwas_information_retriever: Optional[air.ADVPInformationRetriever] = None) -> None:
     paper_id_table_num = None
     m_pid = re.search(r"table[\s_-]?(\d+)$", paper_id or "", flags=re.I)
     if m_pid:
@@ -3203,8 +3202,7 @@ def run_pipeline(pdf_or_url: Optional[str],
         if pop_val != "NR" and pop_val not in col_require_rag_to_possible_info["Population"]:
             col_require_rag_to_possible_info["Population"].append(pop_val) 
             col_require_rag_to_possible_info["Population"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Population"]]))
-        col_require_rag_to_possible_info["Cohort"] = col_require_rag_to_possible_info["Cohort"] + gwas_information_retriever_keyword.extract_possible_info_from_paper(int(resolved_pmid), resolved_pmcid)
-        col_require_rag_to_possible_info["Cohort"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Cohort"]]))
+        # col_require_rag_to_possible_info["Cohort"] = list(set([info.lower() for info in col_require_rag_to_possible_info["Cohort"]]))
         sample_size_val, _ = infer_sample_size(section_text)
         col_require_rag_to_possible_info["Sample Size"] = [sample_size_val]
         # assoc_val, assoc_audit = infer_association_type(section_scoped_text)
@@ -3427,12 +3425,15 @@ def run_pipeline(pdf_or_url: Optional[str],
         shell["RecordID"] = f"{paper_id}_R00001"
         shell["PMCID"] = resolved_pmcid
         shell["Pubmed PMID"] = resolved_pmid
-        shell["Stage"] = col_require_rag_to_possible_info["Stage"]
-        shell["Analyses type"] = col_require_rag_to_possible_info["Association Type"]
-        shell["Model type"] = col_require_rag_to_possible_info["Model Type"]
-        shell["Imputation"] = col_require_rag_to_possible_info["Imputation"]
-        shell["Population"] = col_require_rag_to_possible_info["Population"]
-        shell["Sample size"] = col_require_rag_to_possible_info["Sample Size"]
+        shell["Stage"] = air.combine_possible_info(col_require_rag_to_possible_info["Stage"])
+        shell["Analyses type"] = air.combine_possible_info(col_require_rag_to_possible_info["Association Type"])
+        shell["Model type"] = air.combine_possible_info(col_require_rag_to_possible_info["Model Type"])
+        shell["Imputation"] = air.combine_possible_info(col_require_rag_to_possible_info["Imputation"])
+        shell["Population"] = air.combine_possible_info(col_require_rag_to_possible_info["Population"])
+        shell["Sample size"] = air.combine_possible_info(col_require_rag_to_possible_info["Sample Size"])
+        shell["Population category"] = air.combine_possible_info(col_require_rag_to_possible_info["Population"])
+        shell["Phenotype category"] = air.combine_possible_info(col_require_rag_to_possible_info["Population"])
+        shell["Stage category"] = air.combine_possible_info(col_require_rag_to_possible_info["Population"])
         # shell["_confidence"] = min(stage_audit.confidence, assoc_audit.confidence, model_audit.confidence, imp_audit.confidence, pop_audit.confidence, sample_size_audit.confidence)
         # shell["_needs_review"] = True
         # shell["_evidence"] = (
@@ -3459,13 +3460,11 @@ def main():
         return s
     
     referencing_col_require_rag_df = pd.read_csv("ADVP context required col.csv")
-    gwas_information_retriever = air.ADVPInformationRetriever(referencing_col_require_rag_df)
-
-    # for cohort try to do keyword
-    # Cohort,"The specific study or database name. Keywords: Study, Dataset, Discovery. Examples: ADNI, IGAP, UK Biobank, ADGC, CHARGE, EADI.",
-    with open("cohort_keywords.json", "r") as f:
-        cohort_keyword_dict = json.load(f)
-    gwas_information_retriever_keyword = air.ADVPInformationRetrieverKeyword("Cohort", cohort_keyword_dict)
+    referencing_col_require_rag_with_choice_df = pd.read_csv("ADVP context required col choice.csv")
+    gwas_information_retriever = air.ADVPInformationRetriever(
+        referencing_col_df = referencing_col_require_rag_df,
+        referencing_col_with_choice_df = referencing_col_require_rag_with_choice_df
+    )
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=False, default=None, help="PDF path or URL")
@@ -3528,7 +3527,6 @@ def main():
         table_input=args.table_input,
         validation_json=args.validation,
         gwas_information_retriever=gwas_information_retriever,
-        gwas_information_retriever_keyword=gwas_information_retriever_keyword
     )
 
 

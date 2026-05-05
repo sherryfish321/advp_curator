@@ -1,194 +1,74 @@
 {
-  "18813964": {
-    "Population": [
-      "aa",
-      "eur",
-      "european ancestry",
-      "eas"
-    ],
-    "Stage": [
-      "meta-analysis"
-    ],
-    "Imputation": [
-      "topmed"
-    ],
-    "Study type": [
-      "wes",
-      "array genotyping"
-    ],
-    "Phenotype": [
-      "amyloid beta a levels",
-      "alzheimers disease",
-      "cerebrospinal fluid amyloid beta"
-    ],
-    "Model Type": [
-      "logistic regression (with covariates)",
-      "cdr",
-      "meta",
-      "apoe 4",
-      "ancova",
-      "alzgene"
-    ],
-    "Association Type": [
-      "endophenotype",
-      "imaging",
-      "eqtl"
-    ],
-    "Cohort": [
-      "alzgene",
-      "csf"
-    ],
-    "Sample Size": [
-      "4704"
-    ]
-  },
-  "19105203": {
-    "Population": [
-      "aa",
-      "european ancestry",
-      "eur"
-    ],
-    "Stage": [
-      "combined",
-      "meta-analysis"
-    ],
-    "Imputation": [
-      "haplotype reference consortium (hrc)"
-    ],
-    "Study type": [
-      "genotyping",
-      "wes"
-    ],
-    "Phenotype": [
-      "late-onset alzheimers disease",
-      "alzheimers disease"
-    ],
-    "Model Type": [
-      "odds ratios",
-      "bonferroni correction",
-      "meta",
-      "fishers exact test",
-      "logistic regression",
-      "logistic regression (with covariates)"
-    ],
-    "Association Type": [
-      "aao",
-      "a2m",
-      "apoe",
-      "ctna3lrrtm3",
-      "ctnna3",
-      "age of onset",
-      "imaging"
-    ],
-    "Cohort": [
-      "indiana university medical center",
-      "cap",
-      "vanderbilt university medical center",
-      "nimh",
-      "iu",
-      "bryan adrc"
-    ],
-    "Sample Size": [
-      "4704"
-    ]
-  },
-  "41823034": {
-    "Population": [
-      "european ancestry",
-      "eur",
-      "aa"
-    ],
-    "Stage": [
-      "replication/validation"
-    ],
-    "Imputation": [
-      "1000g",
-      "1000 genomes phase 3",
-      "topmed"
-    ],
-    "Study type": [
-      "whole exome sequencing (wes)",
-      "whole genome sequencing (wgs)"
-    ],
-    "Phenotype": [
-      "schizophrenia",
-      "depression",
-      "bipolar disorder",
-      "alzheimers disease"
-    ],
-    "Model Type": [
-      "linear regression (with covariates)",
-      "logistic regression",
-      "meta"
-    ],
-    "Association Type": [
-      "pleiotropy",
-      "genetic correlation",
-      "imaging"
-    ],
-    "Cohort": [
-      "ukbb",
-      "ros/map",
-      "dbgap",
-      "phs001672.v1.p1",
-      "adsp"
-    ],
-    "Sample Size": [
-      "487511"
-    ]
-  },
   "30448613": {
     "Population": [
-      "aa",
-      "eur",
-      "european ancestry"
-    ],
-    "Stage": [
-      "meta-analysis"
-    ],
-    "Imputation": [
-      "hrc;1000g",
-      "1000 genome phase 3 v5",
-      "eagle v2.3"
-    ],
-    "Study type": [
-      "adsp",
-      "wes",
+      "european ancestry",
+      "ancestry",
+      "race",
+      "ethnic",
       "adgc"
     ],
+    "Stage": [
+      "meta-analysis",
+      "replication",
+      "meta",
+      "discovery",
+      "combined"
+    ],
+    "Imputation": [
+      "adsp",
+      "hrc;1000g",
+      "rs9271192",
+      "1000 genomes eur",
+      "igap snps"
+    ],
+    "Study type": [
+      "sequencing",
+      "genotyping"
+    ],
     "Phenotype": [
-      "alzheimers disease",
-      "presenilin 2",
-      "cd33",
-      "amyloid beta peptide"
+      "ad",
+      "disease",
+      "outcome",
+      "trait",
+      "ad phenotype",
+      "alzheimers disease"
     ],
     "Model Type": [
-      "logistic regression (with covariates)",
-      "fixed effect",
-      "logistic regression",
+      "meta-analysis",
       "meta",
+      "adsp",
+      "sex",
+      "1000 genomes eur",
+      "logistic regression (with covariates)",
+      "adgc",
       "inverse-variance weighted"
     ],
     "Association Type": [
-      "disease risk",
+      "age at onset",
+      "common snps",
       "eqtl",
-      "survival",
-      "cognitive",
-      "age at onset (aao)",
-      "cross phenotype",
+      "rare variants",
       "imaging",
-      "neuropathology",
-      "endophenotype"
+      "survival"
     ],
     "Cohort": [
-      "charge",
-      "igap",
-      "nabec",
-      "adgc",
-      "adni",
       "adsp",
-      "ukbb",
-      "ukbec"
+      "discovery",
+      "international genomics of alzheimers project (igap)",
+      "1000 genomes eur",
+      "adgc",
+      "study"
+    ],
+    "Population category": [
+      "Multi-ethnic"
+    ],
+    "Phenotype category": [
+      "AD (includes LOAD)"
+    ],
+    "Stage category": [
+      "Discovery",
+      "Replication",
+      "Meta-analysis"
     ],
     "Sample Size": [
       "74046"
