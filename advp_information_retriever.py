@@ -492,35 +492,6 @@ Respond with a single JSON object only, no prose, no markdown fence:
 
         return res
 
-class ADVPInformationRetrieverKeyword:
-    def __init__(self, info_type: str, keyword_dict: Dict[str, List]):
-        if keyword_dict is None:
-            raise Exception("Please include a keyword dictionary")
-        self.info_type = info_type
-        self.keyword_dict = keyword_dict
-    
-    def extract_possible_info_from_paper(self, pmid: int, pmcid: str) -> List[str]:
-        curr_doc = ""
-        url = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{pmcid}/unicode"
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            for d in data:
-                doc = d["documents"]
-                for p in doc:
-                    passage = p["passages"]
-                    for item in passage:
-                        if "text" in item:
-                            curr_doc += "\n\n" + item["text"]
-        possible_info = []
-        for keyword in self.keyword_dict:
-            for keyword_variation in self.keyword_dict[keyword]:
-                if keyword_variation in curr_doc:
-                    possible_info.append(keyword)
-                    break
-        return possible_info
-
-
 def match_possible_info_to_df(df: pd.DataFrame, col_to_possible_info: Dict, 
                               threshold: float = 0.6):
     notes_col = [col for col in df.columns if "notes" in col]
