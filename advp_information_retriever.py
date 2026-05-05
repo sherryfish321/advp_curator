@@ -419,6 +419,7 @@ Respond with a single JSON object only, no prose, no markdown fence:
                 new_info = list(map(lambda x: x.lower(), new_info))
                 res[ref_col] = list(set(res[ref_col] + new_info))
         
+        col_with_category = []
         for ref_col, ref_col_choice in zip(
             self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
         ):
@@ -431,7 +432,12 @@ Respond with a single JSON object only, no prose, no markdown fence:
                     if max_by_choice[i] > self.detail_choice_similarity_score_threshold:
                         valid_choice.append(ref_col_choice[i])
                 res[f"{ref_col} category"] = deepcopy(valid_choice)
-
+                col_with_category.append(ref_col)
+        for ref_col in col_with_category:
+            temp, temp_category = res[ref_col], res[f"{ref_col} category"]
+            res[ref_col] = deepcopy(temp_category)
+            res[f"{ref_col} details"] = deepcopy(temp)
+            del res[f"{ref_col} category"]
         return res
 
     def extract_possible_info_from_pdf_paper(self, pmid: int, filename: str) -> Dict[str, List]:

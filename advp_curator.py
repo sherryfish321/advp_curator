@@ -213,7 +213,7 @@ CURATED_COLUMNS = [
     "EffectSize(altvsref)", "95%ConfidenceInterval",
     "Confirmed affected genes, causal variants, evidence",
     "Genome build (hg18/hg37/hg38)", "Pubmed PMID", "PMCID",
-    "Table Ref in paper", "Table links", "LocusName", "Population category", "Stage category", "Phenotype category"
+    "Table Ref in paper", "Table links", "LocusName", "Population details", "Stage details"
 ]
 
 # -----------------------------
