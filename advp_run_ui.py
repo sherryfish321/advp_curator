@@ -18,6 +18,7 @@ from urllib.request import Request, urlopen
 
 import pandas as pd
 
+from advp_services import AdvpServiceConfig, run_curation_workflow
 from table_link_to_excel import discover_relevant_pmc_tables
 
 
@@ -961,86 +962,25 @@ def run_pipeline(
     base_dir: str,
     auto_discovered_tables: List[Dict[str, object]] = None,
 ) -> Dict[str, object]:
-    if source_type != "pmc_table_link":
-        raise ValueError("Only source_type=pmc_table_link is supported in current MVP")
+    config = AdvpServiceConfig.from_project_root(base_dir, advp_tsv=advp_tsv)
+    workflow = run_curation_workflow(
+        pmid=pmid,
+        pmcid=pmcid,
+        paper_input=paper_input,
+        table_links=table_links,
+        owner_name=owner_name,
+        source_type=source_type,
+        config=config,
+        pred_scope=pred_scope,
+        key_mode=key_mode,
+        ignore_bp=ignore_bp,
+        ignore_ra1=ignore_ra1,
+        auto_discovered_tables=auto_discovered_tables,
+        table_number_resolver=infer_table_number_from_link,
+    )
 
-    root = Path(base_dir).resolve()
-    table_dir = root / "table_from_link"
-    harmonized_dir = root / "harmonized_tables_advp"
-    audit_dir = root / "audit"
-    eval_dir = root / "eval_reports"
-    run_log_dir = root / "ui_run_logs"
-    for d in (table_dir, harmonized_dir, audit_dir, eval_dir):
-        d.mkdir(parents=True, exist_ok=True)
-
-    generated_tables = []
-    generated_harmonized = []
-
-    for idx, link in enumerate(table_links, start=1):
-        table_num = infer_table_number_from_link(link, idx)
-        tag = f"{pmid}_table{table_num}"
-        table_xlsx = table_dir / f"{tag}.xlsx"
-        harmonized_xlsx = harmonized_dir / f"from_{tag}_v1.xlsx"
-        audit_json = audit_dir / f"from_{tag}_audit.json"
-        ensure_parent(table_xlsx)
-        ensure_parent(harmonized_xlsx)
-        ensure_parent(audit_json)
-
-        run_cmd([
-            "python3",
-            "table_link_to_excel.py",
-            "--url",
-            link,
-            "--out",
-            str(table_xlsx),
-        ])
-
-        run_cmd([
-            "python3",
-            "advp_curator.py",
-            "--input",
-            paper_input,
-            "--table_input",
-            str(table_xlsx),
-            "--out",
-            str(harmonized_xlsx),
-            "--audit",
-            str(audit_json),
-            "--paper_id",
-            tag,
-            "--pmcid",
-            pmcid or "NR",
-        ])
-
-        generated_tables.append(table_xlsx)
-        generated_harmonized.append(harmonized_xlsx)
-
-    eval_cmd = [
-        "python3",
-        "evaluate_advp_alignment.py",
-        "--advp_tsv",
-        str((Path(base_dir) / advp_tsv).resolve()),
-        "--pmid",
-        str(pmid),
-        "--inputs",
-    ]
-    eval_cmd.extend(str(p) for p in generated_harmonized)
-    eval_cmd.extend([
-        "--pred_scope",
-        pred_scope,
-        "--key_mode",
-        key_mode,
-        "--out_dir",
-        str(eval_dir),
-    ])
-    if ignore_bp:
-        eval_cmd.append("--ignore_bp")
-    if ignore_ra1:
-        eval_cmd.append("--ignore_ra1")
-
-    run_cmd(eval_cmd)
-
-    eval_report = eval_dir / f"pmid_{pmid}_eval_report_{pred_scope}.xlsx"
+    generated_harmonized = [Path(p) for p in workflow["generated_harmonized"]]
+    eval_report = Path(str(workflow["eval_report"]))
     report_summary = read_eval_report_summary(eval_report)
     predicted_issue_summary = summarize_eval_report_sheet(eval_report, "extra_prediction")
     missing_prediction_summary = summarize_eval_report_sheet(eval_report, "missing_from_prediction")
@@ -1050,32 +990,18 @@ def run_pipeline(
     pred_total = count_harmonized_rows(generated_harmonized)
     failed_rows = sum(int(r.get("count", 0) or 0) for r in predicted_issue_summary)
     success_rows = max(0, pred_total - failed_rows)
-    run_log = append_run_log(
-        run_log_dir,
-        {
-            "pmid": pmid,
-            "pmcid": pmcid,
-            "owner_name": owner_name,
-            "paper_input": paper_input,
-            "table_links": table_links,
-            "auto_discovered_tables": auto_discovered_tables or [],
-            "generated_harmonized": [str(p) for p in generated_harmonized],
-            "eval_report": str(eval_report),
-            "created_at": dt.datetime.now().isoformat(),
-        },
-    )
-
     return {
+        "schema_version": workflow["schema_version"],
         "pmid": pmid,
         "pmcid": pmcid,
         "owner_name": owner_name,
-        "generated_tables": [str(p) for p in generated_tables],
-        "generated_harmonized": [str(p) for p in generated_harmonized],
+        "generated_tables": workflow["generated_tables"],
+        "generated_harmonized": workflow["generated_harmonized"],
         "eval_report": str(eval_report),
-        "run_log": str(run_log),
+        "run_log": workflow["run_log"],
         "success_rows": success_rows,
         "failed_rows": failed_rows,
-        "table_count": len(generated_harmonized),
+        "table_count": workflow["table_count"],
         "auto_discovered_tables": auto_discovered_tables or [],
         "predicted_issue_summary": predicted_issue_summary,
         "missing_prediction_summary": missing_prediction_summary,

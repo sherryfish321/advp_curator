@@ -50,6 +50,7 @@ The homepage dashboard is intended as a local tracker. It helps users see which 
 
 ## Features
 - Outputs a fixed curated schema from heterogeneous paper tables
+- MCP-ready callable service layer in [`advp_services.py`](./advp_services.py)
 - Text extraction fallback chain for PDF context fields:
   - `pdfplumber`
   - `Docling` fallback when section signal is weak
@@ -129,6 +130,38 @@ Then open:
 ```text
 http://127.0.0.1:8899
 ```
+
+### 4) MCP-ready service functions
+The local UI still works the same way, but the core workflow is exposed through
+callable functions in [`advp_services.py`](./advp_services.py) and a stdio MCP
+server wrapper in [`advp_mcp_server.py`](./advp_mcp_server.py).  This keeps UI
+state separate from the agent-callable pipeline:
+
+- `discover_pmc_tables`
+- `extract_table`
+- `map_to_advp`
+- `evaluate_against_advp`
+- `open_curated_sheet`
+- `run_full_curation`
+- `run_curation_workflow`
+
+Tool input/output contracts are listed in [`mcp_tool_schemas.json`](./mcp_tool_schemas.json).
+
+Install the MCP SDK if needed:
+
+```bash
+python3 -m pip install mcp
+```
+
+Run the MCP server locally:
+
+```bash
+ADVP_PROJECT_ROOT="$(pwd)" python3 advp_mcp_server.py
+```
+
+The MCP tools restrict local file paths to `ADVP_PROJECT_ROOT`.  The browser UI
+remains the human-in-the-loop review layer, while MCP exposes discovery,
+extraction, mapping, evaluation, and curated-sheet access to agents.
 
 ## How to use the UI
 

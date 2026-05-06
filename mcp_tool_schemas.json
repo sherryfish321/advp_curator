@@ -1,0 +1,195 @@
+{
+  "schema_version": "advp.mcp.v1",
+  "tools": [
+    {
+      "name": "discover_pmc_tables",
+      "description": "Discover candidate association tables from a PMC article URL.",
+      "input_schema": {
+        "type": "object",
+        "required": ["article_url"],
+        "properties": {
+          "article_url": {"type": "string"},
+          "min_score": {"type": "integer", "default": 5}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "article_url", "tables", "selected_links"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "discover_pmc_tables"},
+          "article_url": {"type": "string"},
+          "min_score": {"type": "integer"},
+          "tables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pmcid": {"type": "string"},
+                "table_index": {"type": "integer"},
+                "table_id": {"type": "string"},
+                "caption": {"type": "string"},
+                "score": {"type": "number"},
+                "reasons": {"type": "array", "items": {"type": "string"}},
+                "preview": {"type": "string"},
+                "link": {"type": "string"},
+                "selected": {"type": "boolean"},
+                "source": {"type": "string"}
+              }
+            }
+          },
+          "selected_links": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    {
+      "name": "extract_table",
+      "description": "Extract a web/PMC table URL to an Excel file using the existing table extraction implementation.",
+      "input_schema": {
+        "type": "object",
+        "required": ["table_url", "output_path"],
+        "properties": {
+          "table_url": {"type": "string"},
+          "output_path": {"type": "string"}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "source", "output_path"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "extract_table"},
+          "source": {"type": "string"},
+          "output_path": {"type": "string"},
+          "table_preview": {"type": "object"},
+          "stdout": {"type": "string"}
+        }
+      }
+    },
+    {
+      "name": "map_to_advp",
+      "description": "Map an extracted table into the ADVP curated schema.",
+      "input_schema": {
+        "type": "object",
+        "required": ["paper_input", "table_input", "output_path", "audit_path", "paper_id"],
+        "properties": {
+          "paper_input": {"type": "string"},
+          "table_input": {"type": "string"},
+          "output_path": {"type": "string"},
+          "audit_path": {"type": "string"},
+          "paper_id": {"type": "string"},
+          "pmcid": {"type": "string", "default": "NR"},
+          "validation_path": {"type": "string"}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "output_path", "audit_path"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "map_to_advp"},
+          "paper_input": {"type": "string"},
+          "table_input": {"type": "string"},
+          "output_path": {"type": "string"},
+          "audit_path": {"type": "string"},
+          "validation_path": {"type": "string"},
+          "records_preview": {"type": "object"},
+          "audit_summary": {"type": "object"},
+          "stdout": {"type": "string"}
+        }
+      }
+    },
+    {
+      "name": "evaluate_against_advp",
+      "description": "Evaluate mapped ADVP output against the ADV-P TSV.",
+      "input_schema": {
+        "type": "object",
+        "required": ["pmid", "inputs"],
+        "properties": {
+          "pmid": {"type": "integer"},
+          "inputs": {"type": "array", "items": {"type": "string"}},
+          "pred_scope": {"type": "string", "enum": ["raw", "advp_like", "advp_primary"], "default": "advp_like"},
+          "key_mode": {"type": "string", "enum": ["auto", "pmid_snp_pvalue", "pmid_snp_pvalue_effect"], "default": "auto"},
+          "ignore_bp": {"type": "boolean", "default": true},
+          "ignore_ra1": {"type": "boolean", "default": true}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "pmid", "inputs", "eval_report"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "evaluate_against_advp"},
+          "pmid": {"type": "integer"},
+          "inputs": {"type": "array", "items": {"type": "string"}},
+          "eval_report": {"type": "string"},
+          "eval_summary": {"type": "object"},
+          "stdout": {"type": "string"}
+        }
+      }
+    },
+    {
+      "name": "open_curated_sheet",
+      "description": "Open a curated Excel/CSV sheet and return rows as JSON.",
+      "input_schema": {
+        "type": "object",
+        "required": ["path"],
+        "properties": {
+          "path": {"type": "string"},
+          "limit": {"type": "integer"}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "path", "columns", "row_count", "rows"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "open_curated_sheet"},
+          "path": {"type": "string"},
+          "columns": {"type": "array", "items": {"type": "string"}},
+          "row_count": {"type": "integer"},
+          "rows": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    },
+    {
+      "name": "run_full_curation",
+      "description": "Run the agent-friendly end-to-end ADV-P workflow: optional discovery, table extraction, mapping, evaluation, and JSON summaries.",
+      "input_schema": {
+        "type": "object",
+        "required": ["pmid", "paper_input"],
+        "properties": {
+          "pmid": {"type": "integer"},
+          "paper_input": {"type": "string"},
+          "table_links": {"type": "array", "items": {"type": "string"}, "default": []},
+          "pmcid": {"type": "string", "default": ""},
+          "owner_name": {"type": "string", "default": ""},
+          "auto_discover_tables": {"type": "boolean", "default": false},
+          "pred_scope": {"type": "string", "enum": ["raw", "advp_like", "advp_primary"], "default": "advp_like"},
+          "key_mode": {"type": "string", "enum": ["auto", "pmid_snp_pvalue", "pmid_snp_pvalue_effect"], "default": "auto"},
+          "ignore_bp": {"type": "boolean", "default": true},
+          "ignore_ra1": {"type": "boolean", "default": true}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["schema_version", "tool", "pmid", "generated_tables", "generated_harmonized", "eval_report", "run_log"],
+        "properties": {
+          "schema_version": {"const": "advp.mcp.v1"},
+          "tool": {"const": "run_full_curation"},
+          "pmid": {"type": "integer"},
+          "pmcid": {"type": "string"},
+          "owner_name": {"type": "string"},
+          "generated_tables": {"type": "array", "items": {"type": "string"}},
+          "generated_harmonized": {"type": "array", "items": {"type": "string"}},
+          "eval_report": {"type": "string"},
+          "run_log": {"type": "string"},
+          "table_count": {"type": "integer"},
+          "auto_discovered_tables": {"type": "array", "items": {"type": "object"}},
+          "records_preview": {"type": "array", "items": {"type": "object"}},
+          "eval_summary": {"type": "object"}
+        }
+      }
+    }
+  ]
+}

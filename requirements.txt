@@ -5,3 +5,4 @@ pdfplumber
 camelot-py
 lxml
 beautifulsoup4
+mcp
