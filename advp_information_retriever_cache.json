@@ -1,1 +1,92 @@
-{}
+{
+  "30448613": {
+    "Population": [
+      "african american",
+      "caribbean hispanic",
+      "european ancestry",
+      "multi-ethnic",
+      "caucasian",
+      "asian"
+    ],
+    "Stage": [
+      "Discovery",
+      "Replication",
+      "Joint-analysis",
+      "Meta-analysis"
+    ],
+    "Imputation": [
+      "braineac",
+      "igap",
+      "d",
+      "adgc",
+      "adsp",
+      "hrc;1000g",
+      "gcta",
+      "charge",
+      "maf"
+    ],
+    "Study type": [
+      "genotyping",
+      "sequencing"
+    ],
+    "Phenotype": [
+      "synonymous mutations",
+      "alzheimers disease",
+      "hippocampal sclerosis of aging",
+      "alzheimers disease phenotype",
+      "alzheimer disease",
+      "rest and stress resistance in ageing and alzheimers disease",
+      "amyloid beta peptide",
+      "presenilin 2",
+      "ms4a6a snps",
+      "cancer",
+      "cognitive decline"
+    ],
+    "Model Type": [
+      "metal",
+      "meta",
+      "inverse-variance weighted",
+      "adsp",
+      "ancova",
+      "plink v1.90a",
+      "sex",
+      "logistic regression (with covariates)"
+    ],
+    "Association Type": [
+      "imaging",
+      "survival",
+      "age at onset",
+      "eqtl",
+      "age at onset (aao)",
+      "cognitive"
+    ],
+    "Cohort": [
+      "international genomics of alzheimers project (igap)",
+      "igap",
+      "adni.loni.usc.edu",
+      "adgc",
+      "adsp",
+      "charge",
+      "adni"
+    ],
+    "Population details": [
+      "race",
+      "ancestry",
+      "adgc",
+      "ethnic",
+      "european ancestry",
+      "subjects",
+      "european-type"
+    ],
+    "Stage details": [
+      "meta",
+      "meta-analyzing",
+      "combined",
+      "replication",
+      "discovery"
+    ],
+    "Sample Size": [
+      "74046"
+    ]
+  }
+}

@@ -15,11 +15,10 @@
     {
       "field": "Stage",
       "value": [
-        "combined",
-        "meta",
-        "discovery",
-        "meta-analysis",
-        "replication"
+        "Discovery",
+        "Replication",
+        "Joint-analysis",
+        "Meta-analysis"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -29,12 +28,12 @@
     {
       "field": "Association Type",
       "value": [
-        "cognitive",
         "imaging",
-        "age at onset (aao)",
         "survival",
         "age at onset",
-        "eqtl"
+        "eqtl",
+        "age at onset (aao)",
+        "cognitive"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -44,13 +43,13 @@
     {
       "field": "Model Type",
       "value": [
-        "ancova",
-        "sex",
         "metal",
         "meta",
-        "plink v1.90a",
-        "adsp",
         "inverse-variance weighted",
+        "adsp",
+        "ancova",
+        "plink v1.90a",
+        "sex",
         "logistic regression (with covariates)"
       ],
       "confidence": 0.5,
@@ -62,14 +61,14 @@
       "field": "Imputation",
       "value": [
         "braineac",
-        "d",
         "igap",
-        "charge",
-        "adsp",
-        "maf",
-        "gcta",
+        "d",
         "adgc",
-        "hrc;1000g"
+        "adsp",
+        "hrc;1000g",
+        "gcta",
+        "charge",
+        "maf"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -79,15 +78,12 @@
     {
       "field": "Population",
       "value": [
-        "ethnic",
-        "ukbec",
-        "subjects",
-        "adni",
-        "nabec",
-        "race",
-        "ancestry",
+        "african american",
+        "caribbean hispanic",
         "european ancestry",
-        "european-type"
+        "multi-ethnic",
+        "caucasian",
+        "asian"
       ],
       "confidence": 0.5,
       "evidence": "",
@@ -135,7 +131,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -151,7 +147,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -159,7 +155,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -175,7 +171,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28",
           "rule": "cohort keyword mapping",
@@ -212,7 +208,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -228,7 +224,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -236,7 +232,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -252,7 +248,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs6733839 | BIN1 | 11719631_s_at | BIN1 | 0.071 | 1.51 × 10−7 | 0.28",
           "rule": "cohort keyword mapping",
@@ -289,7 +285,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -305,7 +301,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -313,7 +309,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -329,7 +325,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56",
           "rule": "cohort keyword mapping",
@@ -366,7 +362,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -382,7 +378,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -390,7 +386,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -406,7 +402,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11746895_a_at | BIN1 | 0.084 | 2.05×10−6 | 0.56",
           "rule": "cohort keyword mapping",
@@ -443,7 +439,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -459,7 +455,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -467,7 +463,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -483,7 +479,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91",
           "rule": "cohort keyword mapping",
@@ -520,7 +516,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -536,7 +532,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -544,7 +540,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -560,7 +556,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs111418223 | HLA-DRB5 | 11730933_a_at | AGPAT1 | 0.120 | 1.83×10−11 | 0.91",
           "rule": "cohort keyword mapping",
@@ -597,7 +593,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -613,7 +609,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -621,7 +617,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -637,7 +633,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68",
           "rule": "cohort keyword mapping",
@@ -674,7 +670,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -690,7 +686,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -698,7 +694,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -714,7 +710,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11750187_a_at | AGPAT1 | 0.114 | 6.96×10−9 | 0.68",
           "rule": "cohort keyword mapping",
@@ -751,7 +747,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -767,7 +763,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -775,7 +771,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -791,7 +787,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94",
           "rule": "cohort keyword mapping",
@@ -828,7 +824,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -844,7 +840,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -852,7 +848,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -868,7 +864,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11751668_a_at | AGPAT1 | 0.119 | 1.71×10−8 | 0.94",
           "rule": "cohort keyword mapping",
@@ -905,7 +901,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -921,7 +917,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -929,7 +925,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -945,7 +941,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53",
           "rule": "cohort keyword mapping",
@@ -982,7 +978,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -998,7 +994,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1006,7 +1002,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1022,7 +1018,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs1476679 | ZCWPW1 | 11722909_a_at | GATS | 0.177 | 1.53×10−17 | 0.53",
           "rule": "cohort keyword mapping",
@@ -1059,7 +1055,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1075,7 +1071,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1083,7 +1079,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1099,7 +1095,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95",
           "rule": "cohort keyword mapping",
@@ -1136,7 +1132,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1152,7 +1148,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1160,7 +1156,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1176,7 +1172,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11736388_a_at | TRIM4 | −0.129 | 3.53×10−9 | 0.95",
           "rule": "cohort keyword mapping",
@@ -1213,7 +1209,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1229,7 +1225,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1237,7 +1233,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1253,7 +1249,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85",
           "rule": "cohort keyword mapping",
@@ -1290,7 +1286,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1306,7 +1302,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1314,7 +1310,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1330,7 +1326,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11743311_a_at | PILRB | −0.115 | 4.15×10−9 | 0.85",
           "rule": "cohort keyword mapping",
@@ -1367,7 +1363,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1383,7 +1379,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1391,7 +1387,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1407,7 +1403,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78",
           "rule": "cohort keyword mapping",
@@ -1444,7 +1440,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1460,7 +1456,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1468,7 +1464,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1484,7 +1480,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730023 s at | PILRB | −0.107 | 1.58×10−8 | 0.78",
           "rule": "cohort keyword mapping",
@@ -1521,7 +1517,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1537,7 +1533,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1545,7 +1541,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1561,7 +1557,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89",
           "rule": "cohort keyword mapping",
@@ -1598,7 +1594,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1614,7 +1610,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1622,7 +1618,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1638,7 +1634,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730022_a_at | PILRB | −0.128 | 3.77×10−8 | 0.89",
           "rule": "cohort keyword mapping",
@@ -1675,7 +1671,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1691,7 +1687,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1699,7 +1695,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1715,7 +1711,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15",
           "rule": "cohort keyword mapping",
@@ -1752,7 +1748,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1768,7 +1764,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1776,7 +1772,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1792,7 +1788,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11760665_at | ZKSCAN1 | 0.147 | 2.30×10−7 | 0.15",
           "rule": "cohort keyword mapping",
@@ -1829,7 +1825,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1845,7 +1841,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1853,7 +1849,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1869,7 +1865,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82",
           "rule": "cohort keyword mapping",
@@ -1906,7 +1902,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1922,7 +1918,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1930,7 +1926,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1946,7 +1942,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11730247_a_at | PVRIG | 0.086 | 6.07×10−5 | 0.82",
           "rule": "cohort keyword mapping",
@@ -1983,7 +1979,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -1999,7 +1995,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2007,7 +2003,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2023,7 +2019,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40",
           "rule": "cohort keyword mapping",
@@ -2060,7 +2056,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2076,7 +2072,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2084,7 +2080,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2100,7 +2096,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs11771145 | EPHA1 | 11755327 s at | LOC154761 | 0.109 | 3.68×10−6 | 0.40",
           "rule": "cohort keyword mapping",
@@ -2137,7 +2133,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2153,7 +2149,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2161,7 +2157,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2177,7 +2173,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40",
           "rule": "cohort keyword mapping",
@@ -2214,7 +2210,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2230,7 +2226,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2238,7 +2234,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2254,7 +2250,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs28834970 | PTK2B | 11720981_a_at | PTK2B | 0.114 | 6.86×10−18 | 0.40",
           "rule": "cohort keyword mapping",
@@ -2291,7 +2287,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2307,7 +2303,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2315,7 +2311,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2331,7 +2327,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91",
           "rule": "cohort keyword mapping",
@@ -2368,7 +2364,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2384,7 +2380,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2392,7 +2388,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2408,7 +2404,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11720982 s at | PTK2B | 0.086 | 1.18×10−17 | 0.91",
           "rule": "cohort keyword mapping",
@@ -2445,7 +2441,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2461,7 +2457,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2469,7 +2465,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2485,7 +2481,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47",
           "rule": "cohort keyword mapping",
@@ -2522,7 +2518,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2538,7 +2534,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2546,7 +2542,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2562,7 +2558,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11720980_a_at | PTK2B | 0.094 | 7.33×10−12 | 0.47",
           "rule": "cohort keyword mapping",
@@ -2599,7 +2595,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2615,7 +2611,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2623,7 +2619,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2639,7 +2635,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45",
           "rule": "cohort keyword mapping",
@@ -2676,7 +2672,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2692,7 +2688,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2700,7 +2696,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2716,7 +2712,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11723344_at | TRIM35 | −0.070 | 2.31×10−6 | 0.45",
           "rule": "cohort keyword mapping",
@@ -2753,7 +2749,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2769,7 +2765,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2777,7 +2773,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2793,7 +2789,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5",
           "rule": "cohort keyword mapping",
@@ -2830,7 +2826,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2846,7 +2842,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2854,7 +2850,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2870,7 +2866,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs10838725 | CELF1 | 11725151_at | MYBPC3 | 0.140 | 1.07×10−7 | 8.13×10−5",
           "rule": "cohort keyword mapping",
@@ -2907,7 +2903,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2923,7 +2919,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2931,7 +2927,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -2947,7 +2943,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3",
           "rule": "cohort keyword mapping",
@@ -2984,7 +2980,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3000,7 +2996,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3008,7 +3004,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3024,7 +3020,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed: rs983392 | MS4A6A | 11716846_a_at | MS4A6A | −0.082 | 2.34×10−12 | 4.97×10−3",
           "rule": "cohort keyword mapping",
@@ -3061,7 +3057,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3077,7 +3073,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3085,7 +3081,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3101,7 +3097,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85",
           "rule": "cohort keyword mapping",
@@ -3138,7 +3134,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3154,7 +3150,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3162,7 +3158,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3178,7 +3174,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11751570_a_at | MS4A4A | −0.150 | 1.15×10−6 | 0.85",
           "rule": "cohort keyword mapping",
@@ -3215,7 +3211,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3231,7 +3227,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3239,7 +3235,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3255,7 +3251,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68",
           "rule": "cohort keyword mapping",
@@ -3292,7 +3288,7 @@
         },
         {
           "field": "Stage",
-          "value": "combined + meta + discovery + meta-analysis + replication",
+          "value": "Discovery + Meta-analysis + Joint-analysis + Replication",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3308,7 +3304,7 @@
         },
         {
           "field": "Imputation",
-          "value": "braineac + d + igap + charge + adsp + maf + gcta + adgc + hrc;1000g",
+          "value": "braineac + igap + gcta + d + adgc + adsp + hrc;1000g + charge + maf",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3316,7 +3312,7 @@
         },
         {
           "field": "Population",
-          "value": "ethnic + ukbec + subjects + adni + nabec + race + ancestry + european ancestry + european-type",
+          "value": "african american + caribbean hispanic + european ancestry + multi-ethnic + caucasian + asian",
           "confidence": 0.5,
           "evidence": "",
           "rule": "",
@@ -3332,7 +3328,7 @@
         },
         {
           "field": "Cohort",
-          "value": "international genomics of alzheimers project (igap) + adni.loni.usc.edu + adni + igap + adsp + charge + adgc",
+          "value": "international genomics of alzheimers project (igap) + igap + adni.loni.usc.edu + adgc + adsp + charge + adni",
           "confidence": 0.8,
           "evidence": "Two-p-value eQTL/AD table row parsed:  |  | 11732865_a_at | MS4A4A | −0.179 | 1.59×10−6 | 0.68",
           "rule": "cohort keyword mapping",
