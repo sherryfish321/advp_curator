@@ -21,4 +21,4 @@ optimum
 openai
 pymupdf
 huggingface-hub
-
+pytest

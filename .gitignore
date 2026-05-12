@@ -29,4 +29,3 @@ model/
 
 chroma_db
 venv
-.env
