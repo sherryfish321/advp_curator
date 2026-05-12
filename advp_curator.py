@@ -13,7 +13,8 @@ import pandas as pd
 
 import advp_information_retriever as air
 import torch
-from transformers import AutoModel, AutoTokenizer, PreTrainedModel, PreTrainedTokenizer
+from dotenv import load_dotenv
+load_dotenv()
 
 # Optional dependencies (script will degrade gracefully)
 try:
@@ -3312,10 +3313,6 @@ def run_pipeline(pdf_or_url: Optional[str],
                         for i, u in enumerate(possible_groups):
                             possible_groups_to_possible_info[u] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
                     else:
-                        # best_inx = torch.argmax(similarity_score, dim = 0)
-                        # unique_value_to_possible_info = {}
-                        # for i, u in enumerate(unique_value):
-                        #     unique_value_to_possible_info[u] = col_to_possible_info[col][best_inx[i]]
                         for i, u in enumerate(possible_groups):
                             valid_info = [col_require_rag_to_possible_info[text_col][inx] for inx in range(similarity_score.shape[0]) if similarity_score[inx, i] >= 0.4]
                             possible_groups_to_possible_info[u] = air.combine_possible_info(valid_info)
@@ -3459,8 +3456,8 @@ def main():
             s = s[1:-1].strip()
         return s
     
-    referencing_col_require_rag_df = pd.read_csv("ADVP context required col.csv")
-    referencing_col_require_rag_with_choice_df = pd.read_csv("ADVP context required col choice.csv")
+    referencing_col_require_rag_df = pd.read_csv(os.environ.get("CONTEXT_REQUIRED_COL_DF_PATH", ""))
+    referencing_col_require_rag_with_choice_df = pd.read_csv(os.environ.get("CONTEXT_REQUIRED_COL_CHOICE_DF_PATH", ""))
     gwas_information_retriever = air.ADVPInformationRetriever(
         referencing_col_df = referencing_col_require_rag_df,
         referencing_col_with_choice_df = referencing_col_require_rag_with_choice_df
