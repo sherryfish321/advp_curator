@@ -223,6 +223,12 @@ CURATED_COLUMNS = [
 AIR_CACHE_FILE = "advp_information_retriever_cache.json"
 with open(AIR_CACHE_FILE, "r", encoding="utf-8") as f:
     AIR_CACHE = json.load(f)
+
+# -----------------------------
+# Threshold for matching a term to a group
+# -----------------------------
+GROUP_TO_POSSIBLE_INFO_SIMILARITY_THRESHOLD = float(os.environ.get("GROUP_TO_POSSIBLE_INFO_SIMILARITY_THRESHOLD", 0.0))
+
 # -----------------------------
 # Audit structure
 # -----------------------------
@@ -3309,7 +3315,7 @@ def run_pipeline(pdf_or_url: Optional[str],
                 else:
                     similarity_score = air.calculate_similarity_scores(col_require_rag_to_possible_info[text_col], possible_groups)
                     possible_groups_to_possible_info = {}
-                    if torch.min(torch.max(similarity_score, dim = 0).values) < 0.4:
+                    if torch.min(torch.max(similarity_score, dim = 0).values) < GROUP_TO_POSSIBLE_INFO_SIMILARITY_THRESHOLD:
                         for i, u in enumerate(possible_groups):
                             possible_groups_to_possible_info[u] = air.combine_possible_info(col_require_rag_to_possible_info[text_col])
                     else:
