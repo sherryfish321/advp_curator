@@ -131,7 +131,7 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
         print("Creating Chroma vector store...")
     chroma_db = Chroma(
         persist_directory=chroma_db_path,
-        embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
+        embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
         collection_name=chroma_db_collection_name,
         collection_metadata={"hnsw:space": "cosine"}
     )
@@ -184,7 +184,7 @@ def ingest_doc_from_pdf(pmid: int, filename: str,
         print("Creating Chroma vector store...")
     chroma_db = Chroma(
         persist_directory=chroma_db_path,
-        embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
+        embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
         collection_name=chroma_db_collection_name,
         collection_metadata={"hnsw:space": "cosine"}
     )
@@ -273,7 +273,7 @@ class ADVPInformationRetriever:
         # load vector store
         self.vector_store = Chroma(
             persist_directory=chroma_db_path,
-            embedding_function=InfinityEmbeddings(model="NeuML/pubmedbert-base-embeddings"),
+            embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
             collection_name=chroma_db_collection_name,
             collection_metadata={"hnsw:space": "cosine"}
         )
@@ -472,16 +472,20 @@ Respond with a single JSON object only, no prose, no markdown fence:
             scores = rerank(retrieval_query, documents)
             documents = [doc for _, doc in sorted(zip(scores, documents), key=lambda x: x[0], reverse=True)]
             documents = documents[:self.top_k_rerank]
-
-            messages = self.make_messages(query, documents, examples=ref_col_examples, use_examples_in_llm=ref_col_use_examples_in_llm)
-            response = LLAMA_CLIENT.chat.completions.create(
-                model="local",
-                messages=messages, max_tokens=self.max_new_tokens,
-                temperature=self.temperature, top_p=self.top_p,
-                response_format={"type": "json_object"},
-            )
-            response = response.choices[0].message.content
-            res[ref_col] = self.extract_lst_from_llm_output(response)
+            for doc in documents:
+                messages = self.make_messages(query, [doc], examples=ref_col_examples, use_examples_in_llm=ref_col_use_examples_in_llm)
+                response = LLAMA_CLIENT.chat.completions.create(
+                    model="local",
+                    messages=messages, max_tokens=self.max_new_tokens,
+                    temperature=self.temperature, top_p=self.top_p,
+                    response_format={"type": "json_object"},
+                )
+                response = response.choices[0].message.content
+                if ref_col not in res:
+                    res[ref_col] = []
+                new_info = self.extract_lst_from_llm_output(response)
+                new_info = list(map(lambda x: x.lower(), new_info))
+                res[ref_col] = list(set(res[ref_col] + new_info))
 
         for ref_col, ref_col_choice in zip(
             self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
