@@ -1,12 +1,12 @@
 {
   "30448613": {
     "Population": [
+      "asian",
       "african american",
-      "caribbean hispanic",
-      "european ancestry",
       "multi-ethnic",
       "caucasian",
-      "asian"
+      "caribbean hispanic",
+      "european ancestry"
     ],
     "Stage": [
       "Discovery",
@@ -15,15 +15,23 @@
       "Meta-analysis"
     ],
     "Imputation": [
+      "1000 genome phase 3 v5 reference panel",
+      "adgc",
+      "eagle v2.3 phasing",
+      "maf",
+      "plink",
+      "d",
+      "igap snp",
+      "adsp",
+      "supplementary table 2",
+      "charge",
+      "1 mb",
+      "gcta",
+      "supplementary method",
       "braineac",
       "igap",
-      "d",
-      "adgc",
-      "adsp",
-      "hrc;1000g",
-      "gcta",
-      "charge",
-      "maf"
+      "michigan imputation server",
+      "hrc;1000g"
     ],
     "Study type": [
       "genotyping",
@@ -31,59 +39,82 @@
     ],
     "Phenotype": [
       "synonymous mutations",
-      "alzheimers disease",
-      "hippocampal sclerosis of aging",
-      "alzheimers disease phenotype",
-      "alzheimer disease",
-      "rest and stress resistance in ageing and alzheimers disease",
+      "cognitive decline",
+      "clusterin",
+      "tmem106b",
       "amyloid beta peptide",
       "presenilin 2",
-      "ms4a6a snps",
-      "cancer",
-      "cognitive decline"
+      "alzheimers disease phenotype",
+      "alzheimer disease",
+      "rest and stress",
+      "alzheimers disease",
+      "dna repair",
+      "grn",
+      "alzheimers risk-altering polymorphism",
+      "kcnmb2",
+      "abcc9",
+      "hippocampal sclerosis of aging"
     ],
     "Model Type": [
+      "top five principal components (pcs)",
       "metal",
-      "meta",
-      "inverse-variance weighted",
-      "adsp",
+      "fixed effect",
+      "age at last visit or death",
+      "meta-analysis",
       "ancova",
-      "plink v1.90a",
       "sex",
-      "logistic regression (with covariates)"
+      "adsp",
+      "logistic regression",
+      "ad",
+      "rare variants",
+      "logistic regression (with covariates)",
+      "plink v1.90a",
+      "1000 genomes eur",
+      "meta",
+      "inverse-variance weighted"
     ],
     "Association Type": [
-      "imaging",
       "survival",
       "age at onset",
+      "endophenotype",
       "eqtl",
       "age at onset (aao)",
+      "neuropathology",
+      "imaging",
+      "disease risk",
       "cognitive"
     ],
     "Cohort": [
-      "international genomics of alzheimers project (igap)",
-      "igap",
-      "adni.loni.usc.edu",
       "adgc",
+      "adni.loni.usc.edu",
       "adsp",
+      "international genomics of alzheimers project (igap)",
       "charge",
+      "igap",
       "adni"
     ],
     "Population details": [
       "race",
-      "ancestry",
       "adgc",
+      "pilra",
+      "european-type",
+      "ancestry",
+      "participant pools",
+      "ms4a6a",
+      "abca7",
+      "clu",
       "ethnic",
-      "european ancestry",
-      "subjects",
-      "european-type"
+      "hla-dqb1",
+      "cr1",
+      "nme8",
+      "european ancestry"
     ],
     "Stage details": [
-      "meta",
-      "meta-analyzing",
-      "combined",
+      "discovery",
       "replication",
-      "discovery"
+      "combined",
+      "meta-analyzing",
+      "meta"
     ],
     "Sample Size": [
       "74046"
