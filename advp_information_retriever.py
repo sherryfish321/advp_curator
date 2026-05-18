@@ -88,7 +88,65 @@ def clean_document(document: Document) -> Document:
 
 def ingest_doc_from_pmc(pmid: int, pmcid: str,
                         chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
-                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, print_progress: bool = False):
+                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP):
+    # documents = []
+    # metadata = []
+    # try:
+    #     curr_doc = ""
+    #     url = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{pmcid}/unicode"
+    #     response = requests.get(url)
+    #     if response.status_code == 200:
+    #         data = response.json()
+    #         for d in data:
+    #             doc = d["documents"]
+    #             for p in doc:
+    #                 passage = p["passages"]
+    #                 for item in passage:
+    #                     if "text" in item:
+    #                         curr_doc += "\n\n" + item["text"]
+    #     documents.append(curr_doc)
+    #     metadata.append({"PMID": str(pmid), "PMCID": pmcid})
+    # except Exception as e:
+    #     raise Exception(f"Failed to extract paper {pmid}_{pmcid} from PMC with error {e}")
+    # if print_progress:
+    #     print(f"Finished loading {len(documents)} documents.")
+    #     print()
+
+    # # split documents into chunks
+    # if print_progress:
+    #     print("Splitting documents into chunks...")
+    # text_splitter = RecursiveCharacterTextSplitter(
+    #     chunk_size=chunk_size, 
+    #     chunk_overlap=chunk_overlap,
+    #     separators=["\n\n", "\n", " ", ""]
+    # )
+    # splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
+    # splitted_documents = [clean_document(doc) for doc in splitted_documents]
+    # if print_progress:
+    #     print(f"Finished splitting to make {len(splitted_documents)} chunks.")
+    #     print()
+
+    # # create Chroma vector store
+    # if print_progress:
+    #     print("Creating Chroma vector store...")
+    # chroma_db = Chroma(
+    #     persist_directory=chroma_db_path,
+    #     embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
+    #     collection_name=chroma_db_collection_name,
+    #     collection_metadata={"hnsw:space": "cosine"}
+    # )
+    # # delete current collection contents before adding new documents
+    # collection = chroma_db._collection
+    # all_docs = collection.get(include=[])
+    # all_ids = all_docs["ids"]
+    # if all_ids:
+    #     collection.delete(ids=all_ids)
+    # # add documents to Chroma vector store
+    # chroma_db.add_documents(splitted_documents)
+    # if print_progress:
+    #     print("Finished creating Chroma vector store.")
+    #     print()
+    
     documents = []
     metadata = []
     try:
@@ -106,50 +164,47 @@ def ingest_doc_from_pmc(pmid: int, pmcid: str,
                             curr_doc += "\n\n" + item["text"]
         documents.append(curr_doc)
         metadata.append({"PMID": str(pmid), "PMCID": pmcid})
-    except Exception as e:
-        raise Exception(f"Failed to extract paper {pmid}_{pmcid} from PMC with error {e}")
-    if print_progress:
-        print(f"Finished loading {len(documents)} documents.")
-        print()
+    except:
+        return 0
+        # raise Exception(f"Failed to extract paper {pmid}_{pmcid} from PMC with error {e}")
+    
 
     # split documents into chunks
-    if print_progress:
-        print("Splitting documents into chunks...")
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size, 
-        chunk_overlap=chunk_overlap,
-        separators=["\n\n", "\n", " ", ""]
-    )
-    splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
-    splitted_documents = [clean_document(doc) for doc in splitted_documents]
-    if print_progress:
-        print(f"Finished splitting to make {len(splitted_documents)} chunks.")
-        print()
+    try:
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size, 
+            chunk_overlap=chunk_overlap,
+            separators=["\n\n", "\n", " ", ""]
+        )
+        splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
+        splitted_documents = [clean_document(doc) for doc in splitted_documents]
+    except:
+        return 0
+    
 
     # create Chroma vector store
-    if print_progress:
-        print("Creating Chroma vector store...")
-    chroma_db = Chroma(
-        persist_directory=chroma_db_path,
-        embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
-        collection_name=chroma_db_collection_name,
-        collection_metadata={"hnsw:space": "cosine"}
-    )
-    # delete current collection contents before adding new documents
-    collection = chroma_db._collection
-    all_docs = collection.get(include=[])
-    all_ids = all_docs["ids"]
-    if all_ids:
-        collection.delete(ids=all_ids)
-    # add documents to Chroma vector store
-    chroma_db.add_documents(splitted_documents)
-    if print_progress:
-        print("Finished creating Chroma vector store.")
-        print()
+    try:
+        chroma_db = Chroma(
+            persist_directory=chroma_db_path,
+            embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
+            collection_name=chroma_db_collection_name,
+            collection_metadata={"hnsw:space": "cosine"}
+        )
+        # delete current collection contents before adding new documents
+        collection = chroma_db._collection
+        all_docs = collection.get(include=[])
+        all_ids = all_docs["ids"]
+        if all_ids:
+            collection.delete(ids=all_ids)
+        # add documents to Chroma vector store
+        chroma_db.add_documents(splitted_documents)
+        return len(splitted_documents)
+    except:
+        return 0
 
 def ingest_doc_from_pdf(pmid: int, filename: str,
                         chroma_db_path: str = CHROMA_DB_PATH, chroma_db_collection_name: str = CHROMA_DB_COLLECTION_NAME, 
-                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, print_progress: bool = False):
+                        chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP):
     documents = []
     metadata = []
     try:
@@ -159,46 +214,41 @@ def ingest_doc_from_pdf(pmid: int, filename: str,
                 text += page.get_text() + "\n\n" # special indicator of pages
             documents.append(text)
             metadata.append({"PMID": str(pmid)})
-    except Exception as e:
-        raise Exception(f"Failed to extract paper {pmid} from {filename} with error {e}")
-    if print_progress:
-        print(f"Finished loading {len(documents)} documents.")
-        print()
+    except:
+        return 0
 
     # split documents into chunks
-    if print_progress:
-        print("Splitting documents into chunks...")
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size, 
-        chunk_overlap=chunk_overlap,
-        separators=["\n\n", "\n", " ", ""]
-    )
-    splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
-    splitted_documents = [clean_document(doc) for doc in splitted_documents]
-    if print_progress:
-        print(f"Finished splitting to make {len(splitted_documents)} chunks.")
-        print()
+    try:
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size, 
+            chunk_overlap=chunk_overlap,
+            separators=["\n\n", "\n", " ", ""]
+        )
+        splitted_documents = text_splitter.create_documents(texts=documents, metadatas=metadata)
+        splitted_documents = [clean_document(doc) for doc in splitted_documents]
+    except:
+        return 0
 
     # create Chroma vector store
-    if print_progress:
-        print("Creating Chroma vector store...")
-    chroma_db = Chroma(
-        persist_directory=chroma_db_path,
-        embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
-        collection_name=chroma_db_collection_name,
-        collection_metadata={"hnsw:space": "cosine"}
-    )
-    # delete current collection contents before adding new documents
-    collection = chroma_db._collection
-    all_docs = collection.get(include=[])
-    all_ids = all_docs["ids"]
-    if all_ids:
-        collection.delete(ids=all_ids)
-    # add documents to Chroma vector store
-    chroma_db.add_documents(splitted_documents)
-    if print_progress:
-        print("Finished creating Chroma vector store.")
-        print()
+    try:
+        chroma_db = Chroma(
+            persist_directory=chroma_db_path,
+            embedding_function=InfinityEmbeddings(model=EMBEDDINGS_MODEL),
+            collection_name=chroma_db_collection_name,
+            collection_metadata={"hnsw:space": "cosine"}
+        )
+        # delete current collection contents before adding new documents
+        collection = chroma_db._collection
+        all_docs = collection.get(include=[])
+        all_ids = all_docs["ids"]
+        if all_ids:
+            collection.delete(ids=all_ids)
+        # add documents to Chroma vector store
+        chroma_db.add_documents(splitted_documents)
+        
+        return len(splitted_documents)
+    except:
+        return 0
 
 def make_embeddings(sentences: str | List[str]) -> torch.Tensor:
     if isinstance(sentences, str):
@@ -375,7 +425,10 @@ Respond with a single JSON object only, no prose, no markdown fence:
         """
         res = {}
 
-        ingest_doc_from_pmc(pmid, pmcid)
+        # ingest_doc_from_pmc(pmid, pmcid)
+        num_docs = ingest_doc_from_pmc(pmid, pmcid)
+        if num_docs == 0:
+            return {ref_col: [] for ref_col in self.referencing_col_lst}
 
         for ref_col, ref_col_context, ref_col_examples, ref_col_use_examples_in_llm, ref_col_retrieval_query in zip(
             self.referencing_col_lst,
@@ -419,11 +472,11 @@ Respond with a single JSON object only, no prose, no markdown fence:
                 new_info = list(map(lambda x: x.lower(), new_info))
                 res[ref_col] = list(set(res[ref_col] + new_info))
         
-        col_with_category = []
         for ref_col, ref_col_choice in zip(
             self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
         ):
-            if ref_col in res:
+            col_with_category = []
+            if ref_col in res and len(res[ref_col]) > 0:
                 detail_choice_similarity = calculate_similarity_scores(res[ref_col], ref_col_choice)
                 # get the max of each col
                 max_by_choice = detail_choice_similarity.max(axis = 0).values
@@ -433,11 +486,13 @@ Respond with a single JSON object only, no prose, no markdown fence:
                         valid_choice.append(ref_col_choice[i])
                 res[f"{ref_col} category"] = deepcopy(valid_choice)
                 col_with_category.append(ref_col)
-        for ref_col in col_with_category:
-            temp, temp_category = res[ref_col], res[f"{ref_col} category"]
-            res[ref_col] = deepcopy(temp_category)
-            res[f"{ref_col} details"] = deepcopy(temp)
-            del res[f"{ref_col} category"]
+                for ref_col in col_with_category:
+                    temp, temp_category = res[ref_col], res[f"{ref_col} category"]
+                    res[ref_col] = deepcopy(temp_category)
+                    res[f"{ref_col} details"] = deepcopy(temp)
+                    del res[f"{ref_col} category"]
+            else:
+                res[f"{ref_col} details"] = []
         return res
 
     def extract_possible_info_from_pdf_paper(self, pmid: int, filename: str) -> Dict[str, List]:
@@ -446,7 +501,11 @@ Respond with a single JSON object only, no prose, no markdown fence:
         """
         res = {}
 
-        ingest_doc_from_pdf(pmid, filename)
+        # ingest_doc_from_pdf(pmid, filename)
+
+        num_docs = ingest_doc_from_pdf(pmid, filename)
+        if num_docs == 0:
+            return {ref_col: [] for ref_col in self.referencing_col_lst}
 
         for ref_col, ref_col_context, ref_col_examples, ref_col_use_examples_in_llm, ref_col_retrieval_query in zip(
             self.referencing_col_lst,
@@ -490,7 +549,8 @@ Respond with a single JSON object only, no prose, no markdown fence:
         for ref_col, ref_col_choice in zip(
             self.referencing_col_with_choice_lst, self.referencing_col_choice_with_choice_lst
         ):
-            if ref_col in res:
+            col_with_category = []
+            if ref_col in res and len(res[ref_col]) > 0:
                 detail_choice_similarity = calculate_similarity_scores(res[ref_col], ref_col_choice)
                 # get the max of each col
                 max_by_choice = detail_choice_similarity.max(axis = 0).values
@@ -499,7 +559,14 @@ Respond with a single JSON object only, no prose, no markdown fence:
                     if max_by_choice[i] > self.detail_choice_similarity_score_threshold:
                         valid_choice.append(ref_col_choice[i])
                 res[f"{ref_col} category"] = deepcopy(valid_choice)
-
+                col_with_category.append(ref_col)
+                for ref_col in col_with_category:
+                    temp, temp_category = res[ref_col], res[f"{ref_col} category"]
+                    res[ref_col] = deepcopy(temp_category)
+                    res[f"{ref_col} details"] = deepcopy(temp)
+                    del res[f"{ref_col} category"]
+            else:
+                res[f"{ref_col} details"] = []
         return res
 
 def match_possible_info_to_df(df: pd.DataFrame, col_to_possible_info: Dict, 
