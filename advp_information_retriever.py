@@ -8,17 +8,11 @@ import requests
 import pandas as pd
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 import torch
 import torch.nn.functional as F
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel, PreTrainedModel, PreTrainedTokenizer
-from sentence_transformers import CrossEncoder
-from llama_cpp import Llama, LogitsProcessorList
 from langchain_core.embeddings import Embeddings
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from openai import OpenAI
-from huggingface_hub import login
 from dotenv import load_dotenv
 load_dotenv()
 

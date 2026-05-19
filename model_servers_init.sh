@@ -45,14 +45,14 @@ echo "Infinity started on port ${INFINITY_PORT:-7997}"
 
 # start llama-cpp in foreground
 echo "Starting llama-cpp on port ${LLAMA_PORT:-8001}..."
-# python -m llama_cpp.server \
-#     --model "$MODEL_FILE" \
-#     --n_gpu_layers 0 \
-#     --n_ctx 8192 \
-#     --port "${LLAMA_PORT:-8001}"
-# #   --n_gpu_layers -1 \ if we have gpu
-llama-server \
+python -m llama_cpp.server \
     --model "$MODEL_FILE" \
-    --n-gpu-layers 0 \
-    --ctx-size 8192 \
+    --n_gpu_layers 0 \
+    --n_ctx 8192 \
     --port "${LLAMA_PORT:-8001}"
+#   --n_gpu_layers -1 \ if we have gpu
+# llama-server \
+#     --model "$MODEL_FILE" \
+#     --n-gpu-layers 0 \
+#     --ctx-size 8192 \
+#     --port "${LLAMA_PORT:-8001}"
